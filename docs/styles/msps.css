@@ -1,0 +1,183 @@
+/* =============================================================
+   Identidad visual institucional — Documento Técnico ENUS 2026
+   Ministerio de Salud y Protección Social (MSPS)
+
+   Fuente de la especificación: 04_Marca/
+   manual-identidad-visual-minsalud-gobierno-2024.pdf
+   (Manual de Identidad Visual MSPS, Julio 2024, en atención a la
+   Ley 2345 de 2023 — Grupo de Comunicaciones MSPS)
+     - Paleta de color: pág. 8 y 11
+     - Tipografía: pág. 13-15
+     - Logo: pág. 8 (recursos/) — ver también
+       04_Marca/recursos_graficos/recursos_graficos-minsalud/01_logo
+
+   Nota metodológica: el manual reserva Nunito Sans para piezas
+   gráficas y Verdana para "mailings y documentos office que se
+   deban editar en cualquier computador" (pág. 15). Este HTML es
+   una publicación (no un documento office editable), por lo que
+   se aplica Nunito Sans con Verdana/Arial como pila de reserva.
+   El Word (.docx) generado por bookdown::word_document2 usa
+   Verdana, conforme a esa misma regla (ver styles/generar_reference_doc.py).
+   ============================================================= */
+
+/*-- Tipografía embebida: Nunito Sans (pesos estáticos usados) --*/
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/nunito-sans/NunitoSans_10pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/nunito-sans/NunitoSans_10pt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/nunito-sans/NunitoSans_10pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/nunito-sans/NunitoSans_10pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/nunito-sans/NunitoSans_10pt-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("fonts/nunito-sans/NunitoSans_10pt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*-- Paleta institucional (valores exactos del manual, pág. 8/11/12) --*/
+:root {
+  --msps-verde:      #32B4A8; /* color asignado al Ministerio de Salud — RGB 50-180-168 / CMYK 71-0-41-0 */
+  --msps-verde-osc:  #227069; /* variante oscura derivada, solo para hover/contraste — no está en el manual */
+  --msps-azul:       #003189; /* azul bandera — RGB 0-49-137 */
+  --msps-amarillo:   #FFC800; /* amarillo bandera — RGB 255-200-0 */
+  --msps-rojo:       #D80025; /* rojo bandera — RGB 216-0-37 */
+  --msps-gris-texto: #333333;
+  --msps-font-principal: "Nunito Sans", Verdana, Arial, sans-serif;
+}
+
+/*-- Tipografía y color base --*/
+body {
+  font-family: var(--msps-font-principal);
+  color: var(--msps-gris-texto);
+}
+
+h1, h2, h3, h4, h5, h6,
+.book .book-header h1,
+.book .book-summary {
+  font-family: var(--msps-font-principal);
+}
+
+h1, h2, h3 {
+  color: var(--msps-verde);
+  font-weight: 800;
+}
+
+h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  color: var(--msps-azul);
+}
+a:hover {
+  color: var(--msps-verde);
+}
+
+/*-- Barra lateral (sidebar) del gitbook con marca MSPS --*/
+.book .book-summary {
+  background: #fafafa;
+  border-right: 1px solid #e5e5e5;
+}
+
+.book .book-summary::before {
+  content: "";
+  display: block;
+  height: 64px;
+  margin: 14px auto 6px auto;
+  width: 90%;
+  background-image: url("logo/msps-logo-color.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.book .book-summary ul.summary li.chapter.active > a,
+.book .book-summary ul.summary li.chapter a:hover {
+  color: var(--msps-verde);
+}
+
+.book .book-header {
+  background: var(--msps-verde);
+  color: #fff;
+}
+.book .book-header .btn {
+  color: #fff;
+}
+
+/*-- Tablas anchas (matrices de nodos, cuotas, indicadores) con scroll
+     horizontal propio, sin desbordar el ancho de la página
+     (sección 33 del prompt maestro / CLAUDE.md). --*/
+.cell-output-display table,
+table.table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table.table thead {
+  background-color: var(--msps-verde);
+  color: #fff;
+}
+
+/*-- Figuras del mock ClicSalud / diagramas --*/
+figure img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/*-- Bloques metodológicos (heredados; ver CLAUDE.md sección 1) --*/
+.pendiente-definicion {
+  border-left: 4px solid var(--msps-amarillo);
+  background-color: #fffbea;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.recomendacion-metodologica {
+  border-left: 4px solid var(--msps-azul);
+  background-color: #eaf1fb;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.decision-adoptada {
+  border-left: 4px solid var(--msps-verde);
+  background-color: #eafaf8;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}

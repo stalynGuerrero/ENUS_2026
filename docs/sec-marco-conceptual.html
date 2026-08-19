@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Marco conceptual | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Marco conceptual | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Marco conceptual | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  
+  <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  
+
+<meta name="author" content="Ministerio de Salud y Protección Social" />
+
+
+<meta name="date" content="2026-08-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sec-objetivo-alcance.html"/>
+<link rel="next" href="sec-papel-eps-ips.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="styles/msps.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ENUS 2026 — Documento Técnico (ClicSalud)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presentación</a></li>
+<li class="chapter" data-level="1" data-path="sec-introduccion.html"><a href="sec-introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html"><i class="fa fa-check"></i><b>2</b> Antecedentes</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#marco-normativo-el-sistema-obligatorio-de-garant%C3%ADa-de-calidad-en-salud"><i class="fa fa-check"></i><b>2.1</b> Marco normativo: el Sistema Obligatorio de Garantía de Calidad en Salud</a></li>
+<li class="chapter" data-level="2.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#trayectoria-de-la-medici%C3%B3n-de-experiencia-y-satisfacci%C3%B3n-en-el-sgsss-20032025"><i class="fa fa-check"></i><b>2.2</b> Trayectoria de la medición de experiencia y satisfacción en el SGSSS (2003–2025)</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#encuesta-nacional-2017"><i class="fa fa-check"></i><b>2.2.1</b> Encuesta nacional 2017</a></li>
+<li class="chapter" data-level="2.2.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#ranking-de-satisfacci%C3%B3n-eps-2018"><i class="fa fa-check"></i><b>2.2.2</b> Ranking de satisfacción EPS 2018</a></li>
+<li class="chapter" data-level="2.2.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#evaluaci%C3%B3n-2020"><i class="fa fa-check"></i><b>2.2.3</b> Evaluación 2020</a></li>
+<li class="chapter" data-level="2.2.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#encuesta-2022"><i class="fa fa-check"></i><b>2.2.4</b> Encuesta 2022</a></li>
+<li class="chapter" data-level="2.2.5" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#encuesta-2023-%C3%A9nfasis-en-atenci%C3%B3n-primaria-en-salud"><i class="fa fa-check"></i><b>2.2.5</b> Encuesta 2023: énfasis en atención primaria en salud</a></li>
+<li class="chapter" data-level="2.2.6" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sistema-de-evaluaci%C3%B3n-y-calificaci%C3%B3n-de-actores-mediciones-2024-y-2025"><i class="fa fa-check"></i><b>2.2.6</b> Sistema de Evaluación y Calificación de Actores: mediciones 2024 y 2025</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#balance-metodol%C3%B3gico-del-ciclo-20172023"><i class="fa fa-check"></i><b>2.3</b> Balance metodológico del ciclo 2017–2023</a></li>
+<li class="chapter" data-level="2.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#s%C3%ADntesis-comparativa-de-los-dise%C3%B1os-hist%C3%B3ricos"><i class="fa fa-check"></i><b>2.4</b> Síntesis comparativa de los diseños históricos</a></li>
+<li class="chapter" data-level="2.5" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#referentes-internacionales-de-medici%C3%B3n-de-experiencia-del-usuario-en-salud"><i class="fa fa-check"></i><b>2.5</b> Referentes internacionales de medición de experiencia del usuario en salud</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html"><i class="fa fa-check"></i><b>3</b> Objetivo y alcance</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#objetivo-general"><i class="fa fa-check"></i><b>3.1</b> Objetivo general</a></li>
+<li class="chapter" data-level="3.2" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#objetivos-espec%C3%ADficos"><i class="fa fa-check"></i><b>3.2</b> Objetivos específicos</a></li>
+<li class="chapter" data-level="3.3" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#alcance-de-la-operaci%C3%B3n-estad%C3%ADstica"><i class="fa fa-check"></i><b>3.3</b> Alcance de la operación estadística</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#fen%C3%B3meno-estudiado"><i class="fa fa-check"></i><b>3.3.1</b> Fenómeno estudiado</a></li>
+<li class="chapter" data-level="3.3.2" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#poblaci%C3%B3n-objetivo"><i class="fa fa-check"></i><b>3.3.2</b> Población objetivo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#unidades-de-observaci%C3%B3n"><i class="fa fa-check"></i><b>3.3.3</b> Unidades de observación</a></li>
+<li class="chapter" data-level="3.3.4" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#territorio"><i class="fa fa-check"></i><b>3.3.4</b> Territorio</a></li>
+<li class="chapter" data-level="3.3.5" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#periodo-de-referencia"><i class="fa fa-check"></i><b>3.3.5</b> Periodo de referencia</a></li>
+<li class="chapter" data-level="3.3.6" data-path="sec-objetivo-alcance.html"><a href="sec-objetivo-alcance.html#dominios-de-an%C3%A1lisis"><i class="fa fa-check"></i><b>3.3.6</b> Dominios de análisis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec-marco-conceptual.html"><a href="sec-marco-conceptual.html"><i class="fa fa-check"></i><b>4</b> Marco conceptual</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sec-marco-conceptual.html"><a href="sec-marco-conceptual.html#experiencia-del-usuario-en-salud"><i class="fa fa-check"></i><b>4.1</b> Experiencia del usuario en salud</a></li>
+<li class="chapter" data-level="4.2" data-path="sec-marco-conceptual.html"><a href="sec-marco-conceptual.html#dimensiones-de-la-experiencia-del-usuario"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de la experiencia del usuario</a></li>
+<li class="chapter" data-level="4.3" data-path="sec-marco-conceptual.html"><a href="sec-marco-conceptual.html#distinci%C3%B3n-entre-experiencia-del-usuario-y-otros-conceptos-afines"><i class="fa fa-check"></i><b>4.3</b> Distinción entre experiencia del usuario y otros conceptos afines</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sec-papel-eps-ips.html"><a href="sec-papel-eps-ips.html"><i class="fa fa-check"></i><b>5</b> Papel de las EPS e IPS</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sec-papel-eps-ips.html"><a href="sec-papel-eps-ips.html#eps-como-dato-de-identificaci%C3%B3n-del-usuario"><i class="fa fa-check"></i><b>5.1</b> EPS como dato de identificación del usuario</a></li>
+<li class="chapter" data-level="5.2" data-path="sec-papel-eps-ips.html"><a href="sec-papel-eps-ips.html#eps-ips-y-gestor-como-categor%C3%ADa-de-clasificaci%C3%B3n-del-m%C3%B3dulo"><i class="fa fa-check"></i><b>5.2</b> EPS, IPS y gestor como categoría de clasificación del módulo</a></li>
+<li class="chapter" data-level="5.3" data-path="sec-papel-eps-ips.html"><a href="sec-papel-eps-ips.html#mecanismo-de-participaci%C3%B3n-sin-evidencia-en-los-insumos-t%C3%A9cnicos-disponibles"><i class="fa fa-check"></i><b>5.3</b> Mecanismo de participación: sin evidencia en los insumos técnicos disponibles</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html"><i class="fa fa-check"></i><b>6</b> Limitaciones</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#distinci%C3%B3n-entre-error-de-muestreo-y-sesgos-no-muestrales"><i class="fa fa-check"></i><b>6.1</b> Distinción entre error de muestreo y sesgos no muestrales</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#limitaciones-del-mecanismo-de-captaci%C3%B3n"><i class="fa fa-check"></i><b>6.2</b> Limitaciones del mecanismo de captación</a></li>
+<li class="chapter" data-level="6.3" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#cobertura"><i class="fa fa-check"></i><b>6.3</b> Cobertura</a></li>
+<li class="chapter" data-level="6.4" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#participaci%C3%B3n-y-no-respuesta"><i class="fa fa-check"></i><b>6.4</b> Participación y no respuesta</a></li>
+<li class="chapter" data-level="6.5" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#selecci%C3%B3n-dentro-de-cuotas"><i class="fa fa-check"></i><b>6.5</b> Selección dentro de cuotas</a></li>
+<li class="chapter" data-level="6.6" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#dependencia-de-las-variables-auxiliares"><i class="fa fa-check"></i><b>6.6</b> Dependencia de las variables auxiliares</a></li>
+<li class="chapter" data-level="6.7" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#limitaciones-de-la-calibraci%C3%B3n"><i class="fa fa-check"></i><b>6.7</b> Limitaciones de la calibración</a></li>
+<li class="chapter" data-level="6.8" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#limitaciones-de-la-estimaci%C3%B3n-de-incertidumbre"><i class="fa fa-check"></i><b>6.8</b> Limitaciones de la estimación de incertidumbre</a></li>
+<li class="chapter" data-level="6.9" data-path="sec-limitaciones.html"><a href="sec-limitaciones.html#s%C3%ADntesis"><i class="fa fa-check"></i><b>6.9</b> Síntesis</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://www.minsalud.gov.co" target="blank">Ministerio de Salud y Protección Social</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sec-marco-conceptual" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Marco conceptual<a href="sec-marco-conceptual.html#sec-marco-conceptual" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo define los conceptos necesarios para interpretar la experiencia del usuario en salud tal como la mide ENUS 2026, a partir de las definiciones institucionales disponibles: el marco normativo del SOGCS y los referentes internacionales de medición de experiencia de usuario ya identificados en el capítulo de antecedentes (<a href="sec-antecedentes.html#sec-antecedentes">2</a>).</p>
+<div id="experiencia-del-usuario-en-salud" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Experiencia del usuario en salud<a href="sec-marco-conceptual.html#experiencia-del-usuario-en-salud" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La experiencia del usuario es el conjunto de percepciones y valoraciones que una persona construye a partir de su contacto directo con los servicios de salud, distinta de la satisfacción global (una valoración sintética y retrospectiva) y distinta de los resultados clínicos (que dependen de la condición de salud, no solo del proceso de atención). El marco de <em>responsiveness</em> de la Organización Mundial de la Salud formaliza esta distinción: la capacidad de respuesta de un sistema de salud se evalúa por su desempeño frente a expectativas no clínicas legítimas de la población, verificables únicamente a través del reporte directo del usuario <span class="citation">(<a href="referencias.html#ref-WHO2000Responsiveness">World Health Organization 2000</a>)</span>.</p>
+</div>
+<div id="dimensiones-de-la-experiencia-del-usuario" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Dimensiones de la experiencia del usuario<a href="sec-marco-conceptual.html#dimensiones-de-la-experiencia-del-usuario" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A partir del marco de <em>responsiveness</em> <span class="citation">(<a href="referencias.html#ref-WHO2000Responsiveness">World Health Organization 2000</a>)</span>, de los estándares CAHPS <span class="citation">(<a href="referencias.html#ref-AHRQ_CAHPS">Agency for Healthcare Research and Quality 1995</a>)</span> y del propio marco normativo del SOGCS <span class="citation">(<a href="referencias.html#ref-Decreto1011_2006">Ministerio de la Protección Social 2006</a>)</span>, se identifican las siguientes dimensiones conceptuales, que ENUS 2026 mide a través de su cuestionario (ver <a href="#sec-instrumento-recoleccion"><strong>??</strong></a>):</p>
+<ul>
+<li><strong>Accesibilidad.</strong> La posibilidad efectiva del usuario de utilizar los servicios garantizados por el SGSSS, definida explícitamente como característica de calidad exigible por el SOGCS <span class="citation">(<a href="referencias.html#ref-Decreto1011_2006">Ministerio de la Protección Social 2006</a>)</span>.</li>
+<li><strong>Oportunidad.</strong> La posibilidad de obtener los servicios requeridos sin demoras que pongan en riesgo la vida o la salud del usuario, también definida por el SOGCS <span class="citation">(<a href="referencias.html#ref-Decreto1011_2006">Ministerio de la Protección Social 2006</a>)</span> y presente como dimensión central en el ciclo histórico de medición del MSPS (ver <a href="sec-antecedentes.html#sec-antecedentes">2</a>).</li>
+<li><strong>Trato digno.</strong> El respeto a la dignidad, la autonomía y la confidencialidad del usuario durante la atención, dimensión central del marco de <em>responsiveness</em> de la OMS <span class="citation">(<a href="referencias.html#ref-WHO2000Responsiveness">World Health Organization 2000</a>)</span>.</li>
+<li><strong>Comunicación.</strong> La claridad de la información suministrada al usuario y la facilidad de comunicación con el prestador, dimensión explícita tanto en el marco de la OMS <span class="citation">(<a href="referencias.html#ref-WHO2000Responsiveness">World Health Organization 2000</a>)</span> como en los estándares CAHPS <span class="citation">(<a href="referencias.html#ref-AHRQ_CAHPS">Agency for Healthcare Research and Quality 1995</a>)</span>.</li>
+<li><strong>Resolutividad.</strong> La capacidad del servicio recibido de resolver efectivamente la necesidad de salud que motivó el contacto del usuario con el sistema, dimensión presente de forma constante en el ciclo histórico de medición del MSPS (ver <a href="sec-antecedentes.html#sec-antecedentes">2</a>).</li>
+</ul>
+</div>
+<div id="distinción-entre-experiencia-del-usuario-y-otros-conceptos-afines" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Distinción entre experiencia del usuario y otros conceptos afines<a href="sec-marco-conceptual.html#distinci%C3%B3n-entre-experiencia-del-usuario-y-otros-conceptos-afines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Experiencia vs. satisfacción.</strong> La satisfacción es una valoración global y subjetiva (“¿qué tan satisfecho quedó?”), mientras que la experiencia se refiere a hechos concretos ocurridos durante la atención (“¿tuvo que esperar más de 30 minutos?”, “¿el personal le explicó el procedimiento?”). ENUS 2026, como operación de experiencia del usuario, prioriza el reporte de hechos observables sobre la valoración subjetiva agregada, siguiendo el enfoque de los instrumentos CAHPS <span class="citation">(<a href="referencias.html#ref-AHRQ_CAHPS">Agency for Healthcare Research and Quality 1995</a>)</span>.</p>
+<p><strong>Experiencia vs. resultado clínico.</strong> Un resultado clínico favorable no implica una buena experiencia (un usuario puede recuperarse de una enfermedad y, aun así, haber sido tratado sin dignidad o haber esperado un tiempo excesivo), y viceversa. ENUS 2026 mide la segunda, no la primera.</p>
+<p><strong>Unidad de observación.</strong> El concepto de experiencia del usuario, tal como se define en este capítulo, se aplica al usuario individual del SGSSS en su contacto con un servicio de salud específico. La correspondencia entre este concepto y las unidades efectivamente observadas por ENUS 2026 —población objetivo, población de referencia, población accesible— se desarrolla en el capítulo de población objetivo (<a href="#sec-poblacion-objetivo"><strong>??</strong></a>).</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sec-objetivo-alcance.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-papel-eps-ips.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["ENUS_2026_metodoloia.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
