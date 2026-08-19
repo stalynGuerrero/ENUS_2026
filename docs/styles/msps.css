@@ -127,11 +127,49 @@ a:hover {
 }
 
 .book .book-header {
-  background: var(--msps-verde);
+  background: var(--msps-verde) !important;
   color: #fff;
 }
-.book .book-header .btn {
-  color: #fff;
+.book .book-header .btn,
+.book .book-header .btn i {
+  color: #fff !important;
+}
+.book .book-header .btn:hover {
+  background: var(--msps-verde-osc) !important;
+  color: #fff !important;
+}
+
+/*-- Menús desplegables del toolbar (descarga y tipo de letra): el tema
+     por defecto de gitbook los pinta en gris claro sobre fondo casi
+     blanco (#a6a6a6 sobre #fafafa), lo que los vuelve casi invisibles.
+     Se sube el contraste y se resalta la opción activa/hover en verde
+     institucional. --*/
+.dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.dropdown-menu .buttons .button,
+.dropdown-menu .buttons .button i {
+  color: var(--msps-gris-texto) !important;
+  opacity: 1 !important;
+}
+.dropdown-menu .buttons .button:hover,
+.dropdown-menu .buttons .button:focus,
+.dropdown-menu .buttons .button.active {
+  color: #fff !important;
+  background: var(--msps-verde) !important;
+}
+
+/*-- Panel de configuración de tipografía (botón "Aa"): tamaño de
+     fuente y familia (serif/sans) con el mismo ajuste de contraste. --*/
+.font-settings .buttons .button {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+.font-settings .families .button {
+  color: var(--msps-gris-texto) !important;
+}
+.font-settings .families .button.active {
+  color: var(--msps-verde) !important;
+  font-weight: 700;
 }
 
 /*-- Tablas anchas (matrices de nodos, cuotas, indicadores) con scroll
