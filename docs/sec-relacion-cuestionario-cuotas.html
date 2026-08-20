@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 10 Relación entre cuestionario y cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 10 Relación entre cuestionario y cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 10 Relación entre cuestionario y cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-variables-clasificacion.html"/>
+<link rel="next" href="sec-mecanismo-seleccion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,118 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-relacion-cuestionario-cuotas" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Capítulo 10</span> Relación entre cuestionario y cuotas<a href="sec-relacion-cuestionario-cuotas.html#sec-relacion-cuestionario-cuotas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo formaliza, en una sola matriz y en un caso trazado paso a paso, la relación entre las variables asociadas a un usuario y las dos funciones distintas que cumplen: fijar su celda de cuota o determinar su ruta —es decir, el módulo que finalmente responde—, distinción ya establecida conceptualmente en los capítulos de diseño muestral y muestreo por cuotas (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>, <a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>). El caso trazado a continuación ilustra la condición lógica que determina cada ruta —qué combinación de trazadora, entidad y servicio corresponde a qué módulo—, la misma que formaliza el árbol de decisión (<a href="sec-flujo-rutas.html#sec-flujo-rutas">14</a>); el capítulo de reconciliación de estructuras (<a href="sec-reconciliacion-estructuras.html#sec-reconciliacion-estructuras">15</a>) documenta que, en la aplicación de recolección, el módulo se asigna antes del diligenciamiento y no mediante preguntas de bifurcación respondidas en vivo, sin que ello altere la relación lógica entre variables, cuota y módulo que se describe aquí.</p>
+<div id="matriz-clasificación-cuota-ruta-módulo" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Matriz clasificación → cuota → ruta → módulo<a href="sec-relacion-cuestionario-cuotas.html#matriz-clasificaci%C3%B3n-cuota-ruta-m%C3%B3dulo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="15%" />
+<col width="26%" />
+<col width="26%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Bloque del árbol</th>
+<th align="center">¿Define celda de cuota?</th>
+<th align="center">¿Define ruta / módulo?</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sexo</td>
+<td>1 — Identificación y caracterización</td>
+<td align="center">Sí</td>
+<td align="center">No</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>1 — Identificación y caracterización</td>
+<td align="center">Sí</td>
+<td align="center">No</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Ubicación geográfica (región)</td>
+<td>1 — Identificación y caracterización</td>
+<td align="center">Sí</td>
+<td align="center">No</td>
+<td>También dominio geográfico de análisis (<a href="sec-variables-clasificacion.html#sec-variables-clasificacion">9</a>)</td>
+</tr>
+<tr class="even">
+<td>Zona</td>
+<td>1 — Identificación y caracterización</td>
+<td align="center">Sí</td>
+<td align="center">No</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Régimen de afiliación</td>
+<td>1 — Identificación y caracterización</td>
+<td align="center">Sí</td>
+<td align="center">No</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Uso reciente de servicios de salud (trazadora)</td>
+<td>2 — Pregunta trazadora</td>
+<td align="center">No</td>
+<td align="center">Sí</td>
+<td>Una respuesta negativa dirige directamente a la ruta 1 (EPS – Módulo 1, barreras de acceso), sin pasar por el bloque 3</td>
+</tr>
+<tr class="odd">
+<td>Entidad prestadora (EPS/IPS/gestor)</td>
+<td>3 — Gestión institucional</td>
+<td align="center">No</td>
+<td align="center">Sí</td>
+<td>Solo se pregunta si la trazadora fue afirmativa</td>
+</tr>
+<tr class="even">
+<td>Tipo de servicio recibido</td>
+<td>3 — Gestión institucional</td>
+<td align="center">No</td>
+<td align="center">Sí</td>
+<td>Junto con la entidad, define cuál de los nueve módulos se aplica (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Ninguna variable cumple ambas funciones a la vez: las cinco variables del bloque de identificación y caracterización fijan la celda de cuota y nunca determinan el módulo; las variables de los bloques de trazadora y gestión institucional determinan el módulo y nunca alteran la celda de cuota ya fijada.</p>
+</div>
+<div id="trazabilidad-de-un-caso-ejemplo-ilustrativo" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Trazabilidad de un caso: ejemplo ilustrativo<a href="sec-relacion-cuestionario-cuotas.html#trazabilidad-de-un-caso-ejemplo-ilustrativo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para hacer explícita esta secuencia, se traza el recorrido completo de un usuario hipotético:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Identificación.</strong> El usuario reporta su documento y su EPS; el sistema valida su afiliación activa en BDUA y confirma su identidad con un código enviado por SMS (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>).</li>
+<li><strong>Bloque de identificación y caracterización.</strong> El usuario reporta: sexo femenino, grupo de edad 20-29, región Central, zona urbana, régimen contributivo. Con estas cinco respuestas queda fijada su celda de cuota: <em>Central × Contributivo × Femenino × 20-29 × Urbano</em>, una de las 336 celdas de la matriz de cuotas (<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>).</li>
+<li><strong>Pregunta trazadora.</strong> El usuario reporta que sí ha utilizado servicios de salud en el período de referencia (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>).</li>
+<li><strong>Gestión institucional.</strong> El usuario reporta que el servicio lo recibió a través de su IPS, en modalidad de urgencias.</li>
+<li><strong>Módulo asignado.</strong> De acuerdo con la matriz de rutas (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>), la combinación IPS + urgencias corresponde a la ruta 5, módulo IPS – Módulo 2 (32 preguntas).</li>
+<li><strong>Finalización e inclusión en la base analítica.</strong> El usuario completa el módulo asignado; su registro queda identificado, simultáneamente, por su celda de cuota (para la ponderación y calibración) y por su ruta (para el análisis por módulo), sin que ninguna de las dos condicione a la otra.</li>
+</ol>
+</div>
+<div id="el-espacio-combinatorio-cuota-ruta" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> El espacio combinatorio cuota × ruta<a href="sec-relacion-cuestionario-cuotas.html#el-espacio-combinatorio-cuota-ruta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las 336 celdas de cuota y las nueve rutas del cuestionario son, como se estableció en <a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>, dimensiones transversales: en principio, cualquiera de las 336 celdas puede combinarse con cualquiera de las nueve rutas, para un espacio de hasta 3 024 combinaciones posibles de (celda de cuota, ruta). Ninguna de esas combinaciones tiene una meta de asignación propia: la meta se fija únicamente a nivel de celda de cuota, y la distribución de una celda entre las nueve rutas depende de la regla de asignación al módulo, no de un parámetro de diseño de la cuota (<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>).</p>
+</div>
+<div id="consecuencias-para-la-trazabilidad-y-la-precisión" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Consecuencias para la trazabilidad y la precisión<a href="sec-relacion-cuestionario-cuotas.html#consecuencias-para-la-trazabilidad-y-la-precisi%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Esta separación entre cuota y ruta es la que permite construir la matriz de trazabilidad completa de la operación (objetivo → indicador → variable → pregunta → ruta → base → peso → estimador): cada registro de la base analítica puede reconstruirse hacia atrás tanto por su celda de cuota (para verificar el cumplimiento de la composición demográfica objetivo) como por su ruta (para identificar qué módulo, y por tanto qué preguntas e indicadores, le son aplicables). Al mismo tiempo, y como ya se anticipó en <a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>, esta separación implica que la precisión de los indicadores calculados a nivel de módulo no está garantizada por el mismo mecanismo que garantiza la precisión demográfica; esa limitación se desarrolla en el capítulo de limitaciones del muestreo por cuotas.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-variables-clasificacion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-mecanismo-seleccion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

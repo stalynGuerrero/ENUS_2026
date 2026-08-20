@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 12 Limitaciones del muestreo por cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 12 Limitaciones del muestreo por cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 12 Limitaciones del muestreo por cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-mecanismo-seleccion.html"/>
+<link rel="next" href="sec-instrumento-recoleccion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,95 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-limitaciones-cuotas" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Capítulo 12</span> Limitaciones del muestreo por cuotas<a href="sec-limitaciones-cuotas.html#sec-limitaciones-cuotas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo consolida las limitaciones inferenciales que se derivan específicamente del mecanismo de captación por cuotas de ENUS 2026, anticipadas en los capítulos de diseño muestral, muestreo por cuotas, relación entre cuestionario y cuotas, y mecanismo de selección (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>, <a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>, <a href="sec-relacion-cuestionario-cuotas.html#sec-relacion-cuestionario-cuotas">10</a>, <a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>). Estas limitaciones son distintas de las limitaciones generales de la operación (ver capítulo de limitaciones), que abarcan cobertura, participación y dependencia de variables auxiliares desde una perspectiva más amplia.</p>
+<div id="ausencia-de-probabilidad-de-inclusión-conocida" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Ausencia de probabilidad de inclusión conocida<a href="sec-limitaciones-cuotas.html#ausencia-de-probabilidad-de-inclusi%C3%B3n-conocida" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En ningún punto de la secuencia de captación —identificación, clasificación, aceptación, finalización e inclusión en la base analítica (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>)— existe una probabilidad de inclusión <span class="math inline">\(\pi_i\)</span> observable o controlada por un mecanismo aleatorio formal. En consecuencia, los estimadores de ENUS 2026 no son insesgados por diseño en el sentido clásico del muestreo probabilístico: su validez depende de supuestos adicionales —en particular, del supuesto de ignorabilidad condicional que sustenta la calibración (ver capítulo de ponderación y calibración)— y no de una propiedad garantizada por el mecanismo de selección. Esta es la razón por la cual se adoptó un peso de referencia uniforme (<span class="math inline">\(d_i = 1\)</span>) en lugar de un peso derivado de una probabilidad de inclusión.</p>
+</div>
+<div id="autoselección-dentro-de-la-celda-de-cuota" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Autoselección dentro de la celda de cuota<a href="sec-limitaciones-cuotas.html#autoselecci%C3%B3n-dentro-de-la-celda-de-cuota" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La inclusión de un usuario dentro de su celda de cuota es determinística y exhaustiva —todo usuario elegible y clasificado es aceptado—, pero depende enteramente de su propia decisión de acceder a <em>ClicSalud</em> y completar el cuestionario (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>). La cuota controla la composición observable de la muestra en cinco variables demográficas, pero no controla, ni puede controlar por construcción, la autoselección en variables no observadas que pueden estar asociadas simultáneamente con la probabilidad de participar y con las respuestas sustantivas del cuestionario —por ejemplo, la intensidad de una experiencia negativa reciente, la motivación para participar, o el nivel de alfabetización digital. La calibración posterior (ver capítulo de ponderación y calibración) ajusta la muestra para que reproduzca los totales poblacionales conocidos en las variables auxiliares utilizadas, pero ese ajuste opera exclusivamente sobre esas variables observables: no elimina, ni puede eliminar, un sesgo de autoselección que opere a través de variables no incluidas en la calibración.</p>
+</div>
+<div id="ausencia-de-un-mecanismo-verificable-de-cierre-de-cuota" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Ausencia de un mecanismo verificable de cierre de cuota<a href="sec-limitaciones-cuotas.html#ausencia-de-un-mecanismo-verificable-de-cierre-de-cuota" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los insumos técnicos disponibles no documentan un mecanismo de cierre automático de una celda de cuota una vez alcanzada su meta, ni un procedimiento de monitoreo continuo del avance de cada celda durante el levantamiento (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>). En ausencia de un control verificable de este tipo, la composición real de la muestra —la que efectivamente entra a la base analítica— puede desviarse de la meta de la matriz de cuotas (Anexo E) por exceso en perfiles de fácil acceso a <em>ClicSalud</em> o por defecto en perfiles de menor afluencia, sin que exista, hasta donde documentan los insumos técnicos, una corrección aplicada durante la captación misma. Cualquier desviación de este tipo debe evaluarse empíricamente sobre los datos de campo y, en la medida en que las variables de cuota coincidan con las variables de calibración, puede compensarse parcialmente en la etapa de ponderación —pero no antes de ella.</p>
+</div>
+<div id="precisión-no-controlada-a-nivel-de-módulo" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Precisión no controlada a nivel de módulo<a href="sec-limitaciones-cuotas.html#precisi%C3%B3n-no-controlada-a-nivel-de-m%C3%B3dulo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La cuota fija la composición demográfica de la muestra, pero no controla el tamaño de muestra que finalmente recae en cada uno de los nueve módulos del cuestionario: esa distribución depende de la regla de asignación al módulo, ajena a las cinco variables de cuota y cuyo criterio operativo exacto no está documentado en los insumos disponibles (<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>, <a href="sec-relacion-cuestionario-cuotas.html#sec-relacion-cuestionario-cuotas">10</a>, <a href="sec-reconciliacion-estructuras.html#sec-reconciliacion-estructuras">15</a>). Un módulo asociado a un evento de baja frecuencia —por ejemplo, un procedimiento quirúrgico reciente— puede terminar con un número de respuestas sustancialmente menor que un módulo asociado a un evento frecuente, incluso si las 336 celdas de la cuota demográfica se cumplen exactamente. Los indicadores que dependan de un módulo con baja afluencia tendrán, en consecuencia, menor precisión que los indicadores del bloque transversal, sin que el diseño ofrezca un mecanismo para igualar esa precisión entre módulos.</p>
+</div>
+<div id="dependencia-de-las-variables-auxiliares-utilizadas" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Dependencia de las variables auxiliares utilizadas<a href="sec-limitaciones-cuotas.html#dependencia-de-las-variables-auxiliares-utilizadas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La eficacia de la cuota —y, más adelante, de la calibración— para reducir el desequilibrio de la muestra depende de que sexo, grupo de edad, región, zona y régimen de afiliación (<a href="sec-variables-clasificacion.html#sec-variables-clasificacion">9</a>) capturen adecuadamente los mecanismos reales de autoselección. Si la probabilidad de que un usuario acceda y complete <em>ClicSalud</em> está asociada a factores no capturados por estas cinco variables —por ejemplo, el tipo de EPS, la severidad o urgencia de la necesidad de salud, o el grado de alfabetización digital dentro de un mismo grupo demográfico—, ni la cuota ni la calibración posterior corrigen ese desbalance, porque ambas operan exclusivamente sobre las variables efectivamente incluidas.</p>
+</div>
+<div id="cobertura-de-la-población-accesible" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Cobertura de la población accesible<a href="sec-limitaciones-cuotas.html#cobertura-de-la-poblaci%C3%B3n-accesible" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La cuota opera únicamente sobre la población que ya superó las condiciones de accesibilidad y elegibilidad descritas en el capítulo de población objetivo (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>): usuarios con acceso digital directo o con presencia física en un punto de atención habilitado con código QR, y con afiliación verificable en BDUA. Ningún mecanismo de cuota puede compensar la exclusión estructural de usuarios elegibles que, por falta de acceso a estos canales, nunca llegan a ser clasificados ni captados. Esta limitación de cobertura es anterior a la cuota misma y se hereda íntegramente en la muestra final.</p>
+</div>
+<div id="distinción-entre-error-de-muestreo-y-sesgo-de-selección" class="section level2 hasAnchor" number="12.7">
+<h2><span class="header-section-number">12.7</span> Distinción entre error de muestreo y sesgo de selección<a href="sec-limitaciones-cuotas.html#distinci%C3%B3n-entre-error-de-muestreo-y-sesgo-de-selecci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las limitaciones anteriores no deben confundirse con la estimación de la incertidumbre de los indicadores (ver capítulo de precisión e incertidumbre). El procedimiento de replicación de pesos calibrados que se adoptará para esa estimación cuantifica la variabilidad del estimador bajo el procedimiento de ponderación y calibración efectivamente aplicado; no cuantifica, ni puede cuantificar, la magnitud de un sesgo de autoselección en variables no observadas. Un intervalo de incertidumbre estrecho no es evidencia de ausencia de sesgo de selección, y una calibración que cumple exactamente sus restricciones de totales poblacionales no implica que la muestra sea representativa en dimensiones no incluidas en esas restricciones. Mantener esta distinción es indispensable para no atribuir al muestreo por cuotas de ENUS 2026 propiedades de inferencia probabilística que su diseño no sustenta.</p>
+</div>
+<div id="síntesis" class="section level2 hasAnchor" number="12.8">
+<h2><span class="header-section-number">12.8</span> Síntesis<a href="sec-limitaciones-cuotas.html#s%C3%ADntesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Limitación</th>
+<th>Origen</th>
+<th>¿La calibración la mitiga?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ausencia de probabilidad de inclusión conocida</td>
+<td>Naturaleza no probabilística del diseño (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>)</td>
+<td>No; cambia el fundamento inferencial, no lo restaura</td>
+</tr>
+<tr class="even">
+<td>Autoselección dentro de la celda</td>
+<td>Decisión individual de participar (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>)</td>
+<td>Solo en la medida en que esté asociada a las variables de calibración</td>
+</tr>
+<tr class="odd">
+<td>Ausencia de cierre de cuota verificable</td>
+<td>Sin evidencia de control en tiempo real (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>)</td>
+<td>Parcialmente, si la desviación coincide con variables de calibración</td>
+</tr>
+<tr class="even">
+<td>Precisión no controlada por módulo</td>
+<td>El módulo responde a una regla de asignación ajena a la cuota, sin criterio operativo documentado (<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>)</td>
+<td>No; la calibración no aumenta el tamaño de muestra de un módulo</td>
+</tr>
+<tr class="odd">
+<td>Dependencia de las variables auxiliares</td>
+<td>Solo cinco variables capturadas para cuota y calibración (<a href="sec-variables-clasificacion.html#sec-variables-clasificacion">9</a>)</td>
+<td>No, para factores no capturados por esas variables</td>
+</tr>
+<tr class="even">
+<td>Cobertura de la población accesible</td>
+<td>Exclusión estructural previa a la cuota (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>)</td>
+<td>No; es anterior a la muestra sobre la que opera la calibración</td>
+</tr>
+</tbody>
+</table>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-mecanismo-seleccion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-instrumento-recoleccion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

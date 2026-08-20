@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 13 Instrumento de recolección: ClicSalud | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 13 Instrumento de recolección: ClicSalud | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 13 Instrumento de recolección: ClicSalud | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-limitaciones-cuotas.html"/>
+<link rel="next" href="sec-flujo-rutas.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,217 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-instrumento-recoleccion" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Capítulo 13</span> Instrumento de recolección: ClicSalud<a href="sec-instrumento-recoleccion.html#sec-instrumento-recoleccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>El instrumento de ENUS 2026 se administra en su totalidad a través de <em>ClicSalud</em>, la aplicación en la que se implementan la identificación del usuario, la validación de su elegibilidad, la navegación del árbol de decisión y el registro de las respuestas. Este capítulo documenta la estructura funcional de la aplicación como guía de uso paso a paso —qué ve y qué hace un usuario en cada pantalla— con evidencia visual de cada paso, siguiendo el recorrido completo desde el ingreso a la aplicación hasta el cuestionario de ENUS 2026.</p>
+<div id="sec-app-clicsalud" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Estructura general de la aplicación<a href="sec-instrumento-recoleccion.html#sec-app-clicsalud" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La aplicación se organiza en doce pantallas identificables, agrupadas en tres bloques funcionales:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Pantalla</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Acceso e identificación</td>
+<td>Identificación</td>
+<td>Captura de documento y EPS del usuario</td>
+</tr>
+<tr class="even">
+<td>Acceso e identificación</td>
+<td>Verificación BDUA</td>
+<td>Validación de afiliación activa contra BDUA</td>
+</tr>
+<tr class="odd">
+<td>Acceso e identificación</td>
+<td>Código SMS</td>
+<td>Verificación del usuario mediante código enviado por mensaje de texto</td>
+</tr>
+<tr class="even">
+<td>Acceso e identificación</td>
+<td>Reingreso</td>
+<td>Reconocimiento automático de un usuario con sesión ya verificada en el mismo dispositivo</td>
+</tr>
+<tr class="odd">
+<td>Navegación principal</td>
+<td>Inicio</td>
+<td>Pantalla principal con acceso a los demás módulos</td>
+</tr>
+<tr class="even">
+<td>Navegación principal</td>
+<td>Módulo Encuesta ENUS</td>
+<td>Acceso al cuestionario de ENUS 2026 (árbol de decisión, <a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>)</td>
+</tr>
+<tr class="odd">
+<td>Navegación principal</td>
+<td>Módulo Derechos y Deberes</td>
+<td>Contenido institucional informativo, ajeno al cuestionario</td>
+</tr>
+<tr class="even">
+<td>Navegación principal</td>
+<td>Módulo Carta de Desempeño</td>
+<td>Contenido institucional informativo, ajeno al cuestionario</td>
+</tr>
+<tr class="odd">
+<td>Navegación principal</td>
+<td>Normatividad</td>
+<td>Contenido normativo de referencia, ajeno al cuestionario</td>
+</tr>
+<tr class="even">
+<td>Contenido adicional</td>
+<td>Publicidad MinSalud</td>
+<td>Pantalla promocional mostrada al ingresar a la aplicación</td>
+</tr>
+<tr class="odd">
+<td>Contenido adicional</td>
+<td>Flashcards</td>
+<td>Visor de contenido institucional en formato de tarjetas resumen</td>
+</tr>
+<tr class="even">
+<td>Contenido adicional</td>
+<td>Encuesta de verificación</td>
+<td>Cuestionario breve, distinto del cuestionario de ENUS 2026, asociado en la aplicación a los artículos 5 y 6 de la normatividad de referencia que la propia aplicación cita</td>
+</tr>
+</tbody>
+</table>
+<p>De estas doce pantallas, únicamente el módulo Encuesta ENUS conduce al instrumento que documenta este trabajo metodológico. Las pantallas de Derechos y Deberes, Carta de Desempeño, Normatividad, Publicidad MinSalud y Flashcards son contenido institucional de la aplicación sin relación con la recolección de ENUS 2026; la Encuesta de verificación es un instrumento distinto, cuyo contenido y propósito no se documentan en este trabajo por no ser parte del alcance de ENUS 2026 (<a href="sec-objetivo-alcance.html#sec-objetivo-alcance">3</a>).</p>
+</div>
+<div id="guía-de-uso-recorrido-completo-de-la-aplicación" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Guía de uso: recorrido completo de la aplicación<a href="sec-instrumento-recoleccion.html#gu%C3%ADa-de-uso-recorrido-completo-de-la-aplicaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Esta sección documenta, paso a paso y con evidencia visual, el recorrido completo de un usuario dentro de <em>ClicSalud</em>: desde el ingreso a la aplicación hasta la respuesta de una pregunta del cuestionario de ENUS 2026.</p>
+<div id="paso-1.-mensaje-institucional-de-bienvenida" class="section level3 hasAnchor" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Paso 1. Mensaje institucional de bienvenida<a href="sec-instrumento-recoleccion.html#paso-1.-mensaje-institucional-de-bienvenida" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Al abrir la aplicación, el usuario ve primero una pantalla informativa institucional del Ministerio de Salud y Protección Social, con la opción de omitirla para continuar directamente a la identificación.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-01-publicidad.png" style="width:45.0%" alt="Pantalla de bienvenida institucional, previa al acceso a la identificación." />
+<div class="figcaption">Pantalla de bienvenida institucional, previa al acceso a la identificación.</div>
+</div>
+</div>
+<div id="paso-2.-identificación-por-documento" class="section level3 hasAnchor" number="13.2.2">
+<h3><span class="header-section-number">13.2.2</span> Paso 2. Identificación por documento<a href="sec-instrumento-recoleccion.html#paso-2.-identificaci%C3%B3n-por-documento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El usuario selecciona su tipo de documento e ingresa su número de identificación. Este es el primer paso de la elegibilidad documentada en el capítulo de población objetivo (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>): sin un documento válido, el usuario no puede continuar.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-02-identificacion.png" style="width:45.0%" alt="Identificación del usuario por tipo y número de documento." />
+<div class="figcaption">Identificación del usuario por tipo y número de documento.</div>
+</div>
+</div>
+<div id="paso-3.-verificación-por-código-sms" class="section level3 hasAnchor" number="13.2.3">
+<h3><span class="header-section-number">13.2.3</span> Paso 3. Verificación por código SMS<a href="sec-instrumento-recoleccion.html#paso-3.-verificaci%C3%B3n-por-c%C3%B3digo-sms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Tras enviar el documento, la aplicación indica que está enviando un código de verificación por mensaje de texto al número registrado, y a continuación presenta un campo de cuatro dígitos para que el usuario lo ingrese. Este es el segundo paso de la elegibilidad. La aplicación advierte que, si el usuario no dispone de celular, un funcionario puede asistirlo con la tableta institucional del punto de atención de su EPS —un canal de acceso asistido, adicional al acceso digital directo.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-03-codigo-sms.png" style="width:45.0%" alt="Verificación por código enviado por SMS." />
+<div class="figcaption">Verificación por código enviado por SMS.</div>
+</div>
+</div>
+<div id="paso-4.-verificación-bdua" class="section level3 hasAnchor" number="13.2.4">
+<h3><span class="header-section-number">13.2.4</span> Paso 4. Verificación BDUA<a href="sec-instrumento-recoleccion.html#paso-4.-verificaci%C3%B3n-bdua" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Superada la verificación por SMS, la aplicación presenta los datos de afiliación del usuario —nombre, EPS, régimen, municipio y departamento— obtenidos de la Base de Datos Única de Afiliados (BDUA), junto con la fecha de corte de la consulta y la confirmación de que la afiliación está activa. El usuario debe confirmar que estos datos son correctos para continuar; este es el tercer y último paso de la elegibilidad. La pantalla advierte además que, al confirmar, la sesión queda guardada en el dispositivo (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>).</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-04-verificacion-bdua.png" style="width:45.0%" alt="Verificación BDUA: confirmación de la afiliación activa y de los datos institucionales del usuario." />
+<div class="figcaption">Verificación BDUA: confirmación de la afiliación activa y de los datos institucionales del usuario.</div>
+</div>
+</div>
+<div id="paso-5.-pantalla-de-inicio-y-navegación-principal" class="section level3 hasAnchor" number="13.2.5">
+<h3><span class="header-section-number">13.2.5</span> Paso 5. Pantalla de Inicio y navegación principal<a href="sec-instrumento-recoleccion.html#paso-5.-pantalla-de-inicio-y-navegaci%C3%B3n-principal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Confirmada la identidad, el usuario llega a la pantalla de Inicio, que lo saluda por su nombre y muestra su EPS y régimen. Desde aquí puede acceder a tres funciones —conocer sus derechos y deberes, consultar el desempeño de su EPS o participar en la encuesta de experiencia—, además de ajustar el tamaño de letra de la aplicación. En la parte inferior, una barra de navegación con cinco pestañas (Inicio, Derechos, Desempeño, Encuesta, Normas) permite moverse entre las secciones principales de la aplicación en cualquier momento.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-05-inicio.png" style="width:45.0%" alt="Pantalla de Inicio, con el usuario ya identificado y acceso a los módulos de la aplicación." />
+<div class="figcaption">Pantalla de Inicio, con el usuario ya identificado y acceso a los módulos de la aplicación.</div>
+</div>
+</div>
+<div id="paso-6.-pestaña-derechos" class="section level3 hasAnchor" number="13.2.6">
+<h3><span class="header-section-number">13.2.6</span> Paso 6. Pestaña Derechos<a href="sec-instrumento-recoleccion.html#paso-6.-pesta%C3%B1a-derechos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La pestaña “Derechos” presenta la Carta de Derechos y Deberes del afiliado en tarjetas rápidas por tema (derechos del afiliado, deberes, muerte digna, mecanismos de protección, información de la EPS), un acceso a la Carta específica de cada EPS y una encuesta de verificación distinta de ENUS 2026 (<a href="sec-instrumento-recoleccion.html#sec-app-clicsalud">13.1</a>). Es contenido institucional informativo, sin relación con el cuestionario de ENUS 2026.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-08-tab-derechos.png" style="width:45.0%" alt="Pestaña Derechos: Carta de Derechos y Deberes por tarjetas temáticas." />
+<div class="figcaption">Pestaña Derechos: Carta de Derechos y Deberes por tarjetas temáticas.</div>
+</div>
+</div>
+<div id="paso-7.-pestaña-desempeño" class="section level3 hasAnchor" number="13.2.7">
+<h3><span class="header-section-number">13.2.7</span> Paso 7. Pestaña Desempeño<a href="sec-instrumento-recoleccion.html#paso-7.-pesta%C3%B1a-desempe%C3%B1o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La pestaña “Desempeño” muestra un tablero de indicadores de calidad de la EPS del usuario, con calificación de experiencia, indicadores por atributo (acceso, tiempo de espera, humanización del trato, entrega de medicamentos, satisfacción global), un comparativo entre EPS y una serie de tendencia. Es, igualmente, contenido informativo institucional; no forma parte del cuestionario de recolección, aunque los atributos que despliega son ilustrativos del tipo de indicadores que una operación como ENUS puede producir (ver capítulo de indicadores).</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-09-tab-desempeno.png" style="width:45.0%" alt="Pestaña Desempeño: tablero de indicadores de calidad de la EPS del usuario." />
+<div class="figcaption">Pestaña Desempeño: tablero de indicadores de calidad de la EPS del usuario.</div>
+</div>
+</div>
+<div id="paso-8.-pestaña-normas" class="section level3 hasAnchor" number="13.2.8">
+<h3><span class="header-section-number">13.2.8</span> Paso 8. Pestaña Normas<a href="sec-instrumento-recoleccion.html#paso-8.-pesta%C3%B1a-normas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La pestaña “Normas” enumera el marco normativo que respalda la aplicación y los derechos del usuario, incluida una referencia explícita a una “Resolución MSPS 2026” como lineamiento de adopción de la ENUS. Es, igualmente, contenido de referencia, sin preguntas ni captura de información.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-10-tab-normas.png" style="width:45.0%" alt="Pestaña Normas: marco normativo de referencia de la aplicación." />
+<div class="figcaption">Pestaña Normas: marco normativo de referencia de la aplicación.</div>
+</div>
+</div>
+<div id="paso-9.-acceso-al-módulo-encuesta-enus" class="section level3 hasAnchor" number="13.2.9">
+<h3><span class="header-section-number">13.2.9</span> Paso 9. Acceso al módulo Encuesta ENUS<a href="sec-instrumento-recoleccion.html#paso-9.-acceso-al-m%C3%B3dulo-encuesta-enus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Desde la pestaña “Encuesta” o desde la opción “Contar mi experiencia” en Inicio, el usuario llega a la pantalla de entrada del cuestionario de ENUS 2026, que muestra su sesión activa y verificada, y una sección de atenciones de salud detectadas para el usuario en los últimos seis meses (consulta externa, urgencias, exámenes y procedimientos, con fecha e institución). El usuario inicia la encuesta desde esta pantalla.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-06-modulo-encuesta.png" style="width:45.0%" alt="Pantalla de entrada al módulo Encuesta ENUS, con las atenciones de salud recientes detectadas para el usuario." />
+<div class="figcaption">Pantalla de entrada al módulo Encuesta ENUS, con las atenciones de salud recientes detectadas para el usuario.</div>
+</div>
+</div>
+<div id="paso-10.-bloque-de-preguntas-generales-trazadoras" class="section level3 hasAnchor" number="13.2.10">
+<h3><span class="header-section-number">13.2.10</span> Paso 10. Bloque de preguntas generales (trazadoras)<a href="sec-instrumento-recoleccion.html#paso-10.-bloque-de-preguntas-generales-trazadoras" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Al iniciar la encuesta, el usuario responde un primer bloque de seis preguntas, etiquetadas en la aplicación como “Trazadoras” bajo el encabezado “Preguntas generales”:</p>
+<ol style="list-style-type: decimal">
+<li>¿Quién se encuentra diligenciando esta encuesta? (Usted mismo / Un pariente o tutor legal / Otra persona)</li>
+<li>¿Cuenta con algún plan voluntario de salud? (Plan Complementario / Medicina Prepagada / Póliza de salud / Ninguno)</li>
+<li>¿Cuál es su percepción general de su salud? (Excelente / Muy buena / Buena / Regular / Mala / Muy mala)</li>
+<li>En los últimos 6 meses ¿ha utilizado un servicio de salud? (Sí / No)</li>
+<li>En los últimos 6 meses ¿ha cambiado de EPS o se afilió por primera vez? (Sí / No)</li>
+<li>¿Quién le facilitó el servicio de salud que requería? (EPS / Secretaría de Salud / Hospital, Clínica o IPS / Ninguna de las anteriores)</li>
+</ol>
+<p>Cada pregunta se presenta en pantalla completa, con un indicador de avance (“Pregunta N de 6”) y un botón “Siguiente” para continuar.</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-07-pregunta-ejemplo.png" style="width:45.0%" alt="Primera pregunta del bloque de trazadoras: identificación de quién diligencia la encuesta." />
+<div class="figcaption">Primera pregunta del bloque de trazadoras: identificación de quién diligencia la encuesta.</div>
+</div>
+<div class="float">
+<img src="figuras/fig-clicsalud-11-trazadora-ejemplo.png" style="width:45.0%" alt="Cuarta pregunta trazadora: uso de servicios de salud en los últimos seis meses." />
+<div class="figcaption">Cuarta pregunta trazadora: uso de servicios de salud en los últimos seis meses.</div>
+</div>
+</div>
+<div id="paso-11.-bloque-temático-asignado" class="section level3 hasAnchor" number="13.2.11">
+<h3><span class="header-section-number">13.2.11</span> Paso 11. Bloque temático asignado<a href="sec-instrumento-recoleccion.html#paso-11.-bloque-tem%C3%A1tico-asignado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Completado el bloque de trazadoras, el usuario avanza a un bloque temático específico —en el caso observado, “Consulta externa”—, identificado en la aplicación con una etiqueta de forma (“Forma A”), un código de bloque (“Cod. 01”) y un indicador de posición dentro de una secuencia de bloques (“Bloque 1 de 3”). La primera pregunta del bloque indaga qué tipo de servicio recibió el usuario; las preguntas siguientes profundizan sobre esa atención (por ejemplo, tiempo de espera en días desde la solicitud hasta la atención).</p>
+<div class="float">
+<img src="figuras/fig-clicsalud-12-modulo-forma-a.png" style="width:45.0%" alt="Primera pregunta del bloque temático “Consulta externa”, con las etiquetas “Forma A”, “Cod. 01” y “Bloque 1 de 3” propias de la aplicación." />
+<div class="figcaption">Primera pregunta del bloque temático “Consulta externa”, con las etiquetas “Forma A”, “Cod. 01” y “Bloque 1 de 3” propias de la aplicación.</div>
+</div>
+<p>La etiquetación interna de este bloque —“Forma A”, “Cod. 01”, “Bloque 1 de 3”— es propia de la aplicación y distinta de la terminología de “rutas” y “módulos” (por ejemplo, “EPS – Módulo 3”) utilizada en los demás capítulos de este documento a partir del árbol de decisión (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>, <a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>, <a href="sec-relacion-cuestionario-cuotas.html#sec-relacion-cuestionario-cuotas">10</a>). Ambas representan el mismo instrumento —el cuestionario de ENUS 2026— pero con esquemas de identificación de bloques distintos entre sí. La correspondencia formal entre ambos esquemas, y la determinación de cuál es la estructura vigente para efectos de este documento, se desarrolla en el capítulo de reconciliación de estructuras.</p>
+</div>
+</div>
+<div id="sesión-y-reingreso" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Sesión y reingreso<a href="sec-instrumento-recoleccion.html#sesi%C3%B3n-y-reingreso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El comportamiento de sesión —persistencia en el dispositivo mediante la clave <code>clicsalud_sesion_v1</code> y su relación con la ausencia de un mecanismo de selección aleatoria dentro de la celda de cuota— se documenta de forma completa en el capítulo de mecanismo de selección (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>) y no se repite aquí. La pantalla de Reingreso es la implementación visual de ese reconocimiento automático de sesión.</p>
+</div>
+<div id="almacenamiento-de-datos-durante-la-recolección" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Almacenamiento de datos durante la recolección<a href="sec-instrumento-recoleccion.html#almacenamiento-de-datos-durante-la-recolecci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los insumos técnicos disponibles no documentan si las respuestas del cuestionario se registran en tiempo real conforme el usuario avanza, o únicamente al finalizar el módulo completo, ni un mecanismo de sincronización ante pérdida de conectividad durante la recolección. Tampoco documentan una política de tiempo de espera (<em>timeout</em>) de sesión ni un criterio explícito para distinguir un abandono del cuestionario de una interrupción temporal. En ausencia de esa evidencia, este documento no describe un mecanismo específico de almacenamiento incremental ni de tratamiento de interrupciones; el criterio con el que un registro incompleto se incluye o se excluye de la base analítica se documenta, en la medida en que los insumos lo permitan, en el capítulo de procesamiento.</p>
+</div>
+<div id="alcance-de-esta-documentación-frente-a-otras-estructuras-del-instrumento" class="section level2 hasAnchor" number="13.5">
+<h2><span class="header-section-number">13.5</span> Alcance de esta documentación frente a otras estructuras del instrumento<a href="sec-instrumento-recoleccion.html#alcance-de-esta-documentaci%C3%B3n-frente-a-otras-estructuras-del-instrumento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Este capítulo documenta la estructura funcional de <em>ClicSalud</em> como aplicación de recolección, con evidencia visual de su recorrido completo. La estructura del cuestionario mismo —los nueve rutas y ocho módulos finales que se derivan del árbol de decisión— es la que se ha utilizado de forma consistente en todo este documento desde el capítulo de papel de las EPS e IPS (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>). Como se señaló en el paso 11, existen en los insumos disponibles representaciones adicionales de la estructura del cuestionario —el esquema de bloques y formas propio de la aplicación, y un consolidado de preguntas organizado en bloques— cuya reconciliación formal con la estructura del árbol de decisión se desarrolla en el capítulo de reconciliación de estructuras.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-limitaciones-cuotas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-flujo-rutas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

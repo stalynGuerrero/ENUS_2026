@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 8 Muestreo por cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 8 Muestreo por cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 8 Muestreo por cuotas | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-papel-eps-ips.html"/>
+<link rel="next" href="sec-variables-clasificacion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,154 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-muestreo-cuotas" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Capítulo 8</span> Muestreo por cuotas<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo formaliza la matriz de cuotas de ENUS 2026 —variables, categorías, celdas y metas ya determinadas en el capítulo de diseño muestral (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>)— y desarrolla su relación con los nueve módulos del cuestionario que un usuario puede llegar a responder (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>).</p>
+<div id="variables-categorías-y-celdas-de-la-cuota" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Variables, categorías y celdas de la cuota<a href="sec-muestreo-cuotas.html#variables-categor%C3%ADas-y-celdas-de-la-cuota" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La cuota de ENUS 2026 se construye sobre cinco variables, capturadas en el bloque de identificación y caracterización del árbol de decisión, antes de que el usuario avance hacia el resto del cuestionario:</p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="30%" />
+<col width="40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Categorías</th>
+<th align="right">N.° de categorías</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Región</td>
+<td>Bogotá, Caribe, Central, Oriental, Orinoquía-Amazonía, Pacífica</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td>Régimen de afiliación</td>
+<td>Contributivo, Subsidiado</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td>Sexo</td>
+<td>Femenino, Masculino</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td>Zona</td>
+<td>Urbano, Rural</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<p>La combinación completa de estas cinco variables define <strong>336 celdas de cuota</strong> (6 × 2 × 2 × 7 × 2), cada una con una meta de captación específica, un mínimo garantizado de 10 encuestas y sin techo máximo definido explícitamente —el valor más alto que resulta de la asignación proporcional es de 72 encuestas por celda—. La meta, el mecanismo de asignación proporcional y el método de cuadre por resto mayor se documentan en <a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>; la matriz completa con las 336 celdas se entrega como anexo externo (Anexo E — Matriz de cuotas), organizado en una hoja por cada una de las seis regiones.</p>
+</div>
+<div id="relación-entre-la-cuota-y-los-nueve-módulos-del-cuestionario" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Relación entre la cuota y los nueve módulos del cuestionario<a href="sec-muestreo-cuotas.html#relaci%C3%B3n-entre-la-cuota-y-los-nueve-m%C3%B3dulos-del-cuestionario" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La cuota y el módulo del cuestionario que finalmente responde un usuario se determinan en momentos distintos y a partir de información distinta, por lo que son dimensiones <strong>transversales</strong> entre sí, no anidadas una dentro de la otra.</p>
+<p>La celda de cuota a la que pertenece un usuario queda fijada tan pronto se capturan sus cinco variables de identificación (región, régimen, sexo, edad, zona), al inicio del recorrido por el árbol de decisión. El módulo que ese mismo usuario termina respondiendo, en cambio, solo se determina después, a partir de dos preguntas posteriores: si ha utilizado servicios de salud recientemente y, de ser así, con qué tipo de entidad (EPS, IPS o gestor farmacéutico) y qué tipo de servicio recibió. Estas nueve combinaciones posibles convergen en ocho módulos finales del cuestionario:</p>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ruta</th>
+<th>Descripción</th>
+<th>Módulo destino</th>
+<th align="right">Preguntas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Sin uso de servicios de salud</td>
+<td>EPS – Módulo 1 (barreras de acceso)</td>
+<td align="right">27</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>EPS – atención ambulatoria</td>
+<td>EPS – Módulo 3</td>
+<td align="right">34</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>EPS – otro servicio (distinto de ambulatorio)</td>
+<td>EPS – Módulo 2</td>
+<td align="right">36</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>IPS – atención ambulatoria</td>
+<td>IPS – Módulo 1</td>
+<td align="right">34</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>IPS – urgencias</td>
+<td>IPS – Módulo 2</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>IPS – internación</td>
+<td>IPS – Módulo 3</td>
+<td align="right">29</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>IPS – procedimiento quirúrgico</td>
+<td>IPS – Módulo 4</td>
+<td align="right">33</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Gestor farmacéutico – medicamentos</td>
+<td>Gestor – Módulo 1</td>
+<td align="right">34</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Gestor farmacéutico – no medicamentos</td>
+<td>EPS – Módulo 2 (ruta transversal)</td>
+<td align="right">36</td>
+</tr>
+</tbody>
+</table>
+<p>En consecuencia, un mismo perfil de cuota —por ejemplo, mujer de 20 a 29 años, región Central, régimen contributivo— puede terminar respondiendo cualquiera de los nueve módulos, según cuál haya sido su experiencia real y reciente con el sistema de salud. Ninguna de las 336 celdas de cuota lleva asociada una meta independiente por módulo (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>): la cuota controla la composición demográfica de quién entra a la encuesta, mientras que el módulo responde a una regla de asignación distinta y separada de las cinco variables de cuota.</p>
+<p>Esta distinción no es una omisión del diseño, sino una consecuencia necesaria de la naturaleza de cada variable. Región, régimen, sexo, edad y zona son atributos del usuario conocidos en el momento de su identificación y utilizados explícitamente para construir la cuota; el módulo, en cambio, depende de la entidad y el servicio de salud asociados al usuario, una condición ajena a esas cinco variables. La aplicación de recolección asigna el módulo antes de que el usuario responda ninguna pregunta del cuestionario (<a href="sec-reconciliacion-estructuras.html#sec-reconciliacion-estructuras">15</a>), pero la regla operativa con la que hace esa asignación no está documentada en los insumos técnicos disponibles, y ENUS 2026 tampoco define una meta de cuota para esa asignación. No es metodológicamente posible, con la evidencia disponible, fijar o verificar una meta de cuota para, por ejemplo, “usuarios con procedimiento quirúrgico reciente en IPS”, porque el criterio con el que un usuario queda o no clasificado en esa condición no está documentado.</p>
+<p>La consecuencia directa es que el tamaño de muestra que finalmente recae en cada uno de los nueve módulos <strong>no está controlado por el diseño</strong>: depende de la incidencia real de cada tipo de contacto con el sistema de salud dentro de los usuarios efectivamente captados en cada celda de cuota. Un módulo asociado a un evento poco frecuente (por ejemplo, un procedimiento quirúrgico reciente) puede terminar con un número de respuestas sustancialmente menor que un módulo asociado a un evento frecuente (por ejemplo, consulta ambulatoria), incluso si la cuota demográfica se cumple exactamente en las 336 celdas. Esta limitación de precisión a nivel de módulo, distinta de la precisión demográfica que sí controla la cuota, se desarrolla en el capítulo de limitaciones del muestreo por cuotas.</p>
+</div>
+<div id="mecanismo-de-control-cierre-y-tratamiento-de-desviaciones" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Mecanismo de control, cierre y tratamiento de desviaciones<a href="sec-muestreo-cuotas.html#mecanismo-de-control-cierre-y-tratamiento-de-desviaciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El control de la cuota opera, en el diseño, en dos momentos distintos.</p>
+<p><strong>Ex ante (fase de diseño).</strong> La meta de cada una de las 336 celdas, su mínimo garantizado de 10 encuestas y el método de cuadre por resto mayor (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>) constituyen el mecanismo de control formal de la composición de la muestra, definido antes del levantamiento.</p>
+<p><strong>Ex post (fase de campo).</strong> Los insumos técnicos disponibles —<em>ClicSalud</em> y el árbol de decisión que gobierna su navegación— no documentan un mecanismo de cierre automático de una celda de cuota en tiempo real (por ejemplo, que la aplicación deje de admitir nuevos usuarios de un perfil demográfico cuya meta ya fue alcanzada), ni un procedimiento de monitoreo continuo del avance de cada celda durante el levantamiento, ni una regla de tratamiento de desviaciones (sobre-cumplimiento o incumplimiento de una celda) distinta de la calibración posterior de los pesos (ver capítulo de ponderación y calibración). Conforme al principio de no presentar mecanismos no respaldados por los insumos, este documento no describe un procedimiento operativo de cierre o monitoreo de cuotas. Si en la operación real existe tal procedimiento, debe ser suministrado por el equipo metodológico ENUS para incorporarlo aquí con la evidencia correspondiente.</p>
+</div>
+<div id="diferenciación-conceptual" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Diferenciación conceptual<a href="sec-muestreo-cuotas.html#diferenciaci%C3%B3n-conceptual" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La distinción entre cuota, estrato, dominio y variable de calibración —incluida la precisión de que la cuota no equivale a un estrato probabilístico— se documenta de forma completa en <a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a> y no se repite aquí. El mecanismo mediante el cual se decide, dentro de una celda de cuota aún abierta, qué usuario específico queda incluido se desarrolla en el capítulo de mecanismo de selección; la matriz completa de variables de clasificación —su fuente, momento de obtención y uso (cuota, ruta o calibración)— se desarrolla en el capítulo de variables de clasificación.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-papel-eps-ips.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-variables-clasificacion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

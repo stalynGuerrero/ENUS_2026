@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 18 Diagnóstico de calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 18 Diagnóstico de calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 18 Diagnóstico de calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-pesos-calibracion.html"/>
+<link rel="next" href="sec-limitaciones.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,62 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-diagnostico-calibracion" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Capítulo 18</span> Diagnóstico de calibración<a href="sec-diagnostico-calibracion.html#sec-diagnostico-calibracion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo documenta el protocolo con el que se evalúa, para cada uno de los nueve modelos de calibración por entropía de ENUS 2026 (el modelo transversal y los ocho modelos módulo-específicos; <a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>), si el ajuste obtenido es numéricamente correcto, si produce pesos razonables y qué efecto tiene sobre las estimaciones. El diagnóstico se aplica sobre resultados reales de calibración —de la muestra completa y de cada una de las <span class="math inline">\(B=1\,000\)</span> réplicas—, por lo que sus salidas numéricas (tasas de convergencia observadas, distribución efectiva de los factores de ajuste, límites <span class="math inline">\(L_i,U_i\)</span> finalmente adoptados) solo existen una vez se ejecuta el procedimiento sobre una base de encuestas real; lo que se fija aquí, como parte del documento metodológico, es el protocolo completo y los criterios con los que esas salidas deberán leerse.</p>
+<div id="convergencia-del-algoritmo" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> Convergencia del algoritmo<a href="sec-diagnostico-calibracion.html#convergencia-del-algoritmo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El algoritmo de Newton–Raphson descrito en el capítulo de ponderación y calibración se declara convergente cuando la discrepancia máxima entre la suma ponderada y el total de referencia, para las cinco variables auxiliares, cae por debajo de la tolerancia <span class="math inline">\(\varepsilon\)</span> (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>). El diagnóstico de convergencia registra, para cada uno de los nueve modelos y para cada una de sus réplicas:</p>
+<ul>
+<li>el número de iteraciones hasta alcanzar <span class="math inline">\(\varepsilon\)</span>;</li>
+<li>si el algoritmo convergió dentro de un número máximo de iteraciones o si debió detenerse sin alcanzar la tolerancia;</li>
+<li>la discrepancia residual máxima <span class="math inline">\(\max_j \left|\sum_{i} w_i x_{ij} - X_j\right|\)</span> al momento de detenerse, incluso en los casos convergentes, como verificación de cuadre.</li>
+</ul>
+<p>La no convergencia de un modelo —más probable en los modelos módulo-específicos, cuyo tamaño de muestra <span class="math inline">\(n_m\)</span> es sustancialmente menor que el de la muestra completa (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>)— indica que los totales de referencia <span class="math inline">\(X_j\)</span> no son alcanzables dentro del rango de variación de las variables auxiliares observado en ese subconjunto de respondientes: por ejemplo, que un módulo particular no captó ningún respondiente en alguna combinación de categorías necesaria para cumplir simultáneamente las cinco restricciones. En ese caso, el criterio adoptado es reducir el conjunto de restricciones del modulo afectado —agregando categorías contiguas de la variable auxiliar problemática (por ejemplo, colapsando dos grupos de edad adyacentes) en lugar de omitir por completo esa variable auxiliar— y documentar explícitamente cuáles restricciones debieron colapsarse y en qué módulo.</p>
+</div>
+<div id="cumplimiento-de-restricciones" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Cumplimiento de restricciones<a href="sec-diagnostico-calibracion.html#cumplimiento-de-restricciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Una vez declarado convergente un modelo, se verifica —como control de calidad independiente del criterio de parada del algoritmo— que la muestra ponderada final reproduzca los totales de referencia dentro de un margen de redondeo despreciable, comparando, para cada una de las diecinueve categorías de la tabla de totales de referencia (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>), el total ponderado obtenido <span class="math inline">\(\sum_i w_i x_{ij}\)</span> contra <span class="math inline">\(X_j\)</span>. Esta verificación es la comprobación de que el resultado reportado del algoritmo corresponde efectivamente a la solución del problema de calibración, y no a una salida intermedia.</p>
+</div>
+<div id="distribución-de-los-factores-de-ajuste" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Distribución de los factores de ajuste<a href="sec-diagnostico-calibracion.html#distribuci%C3%B3n-de-los-factores-de-ajuste" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para cada modelo se calcula y se reporta la distribución completa de los factores de ajuste <span class="math inline">\(g_i = w_i/d_i\)</span> (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>): mínimo, percentiles 1, 5, 25, 50 (mediana), 75, 95 y 99, máximo, media y coeficiente de variación <span class="math inline">\(CV(g)\)</span>. Como la distancia de raking garantiza <span class="math inline">\(g_i&gt;0\)</span> para todo registro (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>), el diagnóstico no necesita verificar la ausencia de pesos negativos —una comprobación que sí sería indispensable bajo la distancia lineal—, y se concentra en la dispersión de <span class="math inline">\(g_i\)</span>: valores de <span class="math inline">\(g_i\)</span> muy alejados de 1 indican registros cuya combinación de variables auxiliares está sub- o sobrerrepresentada en la muestra respecto a la población de referencia, y que el algoritmo debe corregir con un ajuste desproporcionado.</p>
+</div>
+<div id="valores-extremos-y-límites-l_i-u_i" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Valores extremos y límites <span class="math inline">\(L_i, U_i\)</span><a href="sec-diagnostico-calibracion.html#valores-extremos-y-l%C3%ADmites-l_i-u_i" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Un factor de ajuste <span class="math inline">\(g_i\)</span> inusualmente grande incrementa la varianza del estimador ponderado sin una ganancia proporcional de reducción de sesgo, un efecto bien documentado en la literatura de recorte de pesos extremos (<em>weight trimming</em>) <span class="citation">(<a href="referencias.html#ref-Potter1990">Potter 1990</a>; <a href="referencias.html#ref-Fuller2009">Fuller 2009</a>)</span>. Siguiendo la decisión adoptada de no fijar los límites <span class="math inline">\(L_i, U_i\)</span> a priori (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>), el procedimiento para determinarlos empíricamente, una vez calculada la distribución de <span class="math inline">\(g_i\)</span> de la sección anterior, es:</p>
+<ol style="list-style-type: decimal">
+<li>Identificar como potencialmente extremos los registros cuyo <span class="math inline">\(g_i\)</span> cae por fuera del rango entre los percentiles 1 y 99 de la distribución observada en ese modelo.</li>
+<li>Evaluar, para el conjunto de indicadores de ese modelo (transversal o del módulo correspondiente), la sensibilidad del estimador y de su varianza replicada (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>) a la inclusión o exclusión de esos registros mediante un recorte (truncamiento de <span class="math inline">\(g_i\)</span> al percentil límite, con redistribución de la masa recortada entre el resto de la muestra para preservar <span class="math inline">\(\sum_i w_i = \sum_i d_i\)</span>).</li>
+<li>Adoptar como <span class="math inline">\(L_i, U_i\)</span> definitivos, para ese modelo, los percentiles de recorte que reducen de manera apreciable la varianza replicada sin desplazar el valor puntual del estimador más allá de su propio intervalo de incertidumbre sin recortar; si ningún recorte cumple esa condición, se documenta que el modelo no requiere truncamiento y <span class="math inline">\(g_i\)</span> se deja sin acotar.</li>
+</ol>
+<p>Este procedimiento se ejecuta de forma independiente para cada uno de los nueve modelos, porque la dispersión de <span class="math inline">\(g_i\)</span> —y, por tanto, la necesidad de truncamiento— depende del tamaño de muestra y de la composición de cada uno (<a href="sec-pesos-calibracion.html#sec-pesos-calibracion">17</a>).</p>
+</div>
+<div id="impacto-de-la-calibración-sobre-las-estimaciones" class="section level2 hasAnchor" number="18.5">
+<h2><span class="header-section-number">18.5</span> Impacto de la calibración sobre las estimaciones<a href="sec-diagnostico-calibracion.html#impacto-de-la-calibraci%C3%B3n-sobre-las-estimaciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El efecto de la calibración se evalúa comparando, para cada indicador, el estimador sin calibrar (con el peso de referencia <span class="math inline">\(d_i\)</span> únicamente) contra el estimador calibrado (con <span class="math inline">\(w_i\)</span> o <span class="math inline">\(w_i^{(m)}\)</span> según corresponda), y registrando:</p>
+<ul>
+<li>la magnitud del desplazamiento entre ambas estimaciones puntuales;</li>
+<li>la pérdida o ganancia de precisión atribuible a la ponderación, mediante el efecto de diseño por ponderación (<em>weighting design effect</em>) de <span class="citation">Kish (<a href="referencias.html#ref-Kish1965">1965</a>)</span>, extendido por <span class="citation">Chen y Rust (<a href="referencias.html#ref-ChenRust2017">2017</a>)</span>:</li>
+</ul>
+<p><span class="math display">\[
+DEFF_w = 1 + CV^2(w)
+\]</span></p>
+<p>donde <span class="math inline">\(CV(w)\)</span> es el coeficiente de variación de los pesos finales del modelo. Un <span class="math inline">\(DEFF_w\)</span> sustancialmente mayor que 1 indica que la calibración, aunque necesaria para corregir la composición de la muestra, incrementa la varianza del estimador respecto a un escenario hipotético de pesos iguales, y es la contraparte cuantitativa de la reducción de sesgo que motiva la calibración: ambos efectos se reportan conjuntamente, nunca por separado, para no sugerir que la calibración mejora la precisión sin condiciones.</p>
+</div>
+<div id="reporte-del-diagnóstico" class="section level2 hasAnchor" number="18.6">
+<h2><span class="header-section-number">18.6</span> Reporte del diagnóstico<a href="sec-diagnostico-calibracion.html#reporte-del-diagn%C3%B3stico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para cada uno de los nueve modelos, el diagnóstico de calibración se resume en una ficha con: tamaño de muestra del modelo (<span class="math inline">\(n\)</span> o <span class="math inline">\(n_m\)</span>), número de iteraciones hasta convergencia, discrepancia residual máxima, distribución de <span class="math inline">\(g_i\)</span> (percentiles listados arriba), límites <span class="math inline">\(L_i,U_i\)</span> adoptados y porcentaje de registros afectados por el truncamiento, y <span class="math inline">\(DEFF_w\)</span>. Esta ficha, aplicada a los resultados reales de la calibración, es el insumo con el que el capítulo de calidad estadística evalúa el desempeño global de la ponderación de la operación (<a href="#sec-calidad-estadistica"><strong>??</strong></a>).</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-pesos-calibracion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-limitaciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

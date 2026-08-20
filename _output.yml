@@ -1,0 +1,24 @@
+bookdown::gitbook:
+  css: [style.css, styles/msps.css]
+  split_by: chapter
+  split_bib: false
+  config:
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="./">ENUS 2026</a></li>
+      after: |
+        <li><a href="https://www.minsalud.gov.co" target="blank">Ministerio de Salud y Protección Social</a></li>
+    download: ["pdf", "docx"]
+    sharing: false
+bookdown::pdf_book:
+  includes:
+    in_header: styles/preamble.tex
+  latex_engine: xelatex
+  toc_depth: 3
+  number_sections: true
+  keep_tex: false
+bookdown::word_document2:
+  toc: true
+  number_sections: true
+  reference_docx: styles/msps_reference.docx

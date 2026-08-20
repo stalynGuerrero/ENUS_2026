@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 9 Variables de clasificación | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 9 Variables de clasificación | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 9 Variables de clasificación | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-muestreo-cuotas.html"/>
+<link rel="next" href="sec-relacion-cuestionario-cuotas.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,121 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-variables-clasificacion" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Capítulo 9</span> Variables de clasificación<a href="sec-variables-clasificacion.html#sec-variables-clasificacion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo consolida, en una sola matriz, todas las variables efectivamente utilizadas por ENUS 2026 para identificar, clasificar y encausar a un usuario, con su fuente, el momento del recorrido por <em>ClicSalud</em> en el que se obtiene y el uso que cumple dentro de la operación —cuota, ruta del cuestionario o calibración—, siguiendo la distinción ya establecida entre estas tres funciones (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>).</p>
+<div id="momento-de-captura-dentro-del-recorrido-del-usuario" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Momento de captura dentro del recorrido del usuario<a href="sec-variables-clasificacion.html#momento-de-captura-dentro-del-recorrido-del-usuario" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las variables se obtienen en tres momentos sucesivos y con dos mecanismos distintos:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Identificación (antes del cuestionario).</strong> El usuario reporta su documento de identificación y su EPS, y el sistema valida el documento contra la Base de Datos Única de Afiliados (BDUA) y confirma el número de contacto mediante un código enviado por SMS (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>). Estas variables se autorreportan y se validan contra un registro administrativo, pero no se completan automáticamente a partir de él.</li>
+<li><strong>Bloque de identificación y caracterización (inicio del árbol de decisión).</strong> El usuario responde, en un orden fijo, cinco preguntas de clasificación: sexo, grupo de edad, ubicación geográfica, zona y régimen de afiliación. A diferencia de la etapa anterior, estas cinco variables se <strong>autorreportan directamente como respuesta a una pregunta del cuestionario</strong>, sin validación posterior contra BDUA u otro registro administrativo dentro del recorrido del usuario.</li>
+<li><strong>Pregunta trazadora y gestión institucional (después de la identificación).</strong> El usuario reporta si ha utilizado servicios de salud recientemente y, de ser así, con qué tipo de entidad y qué tipo de servicio, lo que determina el módulo del cuestionario que responde (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>).</li>
+</ol>
+</div>
+<div id="matriz-de-variables" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Matriz de variables<a href="sec-variables-clasificacion.html#matriz-de-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Categorías</th>
+<th>Fuente</th>
+<th>Momento de obtención</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Documento de identificación</td>
+<td>Cédula de ciudadanía, cédula de extranjería y demás tipos habilitados en <em>ClicSalud</em></td>
+<td>Autorreporte, validado contra BDUA</td>
+<td>Identificación, antes del cuestionario</td>
+<td>Elegibilidad (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>); no es variable de clasificación</td>
+</tr>
+<tr class="even">
+<td>EPS</td>
+<td>Listado de EPS del SGSSS</td>
+<td>Autorreporte (selección de una lista)</td>
+<td>Identificación, antes del cuestionario</td>
+<td>Identificación del usuario; no es variable de cuota ni de calibración (<a href="sec-papel-eps-ips.html#sec-papel-eps-ips">7</a>)</td>
+</tr>
+<tr class="odd">
+<td>Sexo</td>
+<td>Femenino, Masculino</td>
+<td>Autorreporte (pregunta del árbol)</td>
+<td>Bloque de identificación y caracterización</td>
+<td>Cuota; variable auxiliar de calibración</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más</td>
+<td>Autorreporte, capturado directamente en rangos de 10 años (no como edad exacta)</td>
+<td>Bloque de identificación y caracterización</td>
+<td>Cuota; variable auxiliar de calibración</td>
+</tr>
+<tr class="odd">
+<td>Ubicación geográfica (región)</td>
+<td>Bogotá, Caribe, Central, Oriental, Orinoquía-Amazonía, Pacífica</td>
+<td>Autorreporte (pregunta del árbol, etiquetada “Departamento”, con las seis regiones como únicas opciones de respuesta)</td>
+<td>Bloque de identificación y caracterización</td>
+<td>Cuota; dominio geográfico de análisis; variable auxiliar de calibración</td>
+</tr>
+<tr class="even">
+<td>Zona</td>
+<td>Urbano, Rural</td>
+<td>Autorreporte (pregunta del árbol)</td>
+<td>Bloque de identificación y caracterización</td>
+<td>Cuota; variable auxiliar de calibración</td>
+</tr>
+<tr class="odd">
+<td>Régimen de afiliación</td>
+<td>Contributivo, Subsidiado</td>
+<td>Autorreporte (pregunta del árbol)</td>
+<td>Bloque de identificación y caracterización</td>
+<td>Cuota; variable auxiliar de calibración</td>
+</tr>
+<tr class="even">
+<td>Uso reciente de servicios de salud (pregunta trazadora)</td>
+<td>Sí, No</td>
+<td>Autorreporte</td>
+<td>Bloque de pregunta trazadora, tras la identificación y caracterización</td>
+<td>Determina la ruta del cuestionario; no es variable de cuota ni de calibración</td>
+</tr>
+<tr class="odd">
+<td>Entidad prestadora y tipo de servicio</td>
+<td>Nueve combinaciones posibles, correspondientes a los nueve módulos del cuestionario (<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>)</td>
+<td>Autorreporte</td>
+<td>Bloque de gestión institucional, tras respuesta afirmativa a la pregunta trazadora</td>
+<td>Determina el módulo final del cuestionario (ruta); no es variable de cuota ni de calibración</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="precisión-sobre-la-fuente-autorreporte-no-consulta-automática-a-bdua" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Precisión sobre la fuente: autorreporte, no consulta automática a BDUA<a href="sec-variables-clasificacion.html#precisi%C3%B3n-sobre-la-fuente-autorreporte-no-consulta-autom%C3%A1tica-a-bdua" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Aunque sexo, edad, régimen y ubicación geográfica son variables que, conceptualmente, también existen en los registros de la BDUA a nivel poblacional —de hecho, la BDUA es la fuente de los totales poblacionales usados tanto para calcular el tamaño de muestra como para los totales de referencia de la calibración (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>)—, el dato <strong>individual</strong> de cada encuestado en ENUS 2026 no se completa automáticamente a partir de una consulta a BDUA por persona: se obtiene mediante autorreporte directo, como respuesta a una pregunta del árbol de decisión. La validación contra BDUA que sí ocurre dentro del recorrido del usuario (<a href="sec-poblacion-objetivo.html#sec-poblacion-objetivo">5</a>) se limita a confirmar la condición de afiliación activa a partir del documento de identificación, y no se extiende a completar automáticamente sexo, edad, régimen o ubicación geográfica.</p>
+</div>
+<div id="precisión-sobre-la-granularidad-geográfica-región-no-departamento" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Precisión sobre la granularidad geográfica: región, no departamento<a href="sec-variables-clasificacion.html#precisi%C3%B3n-sobre-la-granularidad-geogr%C3%A1fica-regi%C3%B3n-no-departamento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La BDUA permite construir totales poblacionales con granularidad departamental (32 departamentos más el Distrito Capital). Sin embargo, la variable geográfica que efectivamente se captura en el cuestionario —la pregunta de ubicación geográfica del bloque de identificación y caracterización— solo distingue seis regiones, no los 32 departamentos individuales. En consecuencia, los totales de referencia que se utilicen para la calibración en esta variable deben construirse a la misma granularidad de seis regiones —agregando los departamentos de la BDUA según el esquema de regionalización adoptado (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>)—, y no a nivel departamental, porque no existe en el cuestionario un dato individual de departamento contra el cual calibrar una desagregación más fina.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-muestreo-cuotas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-relacion-cuestionario-cuotas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

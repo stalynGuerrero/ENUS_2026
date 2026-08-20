@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <title>Capítulo 17 Ponderación y calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
   <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
 Ministerio de Salud y Protección Social. Este libro bookdown deriva su
@@ -12,7 +12,7 @@ contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
 ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:title" content="Capítulo 17 Ponderación y calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
@@ -23,7 +23,7 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Introducción | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta name="twitter:title" content="Capítulo 17 Ponderación y calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
   
   <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
 — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
@@ -42,8 +42,8 @@ ver README.md sobre el flujo de sincronización entre ambos.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="sec-antecedentes.html"/>
+<link rel="prev" href="sec-procesamiento.html"/>
+<link rel="next" href="sec-diagnostico-calibracion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -336,27 +336,401 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sec-introduccion" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Introducción<a href="sec-introduccion.html#sec-introduccion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) cuenta con antecedentes en Colombia que incluyen ejercicios desarrollados por la Defensoría del Pueblo y posteriores mediciones institucionalizadas por el Ministerio de Salud y Protección Social. Estas experiencias han permitido generar evidencia sobre diferentes dimensiones de la relación de los usuarios con los servicios de salud, entre ellas el acceso, la oportunidad, el trato y la satisfacción <span class="citation">(<a href="referencias.html#ref-MSPS2017">Ministerio de Salud y Protección Social 2017</a>, <a href="referencias.html#ref-MSPS2018">2018</a>, <a href="referencias.html#ref-MSPS2020">2020</a>, <a href="referencias.html#ref-MSPS2022">2022</a>, <a href="referencias.html#ref-MSPS2023">2023</a>)</span>. La <strong>Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</strong> se desarrolla en continuidad con estos antecedentes y busca fortalecer la generación sistemática de información sobre la experiencia de los usuarios con los servicios de salud que reciben.</p>
-<p>La experiencia reportada por los usuarios constituye una fuente de información complementaria a los registros administrativos y a otros mecanismos de seguimiento del sistema de salud. Su medición permite identificar diferencias en la forma en que los usuarios acceden a los servicios, reciben atención, interactúan con las instituciones y valoran distintos aspectos del proceso de atención. En este sentido, la información obtenida mediante la ENUS constituye un insumo para el seguimiento y análisis de las condiciones de atención y para apoyar los procesos de evaluación y toma de decisiones en el sector salud.</p>
-<p>La ENUS 2026 se estructura a partir de un cuestionario diseñado para recoger información sobre las diferentes dimensiones de la experiencia de los usuarios. La aplicación del instrumento se realiza mediante <strong>ClicSalud</strong>, herramienta de recolección en la que se implementan las preguntas, validaciones y reglas de navegación. La secuencia de aplicación se encuentra definida mediante un árbol de decisión que establece las condiciones de entrada, los saltos y las rutas que debe seguir cada participante de acuerdo con sus características y respuestas. Esta estructura permite que no todos los participantes respondan necesariamente el mismo conjunto de preguntas y que la información obtenida corresponda a la ruta aplicable a cada caso.</p>
-<p>La captación de participantes se desarrolla mediante un mecanismo de <strong>muestreo por cuotas</strong>, en el que las EPS e IPS participantes actúan como canales institucionales de promoción y captación de usuarios. La clasificación de los participantes y el control de las cuotas se realizan de acuerdo con las variables y categorías definidas para la operación. Este procedimiento determina la composición objetivo de la muestra y constituye un componente central del diseño de la encuesta, por lo que sus características, reglas de asignación y mecanismos de control se documentan de manera específica.</p>
-<p>Una vez recolectada y validada la información, se conforma la base analítica sobre la cual se aplican los procedimientos de ponderación y <strong>calibración por entropía</strong>. Estos procedimientos permiten incorporar información auxiliar y ajustar los pesos de las observaciones de acuerdo con los totales de referencia definidos para la operación. A partir de los pesos calibrados se obtienen los estimadores de los indicadores de interés y se aplican los procedimientos establecidos para evaluar su incertidumbre y calidad estadística.</p>
-<p>El presente <strong>Documento Metodológico</strong> describe de manera integrada los elementos que sustentan la ENUS 2026. En particular, documenta la población objetivo y las unidades de observación, el mecanismo de captación y clasificación de los participantes, el diseño y control de las cuotas, la estructura y aplicación del cuestionario, el árbol de decisión y sus rutas, el procesamiento y validación de la información, la construcción y calibración de los pesos, la estimación de los indicadores y los procedimientos para evaluar su incertidumbre y calidad.</p>
-<p>El documento mantiene la correspondencia entre los diferentes componentes de la operación. Para ello, se establece la trazabilidad entre los objetivos de medición, las dimensiones e indicadores, las variables observadas, las preguntas del cuestionario, las rutas de aplicación, la base analítica y los procedimientos de estimación. Esta trazabilidad permite relacionar los resultados estadísticos con su origen dentro del instrumento y con las transformaciones realizadas durante el procesamiento y análisis de la información.</p>
-<p>La organización del documento sigue la secuencia metodológica de la operación. Inicialmente se presenta la identidad y caracterización de la ENUS 2026 y se establece su marco general. Posteriormente se describen la población objetivo, el diseño de la encuesta, el mecanismo de captación, el instrumento de recolección y la estructura lógica del cuestionario. A continuación se desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. Finalmente, se presentan las principales limitaciones de la operación y los anexos técnicos que contienen las especificaciones detalladas del cuestionario, el árbol de decisión, las cuotas, los indicadores y las matrices de trazabilidad.</p>
-<p>La elaboración del documento se realiza a partir de los insumos metodológicos, operativos y técnicos vigentes de la ENUS 2026. Las decisiones metodológicas se documentan de manera explícita y, cuando la información disponible no permite establecer una definición, esta se identifica como <strong>pendiente de definición</strong>, evitando incorporar supuestos que no hayan sido establecidos formalmente para la operación.</p>
-<p>En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se obtiene y procesa la información y cómo se transforma la información recolectada en resultados estadísticos.</p>
+<div id="sec-pesos-calibracion" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">Capítulo 17</span> Ponderación y calibración<a href="sec-pesos-calibracion.html#sec-pesos-calibracion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo documenta, con el detalle matemático completo, el procedimiento de ponderación de ENUS 2026: el peso de referencia con el que entra cada registro al proceso de estimación, la familia de distancias de calibración y la que efectivamente se adopta, la solución formal del problema de optimización y el algoritmo con el que esa solución se calcula, las variables auxiliares y sus totales poblacionales de referencia, y el procedimiento de replicación con el que se estima la incertidumbre de los pesos calibrados. La calibración es, en un diseño de captación por cuotas como el de ENUS 2026, el mecanismo formal que sustituye a la expansión probabilística clásica.</p>
+<div id="peso-de-referencia" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> Peso de referencia<a href="sec-pesos-calibracion.html#peso-de-referencia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El mecanismo de selección de usuarios dentro de una celda de cuota no incluye un paso de selección aleatoria: la participación depende de que el usuario se identifique en <em>ClicSalud</em>, sea clasificado en una celda de cuota y complete el cuestionario, sin que exista un sorteo, un listado de marco muestral individual ni un registro de intentos no exitosos dentro de la celda (<a href="sec-mecanismo-seleccion.html#sec-mecanismo-seleccion">11</a>). En consecuencia, no existe una probabilidad de inclusión individual <span class="math inline">\(\pi_i\)</span> que pueda estimarse a partir del diseño, y el peso de diseño clásico <span class="math inline">\(d_i = 1/\pi_i\)</span> <span class="citation">(<a href="referencias.html#ref-HorvitzThompson1952">Horvitz y Thompson 1952</a>; <a href="referencias.html#ref-SarndalSwenssonWretman1992">Särndal et al. 1992</a>)</span> no tiene un valor definido para ENUS 2026.</p>
+<p>Por esta razón, se adopta como peso de referencia:</p>
+<p><span class="math display">\[
+d_i = 1 \qquad \forall i \in s
+\]</span></p>
+<p>Este valor no debe interpretarse como el inverso de una probabilidad de inclusión, sino como el punto de partida neutro del problema de calibración: todos los registros observados entran al ajuste con la misma ponderación inicial, y es la calibración —no el peso de referencia— la que introduce la información poblacional que corrige la composición de la muestra. Este uso de un peso de referencia uniforme como punto de partida de la calibración, sin que provenga de un diseño probabilístico, sigue el tratamiento que la literatura reciente de calibración por entropía generalizada da a las muestras voluntarias y a los esquemas de captación no probabilística <span class="citation">(<a href="referencias.html#ref-KwonKimQiu2025">Kwon et al. 2025</a>; <a href="referencias.html#ref-ChenLiWu2018">Chen et al. 2018</a>; <a href="referencias.html#ref-ElliottValliant2017">Elliott y Valliant 2017</a>)</span>.</p>
+</div>
+<div id="familia-de-distancias-de-calibración" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> Familia de distancias de calibración<a href="sec-pesos-calibracion.html#familia-de-distancias-de-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El problema general de calibración, formalizado por <span class="citation">Deville y Särndal (<a href="referencias.html#ref-DevilleSarndal1992">1992</a>)</span>, busca pesos finales <span class="math inline">\(w_i\)</span> que minimicen una medida de distancia agregada respecto al peso de referencia <span class="math inline">\(d_i\)</span>:</p>
+<p><span class="math display">\[
+\min_{\mathbf w} \sum_{i \in s} d_i \, G\!\left(\frac{w_i}{d_i}\right)
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s} w_i \, x_{ij} = X_j \quad (j = 1, \dots, J)
+\]</span></p>
+<p>donde <span class="math inline">\(G(\cdot)\)</span> es una función de distancia estrictamente convexa, con mínimo en <span class="math inline">\(G(1)=0\)</span>, y <span class="math inline">\(x_{ij}\)</span> es el valor de la variable auxiliar <span class="math inline">\(j\)</span> para el registro <span class="math inline">\(i\)</span>. La elección de <span class="math inline">\(G(\cdot)\)</span> define distintos métodos de calibración, todos miembros de la misma familia <span class="citation">(<a href="referencias.html#ref-DevilleSarndal1992">Deville y Särndal 1992</a>; <a href="referencias.html#ref-CressieRead1984">Cressie y Read 1984</a>; <a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>)</span>:</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Método</th>
+<th><span class="math inline">\(G(x)\)</span></th>
+<th>Solución <span class="math inline">\(w_i/d_i\)</span></th>
+<th>Signo de <span class="math inline">\(w_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lineal (mínimos cuadrados / <em>regresión generalizada</em>)</td>
+<td><span class="math inline">\(\tfrac{1}{2}(x-1)^2\)</span></td>
+<td><span class="math inline">\(1 + \boldsymbol\lambda&#39;\mathbf x_i\)</span></td>
+<td>puede ser negativo</td>
+</tr>
+<tr class="even">
+<td>Raking / entropía (Kullback–Leibler)</td>
+<td><span class="math inline">\(x\log x - x + 1\)</span></td>
+<td><span class="math inline">\(\exp(\boldsymbol\lambda&#39;\mathbf x_i)\)</span></td>
+<td>siempre positivo</td>
+</tr>
+<tr class="odd">
+<td>Logística acotada</td>
+<td>forma cerrada entre <span class="math inline">\(L\)</span> y <span class="math inline">\(U\)</span></td>
+<td>acotado entre <span class="math inline">\(L\)</span> y <span class="math inline">\(U\)</span></td>
+<td>siempre positivo, acotado</td>
+</tr>
+</tbody>
+</table>
+<p>ENUS 2026 adopta la distancia de <strong>raking / entropía</strong> (Kullback–Leibler):</p>
+<p><span class="math display">\[
+G\!\left(\frac{w_i}{d_i}\right) = \frac{w_i}{d_i}\log\!\left(\frac{w_i}{d_i}\right) - \frac{w_i}{d_i} + 1
+\]</span></p>
+<p>lo que, con <span class="math inline">\(d_i=1\)</span>, reduce el problema de calibración a:</p>
+<p><span class="math display">\[
+\min_{\mathbf w} \sum_{i \in s} w_i \log\left(\frac{w_i}{d_i}\right)
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s} w_i \, x_{ij} = X_j \qquad j = 1, \dots, J
+\]</span></p>
+<p>La razón de esta elección, frente a la alternativa lineal, es que la distancia de raking garantiza <span class="math inline">\(w_i&gt;0\)</span> para cualquier valor de <span class="math inline">\(\boldsymbol\lambda\)</span>, mientras que la distancia lineal puede producir pesos negativos cuando la muestra está muy desbalanceada frente a los totales de referencia <span class="citation">(<a href="referencias.html#ref-DevilleSarndal1992">Deville y Särndal 1992</a>; <a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>)</span> —un riesgo real en un diseño por cuotas, en el que la composición de la muestra depende de la captación efectiva y no de un sorteo controlado. Esta misma formulación de entropía es, además, la que permite incorporar de manera coherente un peso de referencia <span class="math inline">\(d_i=1\)</span> que no proviene de una probabilidad de inclusión: el desarrollo de calibración por entropía generalizada para muestras no probabilísticas <span class="citation">(<a href="referencias.html#ref-KwonKimQiu2025">Kwon et al. 2025</a>; <a href="referencias.html#ref-ChenLiWu2018">Chen et al. 2018</a>)</span> muestra que la validez del ajuste no depende de que <span class="math inline">\(d_i\)</span> represente una expansión de diseño, sino de que las variables auxiliares <span class="math inline">\(x_{ij}\)</span> capturen adecuadamente la composición de la población y de que se sostenga el supuesto de que la participación, condicionada a esas variables auxiliares, sea independiente de las respuestas de interés:</p>
+<p><span class="math display">\[
+Y_i \perp S_i \mid X_i
+\]</span></p>
+<p>Este supuesto de ignorabilidad condicional —no verificable directamente con los insumos disponibles— y sus implicaciones se documentan como limitación de la operación (<a href="sec-limitaciones.html#sec-limitaciones">19</a>).</p>
+</div>
+<div id="solución-del-problema-de-calibración" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Solución del problema de calibración<a href="sec-pesos-calibracion.html#soluci%C3%B3n-del-problema-de-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El problema se resuelve mediante el lagrangiano, introduciendo un multiplicador <span class="math inline">\(\lambda_j\)</span> por cada restricción <span class="math inline">\(j\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{L}(\mathbf w, \boldsymbol\lambda) = \sum_{i \in s} d_i \, G\!\left(\frac{w_i}{d_i}\right) - \sum_{j=1}^{J} \lambda_j \left( \sum_{i \in s} w_i x_{ij} - X_j \right)
+\]</span></p>
+<p>Derivando respecto a <span class="math inline">\(w_i\)</span> e igualando a cero:</p>
+<p><span class="math display">\[
+G&#39;\!\left(\frac{w_i}{d_i}\right) = \sum_{j=1}^{J} \lambda_j x_{ij} = \mathbf x_i&#39; \boldsymbol\lambda
+\]</span></p>
+<p>Para la distancia de raking, <span class="math inline">\(G&#39;(x) = \log(x)\)</span>, de modo que:</p>
+<p><span class="math display">\[
+\log\!\left(\frac{w_i}{d_i}\right) = \mathbf x_i&#39; \boldsymbol\lambda
+\quad\Longrightarrow\quad
+\boxed{w_i = d_i \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda\right)}
+\]</span></p>
+<p>El <strong>factor de calibración</strong> de cada registro es entonces:</p>
+<p><span class="math display">\[
+g_i = \frac{w_i}{d_i} = \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda\right)
+\]</span></p>
+<p>que, por construcción, es siempre estrictamente positivo —la propiedad que motivó, en la sección anterior, la elección de la distancia de raking sobre la distancia lineal. El vector <span class="math inline">\(\boldsymbol\lambda\)</span> que hace cumplir simultáneamente las <span class="math inline">\(J\)</span> restricciones se obtiene resolviendo el sistema de ecuaciones no lineales:</p>
+<p><span class="math display">\[
+\sum_{i \in s} d_i \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda\right) x_{ij} = X_j \qquad j = 1, \dots, J
+\]</span></p>
+<p>Dado que <span class="math inline">\(G(\cdot)\)</span> es estrictamente convexa, el problema de calibración tiene solución única siempre que exista un <span class="math inline">\(\boldsymbol\lambda\)</span> que satisfaga el sistema anterior (es decir, siempre que los totales de referencia <span class="math inline">\(X_j\)</span> sean alcanzables dentro del rango de variación de <span class="math inline">\(\mathbf x_i\)</span> observado en la muestra) <span class="citation">(<a href="referencias.html#ref-DevilleSarndal1992">Deville y Särndal 1992</a>; <a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>)</span>.</p>
+</div>
+<div id="procedimiento-de-estimación-algoritmo-iterativo" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">17.4</span> Procedimiento de estimación: algoritmo iterativo<a href="sec-pesos-calibracion.html#procedimiento-de-estimaci%C3%B3n-algoritmo-iterativo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El sistema de ecuaciones que define <span class="math inline">\(\boldsymbol\lambda\)</span> no tiene, en general, solución cerrada, porque <span class="math inline">\(\exp(\cdot)\)</span> es no lineal en <span class="math inline">\(\boldsymbol\lambda\)</span>. Se resuelve numéricamente mediante el algoritmo de Newton–Raphson, que es también la base del procedimiento de <em>raking</em> generalizado (<em>generalized raking procedures</em>, GENRAKE) descrito por <span class="citation">Deville et al. (<a href="referencias.html#ref-deville1993generalized">1993</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Inicialización:</strong> <span class="math inline">\(\boldsymbol\lambda^{(0)} = \mathbf 0\)</span>, de modo que <span class="math inline">\(w_i^{(0)} = d_i\)</span>.</li>
+<li><strong>Actualización:</strong> en la iteración <span class="math inline">\(t\)</span>, se calcula el vector de discrepancias respecto a los totales de referencia y la matriz de segundas derivadas (hessiano):</li>
+</ol>
+<p><span class="math display">\[
+\mathbf u^{(t)} = \sum_{i \in s} w_i^{(t)} \mathbf x_i - \mathbf X
+\qquad\qquad
+\mathbf H^{(t)} = \sum_{i \in s} w_i^{(t)} \, \mathbf x_i \mathbf x_i&#39;
+\]</span></p>
+<p>y se actualiza el multiplicador:</p>
+<p><span class="math display">\[
+\boldsymbol\lambda^{(t+1)} = \boldsymbol\lambda^{(t)} - \left(\mathbf H^{(t)}\right)^{-1} \mathbf u^{(t)}
+\]</span></p>
+<p><span class="math display">\[
+w_i^{(t+1)} = d_i \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda^{(t+1)}\right)
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Convergencia:</strong> el algoritmo se detiene cuando la discrepancia máxima entre la suma ponderada y el total de referencia, para todas las variables auxiliares, cae por debajo de una tolerancia predefinida:</li>
+</ol>
+<p><span class="math display">\[
+\max_{j} \left| \sum_{i \in s} w_i^{(t)} x_{ij} - X_j \right| &lt; \varepsilon
+\]</span></p>
+<p>Cuando las variables auxiliares <span class="math inline">\(x_{ij}\)</span> son indicadoras de categorías (como sexo, grupo de edad, región, régimen y zona en ENUS 2026), este procedimiento equivale exactamente al ajuste iterativo proporcional multivariado (<em>iterative proportional fitting</em>, IPF) sobre las categorías cruzadas, con la ventaja de admitir restricciones sobre variables continuas o combinaciones de variables en la misma formulación <span class="citation">(<a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>; <a href="referencias.html#ref-Fuller2009">Fuller 2009</a>)</span>.</p>
+</div>
+<div id="variables-auxiliares" class="section level2 hasAnchor" number="17.5">
+<h2><span class="header-section-number">17.5</span> Variables auxiliares<a href="sec-pesos-calibracion.html#variables-auxiliares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las variables auxiliares de la calibración son las mismas cinco dimensiones de clasificación que ya se usan para construir las cuotas de captación (<a href="sec-variables-clasificacion.html#sec-variables-clasificacion">9</a>, <a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>):</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable auxiliar</th>
+<th>Categorías</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sexo</td>
+<td>Femenino, Masculino</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más</td>
+</tr>
+<tr class="odd">
+<td>Región</td>
+<td>Bogotá, Caribe, Central, Oriental, Pacífica, Orinoquía-Amazonía</td>
+</tr>
+<tr class="even">
+<td>Régimen de afiliación</td>
+<td>Contributivo, Subsidiado</td>
+</tr>
+<tr class="odd">
+<td>Zona</td>
+<td>Urbano, Rural</td>
+</tr>
+</tbody>
+</table>
+<p>Que la calibración use las mismas variables que la cuota no las vuelve equivalentes: la cuota fija un mínimo de captación por celda durante el trabajo de campo, mientras que la calibración impone una igualdad exacta entre la suma ponderada de la muestra y el total poblacional una vez cerrada la recolección. La distinción conceptual completa entre cuota, estrato, dominio y variable de calibración se desarrolla en el capítulo siguiente (<a href="#sec-distincion-cuotas-calibracion"><strong>??</strong></a>).</p>
+</div>
+<div id="totales-de-referencia" class="section level2 hasAnchor" number="17.6">
+<h2><span class="header-section-number">17.6</span> Totales de referencia<a href="sec-pesos-calibracion.html#totales-de-referencia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los totales poblacionales <span class="math inline">\(X_j\)</span> se obtienen de la misma base de afiliados de la BDUA con corte a marzo de 2026 que ya se usó para calcular el tamaño de muestra y para tabular las 336 celdas de cuota (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>): un registro de afiliados por municipio, EPS, sexo, grupo de edad y régimen, con 736 153 combinaciones y 50 168 746 afiliados en total a nivel nacional. Al agregar ese mismo registro por cada una de las cinco variables auxiliares por separado se obtienen los totales marginales de referencia:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Categoría</th>
+<th align="right"><span class="math inline">\(X_j\)</span> (afiliados BDUA marzo 2026)</th>
+<th align="right">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sexo</td>
+<td>Femenino</td>
+<td align="right">25 775 997</td>
+<td align="right">51,4 %</td>
+</tr>
+<tr class="even">
+<td>Sexo</td>
+<td>Masculino</td>
+<td align="right">24 392 749</td>
+<td align="right">48,6 %</td>
+</tr>
+<tr class="odd">
+<td>Grupo de edad</td>
+<td>00-09</td>
+<td align="right">5 744 359</td>
+<td align="right">11,4 %</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>10-19</td>
+<td align="right">7 461 675</td>
+<td align="right">14,9 %</td>
+</tr>
+<tr class="odd">
+<td>Grupo de edad</td>
+<td>20-29</td>
+<td align="right">7 965 209</td>
+<td align="right">15,9 %</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>30-39</td>
+<td align="right">7 926 389</td>
+<td align="right">15,8 %</td>
+</tr>
+<tr class="odd">
+<td>Grupo de edad</td>
+<td>40-49</td>
+<td align="right">6 751 667</td>
+<td align="right">13,5 %</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>50-59</td>
+<td align="right">5 600 016</td>
+<td align="right">11,2 %</td>
+</tr>
+<tr class="odd">
+<td>Grupo de edad</td>
+<td>60 o más</td>
+<td align="right">8 719 431</td>
+<td align="right">17,4 %</td>
+</tr>
+<tr class="even">
+<td>Región</td>
+<td>Bogotá</td>
+<td align="right">7 780 253</td>
+<td align="right">15,5 %</td>
+</tr>
+<tr class="odd">
+<td>Región</td>
+<td>Caribe</td>
+<td align="right">11 666 255</td>
+<td align="right">23,3 %</td>
+</tr>
+<tr class="even">
+<td>Región</td>
+<td>Central</td>
+<td align="right">12 414 228</td>
+<td align="right">24,7 %</td>
+</tr>
+<tr class="odd">
+<td>Región</td>
+<td>Oriental</td>
+<td align="right">9 033 646</td>
+<td align="right">18,0 %</td>
+</tr>
+<tr class="even">
+<td>Región</td>
+<td>Pacífica</td>
+<td align="right">7 846 342</td>
+<td align="right">15,6 %</td>
+</tr>
+<tr class="odd">
+<td>Región</td>
+<td>Orinoquía-Amazonía</td>
+<td align="right">1 428 022</td>
+<td align="right">2,8 %</td>
+</tr>
+<tr class="even">
+<td>Régimen</td>
+<td>Contributivo</td>
+<td align="right">23 224 623</td>
+<td align="right">46,3 %</td>
+</tr>
+<tr class="odd">
+<td>Régimen</td>
+<td>Subsidiado</td>
+<td align="right">26 944 123</td>
+<td align="right">53,7 %</td>
+</tr>
+<tr class="even">
+<td>Zona</td>
+<td>Urbano</td>
+<td align="right">40 083 538</td>
+<td align="right">79,9 %</td>
+</tr>
+<tr class="odd">
+<td>Zona</td>
+<td>Rural</td>
+<td align="right">10 085 208</td>
+<td align="right">20,1 %</td>
+</tr>
+</tbody>
+</table>
+<p>Cada fila de la tabla es una restricción <span class="math inline">\(\sum_{i\in s} w_i x_{ij} = X_j\)</span> del problema de calibración; los totales por región y por régimen son, además, los mismos que sustentan la tabla de tamaño de muestra por región × régimen del capítulo de diseño muestral (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>), lo que garantiza que el universo frente al cual se evalúa la calibración es idéntico al universo frente al cual se calculó el tamaño de muestra y se asignaron las cuotas.</p>
+</div>
+<div id="multiplicidad-de-modelos-peso-transversal-y-pesos-por-módulo" class="section level2 hasAnchor" number="17.7">
+<h2><span class="header-section-number">17.7</span> Multiplicidad de modelos: peso transversal y pesos por módulo<a href="sec-pesos-calibracion.html#multiplicidad-de-modelos-peso-transversal-y-pesos-por-m%C3%B3dulo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las secciones anteriores formulan la calibración como si existiera un único modelo, resuelto una sola vez sobre toda la muestra. Esto es válido para las variables comunes a los ocho módulos, pero no para el cuestionario completo: cada usuario diligencia un único formulario, preasignado entre ocho módulos independientes, en el que solo la Sección A (identificación) y la Sección B (catorce variables trazadoras) son comunes a los ocho; la Sección C —y, con ella, la mayoría de las preguntas e indicadores de contenido— es específica del módulo asignado (<a href="sec-instrumento-recoleccion.html#sec-instrumento-recoleccion">13</a>, <a href="sec-procesamiento.html#sec-procesamiento">16</a>). Además, la regla que asigna a cada usuario su módulo no está documentada como un mecanismo aleatorio condicional a sexo, edad, región, régimen o zona (<a href="sec-reconciliacion-estructuras.html#sec-reconciliacion-estructuras">15</a>).</p>
+<p>Esto tiene una consecuencia directa sobre la calibración: un único modelo, calibrado sobre el total de la muestra (<span class="math inline">\(n=7\,876\)</span> o el tamaño efectivamente logrado), garantiza por construcción que la suma ponderada del conjunto completo de respondientes reproduzca los totales <span class="math inline">\(X_j\)</span> de la tabla anterior, pero <strong>no garantiza que la submuestra de cada módulo, tomada por separado, también los reproduzca</strong>. Si la composición demográfica de los usuarios preasignados a un módulo difiere sistemáticamente de la del conjunto completo —algo que la regla de asignación no permite descartar—, un indicador construido únicamente con los respondientes de ese módulo y ponderado con el peso del modelo transversal quedaría sesgado en relación con esa misma estructura poblacional, aun cuando el modelo transversal converja correctamente a nivel agregado.</p>
+<p>Por esta razón, ENUS 2026 no ejecuta un único modelo de calibración, sino <strong>nueve, independientes entre sí</strong>:</p>
+<ul>
+<li><strong>Un modelo transversal</strong>, calibrado sobre el conjunto completo de respondientes <span class="math inline">\(s\)</span>, sujeto a los totales de referencia <span class="math inline">\(X_j\)</span> de la tabla anterior. Produce el peso <span class="math inline">\(w_i\)</span> que se usa para los indicadores construidos a partir de la Sección A y la Sección B (las catorce trazadoras, comunes a los ocho módulos).</li>
+<li><strong>Ocho modelos módulo-específicos</strong>, uno por cada módulo <span class="math inline">\(m=1,\dots,8\)</span>, calibrado cada uno únicamente sobre el subconjunto <span class="math inline">\(s_m \subset s\)</span> de respondientes preasignados a ese módulo (<span class="math inline">\(n_m = |s_m|\)</span>), sujeto a los <strong>mismos</strong> totales de referencia <span class="math inline">\(X_j\)</span> de la tabla anterior —porque no existe, en los insumos disponibles, una subpoblación de referencia distinta de la BDUA nacional para “usuarios del módulo <span class="math inline">\(m\)</span>”—. Cada uno produce un peso <span class="math inline">\(w_i^{(m)}\)</span>, propio de ese modelo, que se usa únicamente para los indicadores construidos a partir de la Sección C de ese módulo.</li>
+</ul>
+<p>Formalmente, para el módulo <span class="math inline">\(m\)</span> el problema es el mismo de las secciones anteriores, resuelto sobre <span class="math inline">\(s_m\)</span> en lugar de sobre <span class="math inline">\(s\)</span>:</p>
+<p><span class="math display">\[
+\min_{\mathbf w^{(m)}} \sum_{i \in s_m} d_i \log\!\left(\frac{w_i^{(m)}}{d_i}\right)
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s_m} w_i^{(m)} \, x_{ij} = X_j \qquad j=1,\dots,J
+\]</span></p>
+<p>con solución <span class="math inline">\(w_i^{(m)} = d_i \exp(\mathbf x_i&#39; \boldsymbol\lambda^{(m)})\)</span>, donde <span class="math inline">\(\boldsymbol\lambda^{(m)}\)</span> se obtiene resolviendo, de manera independiente para cada módulo, el mismo algoritmo de Newton–Raphson de la sección anterior.</p>
+<p>Como consecuencia, cada respondiente queda representado en la base analítica por <strong>dos pesos calibrados distintos y no intercambiables</strong>: <span class="math inline">\(w_i\)</span> (del modelo transversal, para sus respuestas de la Sección B) y <span class="math inline">\(w_i^{(m)}\)</span> (del modelo de su propio módulo <span class="math inline">\(m\)</span>, para sus respuestas de la Sección C), obtenidos de dos ejecuciones separadas del mismo procedimiento de calibración, sobre universos muestrales de tamaño distinto (<span class="math inline">\(n\)</span> frente a <span class="math inline">\(n_m\)</span>) y con sistemas de multiplicadores <span class="math inline">\(\boldsymbol\lambda\)</span> propios. Cuál de los dos pesos corresponde usar depende del indicador —criterio que se documenta, indicador por indicador, en la columna “Peso” de la matriz de indicadores (capítulo de indicadores)—. Dado que <span class="math inline">\(n_m\)</span> varía entre módulos según la regla de preasignación (<a href="sec-diseno-muestral.html#sec-diseno-muestral">6</a>, <a href="sec-flujo-rutas.html#sec-flujo-rutas">14</a>), la cantidad de observaciones disponible para satisfacer las <span class="math inline">\(J\)</span> restricciones también varía por módulo; ese punto se retoma en el diagnóstico de calibración (<a href="sec-diagnostico-calibracion.html#sec-diagnostico-calibracion">18</a>).</p>
+<p>La estimación de la incertidumbre descrita más adelante en este capítulo se ejecuta, en consecuencia, también nueve veces —una para el peso transversal y una para cada peso módulo-específico—, no una sola vez sobre un peso final único.</p>
+</div>
+<div id="diferencia-entre-control-de-cuotas-y-calibración" class="section level2 hasAnchor" number="17.8">
+<h2><span class="header-section-number">17.8</span> Diferencia entre control de cuotas y calibración<a href="sec-pesos-calibracion.html#diferencia-entre-control-de-cuotas-y-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La calibración y la cuota comparten variables auxiliares, pero operan en momentos y con lógicas distintas: la cuota controla, durante la recolección, que ninguna celda quede vacía o subrepresentada (una restricción de mínimo, <span class="math inline">\(n_h \geq 10\)</span>); la calibración, una vez cerrada la recolección, ajusta los pesos para que la muestra completa reproduzca exactamente los totales poblacionales de la tabla anterior (una restricción de igualdad). La distinción conceptual completa entre cuota, estrato, dominio y variable de calibración —incluyendo por qué la cuota no es un estrato de diseño probabilístico— se desarrolla en el capítulo siguiente (<a href="#sec-distincion-cuotas-calibracion"><strong>??</strong></a>).</p>
+</div>
+<div id="estimación-de-la-incertidumbre-replicación-de-pesos-calibrados" class="section level2 hasAnchor" number="17.9">
+<h2><span class="header-section-number">17.9</span> Estimación de la incertidumbre: replicación de pesos calibrados<a href="sec-pesos-calibracion.html#estimaci%C3%B3n-de-la-incertidumbre-replicaci%C3%B3n-de-pesos-calibrados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dado que ENUS 2026 no tiene probabilidades de inclusión definidas, la varianza de un estimador calibrado no puede obtenerse mediante las fórmulas clásicas de varianza bajo diseño (basadas en <span class="math inline">\(\pi_{ik}\)</span>). El procedimiento adoptado es la <strong>replicación de pesos calibrados por entropía</strong>: generar réplicas de la muestra, repetir sobre cada réplica el proceso completo de ponderación y calibración ya descrito en este capítulo, y usar la variabilidad entre las estimaciones replicadas como medida de la incertidumbre del estimador <span class="citation">(<a href="referencias.html#ref-RaoWu1988">Rao y Wu 1988</a>; <a href="referencias.html#ref-Wolter2007">Wolter 2007</a>; <a href="referencias.html#ref-EfronTibshirani1993">Efron y Tibshirani 1993</a>; <a href="referencias.html#ref-Fuller2009">Fuller 2009</a>)</span>.</p>
+<p>Este procedimiento se aplica de manera independiente a cada uno de los nueve modelos de calibración descritos en la sección anterior: una vez sobre la muestra completa <span class="math inline">\(s\)</span> para obtener la incertidumbre de los indicadores transversales, y una vez sobre cada submuestra <span class="math inline">\(s_m\)</span> para obtener la incertidumbre de los indicadores propios del módulo <span class="math inline">\(m\)</span>. Para no repetir la notación nueve veces, las fórmulas siguientes se presentan para un modelo genérico, sobre una muestra genérica que se denota <span class="math inline">\(s\)</span> (que representa, según el modelo, a la muestra completa o a la submuestra de un módulo) y un peso de referencia genérico <span class="math inline">\(d_i\)</span> (que representa, según el modelo, a <span class="math inline">\(d_i=1\)</span> o a la <span class="math inline">\(d_i\)</span> del respondiente dentro de su módulo).</p>
+<div id="generación-de-réplicas" class="section level3 hasAnchor" number="17.9.1">
+<h3><span class="header-section-number">17.9.1</span> Generación de réplicas<a href="sec-pesos-calibracion.html#generaci%C3%B3n-de-r%C3%A9plicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sea <span class="math inline">\(h = 1,\dots,336\)</span> el índice de las celdas de cuota (<a href="sec-muestreo-cuotas.html#sec-muestreo-cuotas">8</a>) y <span class="math inline">\(n_h\)</span> el número de encuestas efectivamente observadas en la celda <span class="math inline">\(h\)</span> <strong>dentro de la muestra que se está replicando</strong> (<span class="math inline">\(s\)</span> o <span class="math inline">\(s_m\)</span> según el modelo), con <span class="math inline">\(n = \sum_h n_h\)</span>. Para cada réplica <span class="math inline">\(b = 1,\dots,B\)</span>, dentro de cada celda <span class="math inline">\(h\)</span> se extrae, con reemplazo, una muestra aleatoria de tamaño <span class="math inline">\(n_h\)</span> de las <span class="math inline">\(n_h\)</span> unidades observadas en esa celda. Sea <span class="math inline">\(m_i^{(b)}\)</span> el número de veces que la unidad <span class="math inline">\(i\)</span> resulta seleccionada en ese remuestreo; el peso de referencia replicado es:</p>
+<p><span class="math display">\[
+d_i^{(b)} = m_i^{(b)}
+\]</span></p>
+<p>La celda de cuota se usa aquí únicamente como partición operativa de remuestreo —para que cada réplica conserve la misma distribución de captación observada por celda— y no como un estrato de diseño probabilístico: esa distinción se mantiene también en este procedimiento (<a href="#sec-distincion-cuotas-calibracion"><strong>??</strong></a>).</p>
+</div>
+<div id="recalibración-de-cada-réplica" class="section level3 hasAnchor" number="17.9.2">
+<h3><span class="header-section-number">17.9.2</span> Recalibración de cada réplica<a href="sec-pesos-calibracion.html#recalibraci%C3%B3n-de-cada-r%C3%A9plica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para cada réplica <span class="math inline">\(b\)</span> se resuelve el mismo problema de calibración por entropía de las secciones anteriores, reemplazando el peso de referencia por <span class="math inline">\(d_i^{(b)}\)</span> y manteniendo los mismos totales poblacionales <span class="math inline">\(X_j\)</span>:</p>
+<p><span class="math display">\[
+\min_{\mathbf w^{(b)}} \sum_{i \in s} d_i^{(b)} \, G\!\left(\frac{w_i^{(b)}}{d_i^{(b)}}\right)
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s} w_i^{(b)} \, x_{ij} = X_j
+\]</span></p>
+<p>cuya solución, siguiendo la sección de solución del problema de calibración, es:</p>
+<p><span class="math display">\[
+w_i^{(b)} = d_i^{(b)} \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda^{(b)}\right)
+\]</span></p>
+<p>con <span class="math inline">\(\boldsymbol\lambda^{(b)}\)</span> obtenido mediante el mismo algoritmo de Newton–Raphson descrito antes, aplicado a la réplica <span class="math inline">\(b\)</span>.</p>
+</div>
+<div id="estimador-replicado-y-varianza" class="section level3 hasAnchor" number="17.9.3">
+<h3><span class="header-section-number">17.9.3</span> Estimador replicado y varianza<a href="sec-pesos-calibracion.html#estimador-replicado-y-varianza" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para un indicador con estimador puntual <span class="math inline">\(\hat\theta = \dfrac{\sum_{i \in s} w_i y_i}{\sum_{i \in s} w_i}\)</span> (razón de medias ponderadas, la forma general de los indicadores del capítulo de estimación), el estimador replicado es:</p>
+<p><span class="math display">\[
+\hat\theta^{(b)} = \frac{\sum_{i \in s} w_i^{(b)} y_i}{\sum_{i \in s} w_i^{(b)}}
+\]</span></p>
+<p>Repitiendo el proceso para <span class="math inline">\(b=1,\dots,B\)</span>, la varianza se estima como la variabilidad entre las <span class="math inline">\(B\)</span> estimaciones replicadas alrededor de su propio promedio:</p>
+<p><span class="math display">\[
+\bar\theta = \frac{1}{B}\sum_{b=1}^{B}\hat\theta^{(b)}
+\qquad\qquad
+\widehat V(\hat\theta) = \frac{1}{B-1}\sum_{b=1}^{B}\left(\hat\theta^{(b)}-\bar\theta\right)^2
+\]</span></p>
+<p>A partir de <span class="math inline">\(\widehat V(\hat\theta)\)</span> se derivan las medidas de precisión reportadas para cada indicador:</p>
+<p><span class="math display">\[
+ee(\hat\theta) = \sqrt{\widehat V(\hat\theta)}
+\qquad\qquad
+cv(\hat\theta) = \frac{ee(\hat\theta)}{\hat\theta}
+\]</span></p>
+<p>y el intervalo de incertidumbre, que puede reportarse en su forma normal:</p>
+<p><span class="math display">\[
+\hat\theta \; \pm \; z_{1-\alpha/2}\, ee(\hat\theta)
+\]</span></p>
+<p>o, de forma más robusta frente a asimetrías en la distribución de las réplicas, mediante los percentiles empíricos <span class="math inline">\(\alpha/2\)</span> y <span class="math inline">\(1-\alpha/2\)</span> de <span class="math inline">\(\{\hat\theta^{(1)},\dots,\hat\theta^{(B)}\}\)</span> <span class="citation">(<a href="referencias.html#ref-EfronTibshirani1993">Efron y Tibshirani 1993</a>)</span>. El desarrollo completo de la estimación puntual por indicador y del reporte de precisión se presenta en los capítulos de estimación y de precisión e incertidumbre (<a href="sec-diagnostico-calibracion.html#sec-diagnostico-calibracion">18</a> y siguientes).</p>
+</div>
+<div id="número-de-réplicas" class="section level3 hasAnchor" number="17.9.4">
+<h3><span class="header-section-number">17.9.4</span> Número de réplicas<a href="sec-pesos-calibracion.html#n%C3%BAmero-de-r%C3%A9plicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se adopta <span class="math inline">\(B = 1\,000\)</span> réplicas. La literatura de métodos de replicación (<em>bootstrap</em>, <em>jackknife</em>, <em>balanced repeated replication</em>) documenta que la varianza estimada por replicación se estabiliza con algunos cientos de réplicas y que <span class="math inline">\(B\)</span> entre 500 y 1 000 es una práctica estándar en la producción de encuestas oficiales <span class="citation">(<a href="referencias.html#ref-Wolter2007">Wolter 2007</a>; <a href="referencias.html#ref-RaoWu1988">Rao y Wu 1988</a>)</span>; se adopta el extremo superior de ese rango para reducir el error de Monte Carlo introducido por el propio procedimiento de remuestreo, dado que ENUS 2026 no cuenta, a diferencia de un diseño probabilístico, con una fórmula analítica alternativa de varianza contra la cual contrastar el resultado.</p>
+</div>
+</div>
+<div id="diagnóstico-de-la-calibración" class="section level2 hasAnchor" number="17.10">
+<h2><span class="header-section-number">17.10</span> Diagnóstico de la calibración<a href="sec-pesos-calibracion.html#diagn%C3%B3stico-de-la-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La convergencia del algoritmo de Newton–Raphson en la muestra completa y en cada una de las <span class="math inline">\(B\)</span> réplicas, la distribución de los factores de ajuste <span class="math inline">\(g_i = w_i/d_i\)</span>, el tratamiento de valores extremos y el impacto de la calibración sobre las estimaciones solo pueden evaluarse una vez exista una base de datos real de encuestas completadas; ese diagnóstico se documenta en el capítulo siguiente de diagnóstico de calibración (<a href="sec-diagnostico-calibracion.html#sec-diagnostico-calibracion">18</a>), incluyendo la determinación empírica de los límites <span class="math inline">\(L_i, U_i\)</span> de los factores de ajuste, que no se fijan a priori.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sec-antecedentes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sec-procesamiento.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-diagnostico-calibracion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

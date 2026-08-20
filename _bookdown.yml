@@ -1,0 +1,111 @@
+book_filename: "ENUS_2026_metodoloia"
+delete_merged_file: true
+new_session: false
+output_dir: "docs"
+language:
+  ui:
+    chapter_name: "Capítulo "
+
+# Fuente única: el contenido se redacta directamente en index.Rmd y en los
+# capítulos de capitulos_bookdown/*.Rmd (ya no hay Quarto/.qmd de por
+# medio). Los capítulos se van llenando uno a uno; cada capítulo permanece
+# comentado aquí hasta que su contenido esté listo, momento en el que se
+# descomenta para incluirlo en la compilación del libro. Ver README.md.
+rmd_files:
+  - index.Rmd
+  - capitulos_bookdown/01-Introduccion.Rmd
+  - capitulos_bookdown/02-Antecedentes.Rmd
+  - capitulos_bookdown/03-Objetivo_y_alcance.Rmd
+  - capitulos_bookdown/04-Marco_conceptual.Rmd
+  - capitulos_bookdown/05-Poblacion_objetivo_y_marco_de_referencia.Rmd
+  - capitulos_bookdown/06-Diseno_muestral.Rmd
+  - capitulos_bookdown/07-Papel_de_las_EPS_e_IPS.Rmd
+  - capitulos_bookdown/08-Muestreo_por_cuotas.Rmd
+  - capitulos_bookdown/09-Variables_de_clasificacion.Rmd
+  - capitulos_bookdown/10-Relacion_entre_cuestionario_y_cuotas.Rmd
+  - capitulos_bookdown/11-Mecanismo_de_seleccion.Rmd
+  - capitulos_bookdown/12-Limitaciones_del_muestreo_por_cuotas.Rmd
+  - capitulos_bookdown/13-Instrumento_de_recoleccion.Rmd
+  - capitulos_bookdown/14-Flujo_y_rutas_del_cuestionario.Rmd
+  - capitulos_bookdown/15-Reconciliacion_de_estructuras.Rmd
+  - capitulos_bookdown/17-Procesamiento.Rmd
+  - capitulos_bookdown/18-Ponderacion_y_calibracion.Rmd
+  - capitulos_bookdown/20-Diagnostico_de_calibracion.Rmd
+  - capitulos_bookdown/24-Limitaciones.Rmd
+  - capitulos_bookdown/26-Referencias.Rmd
+
+# El Anexo A (formularios completos de los 8 módulos) se retiró del libro
+# el 2026-08-20 por instrucción de Stalyn: se entrega como archivo PDF
+# externo, no como capítulo del documento compilado (mismo tratamiento que
+# el Anexo E). Ver `datos/Anexo_A_Formularios_del_cuestionario.pdf`. El
+# .Rmd que lo redactaba como capítulo se conserva sin borrar en
+# `_archivo/anexos_pre_v3/` (no vuelto a numerar).
+
+# 16-Recoleccion_ClicSalud.Rmd se fusionó dentro de
+# 13-Instrumento_de_recoleccion.Rmd el 2026-08-20 por instrucción de
+# Stalyn: un solo capítulo (13) cubre tanto el instrumento como el detalle
+# funcional de ClicSalud, conservando ambas anclas (#sec-instrumento-recoleccion
+# en el título, #sec-app-clicsalud en la sección de estructura de la
+# aplicación) para no romper las referencias cruzadas ya existentes en los
+# capítulos 03, 04 y 24. El archivo 16 se conserva sin borrar en
+# `_archivo/anexos_pre_v3/` (no vuelto a numerar). Pendiente: incorporar
+# capturas de pantalla reales de las 12 pantallas identificadas.
+
+# El Anexo E (matriz de cuotas, 336 celdas) se retiró del libro el 2026-08-20
+# por instrucción de Stalyn: se divide por región y se entrega como archivo
+# externo, no como capítulo del documento compilado. Ver
+# `datos/Anexo_E_Matriz_de_cuotas.xlsx` (hoja Resumen + una hoja por cada
+# una de las 6 regiones). El .Rmd que lo redactaba como capítulo se
+# conserva sin borrar en `_archivo/anexos_pre_v3/` (no vuelto a numerar).
+
+# Cuerpo reordenado el 2026-08-19 según la estructura §4 del prompt maestro
+# v3.0 (4.1 Introducción ... 4.17 Trazabilidad y reproducibilidad).
+#
+# Los antiguos capítulos "Identidad de la operación estadística" y
+# "Versionamiento del instrumento" (sin equivalente en la v3.0) se
+# retiraron del libro por instrucción de Stalyn y se archivaron sin
+# borrar en `_archivo/capitulos_pre_v3/`.
+#
+# Se agregaron 4 capítulos nuevos para llenar los huecos de la v3.0 que no
+# tenían archivo correspondiente, todos activos por tener contenido
+# redactado (no stub): 01-Introduccion.Rmd (§4.1), 04-Marco_conceptual.Rmd
+# (§4.5, construido sobre las mismas fuentes ya citadas en Antecedentes:
+# Decreto1011_2006, WHO2000Responsiveness, AHRQ_CAHPS),
+# 07-Papel_de_las_EPS_e_IPS.Rmd (§5.2 — documenta únicamente lo que
+# respaldan ClicSalud y el árbol de decisión: EPS como dato de
+# identificación y EPS/IPS/gestor como variable de clasificación del
+# módulo; NO describe un mecanismo de reclutamiento institucional porque
+# los insumos técnicos no lo evidencian), y 24-Limitaciones.Rmd (§16,
+# limitaciones generales de la operación, distintas de las limitaciones
+# específicas de cuotas del capítulo 12, que sigue sin redactar).
+#
+# 02-Antecedentes.Rmd (antes 01-Antecedentes.Rmd) cubre la sección §4.2:
+# construido a partir de los antecedentes ya documentados en
+# `03_Encuesta/Documento/00_Meotodoogía.qmd` (ciclo MSPS 2003-2023) y
+# complementado con investigación web: marco normativo (SOGCS, Decreto
+# 1011/2006), la continuidad del ciclo en 2024-2025 (Oficina de Calidad,
+# SEA) y referentes internacionales (CAHPS/AHRQ, responsiveness/OMS,
+# PaRIS/OCDE). Deliberadamente NO incluye la caracterización de "diseño
+# mixto en dos fases" (probabilística + cuotas) de ese mismo insumo para
+# ENUS 2026 — esa caracterización sigue en disputa (decisión #2 pendiente,
+# ver Anexo de decisiones metodológicas). Referencias en referencias.bib:
+# MSPS2024, MSPS2025, DefensoriaPueblo2009, PECASUSS2008, Decreto1011_2006,
+# WHO2000Responsiveness, AHRQ_CAHPS, OECD2025PaRIS.
+#
+# Ver la tabla completa de correspondencia (archivo actual / sección v3.0 /
+# archivo anterior) en README.md.
+
+# 26-Referencias.Rmd agregado el 2026-08-19: sección aparte para la
+# bibliografía (antes se anexaba sin título al final del último capítulo
+# activo). Usa el marcador ::: {#refs} :::, que pandoc reemplaza por la
+# lista generada desde referencias.bib. DEBE permanecer como el último
+# elemento de `rmd_files` — al activar capítulos adicionales (05 en
+# adelante), agregarlos siempre antes de esta línea.
+
+# Anexos A-M de la estructura anterior (prompt maestro v2.1) retirados del
+# libro el 2026-08-19 al adoptarse el prompt maestro v3.0, cuya sección 19
+# define una lista de anexos distinta (A-J, 10 en total) y no incluye varios
+# de los anteriores (Arquitectura de la aplicación, Decisiones metodológicas,
+# Referencias bibliográficas como anexo aparte). Los 13 archivos originales
+# se conservan sin borrar en `_archivo/anexos_pre_v3/` — no se han vuelto a
+# redactar los nuevos Anexo A-J todavía. Ver README.md.

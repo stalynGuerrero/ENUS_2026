@@ -1,0 +1,22 @@
+---
+title: "Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)"
+subtitle: ""
+author: "Ministerio de Salud y Protección Social"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: report
+classoption: [twoside]
+lang: es
+bibliography: [referencias.bib]
+biblio-style: apalike
+link-citations: true
+description: |
+  Especificación técnica reproducible de la operación estadística ClicSalud
+  — Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+  Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+  contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+  ver README.md sobre el flujo de sincronización entre ambos.
+---
+# Presentación {-}
+
+El presente documento constituye el **Documento Metodológico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)**, operación estadística del *Ministerio de Salud y Protección Social (MSPS)*. El documento es elaborado por la **Oficina de Calidad del Ministerio de Salud y Protección Social** y constituye el referente metodológico para la revisión técnica, la validación institucional y la documentación de la operación.
