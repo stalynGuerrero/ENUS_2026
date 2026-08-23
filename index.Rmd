@@ -19,4 +19,13 @@ description: |
 ---
 # Presentación {-}
 
-El presente documento constituye el **Documento Metodológico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)**, operación estadística del *Ministerio de Salud y Protección Social (MSPS)*. El documento es elaborado por la **Oficina de Calidad del Ministerio de Salud y Protección Social** y constituye el referente metodológico para la revisión técnica, la validación institucional y la documentación de la operación.
+El presente documento constituye el Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), operación estadística del Ministerio de Salud y Protección Social (MSPS) orientada a la medición de la experiencia de los usuarios frente a los servicios de salud.
+
+El documento ha sido elaborado por la Oficina de Calidad del Ministerio de Salud y Protección Social y tiene como propósito establecer y documentar los aspectos técnicos y metodológicos que sustentan el diseño, ejecución, procesamiento, análisis y generación de resultados de la operación estadística.
+
+En este sentido, constituye el marco de referencia para la revisión técnica, validación institucional, implementación y documentación de la ENUS 2026, procurando que las diferentes etapas de la operación se desarrollen bajo criterios de coherencia metodológica, trazabilidad y reproducibilidad.
+
+El documento presenta de manera integrada los elementos que sustentan la operación estadística, incluyendo sus objetivos, alcance, diseño estadístico, diseño de la recolección, procesamiento de la información, estrategias de estimación y validación, así como los mecanismos previstos para el control de calidad y la generación de los productos estadísticos.
+
+La documentación se estructura de manera que permita identificar la relación entre los objetivos de la operación, las necesidades de información, los instrumentos de recolección, las variables e indicadores derivados y los procedimientos estadísticos utilizados para la producción de resultados.
+

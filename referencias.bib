@@ -4,11 +4,45 @@
 %   - 03_Encuesta/Documento/referencias.bib
 %   - 03_Encuesta/00_Diseño_muestra/Propuesta PPT/referencias.bib
 % (ambos archivos eran prácticamente idénticos; se conserva la versión con
-% las referencias institucionales MSPS 2017-2023). Se eliminó una entrada
-% duplicada con clave repetida (ChenLiWu2018). Pendiente: revisar si
-% deville1992calibration y DevilleSarndal1992 deben unificarse en una sola
-% clave (son el mismo artículo con dos claves distintas en los insumos
-% originales).
+% las referencias institucionales MSPS 2017-2023). Se eliminaron tres
+% entradas duplicadas con distinta clave para el mismo artículo: una con
+% clave repetida (ChenLiWu2018), deville1992calibration (= DevilleSarndal1992,
+% ambas "Calibration Estimators in Survey Sampling", Deville & Särndal
+% 1992 — se conservó DevilleSarndal1992, la clave efectivamente citada en
+% el cuerpo) y kim2025calibration (= KwonKimQiu2025, ambas "Generalized
+% entropy calibration for analyzing voluntary survey data", Kwon, Kim &
+% Qiu 2025 — se conservó KwonKimQiu2025, que incluye la URL de arXiv y es
+% la clave efectivamente citada en el cuerpo).
+%
+% Auditoría documental 2026-08-21 (capítulo de Antecedentes): se descargó y
+% leyó directamente el PDF/PPT original de MSPS2017, MSPS2018, MSPS2020,
+% MSPS2022, MSPS2023 y MSPS2025 (fuentes primarias, no solo metadatos) para
+% verificar título, autor, año y las cifras citadas en el capítulo. Cambios
+% resultantes documentados en la matriz de auditoría de fuentes
+% (auditoria_fuentes_antecedentes.md). En síntesis:
+%   - MSPS2017, MSPS2018, MSPS2020, MSPS2022, MSPS2025: título corregido
+%     para igualar exactamente el título de portada del documento original.
+%   - MSPS2018: se añaden los autores individuales reales (Matajira Gaitán,
+%     Barney Iglesias, Bonett Molina, Escobar Morales), visibles en la
+%     portada académica del documento; antes solo figuraba la institución.
+%   - MSPS2025: URL reemplazada por el enlace directo al PDF del informe
+%     (antes apuntaba a la página general de publicaciones de SISPRO).
+%   - MSPS2024: no fue posible localizar un enlace directo al PDF de ese
+%     informe (solo la página general de publicaciones de SISPRO); queda
+%     así, marcado como pendiente de mejora en la matriz de auditoría.
+%   - DefensoriaPueblo2009 y PECASUSS2008: el campo `note` se corrigió
+%     porque dos fuentes primarias independientes de MSPS (MSPS2017,
+%     MSPS2020, ambas leídas directamente) citan como antecedente
+%     únicamente "Defensoría del Pueblo (2005)" y "PECASUSS (2006 y 2008)"
+%     — no se encontró en ninguna fuente disponible una confirmación
+%     independiente de mediciones de la Defensoría en 2003 o 2009, ni de
+%     PECASUSS en 2010. El detalle de esta corrección, y su nivel de
+%     confianza, se documenta en la matriz de auditoría.
+%   - Se agregó Resolucion1642_2026: acto normativo que adopta la ENUS como
+%     instrumento oficial permanente (verificado por búsqueda web, no por
+%     lectura directa del texto de la resolución — ver matriz de
+%     auditoría). Es la única referencia nueva agregada a este archivo; se
+%     usa exclusivamente en la sección de marco normativo de ENUS 2026.
 
 @book{Cochran1977,
   author    = {Cochran, William G.},
@@ -41,16 +75,6 @@
   edition   = {2},
   publisher = {Brooks/Cole},
   year      = {2010}
-}
-
-@article{deville1992calibration,
-  author  = {Deville, Jean-Claude and S{\"a}rndal, Carl-Erik},
-  title   = {Calibration Estimators in Survey Sampling},
-  journal = {Journal of the American Statistical Association},
-  volume  = {87},
-  number  = {418},
-  pages   = {376--382},
-  year    = {1992}
 }
 
 @article{deville1993generalized,
@@ -128,13 +152,6 @@
   number  = {521},
   pages   = {167--179},
   year    = {2018}
-}
-
-@article{kim2025calibration,
-  author  = {Kwon, Yonghyun and Kim, Jae Kwang and Qiu, Yumou},
-  title   = {Generalized Entropy Calibration for Analyzing Voluntary Survey Data},
-  journal = {arXiv preprint arXiv:2412.12405},
-  year    = {2025}
 }
 
 @article{ChenLiWu2020,
@@ -264,40 +281,74 @@
   url     = {https://arxiv.org/abs/2412.12405}
 }
 
+@techreport{MSPS2014_2015,
+  author      = {{Consultores en Información Infométrika S.A.S.}},
+  title       = {Estudio de Evaluación de los Servicios de las EPS por Parte de los Usuarios, en el Régimen Contributivo y Subsidiado: Informe de Resultados},
+  institution = {Ministerio de Salud y Protección Social},
+  year        = {2015},
+  address     = {Bogotá, Colombia},
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/estudio-evaluacion-servicios-eps.pdf},
+  note        = {Estudio combinado que compara los levantamientos 2014 y 2015 (recolección de la ronda 2015: 7 de octubre-10 de diciembre de 2015); 29.761 encuestas efectivas (54.852 contactos) en 73 municipios de 32 departamentos y el Distrito Capital; muestra probabilística de conglomerados con marco mixto de áreas (DANE 2005, actualización 2012) y de lista (para EPS de baja participación). El universo de 2014 comprendió solo mayores de 18 años; el de 2015 incluyó menores de edad, por lo que la comparación 2014-2015 no es estricta. Título de portada verificado por lectura directa del documento el 2026-08-23}
+}
+
+@techreport{MSPS2016,
+  author      = {{Ministerio de Salud y Protección Social}},
+  title       = {Encuesta de Evaluación de los Servicios de las EPS: Informe Final},
+  institution = {Oficina de Calidad, Ministerio de Salud y Protección Social},
+  year        = {2016},
+  address     = {Bogotá, Colombia},
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/evalacion-servicios-eps-2016.pdf},
+  note        = {Elaborado por Proyectamos Colombia S.A.S. en el marco del Contrato de Consultoría N.\textdegree{} 405 de 2016; informe fechado el 31 de diciembre de 2016. Diseño probabilístico, multietápico, estratificado y de conglomerados, con los mismos tres estratos DNP y los mismos 95 municipios UPM que reutilizaría la edición 2017 (32 capitales con inclusión forzosa; 23 municipios de categoría 1-5 DNP y 40 municipios de categoría 6, ambos grupos seleccionados con probabilidad proporcional al tamaño); 26.502 encuestas efectivas (81.049 contactos), 18\% por encima de la meta fijada por el Ministerio. Título de portada verificado por lectura directa del documento el 2026-08-23}
+}
+
+@techreport{MSPS2016Ranking,
+  author      = {Matajira Gaitán, Camilo A. and Escobar Morales, Germán and Barney Iglesias, Eric A.},
+  title       = {Sistema de Evaluación y Calificación de Actores: Ranking de Satisfacción {EPS} 2016},
+  institution = {Oficina de Calidad, Ministerio de Salud y Protección Social},
+  year        = {2016},
+  address     = {Bogotá, Colombia},
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/evaluacion-calificacion-actores-ranking-eps-2016.pdf},
+  note        = {Publicado el 24 de noviembre de 2016, con información de la encuesta de 2015, no de 2016 (nota al pie 1 del propio artículo); 44 indicadores en tres dimensiones (oportunidad 20, satisfacción 16, acceso 8); antecesor directo del Ranking de Satisfacción EPS 2018 (MSPS2018), firmado por dos de los mismos autores (Matajira Gaitán, Barney Iglesias). Título verificado por lectura directa del documento el 2026-08-23}
+}
+
 @techreport{MSPS2017,
   author      = {{Ministerio de Salud y Protección Social}},
-  title       = {Informe Encuesta de Satisfacción {EPS} 2017},
+  title       = {Encuesta Nacional de Evaluación de los Servicios de las {EPS}: Informe Final Colombia 2017},
   institution = {Ministerio de Salud y Protección Social},
   year        = {2017},
   address     = {Bogotá, Colombia},
-  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/Informe-encuesta-satisfaccion-eps-2017.pdf}
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/Informe-encuesta-satisfaccion-eps-2017.pdf},
+  note        = {Elaborado por Proyectamos Colombia S.A.S. para la Oficina de Calidad del MSPS. Título de portada verificado por lectura directa del documento el 2026-08-21; el título anterior de esta entrada ("Informe Encuesta de Satisfacción EPS 2017") no correspondía exactamente al título del documento}
 }
 
 @techreport{MSPS2018,
-  author      = {{Ministerio de Salud y Protección Social}},
-  title       = {Ranking de Satisfacción {EPS} 2018. Sistema de Evaluación y Calificación de Actores},
-  institution = {Ministerio de Salud y Protección Social — Oficina de Calidad},
+  author      = {Matajira Gaitán, Camilo and Barney Iglesias, Eric and Bonett Molina, Wilman and Escobar Morales, Germán},
+  title       = {Sistema de Evaluación y Calificación de Actores: Ranking de Satisfacción {EPS} 2018},
+  institution = {Oficina de Calidad, Ministerio de Salud y Protección Social},
   year        = {2018},
   address     = {Bogotá, Colombia},
-  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/ranking-satisfaccion-eps-2018.pdf}
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/ranking-satisfaccion-eps-2018.pdf},
+  note        = {Autores individuales verificados por lectura directa de la portada académica del documento el 2026-08-21; la entrada anterior solo citaba a la institución}
 }
 
 @techreport{MSPS2020,
   author      = {{Ministerio de Salud y Protección Social}},
-  title       = {Encuesta de Evaluación de los Servicios de las {EPS}: Informe Final 2020},
-  institution = {Ministerio de Salud y Protección Social},
+  title       = {Estudio Nacional de Evaluación de los Servicios de las {EPS} -- Régimen Contributivo y Subsidiado 2020: Informe Final},
+  institution = {Oficina de Calidad, Ministerio de Salud y Protección Social},
   year        = {2020},
   address     = {Bogotá, Colombia},
-  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/evaluacion-eps-2020-minsalud.pdf}
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/evaluacion-eps-2020-minsalud.pdf},
+  note        = {Elaborado por Proyectamos Colombia S.A.S. y C\&M Asesoría y Consultoría S.A.S.; informe fechado el 21 de diciembre de 2020. Título de portada verificado por lectura directa del documento el 2026-08-21}
 }
 
 @techreport{MSPS2022,
   author      = {{Ministerio de Salud y Protección Social}},
-  title       = {Encuesta de Satisfacción de Servicios de las {EPS} 2022},
+  title       = {Encuesta Nacional de Satisfacción de los Usuarios frente a los Servicios de las {EPS} -- 2022},
   institution = {Ministerio de Salud y Protección Social},
   year        = {2022},
   address     = {Bogotá, Colombia},
-  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/encuesta-satisfaccion-servicios-eps-2022.pdf}
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/encuesta-satisfaccion-servicios-eps-2022.pdf},
+  note        = {Título de portada verificado por lectura directa del documento el 2026-08-21; el título anterior de esta entrada no correspondía exactamente al título del documento}
 }
 
 @techreport{MSPS2023,
@@ -309,23 +360,24 @@
   url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/resultados-encuesta-satisfaccion-usuarios-sistema-salud-colombiano-enfasis-atencion-primaria.pdf}
 }
 
+@techreport{MSPS2025,
+  author      = {{Ministerio de Salud y Protección Social}},
+  title       = {Encuesta para Evaluar la Satisfacción de los Usuarios del Sistema de Salud Colombiano 2025},
+  institution = {Oficina de Calidad, Ministerio de Salud y Protección Social},
+  year        = {2025},
+  address     = {Bogotá, Colombia},
+  url         = {https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/informe-encuesta-satisfaccion-2025.pdf},
+  note        = {18\,639 usuarios encuestados en seis regiones del sistema de salud, entre el 15 de septiembre y el 21 de diciembre de 2025. Título y URL corregidos por lectura directa del documento el 2026-08-21 (antes remitía solo a la página general de publicaciones de SISPRO)}
+}
+
 @techreport{MSPS2024,
   author      = {{Ministerio de Salud y Protección Social}},
   title       = {Informe de Resultados: Encuesta para Evaluar la Satisfacción de los Usuarios del Sistema de Salud Colombiano 2024},
-  institution = {Ministerio de Salud y Protección Social, Oficina de Calidad},
+  institution = {Oficina de Calidad, Ministerio de Salud y Protección Social},
   year        = {2024},
   address     = {Bogotá, Colombia},
-  url         = {https://www.sispro.gov.co/observatorios/oncalidadsalud/Paginas/Publicaciones.aspx}
-}
-
-@techreport{MSPS2025,
-  author      = {{Ministerio de Salud y Protección Social}},
-  title       = {Informe de Resultados: Encuesta para Evaluar la Satisfacción de los Usuarios del Sistema de Salud Colombiano 2025},
-  institution = {Ministerio de Salud y Protección Social, Oficina de Calidad},
-  year        = {2025},
-  address     = {Bogotá, Colombia},
   url         = {https://www.sispro.gov.co/observatorios/oncalidadsalud/Paginas/Publicaciones.aspx},
-  note        = {18\,639 usuarios encuestados en seis regiones del sistema de salud, entre el 15 de septiembre y el 21 de diciembre de 2025}
+  note        = {No fue posible localizar, al 2026-08-21, un enlace directo al PDF de este informe específico (a diferencia de la edición 2025); la URL remite a la página general de publicaciones del Observatorio Nacional de Calidad en Salud (SISPRO). Pendiente sustituir por el enlace directo si se localiza}
 }
 
 @techreport{DefensoriaPueblo2009,
@@ -334,7 +386,7 @@
   institution = {Defensoría del Pueblo de Colombia},
   year        = {2009},
   address     = {Bogotá, Colombia},
-  note        = {Tercera medición del ejercicio, con antecedentes en 2003 y 2005; referenciada por el Ministerio de Salud y Protección Social en \url{https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/Encuesta\%20de\%20Evaluacion.pdf}}
+  note        = {ADVERTENCIA DE AUDITORÍA (2026-08-21): esta entrada asumía, sin fuente propia, una serie de tres mediciones (2003, 2005 y 2009). Dos informes primarios independientes del MSPS leídos directamente (MSPS2017, diapositiva "Introducción"; MSPS2020, diapositiva "Antecedentes") citan como antecedente de la Defensoría del Pueblo únicamente la medición de 2005 -- ninguno confirma una medición en 2003 ni en 2009. No se localizó el informe original de la Defensoría del Pueblo para verificar directamente el año, el título exacto ni si existieron mediciones adicionales. Referenciada también por el Ministerio de Salud y Protección Social en \url{https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/Encuesta\%20de\%20Evaluacion.pdf}. Tratar el año 2009 y la existencia de mediciones en 2003 como no confirmados hasta ubicar el documento original de la Defensoría del Pueblo}
 }
 
 @techreport{PECASUSS2008,
@@ -343,7 +395,7 @@
   institution = {Ministerio de la Protección Social},
   year        = {2008},
   address     = {Bogotá, Colombia},
-  note        = {Línea de base 2006 y mediciones de seguimiento en 2008 y 2010, en el marco del Programa de Reestructuración de Redes de Servicios de Salud; validado en Revista de Salud Pública y descrito en Scielo Colombia, \url{http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0124-00642008000400009}}
+  note        = {CORREGIDO (2026-08-21): esta entrada indicaba línea de base 2006 y seguimientos en 2008 y 2010. Dos informes primarios independientes del MSPS leídos directamente (MSPS2017, MSPS2020) citan PECASUSS únicamente como "(2006 y 2008)", sin mencionar 2010. Se corrige a línea de base 2006 y una medición de seguimiento en 2008, en el marco del Programa de Reestructuración de Redes de Servicios de Salud. Validado en Revista de Salud Pública y descrito en Scielo Colombia (consultado el 2026-08-21, no menciona explícitamente una tercera ronda en 2010), \url{http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0124-00642008000400009}}
 }
 
 @techreport{Decreto1011_2006,
@@ -353,6 +405,26 @@
   year        = {2006},
   address     = {Bogotá, Colombia},
   url         = {https://www.minsalud.gov.co/normatividad_nuevo/decreto\%201011\%20de\%202006.pdf}
+}
+
+@techreport{Decreto780_2016,
+  author      = {{Ministerio de Salud y Protección Social}},
+  title       = {Decreto 780 de 2016, por medio del cual se expide el Decreto Único Reglamentario del Sector Salud y Protección Social},
+  institution = {Ministerio de Salud y Protección Social},
+  year        = {2016},
+  address     = {Bogotá, Colombia},
+  url         = {https://www.minsalud.gov.co/Normativa/paginas/decreto-unico-minsalud-780-de-2016.aspx},
+  note        = {Compila y racionaliza la normatividad reglamentaria preexistente del sector salud, incluidas las disposiciones del Sistema Obligatorio de Garantía de Calidad de la Atención de Salud (SOGCS) originalmente establecidas por el Decreto 1011 de 2006. Verificado por búsqueda web el 2026-08-21, no por lectura directa del texto completo del decreto}
+}
+
+@techreport{Resolucion256_2016,
+  author      = {{Ministerio de Salud y Protección Social}},
+  title       = {Resolución 256 de 2016, por la cual se dictan disposiciones en relación con el Sistema de Información para la Calidad y se establecen los indicadores para el monitoreo de la calidad en salud},
+  institution = {Ministerio de Salud y Protección Social},
+  year        = {2016},
+  address     = {Bogotá, Colombia},
+  url         = {https://minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/abece-resolucion-256-de-2016.pdf},
+  note        = {Deroga la Resolución 1446 de 2006; agrupa los indicadores de monitoreo de calidad en los dominios de efectividad, seguridad, gestión del riesgo y experiencia de la atención. Verificado por búsqueda web el 2026-08-21, no por lectura directa del texto completo de la resolución}
 }
 
 @techreport{WHO2000Responsiveness,
@@ -379,4 +451,21 @@
   year        = {2025},
   address     = {Paris, France},
   url         = {https://www.oecd.org/en/publications/does-healthcare-deliver_c8af05a5-en.html}
+}
+
+@techreport{Resolucion1642_2026,
+  author      = {{Ministerio de Salud y Protección Social}},
+  title       = {Resolución 1642 de 2026, por la cual se actualizan las reglas para la elaboración, entrega y divulgación de la Carta de Derechos y Deberes de las personas afiliadas al sistema de salud y se adopta la Encuesta Nacional de Experiencia del Usuario en Salud ({ENUS}) como instrumento oficial y permanente de medición del desempeño de las EPS y demás actores del sistema},
+  institution = {Ministerio de Salud y Protección Social},
+  year        = {2026},
+  address     = {Bogotá, Colombia},
+  note        = {Expedida el 31 de julio de 2026. Verificada por búsqueda web y por análisis de una fuente secundaria (ConsultorSalud) el 2026-08-21, NO por lectura directa del texto oficial de la resolución en el Diario Oficial ni en minsalud.gov.co -- no se localizó, dentro del tiempo disponible para esta auditoría, el PDF oficial de la resolución. Tratar el número, la fecha y el contenido citados como pendientes de confirmación contra el texto oficial antes de una publicación institucional definitiva. VERIFICAR FUENTE: ubicar y leer el texto oficial completo de la Resolución 1642 de 2026}
+}
+
+@online{AHRQ_CAHPS_Measures,
+  author  = {{Agency for Healthcare Research and Quality}},
+  title   = {CAHPS Measures of Patient Experience},
+  year    = {2024},
+  url     = {https://www.ahrq.gov/cahps/consumer-reporting/measures/index.html},
+  note    = {Content last reviewed October 2024}
 }
