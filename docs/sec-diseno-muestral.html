@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Diseño muestral | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Diseño muestral | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Diseño muestral | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  
+  <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  
+
+<meta name="author" content="Ministerio de Salud y Protección Social" />
+
+
+<meta name="date" content="2026-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sec-alcance.html"/>
+<link rel="next" href="referencias.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="styles/msps.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ENUS 2026</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presentación</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i>Introducción</a></li>
+<li class="chapter" data-level="1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html"><i class="fa fa-check"></i><b>1</b> Antecedentes</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-marco-normativo"><i class="fa fa-check"></i><b>1.1</b> Marco normativo: el Sistema Obligatorio de Garantía de Calidad en Salud</a></li>
+<li class="chapter" data-level="1.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#evoluci%C3%B3n-conceptual-de-la-percepci%C3%B3n-de-calidad-a-la-medici%C3%B3n-de-la-experiencia"><i class="fa fa-check"></i><b>1.2</b> Evolución conceptual: de la percepción de calidad a la medición de la experiencia</a></li>
+<li class="chapter" data-level="1.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#primeros-antecedentes-2003-2011"><i class="fa fa-check"></i><b>1.3</b> Primeros antecedentes: 2003-2011</a></li>
+<li class="chapter" data-level="1.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-mediciones-msps"><i class="fa fa-check"></i><b>1.4</b> Consolidación de las mediciones del MSPS: 2012-2019</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-poblacion-objetivo-serie"><i class="fa fa-check"></i><b>1.4.1</b> Evolución de la población objetivo</a></li>
+<li class="chapter" data-level="1.4.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-diseno-serie"><i class="fa fa-check"></i><b>1.4.2</b> Evolución del diseño muestral</a></li>
+<li class="chapter" data-level="1.4.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-medicion-2017"><i class="fa fa-check"></i><b>1.4.3</b> La medición de 2017</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-mediciones-msps-2018-2025"><i class="fa fa-check"></i><b>1.5</b> Continuidad y transformaciones de las mediciones del MSPS: 2018-2025</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-comparacion-mediciones-2018-2025"><i class="fa fa-check"></i><b>1.5.1</b> Comparación de las mediciones 2018-2025</a></li>
+<li class="chapter" data-level="1.5.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#ranking-de-satisfacci%C3%B3n-eps"><i class="fa fa-check"></i><b>1.5.2</b> 2018 — Ranking de Satisfacción EPS</a></li>
+<li class="chapter" data-level="1.5.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#estudio-nacional-de-evaluaci%C3%B3n-de-los-servicios-de-las-eps"><i class="fa fa-check"></i><b>1.5.3</b> 2020 — Estudio Nacional de Evaluación de los Servicios de las EPS</a></li>
+<li class="chapter" data-level="1.5.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#encuesta-nacional-de-satisfacci%C3%B3n-de-los-usuarios-frente-a-los-servicios-de-las-eps"><i class="fa fa-check"></i><b>1.5.4</b> 2022 — Encuesta Nacional de Satisfacción de los Usuarios frente a los Servicios de las EPS</a></li>
+<li class="chapter" data-level="1.5.5" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#encuesta-con-%C3%A9nfasis-en-atenci%C3%B3n-primaria-en-salud"><i class="fa fa-check"></i><b>1.5.5</b> 2023 — Encuesta con énfasis en Atención Primaria en Salud</a></li>
+<li class="chapter" data-level="1.5.6" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#mediciones-inmediatamente-anteriores-a-enus-2026"><i class="fa fa-check"></i><b>1.5.6</b> 2024-2025 — Mediciones inmediatamente anteriores a ENUS 2026</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-sintesis-antecedentes"><i class="fa fa-check"></i><b>1.6</b> Aprendizajes de las mediciones históricas</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#cambios-en-la-poblaci%C3%B3n-incluida"><i class="fa fa-check"></i><b>1.6.1</b> Cambios en la población incluida</a></li>
+<li class="chapter" data-level="1.6.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#cambios-en-la-forma-de-seleccionar-a-los-usuarios"><i class="fa fa-check"></i><b>1.6.2</b> Cambios en la forma de seleccionar a los usuarios</a></li>
+<li class="chapter" data-level="1.6.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#cambios-en-los-temas-y-preguntas"><i class="fa fa-check"></i><b>1.6.3</b> Cambios en los temas y preguntas</a></li>
+<li class="chapter" data-level="1.6.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#el-cambio-de-modalidad-de-recolecci%C3%B3n-en-2020"><i class="fa fa-check"></i><b>1.6.4</b> El cambio de modalidad de recolección en 2020</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#enus-2026-como-nueva-l%C3%ADnea-base-de-medici%C3%B3n"><i class="fa fa-check"></i><b>1.7</b> ENUS 2026 como nueva línea base de medición</a></li>
+<li class="chapter" data-level="1.8" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-referentes-internacionales"><i class="fa fa-check"></i><b>1.8</b> Referentes internacionales para la medición de la experiencia del usuario en salud</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#cahps-medici%C3%B3n-estandarizada-de-la-experiencia-del-paciente"><i class="fa fa-check"></i><b>1.8.1</b> CAHPS: medición estandarizada de la experiencia del paciente</a></li>
+<li class="chapter" data-level="1.8.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#oms-capacidad-de-respuesta-de-los-sistemas-de-salud"><i class="fa fa-check"></i><b>1.8.2</b> OMS: capacidad de respuesta de los sistemas de salud</a></li>
+<li class="chapter" data-level="1.8.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#ocde-paris-experiencias-y-resultados-reportados-por-los-pacientes"><i class="fa fa-check"></i><b>1.8.3</b> OCDE-PaRIS: experiencias y resultados reportados por los pacientes</a></li>
+<li class="chapter" data-level="1.8.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#elementos-comunes-de-los-referentes-internacionales"><i class="fa fa-check"></i><b>1.8.4</b> Elementos comunes de los referentes internacionales</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sec-objetivo.html"><a href="sec-objetivo.html"><i class="fa fa-check"></i><b>2</b> Objetivo de la ENUS 2026</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sec-objetivo.html"><a href="sec-objetivo.html#objetivo-general"><i class="fa fa-check"></i><b>2.1</b> Objetivo general</a></li>
+<li class="chapter" data-level="2.2" data-path="sec-objetivo.html"><a href="sec-objetivo.html#objetivos-espec%C3%ADficos"><i class="fa fa-check"></i><b>2.2</b> Objetivos específicos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sec-alcance.html"><a href="sec-alcance.html"><i class="fa fa-check"></i><b>3</b> Alcance de la operación estadística</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sec-alcance.html"><a href="sec-alcance.html#sec-marco-conceptual"><i class="fa fa-check"></i><b>3.1</b> Fenómenos objeto de medición</a></li>
+<li class="chapter" data-level="3.2" data-path="sec-alcance.html"><a href="sec-alcance.html#sec-poblacion-objetivo"><i class="fa fa-check"></i><b>3.2</b> Población objetivo</a></li>
+<li class="chapter" data-level="3.3" data-path="sec-alcance.html"><a href="sec-alcance.html#unidad-de-observaci%C3%B3n"><i class="fa fa-check"></i><b>3.3</b> Unidad de observación</a></li>
+<li class="chapter" data-level="3.4" data-path="sec-alcance.html"><a href="sec-alcance.html#cobertura-territorial"><i class="fa fa-check"></i><b>3.4</b> Cobertura territorial</a></li>
+<li class="chapter" data-level="3.5" data-path="sec-alcance.html"><a href="sec-alcance.html#cobertura-temporal-y-periodo-de-referencia"><i class="fa fa-check"></i><b>3.5</b> Cobertura temporal y periodo de referencia</a></li>
+<li class="chapter" data-level="3.6" data-path="sec-alcance.html"><a href="sec-alcance.html#servicios-de-salud-objeto-de-medici%C3%B3n"><i class="fa fa-check"></i><b>3.6</b> Servicios de salud objeto de medición</a></li>
+<li class="chapter" data-level="3.7" data-path="sec-alcance.html"><a href="sec-alcance.html#dominios-de-an%C3%A1lisis"><i class="fa fa-check"></i><b>3.7</b> Dominios de análisis</a></li>
+<li class="chapter" data-level="3.8" data-path="sec-alcance.html"><a href="sec-alcance.html#l%C3%ADmites-del-alcance"><i class="fa fa-check"></i><b>3.8</b> Límites del alcance</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html"><i class="fa fa-check"></i><b>4</b> Diseño muestral</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#naturaleza-del-dise%C3%B1o"><i class="fa fa-check"></i><b>4.1</b> Naturaleza del diseño</a></li>
+<li class="chapter" data-level="4.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-tamano-muestra"><i class="fa fa-check"></i><b>4.2</b> Determinación del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#f%C3%B3rmula"><i class="fa fa-check"></i><b>4.2.1</b> Fórmula</a></li>
+<li class="chapter" data-level="4.2.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#par%C3%A1metros-de-dise%C3%B1o"><i class="fa fa-check"></i><b>4.2.2</b> Parámetros de diseño</a></li>
+<li class="chapter" data-level="4.2.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#resultado-por-nivel-de-dominio"><i class="fa fa-check"></i><b>4.2.3</b> Resultado por nivel de dominio</a></li>
+<li class="chapter" data-level="4.2.4" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#tama%C3%B1o-adoptado-por-qu%C3%A9-la-suma-regional-y-no-el-c%C3%A1lculo-nacional-ni-el-cruce-regi%C3%B3n-r%C3%A9gimen"><i class="fa fa-check"></i><b>4.2.4</b> Tamaño adoptado: por qué la suma regional y no el cálculo nacional ni el cruce región × régimen</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#asignaci%C3%B3n-del-tama%C3%B1o-de-muestra-por-cuotas"><i class="fa fa-check"></i><b>4.3</b> Asignación del tamaño de muestra por cuotas</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#resultado-agregado-por-regi%C3%B3n-y-r%C3%A9gimen"><i class="fa fa-check"></i><b>4.3.1</b> Resultado agregado por región y régimen</a></li>
+<li class="chapter" data-level="4.3.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#resultado-agregado-por-sexo-grupo-de-edad-y-zona"><i class="fa fa-check"></i><b>4.3.2</b> Resultado agregado por sexo, grupo de edad y zona</a></li>
+<li class="chapter" data-level="4.3.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#bloques-de-gesti%C3%B3n-institucional-y-m%C3%B3dulo-final-sin-cuota-de-asignaci%C3%B3n-previa"><i class="fa fa-check"></i><b>4.3.3</b> Bloques de gestión institucional y módulo final: sin cuota de asignación previa</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#diferenciaci%C3%B3n-conceptual-cuota-estrato-dominio-variable-de-calibraci%C3%B3n"><i class="fa fa-check"></i><b>4.4</b> Diferenciación conceptual: cuota ≠ estrato ≠ dominio ≠ variable de calibración</a></li>
+<li class="chapter" data-level="4.5" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#papel-de-las-eps-e-ips-en-la-captaci%C3%B3n"><i class="fa fa-check"></i><b>4.5</b> Papel de las EPS e IPS en la captación</a></li>
+<li class="chapter" data-level="4.6" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#alcance-inferencial-y-limitaciones-generales"><i class="fa fa-check"></i><b>4.6</b> Alcance inferencial y limitaciones generales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://www.minsalud.gov.co" target="blank">Ministerio de Salud y Protección Social</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sec-diseno-muestral" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Diseño muestral<a href="sec-diseno-muestral.html#sec-diseno-muestral" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo documenta formalmente el mecanismo mediante el cual se compone la muestra de usuarios de ENUS 2026: la naturaleza del diseño, la determinación del tamaño de muestra, la estructura de cuotas que distribuye ese tamaño entre los dominios de análisis y las celdas demográficas, y la distinción conceptual entre cuota, estrato, dominio y variable de calibración. Retoma la cadena de población desarrollada en el capítulo anterior (<a href="sec-alcance.html#sec-poblacion-objetivo">3.2</a>) y la extiende hasta la conformación de la base analítica.</p>
+<div id="naturaleza-del-diseño" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Naturaleza del diseño<a href="sec-diseno-muestral.html#naturaleza-del-dise%C3%B1o" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ENUS 2026 utiliza un <em>diseño de muestreo no probabilístico por cuotas</em> para la selección y composición de la muestra.</p>
+<p>La inclusión de las personas participantes no se basa en un mecanismo de selección aleatoria con probabilidades de inclusión conocidas. La participación se estructura mediante cuotas previamente definidas, orientadas a garantizar una composición mínima de la muestra en las regiones establecidas para la operación.</p>
+<p>En consecuencia, ENUS 2026 no corresponde a un diseño probabilístico y los procedimientos de estimación y análisis deben considerar las implicaciones derivadas de la ausencia de probabilidades de inclusión conocidas.</p>
+<p>Los mecanismos, canales y herramientas utilizados para la captación de participantes constituyen componentes operativos de la recolección y podrán modificarse durante el desarrollo de la operación sin alterar la naturaleza del diseño estadístico.</p>
+<p>De manera general, la operación comprende la siguiente secuencia:</p>
+<blockquote>
+<p><em>población objetivo → identificación de personas elegibles → captación → asignación a cuotas → participación → validación de la información → conformación de la base analítica → producción de resultados.</em></p>
+</blockquote>
+<p>Los procedimientos específicos asociados con cada etapa se desarrollan en los capítulos correspondientes de diseño, recolección, procesamiento y estimación.</p>
+</div>
+<div id="sec-tamano-muestra" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Determinación del tamaño de muestra<a href="sec-diseno-muestral.html#sec-tamano-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El tamaño de muestra de ENUS 2026 se establece como un <em>tamaño objetivo de participación</em> para la operación y se define a partir de la población afiliada al SGSSS registrada en la Base de Datos Única de Afiliados (BDUA), con corte a marzo de 2026 (<span class="math inline">\(N = 50,168,746\)</span> personas).</p>
+<p>Este corte se utiliza como referencia para establecer el tamaño objetivo de la operación y la distribución de las cuotas regionales. Su utilización tiene carácter de parámetro de diseño y no implica que la BDUA constituya, por sí misma, un marco de selección probabilística.</p>
+<p>El tamaño objetivo se determina considerando los niveles de precisión deseados para los principales indicadores y las condiciones previstas para la distribución de la participación entre las regiones. Dado el carácter no probabilístico del diseño, estos tamaños no corresponden a tamaños de muestra probabilísticos asociados a probabilidades de inclusión conocidas ni permiten, por sí mismos, derivar márgenes de error bajo el enfoque clásico de muestreo probabilístico.</p>
+<p>La información de afiliación utilizada para la ponderación y calibración se actualizará con periodicidad trimestral, de acuerdo con el periodo de referencia correspondiente. Esta actualización permite que los procedimientos de ajuste de la composición de la muestra utilicen información poblacional consistente con el periodo de referencia, sin modificar el tamaño objetivo establecido para la operación.</p>
+<p>El procedimiento detallado para determinar el tamaño objetivo, distribuir las cuotas regionales y evaluar la suficiencia de la participación alcanzada se desarrolla en las secciones correspondientes al diseño de cuotas y a la ponderación y calibración.</p>
+<div id="fórmula" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Fórmula<a href="sec-diseno-muestral.html#f%C3%B3rmula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para una proporción de referencia <span class="math inline">\(P\)</span>, un nivel de confianza <span class="math inline">\(1-\alpha\)</span> y un margen de error relativo <span class="math inline">\(MER\)</span>, el tamaño de muestra bajo muestreo aleatorio simple es:</p>
+<p><span class="math display">\[n_{MAS} = \frac{Z_{1-\alpha/2}^{2}\,(1-P)}{MER^{2}\,P}\]</span></p>
+<p>Este tamaño se ajusta por el efecto de diseño (<span class="math inline">\(DEFF\)</span>), que representa la pérdida de eficiencia del diseño complejo frente a un muestreo aleatorio simple:</p>
+<p><span class="math display">\[n_{DEFF} = n_{MAS} \times DEFF\]</span></p>
+<p>y se corrige por población finita cuando el tamaño del dominio <span class="math inline">\(N\)</span> lo amerita:</p>
+<p><span class="math display">\[n_{ajustado} = \frac{n_{DEFF}}{1 + n_{DEFF}/N}\]</span></p>
+<p>Finalmente, se aplica un factor operativo <span class="math inline">\(f\)</span> que ajusta anticipadamente por no respuesta, imposibilidad de contacto y registros inválidos, para obtener el tamaño de muestra efectivo —la meta de captación de la cuota—:</p>
+<p><span class="math display">\[n_{efectivo} = n_{ajustado} \times f\]</span></p>
+</div>
+<div id="parámetros-de-diseño" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Parámetros de diseño<a href="sec-diseno-muestral.html#par%C3%A1metros-de-dise%C3%B1o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Símbolo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Proporción de referencia (máxima varianza)</td>
+<td><span class="math inline">\(P\)</span></td>
+<td>0,50</td>
+</tr>
+<tr class="even">
+<td>Nivel de confianza</td>
+<td><span class="math inline">\(1-\alpha\)</span></td>
+<td>95 %</td>
+</tr>
+<tr class="odd">
+<td>Longitud total del intervalo de confianza</td>
+<td>—</td>
+<td>0,04</td>
+</tr>
+<tr class="even">
+<td>Margen de error absoluto</td>
+<td><span class="math inline">\(ME = Z_{1-\alpha/2}\times(\text{longitud}/2)\)</span></td>
+<td>0,0392</td>
+</tr>
+<tr class="odd">
+<td>Margen de error relativo</td>
+<td><span class="math inline">\(MER = ME/P\)</span></td>
+<td>7,84 %</td>
+</tr>
+<tr class="even">
+<td>Efecto de diseño aplicado</td>
+<td><span class="math inline">\(DEFF\)</span></td>
+<td>1,5</td>
+</tr>
+<tr class="odd">
+<td>Factor operativo (ajuste por no respuesta)</td>
+<td><span class="math inline">\(f\)</span></td>
+<td>1,4</td>
+</tr>
+</tbody>
+</table>
+<p>Con estos parámetros, <span class="math inline">\(n_{MAS} \approx 625\)</span> y <span class="math inline">\(n_{DEFF} = 625 \times 1{,}5 \approx 938\)</span>. Para la generalidad de los dominios —cuyo tamaño poblacional es del orden de cientos de miles a decenas de millones— la corrección por población finita es despreciable y <span class="math inline">\(n_{ajustado} \approx 938\)</span>; solo en el dominio más pequeño (Orinoquía-Amazonía, régimen contributivo, <span class="math inline">\(N \approx 331\,029\)</span>) la corrección reduce el resultado a 935. El tamaño efectivo por dominio es entonces <span class="math inline">\(n_{efectivo} = n_{ajustado}\times 1{,}4\)</span>, es decir, del orden de 1 309 a 1 313 encuestas por dominio.</p>
+<p>Este resultado debe leerse como el <strong>tamaño objetivo (meta) de cada cuota</strong>, y no como el resultado de un cálculo de precisión bajo selección aleatoria: la fórmula se utiliza para fijar una meta de captación con una precisión nominal deseada, no para certificar que esa precisión se alcanza mediante un mecanismo probabilístico —lo cual sería inconsistente con la naturaleza del diseño (<a href="sec-diseno-muestral.html#sec-diseno-muestral">4</a>).</p>
+</div>
+<div id="resultado-por-nivel-de-dominio" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Resultado por nivel de dominio<a href="sec-diseno-muestral.html#resultado-por-nivel-de-dominio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La fórmula se evalúa, con los mismos parámetros, sobre cuatro niveles de dominio: nacional, región (6 categorías), régimen (2 categorías) y región × régimen (12 categorías). El resultado es prácticamente el mismo (≈1 313 encuestas) en todos los dominios, salvo en los de menor tamaño poblacional:</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="22%" />
+<col width="22%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dominio</th>
+<th>Nivel</th>
+<th align="right"><span class="math inline">\(N\)</span></th>
+<th align="right"><span class="math inline">\(n_{DEFF}\)</span></th>
+<th align="right"><span class="math inline">\(n_{efectivo}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nacional</td>
+<td>Nacional</td>
+<td align="right">50 168 746</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Bogotá</td>
+<td>Región</td>
+<td align="right">7 780 253</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Caribe</td>
+<td>Región</td>
+<td align="right">11 666 255</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>Región</td>
+<td align="right">12 414 228</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Oriental</td>
+<td>Región</td>
+<td align="right">9 033 646</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Pacífica</td>
+<td>Región</td>
+<td align="right">7 846 342</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Orinoquía-Amazonía</td>
+<td>Región</td>
+<td align="right">1 428 022</td>
+<td align="right">937</td>
+<td align="right">1 311,8</td>
+</tr>
+<tr class="even">
+<td>Contributivo</td>
+<td>Régimen</td>
+<td align="right">23 224 623</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Subsidiado</td>
+<td>Régimen</td>
+<td align="right">26 944 123</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Bogotá × Contributivo</td>
+<td>Región × Régimen</td>
+<td align="right">5 969 975</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Bogotá × Subsidiado</td>
+<td>Región × Régimen</td>
+<td align="right">1 810 278</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Caribe × Contributivo</td>
+<td>Región × Régimen</td>
+<td align="right">3 319 849</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Caribe × Subsidiado</td>
+<td>Región × Régimen</td>
+<td align="right">8 346 406</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Central × Contributivo</td>
+<td>Región × Régimen</td>
+<td align="right">6 354 613</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Central × Subsidiado</td>
+<td>Región × Régimen</td>
+<td align="right">6 059 615</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Oriental × Contributivo</td>
+<td>Región × Régimen</td>
+<td align="right">4 174 548</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Oriental × Subsidiado</td>
+<td>Región × Régimen</td>
+<td align="right">4 859 098</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="even">
+<td>Orinoquía-Amazonía × Contributivo</td>
+<td>Región × Régimen</td>
+<td align="right">331 029</td>
+<td align="right">935</td>
+<td align="right">1 309,0</td>
+</tr>
+<tr class="odd">
+<td>Orinoquía-Amazonía × Subsidiado</td>
+<td>Región × Régimen</td>
+<td align="right">1 096 993</td>
+<td align="right">937</td>
+<td align="right">1 311,8</td>
+</tr>
+<tr class="even">
+<td>Pacífica × Contributivo</td>
+<td>Región × Régimen</td>
+<td align="right">3 074 609</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+<tr class="odd">
+<td>Pacífica × Subsidiado</td>
+<td>Región × Régimen</td>
+<td align="right">4 771 733</td>
+<td align="right">938</td>
+<td align="right">1 313,2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tamaño-adoptado-por-qué-la-suma-regional-y-no-el-cálculo-nacional-ni-el-cruce-región-régimen" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> Tamaño adoptado: por qué la suma regional y no el cálculo nacional ni el cruce región × régimen<a href="sec-diseno-muestral.html#tama%C3%B1o-adoptado-por-qu%C3%A9-la-suma-regional-y-no-el-c%C3%A1lculo-nacional-ni-el-cruce-regi%C3%B3n-r%C3%A9gimen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El resultado a nivel <strong>nacional</strong> de la tabla anterior (1 313 encuestas) no es el tamaño adoptado para la operación: ese valor solo garantizaría la precisión nominal para una estimación agregada del país completo, sin desagregación. El objetivo de generar información con desagregación regional (<a href="sec-alcance.html#sec-alcance">3</a>) exige que <strong>cada una de las seis regiones</strong>, individualmente, alcance esa misma precisión. Por ello, el tamaño de muestra adoptado es la <strong>suma de los seis tamaños regionales</strong>, asignados en cantidad igual e independiente:</p>
+<p><span class="math display">\[n_{nacional} = \sum_{r=1}^{6} n_{efectivo}(r) \approx 6 \times 1\,313 \approx 7\,876 \text{ encuestas}\]</span></p>
+<p>Esta suma —no el valor nacional agregado ni el cruce región × régimen— es el tamaño de muestra que se asigna operativamente. El cruce región × régimen, por su parte, tampoco se adopta como nivel de meta independiente: si cada una de las 12 celdas de región × régimen se fijara con su propia meta de ≈1 313 encuestas, el tamaño total requerido casi se duplicaría (≈15 750 encuestas). En lugar de ello, el régimen se distribuye proporcionalmente <strong>dentro</strong> del presupuesto ya fijado por región (ver <a href="sec-diseno-muestral.html#sec-diseno-muestral">4</a>), lo que preserva la precisión regional objetivo sin duplicar el tamaño total, a costa de que las combinaciones región × régimen menos pobladas (por ejemplo, Bogotá × Subsidiado o Orinoquía-Amazonía × Contributivo) queden con una precisión nominal menor a la de la tabla anterior.</p>
+</div>
+</div>
+<div id="asignación-del-tamaño-de-muestra-por-cuotas" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Asignación del tamaño de muestra por cuotas<a href="sec-diseno-muestral.html#asignaci%C3%B3n-del-tama%C3%B1o-de-muestra-por-cuotas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El tamaño ya fijado por región (<a href="sec-diseno-muestral.html#sec-diseno-muestral">4</a>) se reparte en un único paso entre las celdas formadas por régimen de afiliación (2 categorías), sexo (2 categorías), grupo de edad en rangos de 10 años (7 categorías: 00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más) y zona (urbano/rural) —56 celdas por región, 336 en total—, de forma proporcional al peso poblacional de cada celda en la BDUA de marzo de 2026, con un <strong>mínimo garantizado de 10 encuestas por celda</strong>:</p>
+<p><span class="math display">\[n_{celda} = \max \left\{ n_{región} \times \frac{N_{celda}}{N_{región}} \;;\; 10 \right\}\]</span></p>
+<p>Cuando la suma de los mínimos garantizados dentro de una región excede el tamaño regional disponible, se aplica un reajuste proporcional entre las celdas restantes. El cuadre exacto entre la suma de las 56 celdas y el tamaño ya asignado a la región se garantiza mediante el método del resto mayor: el remanente entero, tras asignar la parte base de cada celda, se reparte una unidad a la vez a las celdas con mayor parte fraccionaria pendiente, hasta agotar el tamaño regional.</p>
+<p>De las 336 celdas resultantes a nivel nacional, 17 quedan fijadas exactamente en el mínimo garantizado de 10 encuestas (las combinaciones menos pobladas, típicamente zona rural en grupos de edad extremos), mientras que la celda de mayor tamaño alcanza 72 encuestas. Un umbral mínimo por celda es, en sí mismo, una sobrerrepresentación deliberada de los subgrupos demográficos menos numerosos respecto a su peso poblacional real, adoptada para preservar la posibilidad de análisis desagregado; su efecto sobre los pesos analíticos se corrige en la etapa de calibración (ver capítulo de ponderación y calibración).</p>
+<div id="resultado-agregado-por-región-y-régimen" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Resultado agregado por región y régimen<a href="sec-diseno-muestral.html#resultado-agregado-por-regi%C3%B3n-y-r%C3%A9gimen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La agregación de las 56 celdas de cada región por régimen produce la siguiente meta de cuota, consistente con el tamaño regional ya fijado y con el peso poblacional de cada régimen dentro de cada región:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Región</th>
+<th align="right">Contributivo</th>
+<th align="right">Subsidiado</th>
+<th align="right">Total región</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bogotá</td>
+<td align="right">855</td>
+<td align="right">458</td>
+<td align="right">1 313</td>
+</tr>
+<tr class="even">
+<td>Caribe</td>
+<td align="right">494</td>
+<td align="right">819</td>
+<td align="right">1 313</td>
+</tr>
+<tr class="odd">
+<td>Central</td>
+<td align="right">663</td>
+<td align="right">650</td>
+<td align="right">1 313</td>
+</tr>
+<tr class="even">
+<td>Oriental</td>
+<td align="right">629</td>
+<td align="right">684</td>
+<td align="right">1 313</td>
+</tr>
+<tr class="odd">
+<td>Orinoquía-Amazonía</td>
+<td align="right">453</td>
+<td align="right">858</td>
+<td align="right">1 311</td>
+</tr>
+<tr class="even">
+<td>Pacífica</td>
+<td align="right">575</td>
+<td align="right">738</td>
+<td align="right">1 313</td>
+</tr>
+<tr class="odd">
+<td><strong>Total nacional</strong></td>
+<td align="right"><strong>3 669</strong></td>
+<td align="right"><strong>4 207</strong></td>
+<td align="right"><strong>7 876</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="resultado-agregado-por-sexo-grupo-de-edad-y-zona" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Resultado agregado por sexo, grupo de edad y zona<a href="sec-diseno-muestral.html#resultado-agregado-por-sexo-grupo-de-edad-y-zona" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<thead>
+<tr class="header">
+<th>Sexo</th>
+<th align="right"><span class="math inline">\(n\)</span></th>
+<th align="right">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Femenino</td>
+<td align="right">3 993</td>
+<td align="right">50,7 %</td>
+</tr>
+<tr class="even">
+<td>Masculino</td>
+<td align="right">3 883</td>
+<td align="right">49,3 %</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Grupo de edad</th>
+<th align="right"><span class="math inline">\(n\)</span></th>
+<th align="right">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00-09</td>
+<td align="right">1 014</td>
+<td align="right">12,9 %</td>
+</tr>
+<tr class="even">
+<td>10-19</td>
+<td align="right">1 163</td>
+<td align="right">14,8 %</td>
+</tr>
+<tr class="odd">
+<td>20-29</td>
+<td align="right">1 203</td>
+<td align="right">15,3 %</td>
+</tr>
+<tr class="even">
+<td>30-39</td>
+<td align="right">1 203</td>
+<td align="right">15,3 %</td>
+</tr>
+<tr class="odd">
+<td>40-49</td>
+<td align="right">1 086</td>
+<td align="right">13,8 %</td>
+</tr>
+<tr class="even">
+<td>50-59</td>
+<td align="right">975</td>
+<td align="right">12,4 %</td>
+</tr>
+<tr class="odd">
+<td>60 o más</td>
+<td align="right">1 232</td>
+<td align="right">15,6 %</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Zona</th>
+<th align="right"><span class="math inline">\(n\)</span></th>
+<th align="right">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Urbano</td>
+<td align="right">5 147</td>
+<td align="right">65,4 %</td>
+</tr>
+<tr class="even">
+<td>Rural</td>
+<td align="right">2 729</td>
+<td align="right">34,6 %</td>
+</tr>
+</tbody>
+</table>
+<p>La matriz completa de las 336 celdas (región × régimen × sexo × grupo de edad × zona), con su meta y mínimo garantizado, se entrega como anexo externo al documento (Anexo E — Matriz de cuotas), dividido en una hoja por cada una de las seis regiones.</p>
+</div>
+<div id="bloques-de-gestión-institucional-y-módulo-final-sin-cuota-de-asignación-previa" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Bloques de gestión institucional y módulo final: sin cuota de asignación previa<a href="sec-diseno-muestral.html#bloques-de-gesti%C3%B3n-institucional-y-m%C3%B3dulo-final-sin-cuota-de-asignaci%C3%B3n-previa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Las cajas de entidad prestadora (EPS/IPS/gestor) y de tipo de servicio recibido —que determinan el módulo final del cuestionario (<a href="#sec-papel-eps-ips"><strong>??</strong></a>)— no reciben una cuota de asignación definida a priori. Las nueve rutas posibles del árbol de decisión se nutren del mismo universo de 7 876 encuestas ya asignado por región, régimen, sexo, edad y zona; el número de casos que finalmente recae en cada ruta depende de la regla con la que se asigna el módulo a cada usuario —regla que, según se documenta en el capítulo de reconciliación de estructuras (<a href="#sec-reconciliacion-estructuras"><strong>??</strong></a>), se resuelve antes del diligenciamiento del cuestionario y cuyo criterio operativo exacto no está documentado en los insumos técnicos disponibles—, no de una meta de cuota fijada por módulo. La correspondencia completa entre esta asignación y las cuotas demográficas se desarrolla en el capítulo de relación entre cuestionario y cuotas.</p>
+</div>
+</div>
+<div id="diferenciación-conceptual-cuota-estrato-dominio-variable-de-calibración" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Diferenciación conceptual: cuota ≠ estrato ≠ dominio ≠ variable de calibración<a href="sec-diseno-muestral.html#diferenciaci%C3%B3n-conceptual-cuota-estrato-dominio-variable-de-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Cuota.</strong> Meta de composición de la muestra, fijada ex ante para cada celda de región × régimen × sexo × grupo de edad × zona (<a href="sec-diseno-muestral.html#sec-diseno-muestral">4</a>), sin mecanismo aleatorio de selección dentro de la celda. Su función es controlar la composición demográfica de la captación, no producir una estimación insesgada por sí misma.</li>
+<li><strong>Estrato.</strong> En el sentido probabilístico clásico, un estrato implica una partición de la población con selección aleatoria y probabilidad de inclusión conocida dentro de cada parte <span class="citation">(<a href="referencias.html#ref-Cochran1977">Cochran 1977</a>; <a href="referencias.html#ref-Kish1965">Kish 1965</a>)</span>. ENUS 2026 no tiene estratos en ese sentido formal: las celdas de cuota organizan la captación, pero no hay selección aleatoria dentro de ellas (<a href="sec-diseno-muestral.html#sec-diseno-muestral">4</a>).</li>
+<li><strong>Dominio.</strong> Agregación utilizada para la producción y publicación de resultados (nacional, regional, por régimen, por sexo, etc.). Puede coincidir en las variables que definen la cuota, pero cumple una función de reporte y estimación, no de control de la captación.</li>
+<li><strong>Variable de calibración.</strong> Variable auxiliar utilizada en el ajuste posterior de los pesos contra los totales de referencia de la BDUA (capítulo de ponderación y calibración). Puede compartir las mismas variables que la cuota (sexo, edad, régimen, zona, región), pero cumple una función distinta: corrige desbalances remanentes en la muestra ya captada, mientras que la cuota controla la composición de la captación misma.</li>
+</ul>
+</div>
+<div id="papel-de-las-eps-e-ips-en-la-captación" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Papel de las EPS e IPS en la captación<a href="sec-diseno-muestral.html#papel-de-las-eps-e-ips-en-la-captaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El papel de las EPS, IPS y gestores farmacéuticos dentro de la operación —como dato de identificación del usuario y como variable de clasificación del módulo del cuestionario, sin selección institucional ni evidencia de un canal activo de reclutamiento— se documenta de forma completa en <a href="#sec-papel-eps-ips"><strong>??</strong></a> y no se repite aquí.</p>
+</div>
+<div id="alcance-inferencial-y-limitaciones-generales" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Alcance inferencial y limitaciones generales<a href="sec-diseno-muestral.html#alcance-inferencial-y-limitaciones-generales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dado que no existe un mecanismo aleatorio de inclusión a nivel de usuario, la probabilidad efectiva de que un usuario elegible (<a href="sec-alcance.html#sec-poblacion-objetivo">3.2</a>) quede incluido en la muestra no es observable ni controlada por un mecanismo formal: depende de su decisión de acceder a <em>ClicSalud</em> y completar el cuestionario dentro de una celda de cuota aún abierta. El esquema de cuotas reduce el desequilibrio marginal en las variables demográficas utilizadas para su construcción, pero no elimina por sí mismo el sesgo de autoselección en variables no observadas <span class="citation">(<a href="referencias.html#ref-ElliottValliant2017">Elliott y Valliant 2017</a>; <a href="referencias.html#ref-WangValliant2015">Wang y Valliant 2015</a>; <a href="referencias.html#ref-LeeValliant2006">Lee y Valliant 2006</a>)</span>. El desarrollo completo de esta limitación, y de las demás limitaciones propias del muestreo por cuotas, se documenta en el capítulo de limitaciones del muestreo por cuotas; el mecanismo de selección dentro de cada celda de cuota se desarrolla en el capítulo de mecanismo de selección; y la matriz completa de variables, categorías y metas de cuota se desarrolla en el capítulo de muestreo por cuotas.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sec-alcance.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["ENUS_2026_metodoloia.pdf", "ENUS_2026_metodoloia.docx"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -23,25 +23,23 @@ contenido pendiente, su línea permanece comentada en `rmd_files` dentro de
 
 1. Introducción
 2. Antecedentes
-3. Objetivo y alcance
-4. Marco conceptual
-5. Población objetivo y marco de referencia
-6. Diseño muestral
-7. Papel de las EPS e IPS
-8. Muestreo por cuotas
-9. Variables de clasificación
-10. Relación entre cuestionario y cuotas
-11. Mecanismo de selección
-12. Limitaciones del muestreo por cuotas
-13. Instrumento de recolección (incluye ClicSalud)
-14. Flujo y rutas del cuestionario
-15. Reconciliación de estructuras
-16. Procesamiento
-17. Ponderación y calibración
-18. Diagnóstico de calibración
-19. Precisión e incertidumbre
-20. Limitaciones
-21. Referencias
+3. Objetivo y alcance (incluye el marco conceptual: fenómenos medidos y su definición; y la población objetivo)
+4. Diseño muestral (incluye el marco de referencia: fuente y actualización)
+5. Papel de las EPS e IPS
+6. Muestreo por cuotas
+7. Variables de clasificación
+8. Relación entre cuestionario y cuotas
+9. Mecanismo de selección
+10. Limitaciones del muestreo por cuotas
+11. Instrumento de recolección (incluye ClicSalud)
+12. Flujo y rutas del cuestionario
+13. Reconciliación de estructuras
+14. Procesamiento
+15. Ponderación y calibración
+16. Diagnóstico de calibración
+17. Precisión e incertidumbre
+18. Limitaciones
+19. Referencias
 
 ## Compilación
 

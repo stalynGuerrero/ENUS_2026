@@ -15,10 +15,8 @@ rmd_files:
   - index.Rmd
   - capitulos_bookdown/01-Introduccion.Rmd
   - capitulos_bookdown/02-Antecedentes.Rmd
-  # - capitulos_bookdown/03-Objetivo_y_alcance.Rmd
-  # - capitulos_bookdown/04-Marco_conceptual.Rmd
-  # - capitulos_bookdown/05-Poblacion_objetivo_y_marco_de_referencia.Rmd
-  # - capitulos_bookdown/06-Diseno_muestral.Rmd
+  - capitulos_bookdown/03-Objetivo_y_alcance.Rmd
+  - capitulos_bookdown/06-Diseno_muestral.Rmd
   # - capitulos_bookdown/07-Papel_de_las_EPS_e_IPS.Rmd
   # - capitulos_bookdown/08-Muestreo_por_cuotas.Rmd
   # - capitulos_bookdown/09-Variables_de_clasificacion.Rmd
@@ -31,5 +29,6 @@ rmd_files:
   # - capitulos_bookdown/17-Procesamiento.Rmd
   # - capitulos_bookdown/18-Ponderacion_y_calibracion.Rmd
   # - capitulos_bookdown/20-Diagnostico_de_calibracion.Rmd
+  # - capitulos_bookdown/22-Precision_e_incertidumbre.Rmd
   # - capitulos_bookdown/24-Limitaciones.Rmd
   - capitulos_bookdown/26-Referencias.Rmd
