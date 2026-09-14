@@ -13,17 +13,17 @@ language:
 # descomenta para incluirlo en la compilación del libro. Ver README.md.
 rmd_files:
   - index.Rmd
+  - capitulos_bookdown/00-Glosario.Rmd
   - capitulos_bookdown/01-Introduccion.Rmd
   - capitulos_bookdown/02-Antecedentes.Rmd
   - capitulos_bookdown/03-Objetivo_y_alcance.Rmd
   - capitulos_bookdown/06-Diseno_muestral.Rmd
-  # - capitulos_bookdown/07-Papel_de_las_EPS_e_IPS.Rmd
-  # - capitulos_bookdown/08-Muestreo_por_cuotas.Rmd
+  - capitulos_bookdown/07-Papel_de_las_EPS_e_IPS.Rmd
   # - capitulos_bookdown/09-Variables_de_clasificacion.Rmd
   # - capitulos_bookdown/10-Relacion_entre_cuestionario_y_cuotas.Rmd
   # - capitulos_bookdown/11-Mecanismo_de_seleccion.Rmd
   # - capitulos_bookdown/12-Limitaciones_del_muestreo_por_cuotas.Rmd
-  # - capitulos_bookdown/13-Instrumento_de_recoleccion.Rmd
+  - capitulos_bookdown/13-Instrumento_de_recoleccion.Rmd
   # - capitulos_bookdown/14-Flujo_y_rutas_del_cuestionario.Rmd
   # - capitulos_bookdown/15-Reconciliacion_de_estructuras.Rmd
   # - capitulos_bookdown/17-Procesamiento.Rmd
