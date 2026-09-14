@@ -1,0 +1,42 @@
+# Limitaciones {#sec-limitaciones}
+
+Este capítulo documenta las limitaciones metodológicas de ENUS 2026 como operación estadística, a un nivel general y transversal. Las limitaciones específicas del muestreo por cuotas se desarrollan en \@ref(sec-limitaciones-cuotas).
+
+## Distinción entre error de muestreo y sesgos no muestrales
+
+Es necesario distinguir dos fuentes de discrepancia entre una estimación de ENUS 2026 y el valor poblacional que pretende representar:
+
+- **Error de muestreo / variabilidad de estimación.** Es la variabilidad que surge de observar solo una muestra y no la totalidad de la población. Bajo el diseño de ENUS 2026, esta variabilidad se cuantifica mediante replicación de pesos calibrados por entropía (ver \@ref(sec-pesos-calibracion)) y se expresa en los intervalos de incertidumbre reportados junto a cada estimador.
+- **Sesgos y errores no muestrales.** Son discrepancias sistemáticas que no desaparecen al aumentar el tamaño de muestra: sesgo de selección, sesgo de cobertura, sesgo de no respuesta, errores de medición del instrumento, errores de captura. Estos no quedan reflejados en los intervalos de incertidumbre y deben documentarse explícitamente, como se hace en las secciones siguientes.
+
+## Limitaciones del mecanismo de captación
+
+La captación de usuarios de ENUS 2026 no es un muestreo aleatorio: la inclusión de un usuario en la muestra depende de que sea clasificado como elegible y de que decida participar, no de un mecanismo de selección con probabilidad conocida (ver \@ref(sec-diseno-muestral)). En consecuencia, no existe una probabilidad de inclusión $\pi_i$ definida para cada usuario de la población objetivo, y los estimadores no pueden interpretarse como insesgados en el sentido del muestreo probabilístico clásico.
+
+## Cobertura
+
+La cobertura de ENUS 2026 está limitada a los usuarios que son identificables y clasificables a través de la aplicación ClicSalud y de las variables trazadoras que utiliza el árbol de decisión (ver \@ref(sec-app-clicsalud)). Usuarios sin acceso al canal de recolección, o cuyas variables de clasificación no puedan determinarse, no tienen posibilidad de quedar representados en la muestra, con independencia de cuál sea su experiencia real con el sistema de salud.
+
+## Participación y no respuesta
+
+La participación en ENUS 2026 depende de la decisión voluntaria del usuario contactado o identificado. No existe garantía de que los usuarios que efectivamente participan sean representativos, en sus variables no observadas, de los usuarios que no participan. En particular, la propensión a participar puede estar asociada a la intensidad de la experiencia vivida —positiva o negativa—, lo que introduce un riesgo de sesgo de no respuesta que las cuotas y la calibración por entropía no garantizan eliminar, en la medida en que ese riesgo dependa de variables no observadas o no incluidas como variables auxiliares.
+
+## Selección dentro de cuotas
+
+Dentro de cada celda de cuota, la selección del usuario específico que efectivamente responde no sigue un mecanismo aleatorio documentado en los insumos disponibles (ver limitaciones específicas en \@ref(sec-limitaciones-cuotas)). Esto significa que, aun cuando la composición agregada de la muestra coincida con la cuota objetivo en las variables de control, pueden persistir diferencias sistemáticas entre los usuarios seleccionados y el resto de la celda en variables no controladas.
+
+## Dependencia de las variables auxiliares
+
+La calibración por entropía corrige la muestra respecto de los totales poblacionales de las variables auxiliares utilizadas (sexo, edad, régimen, departamento, zona; ver \@ref(sec-pesos-calibracion)). Esta corrección es efectiva únicamente en la medida en que el sesgo de selección esté correlacionado con esas variables. Si existen factores no observados que influyen simultáneamente en la probabilidad de participar y en las respuestas sustantivas del cuestionario —por ejemplo, la intensidad de la experiencia, el nivel de alfabetización digital, o el acceso a dispositivos y conectividad—, la calibración no corrige el sesgo asociado a esos factores.
+
+## Limitaciones de la calibración
+
+**La calibración por entropía no elimina los sesgos de selección.** Reconstruye la coincidencia de la muestra con los totales poblacionales conocidos en las variables auxiliares utilizadas, pero no convierte una muestra no probabilística en una muestra aleatoria, y no corrige sesgos en variables que no forman parte de la calibración. El diagnóstico de calibración (ver \@ref(sec-diagnostico-calibracion)) permite evaluar el ajuste logrado, pero no sustituye una evaluación directa de representatividad en variables no auxiliares.
+
+## Limitaciones de la estimación de incertidumbre
+
+El método de replicación de pesos calibrados por entropía adoptado para ENUS 2026 (ver \@ref(sec-pesos-calibracion)) cuantifica la variabilidad asociada al remuestreo y a la recalibración, bajo los supuestos del mecanismo de réplica definido. No cuantifica la incertidumbre asociada a los sesgos no muestrales descritos en las secciones anteriores. Un intervalo de incertidumbre estrecho es compatible con una estimación sesgada si el sesgo no muestral es de magnitud mayor que la variabilidad de muestreo capturada por las réplicas.
+
+## Síntesis
+
+Las limitaciones descritas en este capítulo no invalidan a ENUS 2026 como operación estadística, pero sí acotan la interpretación de sus resultados: las estimaciones deben leerse como aproximaciones ajustadas a la estructura poblacional conocida en las variables de calibración, sujetas a sesgos no muestrales no cuantificados, y no como estimaciones insesgadas en el sentido de un diseño probabilístico. Esta distinción debe mantenerse explícita en cualquier producto derivado de ENUS 2026.

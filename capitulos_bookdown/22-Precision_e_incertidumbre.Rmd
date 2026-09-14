@@ -1,0 +1,17 @@
+# Precisión e incertidumbre
+
+Stalyn adoptó y cerró el 2026-08-17 el método de estimación de precisión
+para ENUS 2026 (ver \@ref(sec-anexo-l), decisión #6): **replicación de pesos
+calibrados por entropía**, con remuestreo bootstrap y recalibración por
+réplica, $B$ = 500 a 1000 réplicas, e intervalos de confianza al 95% por
+percentiles empíricos de la distribución de réplicas. El método no requiere
+supuestos de normalidad asintótica y no debe interpretarse como si
+derivara de un diseño probabilístico con $\pi_i$ conocida (ver
+\@ref(sec-limitaciones-cuotas)). Especificación matemática completa,
+procedimiento paso a paso e interpretación de límites en \@ref(sec-anexo-h).
+
+::: {.pendiente-definicion}
+**Pendiente de definición:** resultados numéricos de la replicación
+(varianzas e intervalos de confianza por indicador) — no es posible
+completarlos sin datos reales de campo. Ver \@ref(sec-anexo-h).
+:::

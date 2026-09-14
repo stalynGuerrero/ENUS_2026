@@ -1,0 +1,37 @@
+# Relación entre cuestionario y cuotas {#sec-relacion-cuestionario-cuotas}
+
+Este capítulo formaliza, en una sola matriz y en un caso trazado paso a paso, la relación entre las variables asociadas a un usuario y las dos funciones distintas que cumplen: fijar su celda de cuota o determinar su ruta —es decir, el módulo que finalmente responde—, distinción ya establecida conceptualmente en el capítulo de diseño muestral (\@ref(sec-diseno-muestral)). El caso trazado a continuación ilustra la condición lógica que determina cada ruta —qué combinación de trazadora, entidad y servicio corresponde a qué módulo—, la misma que formaliza el árbol de decisión (\@ref(sec-flujo-rutas)); el capítulo de reconciliación de estructuras (\@ref(sec-reconciliacion-estructuras)) documenta que, en la aplicación de recolección, el módulo se asigna antes del diligenciamiento y no mediante preguntas de bifurcación respondidas en vivo, sin que ello altere la relación lógica entre variables, cuota y módulo que se describe aquí.
+
+## Matriz clasificación → cuota → ruta → módulo
+
+| Variable | Bloque del árbol | ¿Define celda de cuota? | ¿Define ruta / módulo? | Observación |
+|---|---|:---:|:---:|---|
+| Sexo | 1 — Identificación y caracterización | Sí | No | — |
+| Grupo de edad | 1 — Identificación y caracterización | Sí | No | — |
+| Ubicación geográfica (región) | 1 — Identificación y caracterización | Sí | No | También dominio geográfico de análisis (\@ref(sec-variables-clasificacion)) |
+| Zona | 1 — Identificación y caracterización | Sí | No | — |
+| Régimen de afiliación | 1 — Identificación y caracterización | Sí | No | — |
+| Uso reciente de servicios de salud (trazadora) | 2 — Pregunta trazadora | No | Sí | Una respuesta negativa dirige directamente a la ruta 1 (EPS – Módulo 1, barreras de acceso), sin pasar por el bloque 3 |
+| Entidad prestadora (EPS/IPS/gestor) | 3 — Gestión institucional | No | Sí | Solo se pregunta si la trazadora fue afirmativa |
+| Tipo de servicio recibido | 3 — Gestión institucional | No | Sí | Junto con la entidad, define cuál de los nueve módulos se aplica (\@ref(sec-flujo-rutas)) |
+
+Ninguna variable cumple ambas funciones a la vez: las cinco variables del bloque de identificación y caracterización fijan la celda de cuota y nunca determinan el módulo; las variables de los bloques de trazadora y gestión institucional determinan el módulo y nunca alteran la celda de cuota ya fijada.
+
+## Trazabilidad de un caso: ejemplo ilustrativo
+
+Para hacer explícita esta secuencia, se traza el recorrido completo de un usuario hipotético:
+
+1. **Identificación.** El usuario reporta su documento y su EPS; el sistema valida su afiliación activa en BDUA y confirma su identidad con un código enviado por SMS (\@ref(sec-poblacion-objetivo)).
+2. **Bloque de identificación y caracterización.** El usuario reporta: sexo femenino, grupo de edad 20-29, región Central, zona urbana, régimen contributivo. Con estas cinco respuestas queda fijada su celda de cuota: *Central × Contributivo × Femenino × 20-29 × Urbano*, una de las 336 celdas de la matriz de cuotas (\@ref(sec-diseno-muestral)).
+3. **Pregunta trazadora.** El usuario reporta que sí ha utilizado servicios de salud en el período de referencia (\@ref(sec-poblacion-objetivo)).
+4. **Gestión institucional.** El usuario reporta que el servicio lo recibió a través de su IPS, en modalidad de urgencias.
+5. **Módulo asignado.** De acuerdo con la matriz de rutas (\@ref(sec-flujo-rutas)), la combinación IPS + urgencias corresponde a la ruta 5, módulo IPS – Módulo 2 (32 preguntas).
+6. **Finalización e inclusión en la base analítica.** El usuario completa el módulo asignado; su registro queda identificado, simultáneamente, por su celda de cuota (para la ponderación y calibración) y por su ruta (para el análisis por módulo), sin que ninguna de las dos condicione a la otra.
+
+## El espacio combinatorio cuota × ruta
+
+Las 336 celdas de cuota y las nueve rutas del cuestionario son dimensiones transversales: en principio, cualquiera de las 336 celdas puede combinarse con cualquiera de las nueve rutas, para un espacio de hasta 3 024 combinaciones posibles de (celda de cuota, ruta). Ninguna de esas combinaciones tiene una meta de asignación propia: la meta se fija únicamente a nivel de celda de cuota (\@ref(sec-diseno-muestral)), y la distribución de una celda entre las nueve rutas depende de la regla de asignación al módulo, no de un parámetro de diseño de la cuota.
+
+## Consecuencias para la trazabilidad y la precisión
+
+Esta separación entre cuota y ruta es la que permite construir la matriz de trazabilidad completa de la operación (objetivo → indicador → variable → pregunta → ruta → base → peso → estimador): cada registro de la base analítica puede reconstruirse hacia atrás tanto por su celda de cuota (para verificar el cumplimiento de la composición demográfica objetivo) como por su ruta (para identificar qué módulo, y por tanto qué preguntas e indicadores, le son aplicables). Al mismo tiempo, esta separación implica que la precisión de los indicadores calculados a nivel de módulo no está garantizada por el mismo mecanismo que garantiza la precisión demográfica; esa limitación se desarrolla en el capítulo de limitaciones del muestreo por cuotas (\@ref(sec-limitaciones-cuotas)).

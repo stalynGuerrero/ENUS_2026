@@ -1,0 +1,97 @@
+# Flujo y rutas del cuestionario {#sec-flujo-rutas}
+
+Este capítulo reconstruye la lógica completa de navegación del cuestionario a partir del árbol de decisión: los nodos que lo componen, las transiciones entre ellos y las rutas alcanzables desde la raíz hasta cada módulo final. El árbol se organiza en 48 nodos distribuidos en cuatro bloques secuenciales —identificación y caracterización, pregunta trazadora, gestión institucional y módulos finales—, y define las nueve rutas que convergen en ocho módulos, referenciadas desde los capítulos de papel de las EPS (\@ref(sec-papel-eps-ips)) y de relación entre cuestionario y cuotas (\@ref(sec-relacion-cuestionario-cuotas)).
+
+![Esquema general del árbol de decisión: de la caracterización del usuario a la pregunta trazadora, la gestión institucional y las nueve rutas que convergen en ocho módulos finales.](figuras/fig-arbol-general.png){width=95%}
+
+## Matriz de nodos
+
+### Bloque 1 — Identificación y caracterización (25 nodos)
+
+Cada persona encuestada recorre, en un orden fijo, cinco preguntas de clasificación. Cada pregunta converge en la siguiente sin importar la respuesta dada previamente: todas las combinaciones posibles de estas cinco variables son alcanzables, y ninguna respuesta en este bloque determina todavía una ruta hacia un módulo distinto (\@ref(sec-relacion-cuestionario-cuotas)).
+
+| ID nodo | Tipo | Pregunta / condición | Opciones | Nodo siguiente |
+|---|---|---|---|---|
+| `cedula` | Identificador | — | — | Sexo |
+| `sexo` | Pregunta | Sexo | Hombre, Mujer | Edad |
+| `edad` | Pregunta | Grupo de edad | 0–9, 10–19, 20–29, 30–39, 40–49, 50–59, 60+ | Región |
+| `departamento` | Pregunta | Región | Bogotá, Oriental, Caribe, Central, Pacífica, Orinoquía-Amazonía | Zona |
+| `zona` | Pregunta | Zona | Urbano, Rural | Régimen |
+| `regimen` | Pregunta | Régimen de afiliación | Contributivo, Subsidiado | Pregunta trazadora (B0) |
+
+Cada una de las cinco preguntas tiene, además, un nodo de tipo "respuesta" por cada opción listada (por ejemplo, `sexo_hombre` y `sexo_mujer` para la pregunta Sexo), que convergen todos en la pregunta siguiente del bloque. Esta estructura de árbol reconstruye exactamente la matriz de variables ya documentada en el capítulo de variables de clasificación (\@ref(sec-variables-clasificacion)).
+
+### Bloque 2 — Pregunta trazadora (1 nodo)
+
+| ID nodo | Tipo | Pregunta / condición | Opciones | Nodo siguiente |
+|---|---|---|---|---|
+| `pregunta_b0` | Decisión | ¿Ha utilizado servicios de salud? | Sí, No | No → EPS – Módulo 1; Sí → Entidad EPS / IPS / Gestor |
+
+Esta es la única pregunta del árbol que determina una bifurcación real hacia rutas distintas.
+
+### Bloque 3 — Gestión institucional (14 nodos)
+
+| ID nodo | Tipo | Pregunta / condición | Opciones | Nodo siguiente |
+|---|---|---|---|---|
+| `entidad_eps` | Entidad | Empresa Prestadora (EPS) | — | ¿Qué servicio utilizó en EPS? |
+| `entidad_ips` | Entidad | Institución Prestadora (IPS) | — | ¿Qué servicio utilizó en IPS? |
+| `entidad_gestor` | Entidad | Entidad Gestora Farmacéutica | — | ¿El acceso fue por medicamentos? |
+| `servicio_eps` | Decisión | ¿Qué servicio utilizó en EPS? | Ambulatorio, Otro servicio | EPS – Módulo 3 / EPS – Módulo 2 |
+| `servicio_ips` | Decisión | ¿Qué servicio utilizó en IPS? | Ambulatorio, Urgencias, Internación, Quirúrgico | IPS – Módulo 1 / 2 / 3 / 4 |
+| `servicio_gestor` | Decisión | ¿El acceso fue por medicamentos? | Medicamentos, No medicamentos | Gestor – Módulo 1 / EPS – Módulo 2 |
+
+Al igual que en el bloque 1, cada pregunta de este bloque tiene un nodo de respuesta por cada opción (por ejemplo, `sub_ambulatorio_eps`, `sub_urgencias_ips`), que es el que efectivamente conecta con el módulo final correspondiente.
+
+### Bloque 4 — Módulos finales (8 nodos)
+
+| ID nodo | Módulo | Preguntas |
+|---|---|---:|
+| `eps_m1` | EPS – Módulo 1 (barreras de acceso) | 27 |
+| `eps_m2` | EPS – Módulo 2 (Deberes y Derechos) | 36 |
+| `eps_m3` | EPS – Módulo 3 | 34 |
+| `ips_m1` | IPS – Módulo 1 | 34 |
+| `ips_m2` | IPS – Módulo 2 | 32 |
+| `ips_m3` | IPS – Módulo 3 | 29 |
+| `ips_m4` | IPS – Módulo 4 | 33 |
+| `gestor_m1` | Gestor – Módulo 1 | 34 |
+
+## Matriz de transiciones
+
+Las transiciones del bloque 1 son secuenciales y no ramifican hacia rutas distintas (cada pregunta reconverge en la siguiente, cualquiera sea la respuesta); se resumen en la matriz de nodos anterior. Las transiciones con implicación real sobre la ruta del cuestionario —las que determinan a qué módulo llega finalmente el usuario— son las siguientes:
+
+| Nodo origen | Condición / respuesta | Nodo destino | Módulo | Observación |
+|---|---|---|---|---|
+| Pregunta trazadora (B0) | No | EPS – Módulo 1 | EPS – Módulo 1 | Única salida directa a módulo sin paso por gestión institucional |
+| Pregunta trazadora (B0) | Sí | Entidad EPS | — | Continúa hacia ¿qué servicio utilizó en EPS? |
+| Pregunta trazadora (B0) | Sí | Entidad IPS | — | Continúa hacia ¿qué servicio utilizó en IPS? |
+| Pregunta trazadora (B0) | Sí | Entidad Gestor | — | Continúa hacia ¿el acceso fue por medicamentos? |
+| ¿Qué servicio utilizó en EPS? | Ambulatorio | EPS – Módulo 3 | EPS – Módulo 3 | — |
+| ¿Qué servicio utilizó en EPS? | Otro servicio | EPS – Módulo 2 | EPS – Módulo 2 | Mismo módulo destino que la ruta 9 (transversal) |
+| ¿Qué servicio utilizó en IPS? | Ambulatorio | IPS – Módulo 1 | IPS – Módulo 1 | — |
+| ¿Qué servicio utilizó en IPS? | Urgencias | IPS – Módulo 2 | IPS – Módulo 2 | — |
+| ¿Qué servicio utilizó en IPS? | Internación | IPS – Módulo 3 | IPS – Módulo 3 | — |
+| ¿Qué servicio utilizó en IPS? | Quirúrgico | IPS – Módulo 4 | IPS – Módulo 4 | — |
+| ¿El acceso fue por medicamentos? | Medicamentos | Gestor – Módulo 1 | Gestor – Módulo 1 | — |
+| ¿El acceso fue por medicamentos? | No medicamentos | EPS – Módulo 2 | EPS – Módulo 2 | Enrutamiento transversal: un usuario que llega por el Gestor farmacéutico puede terminar respondiendo el mismo módulo que un usuario que llegó por EPS |
+
+## Matriz de rutas
+
+Las nueve rutas comparten un tramo común (bloques 1 y 2: identificación, caracterización y pregunta trazadora) y se diferencian únicamente a partir de la respuesta a la pregunta trazadora y, cuando aplica, de la entidad y el servicio reportados en el bloque de gestión institucional.
+
+| Ruta | Condiciones | Secuencia (a partir de la trazadora) | Módulo destino | Preguntas |
+|---|---|---|---|---:|
+| Ruta 1 | B0 = No | Trazadora → EPS – Módulo 1 | EPS – Módulo 1 | 27 |
+| Ruta 2 | B0 = Sí; Entidad = EPS; Servicio = Ambulatorio | Trazadora → Entidad EPS → Servicio → EPS – Módulo 3 | EPS – Módulo 3 | 34 |
+| Ruta 3 | B0 = Sí; Entidad = EPS; Servicio = Otro | Trazadora → Entidad EPS → Servicio → EPS – Módulo 2 | EPS – Módulo 2 | 36 |
+| Ruta 4 | B0 = Sí; Entidad = IPS; Servicio = Ambulatorio | Trazadora → Entidad IPS → Servicio → IPS – Módulo 1 | IPS – Módulo 1 | 34 |
+| Ruta 5 | B0 = Sí; Entidad = IPS; Servicio = Urgencias | Trazadora → Entidad IPS → Servicio → IPS – Módulo 2 | IPS – Módulo 2 | 32 |
+| Ruta 6 | B0 = Sí; Entidad = IPS; Servicio = Internación | Trazadora → Entidad IPS → Servicio → IPS – Módulo 3 | IPS – Módulo 3 | 29 |
+| Ruta 7 | B0 = Sí; Entidad = IPS; Servicio = Quirúrgico | Trazadora → Entidad IPS → Servicio → IPS – Módulo 4 | IPS – Módulo 4 | 33 |
+| Ruta 8 | B0 = Sí; Entidad = Gestor; Acceso = Medicamentos | Trazadora → Entidad Gestor → Servicio → Gestor – Módulo 1 | Gestor – Módulo 1 | 34 |
+| Ruta 9 | B0 = Sí; Entidad = Gestor; Acceso = No medicamentos | Trazadora → Entidad Gestor → Servicio → EPS – Módulo 2 (transversal) | EPS – Módulo 2 | 36 |
+
+Las nueve rutas son, en conjunto, todas las rutas alcanzables del árbol: no existe combinación de respuestas a la pregunta trazadora, la entidad y el tipo de servicio que no esté cubierta por alguna de ellas. La condición de entrada a cada ruta —la combinación de valores del bloque de identificación y caracterización (sexo, edad, región, zona, régimen) que fija la celda de cuota del usuario— es independiente de la ruta que finalmente recorre, según se estableció en el capítulo de relación entre cuestionario y cuotas (\@ref(sec-relacion-cuestionario-cuotas)): cualquier celda de cuota puede combinarse, en principio, con cualquiera de las nueve rutas.
+
+## Alcance de esta reconstrucción
+
+Esta matriz reconstruye el árbol de decisión de 48 nodos tal como está definido en sus datos de origen, y es la estructura que se ha utilizado de forma consistente en los capítulos anteriores de este documento (papel de las EPS e IPS, muestreo por cuotas, relación entre cuestionario y cuotas, mecanismo de selección). Como se señaló en el capítulo de instrumento de recolección (\@ref(sec-instrumento-recoleccion)), el flujo observado dentro de la aplicación *ClicSalud* etiqueta sus bloques temáticos con una nomenclatura propia —"Forma A/B", "Bloque N de M", "Cod. NN"— distinta de la nomenclatura de rutas y módulos que emplea este árbol. La correspondencia formal entre ambas representaciones se desarrolla en el capítulo de reconciliación de estructuras.

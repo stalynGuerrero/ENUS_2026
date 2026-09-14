@@ -1,0 +1,115 @@
+# Objetivo de la ENUS 2026 {#sec-objetivo}
+
+## Objetivo general
+
+Medir la *satisfacción y la experiencia de las personas usuarias* del Sistema General de Seguridad Social en Salud (SGSSS) con los servicios de salud utilizados, mediante una operación estadística de recolección continua, para producir información periódica, comparable y estadísticamente sustentada que contribuya al seguimiento, la evaluación y el mejoramiento de la calidad de los servicios de salud.
+
+## Objetivos específicos
+
+1. *Medir la satisfacción de las personas usuarias* con los servicios de salud utilizados, como valoración general de la atención recibida.
+
+2. *Medir las principales dimensiones de la experiencia del usuario* en la interacción con los servicios de salud, considerando aspectos relacionados con la accesibilidad, oportunidad, trato digno, comunicación y resolutividad.
+
+3. *Producir información periódica y oportuna* sobre la satisfacción y la experiencia de las personas usuarias mediante un esquema de recolección continua que permita identificar cambios en los principales indicadores con menor rezago temporal.
+
+4. *Minimizar el potencial sesgo de recuerdo* mediante la recolección de información en proximidad temporal a la utilización del servicio de salud, favoreciendo un reporte más cercano a la experiencia efectivamente vivida por la persona usuaria.
+
+5. *Producir estimaciones para los principales dominios de interés* de la operación, incluyendo características sociodemográficas, de afiliación, territoriales y relacionadas con el tipo de servicio utilizado, siempre que los niveles de precisión y confiabilidad estadística permitan sustentar dichas desagregaciones.
+
+6. *Mantener la comparabilidad temporal de los principales indicadores* de satisfacción y experiencia del usuario con las mediciones anteriores, preservando la continuidad conceptual y metodológica cuando resulte pertinente y documentando los cambios que puedan afectar la interpretación de las series.
+
+7. *Proporcionar información estadística pertinente para el seguimiento de la satisfacción y experiencia de los usuarios*, que contribuya a la evaluación y al mejoramiento de las políticas, estrategias y acciones relacionadas con la calidad de los servicios de salud.
+
+
+# Alcance de la operación estadística {#sec-alcance}
+
+El alcance de ENUS 2026 delimita los fenómenos objeto de medición, la población a la que se refieren los resultados, las unidades de observación, la cobertura territorial y temporal, los servicios de salud considerados y los principales dominios de análisis. Estas definiciones establecen el ámbito de interpretación de los resultados y los límites de la información que puede producir la operación estadística.
+
+## Fenómenos objeto de medición {#sec-marco-conceptual}
+
+ENUS 2026 mide dos fenómenos relacionados pero conceptualmente diferenciados: la *satisfacción de las personas usuarias con los servicios de salud utilizados* y la *experiencia de las personas usuarias durante su interacción con dichos servicios*.
+
+La *satisfacción* corresponde a la valoración general que realiza la persona usuaria sobre el servicio recibido, expresando su grado de conformidad con la atención proporcionada; es una medida global y retrospectiva, en continuidad con la serie histórica de mediciones del SGSSS (\@ref(sec-antecedentes)).
+
+La *experiencia del usuario* comprende, en cambio, hechos concretos ocurridos durante la interacción con los servicios de salud —distintos de esa valoración global—. Los atributos observados en la aplicación de recolección de ENUS 2026 son el acceso (correspondiente a la accesibilidad exigida por el SOGCS), el tiempo de espera (correspondiente a la oportunidad exigida por el SOGCS, \@ref(sec-antecedentes)), la humanización del trato y la entrega de medicamentos.
+
+Ambos fenómenos se miden de manera complementaria: la satisfacción proporciona una valoración global de la atención recibida, mientras que los atributos de experiencia permiten caracterizar los aspectos concretos de la interacción que contribuyen a dicha valoración. Este enfoque combinado —valoración global junto con hechos concretos— sigue el mismo patrón que utilizan los referentes internacionales identificados en los antecedentes de este documento, en particular CAHPS (\@ref(sec-antecedentes)).
+
+ENUS 2026 mide percepciones y valoraciones reportadas directamente por las personas usuarias. Por tanto, sus resultados no constituyen mediciones directas de resultados clínicos, desenlaces en salud, efectividad de los tratamientos ni de la calidad técnica de la atención, salvo en aquellos aspectos que sean explícitamente operacionalizados mediante el instrumento.
+
+## Población objetivo {#sec-poblacion-objetivo}
+
+La población objetivo de ENUS 2026 está constituida por las *personas afiliadas al Sistema General de Seguridad Social en Salud (SGSSS) que hayan utilizado, durante alguno de los trimestres del año de referencia, al menos uno de los servicios de salud incluidos en el ámbito de medición de la encuesta*.
+
+La población comprende las personas afiliadas a los regímenes considerados por el SGSSS, independientemente de su sexo, edad, territorio de residencia u otras características sociodemográficas. La utilización de un servicio de salud durante el año de referencia constituye la condición que vincula a la persona con el fenómeno objeto de medición, dado que las preguntas de satisfacción y experiencia se refieren a una atención o servicio efectivamente utilizado.
+
+Para efectos de la operación estadística, la identificación de las personas elegibles se realiza de manera continua durante el año, tomando como periodo de referencia para la utilización del servicio cada trimestre calendario. En consecuencia, para cada trimestre se consideran las personas que cumplen simultáneamente las siguientes condiciones:
+
+1. *Afiliación al SGSSS:* encontrarse afiliadas al Sistema General de Seguridad Social en Salud durante el periodo correspondiente a la utilización del servicio.
+
+2. *Utilización de servicios de salud:* haber utilizado al menos uno de los servicios de salud incluidos en el ámbito de ENUS 2026.
+
+3. *Periodo de referencia:* que la utilización del servicio haya ocurrido durante el trimestre correspondiente.
+
+Los cuatro trimestres conforman el periodo anual de referencia de la operación. De esta manera, la recolección se desarrolla de forma continua a lo largo del año, mientras que la producción principal de resultados corresponde al *año de referencia*, integrando la información recolectada durante sus respectivos periodos trimestrales.
+
+La identificación y selección de las personas pertenecientes a la población objetivo se realizará mediante los mecanismos de captación y verificación definidos para la operación estadística. Estos mecanismos podrán apoyarse en diferentes fuentes de información y herramientas tecnológicas y podrán modificarse durante el ciclo de vida de la encuesta sin alterar la definición conceptual de la población objetivo.
+
+La base de usuarios habilitados para acceder a *ClicSalud* y diligenciar el cuestionario se actualiza cada cuatro meses a lo largo del año. El propósito de esta actualización periódica es incorporar a la base a los usuarios que, por haberse afiliado al SGSSS o haber utilizado un servicio de salud con posterioridad al corte anterior, aún no se encontraban habilitados para participar. De esta manera, la base de usuarios se mantiene alineada, a lo largo del año, con la definición continua de la población objetivo establecida en esta sección, aunque la habilitación efectiva de un usuario recientemente elegible queda sujeta al ciclo de actualización vigente y no ocurre en tiempo real (\@ref(sec-diseno-muestral)).
+
+La población efectivamente observada estará constituida por las personas de la población objetivo que sean captadas o seleccionadas mediante los procedimientos establecidos y que proporcionen información válida para la estimación de los indicadores.
+
+La definición de la población objetivo, los criterios de elegibilidad y los procedimientos de selección deberán garantizar que la información recolectada durante los cuatro trimestres permita producir estimaciones anuales representativas de la población objetivo del año correspondiente.
+
+
+## Unidad de observación
+
+La unidad de observación de ENUS 2026 es la persona afiliada al SGSSS que haya utilizado un servicio de salud incluido en el ámbito de la operación durante el periodo de referencia.
+
+La información recolectada corresponde a la satisfacción y experiencia reportadas por la persona respecto del servicio utilizado. Las EPS, IPS, gestores farmacéuticos y demás actores relacionados con la prestación de los servicios no constituyen unidades de observación.
+
+## Cobertura territorial
+
+ENUS 2026 tendrá cobertura nacional, con una distribución de la muestra que garantizará una cuota mínima de participación para cada región definida en la operación.
+
+La región constituye el nivel territorial mínimo previsto para la producción de resultados. La participación efectiva de los usuarios podrá permitir desagregaciones territoriales adicionales dentro de cada región, siempre que se alcance un número suficiente de observaciones y condiciones adecuadas de calidad estadística para su interpretación.
+
+
+## Cobertura temporal y periodo de referencia
+
+ENUS 2026 adopta un esquema de *recolección continua durante el año*, organizado en cuatro periodos trimestrales de referencia.
+
+El periodo de referencia corresponde al *trimestre en el que la persona utilizó el servicio de salud* objeto de la medición. La satisfacción y experiencia reportadas se refieren a dicha utilización.
+
+La recolección continua permite aproximar el momento de la encuesta al momento de utilización del servicio, reduciendo el potencial efecto del recuerdo retrospectivo.
+
+Los resultados de ENUS 2026 se producirán con *periodicidad anual*, integrando la información recolectada durante los cuatro trimestres del año de referencia.
+
+## Servicios de salud objeto de medición
+
+ENUS 2026 mide la satisfacción y experiencia de las personas usuarias frente a los *servicios de salud incluidos en el ámbito de la operación*.
+
+La medición se realiza de acuerdo con el tipo de servicio utilizado, de manera que el instrumento permita recoger las características específicas de la interacción de la persona con el sistema de salud.
+
+La clasificación de los servicios considerados y la asignación de las preguntas correspondientes hacen parte de la estructura del instrumento de recolección.
+
+## Dominios de análisis
+
+ENUS 2026 contempla la producción de resultados para el *total nacional y para las regiones definidas en la operación*, de acuerdo con las cuotas mínimas de participación establecidas para cada una.
+
+La información recolectada permitirá explorar desagregaciones adicionales según características de las personas usuarias, de su afiliación y del servicio utilizado. La disponibilidad de estas desagregaciones dependerá de la participación efectiva alcanzada en las categorías correspondientes y de las condiciones de calidad requeridas para su presentación e interpretación.
+
+Los principales resultados corresponderán a indicadores de *satisfacción y experiencia del usuario*, tanto de manera general como para las dimensiones consideradas en el instrumento, de acuerdo con el tipo de servicio evaluado.
+
+
+## Límites del alcance
+
+El alcance de ENUS 2026 está determinado por la población objetivo, los servicios de salud incluidos, el instrumento de recolección y el diseño de la operación estadística.
+
+Los resultados corresponden a la *satisfacción y experiencia reportadas por las personas participantes* respecto de los servicios de salud utilizados. No constituyen una medición integral del desempeño del SGSSS ni sustituyen otras fuentes de información requeridas para evaluar resultados clínicos, desenlaces en salud, efectividad de tratamientos o calidad técnica de la atención.
+
+La cobertura mínima por región se establece mediante cuotas de participación. Las desagregaciones adicionales estarán condicionadas por la participación efectiva alcanzada y por criterios de suficiencia y calidad de la información.
+
+La Resolución 1642 de 2026 habilita la desagregación de los resultados de ENUS por EPS, institución prestadora, departamento, distrito y municipio, entre otros niveles [@Resolucion1642_2026]. Esta habilitación normativa no debe confundirse con una garantía de precisión estadística en esos niveles: el diseño muestral de la operación solo asegura la precisión nominal a nivel de región; las desagregaciones por EPS, institución prestadora o municipio dependerán de la participación efectivamente alcanzada en cada categoría y podrán no ser publicables si no cumplen los criterios de suficiencia y calidad establecidos.
+
+Dado el carácter no probabilístico de la operación, las desagregaciones y resultados deberán interpretarse de acuerdo con el alcance del diseño de selección y con las condiciones bajo las cuales se obtuvo la información.

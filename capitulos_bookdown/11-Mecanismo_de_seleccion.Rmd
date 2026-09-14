@@ -1,0 +1,34 @@
+# Mecanismo de selección {#sec-mecanismo-seleccion}
+
+Este capítulo documenta, paso a paso, qué determina que un usuario específico —dentro de una celda de cuota aún abierta— quede finalmente incluido en la base analítica de ENUS 2026, y establece explícitamente que en ningún punto de esa secuencia existe un mecanismo de selección aleatoria.
+
+## Secuencia completa
+
+1. **Elegibilidad.** El usuario supera la identificación por documento, la verificación de afiliación activa en BDUA y la verificación por código enviado por SMS (\@ref(sec-poblacion-objetivo)).
+2. **Clasificación.** El usuario responde las cinco preguntas del bloque de identificación y caracterización, lo que fija su celda de cuota entre las 336 posibles (\@ref(sec-diseno-muestral), \@ref(sec-relacion-cuestionario-cuotas)).
+3. **Disponibilidad de la celda.** En principio, la celda de cuota a la que el usuario fue clasificado puede estar abierta (meta aún no alcanzada) o cerrada (meta ya alcanzada).
+4. **Aceptación.** El usuario continúa hacia la pregunta trazadora y, según corresponda, hacia el bloque de gestión institucional y el módulo final asignado (\@ref(sec-relacion-cuestionario-cuotas)).
+5. **Finalización.** El usuario completa el módulo asignado.
+6. **Inclusión en la base analítica.** El registro completo, superados los controles de validación y consistencia, se incorpora a la base sobre la cual se calculan los pesos y los estimadores (ver capítulo de procesamiento).
+
+## Ausencia de un mecanismo de cierre verificable en el paso 3
+
+*ClicSalud* y el árbol de decisión que gobierna su navegación no documentan una verificación de disponibilidad de la celda de cuota en el momento en que el usuario la completa: no hay evidencia de una regla que impida continuar a un usuario cuya celda demográfica ya alcanzó su meta, ni de un mensaje o pantalla asociada a esa condición (\@ref(sec-diseno-muestral)). En consecuencia, y conforme a la evidencia técnica disponible, el paso 3 de la secuencia no opera como un filtro activo dentro de la aplicación: todo usuario que completa la clasificación avanza a la aceptación, independientemente del estado de su celda de cuota. Si en la operación real existe un control de cierre de cuota —por ejemplo, gestionado en campo y no dentro de la aplicación—, esa información debe ser suministrada por el equipo metodológico ENUS para incorporarla aquí con la evidencia correspondiente.
+
+## Ausencia de selección aleatoria dentro de la celda
+
+Dado lo anterior, el mecanismo de inclusión dentro de una celda de cuota no es una selección en el sentido probabilístico —no se sortea ni se descarta a ningún usuario elegible y clasificado para decidir si entra o no—, sino una regla de inclusión determinística y, hasta donde documentan los insumos técnicos, exhaustiva: todo usuario elegible que se clasifica en una celda es aceptado y avanza en el cuestionario. La composición final de cada celda depende, por tanto, de quiénes efectivamente llegan a *ClicSalud* y completan su clasificación, no de un mecanismo que seleccione una submuestra dentro de un conjunto más amplio de candidatos. Esta ausencia de un mecanismo formal de selección es la razón por la cual se adopta un peso de referencia uniforme ($d_i = 1$) en lugar de un peso derivado de una probabilidad de inclusión, siguiendo el tratamiento que la literatura de calibración por entropía generalizada da a las muestras sin mecanismo de selección probabilístico [@KwonKimQiu2025; @ChenLiWu2018] (ver capítulo de ponderación y calibración): no existe, en ningún punto de esta secuencia, una probabilidad de inclusión $\pi_i$ observable a partir de la cual derivar $d_i = 1/\pi_i$.
+
+## Persistencia de sesión y tratamiento de abandonos
+
+*ClicSalud* conserva, en el dispositivo del usuario, un registro de su sesión de identificación ya verificada, de modo que un usuario que vuelve a abrir la aplicación desde el mismo dispositivo no necesita repetir la verificación de documento, BDUA y código SMS. Esta persistencia se limita a la sesión de identificación: no hay evidencia, en los insumos técnicos disponibles, de un mecanismo que guarde el avance de un cuestionario parcialmente respondido para permitir su reanudación, ni de una regla explícita sobre qué ocurre con las respuestas de un usuario que abandona el cuestionario antes de completar su módulo asignado. En ausencia de esa evidencia, este documento no describe un tratamiento específico de abandonos o respuestas incompletas; el criterio con el que un registro incompleto se incluye o se excluye de la base analítica se documenta, en la medida en que los insumos lo permitan, en el capítulo de procesamiento.
+
+## Control de duplicidad de evaluación por entidad
+
+De manera independiente de la persistencia de sesión descrita en la sección anterior, ENUS 2026 aplica un control que impide que un mismo usuario evalúe más de una vez a la misma entidad (EPS, IPS o gestor farmacéutico): una vez que el usuario completa un formulario en el que evalúa una entidad determinada, queda bloqueado para volver a diligenciar un formulario que evalúe esa misma entidad. Este bloqueo opera por combinación de usuario y entidad evaluada, no por usuario en general: un mismo usuario puede volver a acceder a *ClicSalud* y completar el cuestionario para evaluar una entidad distinta de la ya evaluada.
+
+Este control debe distinguirse de la ausencia de cierre de cuota documentada más arriba: mientras que el cierre de cuota supondría restringir el acceso según la composición demográfica ya alcanzada por una celda, el control de duplicidad por entidad restringe el acceso según la historia de evaluaciones de un usuario particular, con independencia de su celda de cuota. Su función principal es evitar que la evaluación de una misma entidad se concentre de manera desproporcionada en las respuestas repetidas de un mismo usuario.
+
+## Implicaciones
+
+La ausencia de un mecanismo de cierre verificable y de selección aleatoria dentro de la celda tiene dos consecuencias que se desarrollan en el capítulo de limitaciones del muestreo por cuotas: primero, la composición final de cada celda puede desviarse de su meta —por exceso, ante la falta de un cierre automático, o por defecto, ante baja afluencia de usuarios de ese perfil— sin que la aplicación misma corrija esa desviación durante la captación; segundo, la inclusión de un usuario dentro de su celda depende enteramente de su propia decisión de acceder y completar *ClicSalud*, lo que introduce un componente de autoselección que la sola composición demográfica de la cuota no controla.

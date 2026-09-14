@@ -1,0 +1,91 @@
+# Papel de las EPS y operativo de campo {#sec-papel-eps-ips}
+
+Este capítulo documenta el papel de las Empresas Promotoras de Salud (EPS), las Instituciones Prestadoras de Servicios de Salud (IPS) y los gestores farmacéuticos dentro de la operación de campo de ENUS 2026, y desarrolla las implicaciones operativas de la ausencia, en los insumos técnicos disponibles, de un mecanismo documentado de difusión o cierre activo de la captación. La forma en que estos actores institucionales determinan el módulo del cuestionario que responde un usuario —esto es, su función dentro del árbol de decisión— es una cuestión de estructura del instrumento y se documenta de forma completa en el capítulo de flujo y rutas del cuestionario (\@ref(sec-flujo-rutas)); no se repite aquí.
+
+## ¿Qué es ClicSalud?
+
+*ClicSalud* es la aplicación digital mediante la cual se implementa la recolección de ENUS 2026: es el canal a través del cual el usuario se identifica, responde el cuestionario y navega entre preguntas de acuerdo con las reglas del árbol de decisión. Es, por tanto, el mecanismo concreto sobre el que operan tanto la captación de usuarios como la relación con las EPS e IPS que se desarrolla en este capítulo —la EPS se reporta dentro de *ClicSalud*, y es *ClicSalud* la que finalmente registra la participación de cada usuario, con independencia de que exista o no un canal institucional que lo dirija hacia la aplicación—. La descripción completa de su estructura, pantallas y recorrido de uso se documenta en el capítulo de instrumento de recolección (\@ref(sec-instrumento-recoleccion)); aquí solo se introduce lo necesario para situar el papel de las EPS e IPS frente a ella.
+
+## Importancia de las EPS en la operación
+
+La Resolución 1642 de 2026 adopta la ENUS como instrumento oficial y permanente y dispone explícitamente que la encuesta debe generar información sobre el **desempeño de las EPS, las IPS y los gestores farmacéuticos**, mediante indicadores organizados de acuerdo con los atributos de calidad definidos en la normativa vigente [@Resolucion1642_2026] (\@ref(sec-antecedentes)). Las EPS no son, por tanto, un actor incidental de la operación: son, junto con las IPS y los gestores farmacéuticos, el objeto último de medición de buena parte de los indicadores que la ENUS 2026 está llamada a producir.
+
+En consonancia con ese mandato, el diseño de ENUS 2026 no contempla una etapa de selección de EPS, IPS o gestores farmacéuticos: **todas las entidades del universo institucional son, en principio, canal potencial de acceso y objeto de medición**, sin un marco muestral propio a nivel institucional ni una fase probabilística previa de selección de actores (\@ref(sec-diseno-muestral)). La cuota y la captación operan exclusivamente a nivel de usuario; ninguna EPS, IPS o gestor queda excluido de antemano de la posibilidad de que sus afiliados o usuarios participen y de que su desempeño sea evaluado.
+
+## La EPS como dato de identificación del usuario
+
+En *ClicSalud*, la EPS del usuario se captura como parte de su proceso de identificación: la aplicación presenta un listado de EPS del cual el usuario selecciona la propia antes de continuar, de forma análoga a las demás variables de identificación —documento, ubicación geográfica, régimen— (\@ref(sec-variables-clasificacion)). Esta selección identifica al usuario y, más adelante, permite reportar resultados por EPS; no constituye un mecanismo de selección de la EPS como unidad muestral, y la EPS reportada no interviene en la construcción de la cuota ni en la calibración de los pesos (\@ref(sec-diseno-muestral)).
+
+## Participación de las EPS e IPS en la captación: sin evidencia de un canal activo
+
+Los insumos técnicos revisados —*ClicSalud* y los datos del árbol de decisión que gobierna su navegación— no documentan un mecanismo por el cual las EPS o las IPS actúen como canal institucional para invitar, promover o facilitar activamente la participación de sus propios usuarios en ENUS 2026: no hay evidencia de envío de invitaciones, códigos de acceso distribuidos en puntos de atención, listados de usuarios remitidos por el actor institucional, ni de un procedimiento de monitoreo o cierre de la captación gestionado por estas entidades. Esta ausencia de evidencia es distinta, y adicional, a la ya documentada para el mecanismo de cierre de cuota dentro de la propia aplicación (\@ref(sec-mecanismo-seleccion)): aquí se trata específicamente de la falta de un canal institucional de difusión hacia los usuarios de cada EPS o IPS, no del comportamiento interno de *ClicSalud*.
+
+Conforme al principio de no presentar mecanismos no respaldados por los insumos, este documento no describe un procedimiento operativo de difusión, promoción o reclutamiento institucional. Si en la operación real las EPS o las IPS cumplen un papel activo de promoción o facilitación del acceso a la encuesta, esa información debe ser suministrada por el equipo metodológico ENUS para incorporarla aquí con la evidencia correspondiente.
+
+En síntesis, con la evidencia disponible, las EPS y las IPS participan en ENUS 2026 como categoría de identificación del usuario y como objeto de medición de los indicadores de desempeño —no como unidades de muestreo ni, hasta donde documentan los insumos técnicos, como canales activos de reclutamiento o difusión.
+
+## Métodos de difusión: recomendación metodológica
+
+**Recomendación metodológica.** Dada la ausencia de un canal institucional documentado, y dado que la representatividad de la muestra por cuotas depende directamente del volumen y la diversidad de usuarios que llegan a *ClicSalud* (\@ref(sec-limitaciones-cuotas)), se recomienda que el equipo operativo de ENUS 2026 evalúe la incorporación de mecanismos de difusión que involucren activamente a las EPS y las IPS. Se organizan a continuación en tres frentes: los canales propios de cada entidad, los que se apoyan en capacidades que *ClicSalud* ya tiene implementadas, y los de coordinación institucional.
+
+### Canales propios de EPS e IPS
+
+- **Puntos de atención física.** Divulgación mediante material impreso o código QR de acceso directo en las sedes de atención al usuario de EPS e IPS, en el mismo punto en que hoy se entrega la Carta de Derechos y Deberes (\@ref(sec-antecedentes)).
+- **Canales digitales propios de la EPS.** Envío de la invitación a través de los canales de comunicación que cada EPS ya mantiene con sus afiliados (aplicaciones propias, mensajería, correo electrónico o portales de usuario), sujeto a la disponibilidad y disposición de cada entidad.
+- **Momento posterior a la atención.** Invitación a participar inmediatamente después de recibir un servicio en una IPS, cuando la experiencia del usuario está más reciente y el sesgo de recuerdo es menor —en línea con el objetivo específico de minimizar el sesgo de recuerdo ya adoptado para la operación (\@ref(sec-objetivo)).
+- **Líneas de atención al usuario y PQRS.** Mención de la encuesta como opción de cierre en las líneas telefónicas y canales de peticiones, quejas y reclamos que EPS e IPS ya operan de manera regular, sin que ello sustituya el canal de participación formal en *ClicSalud*.
+
+### Canales apoyados en capacidades ya implementadas en *ClicSalud*
+
+- **Notificación dirigida a partir de atenciones detectadas.** *ClicSalud* ya presenta al usuario, al ingresar al módulo de encuesta, una sección de atenciones de salud detectadas en los últimos seis meses —consulta externa, urgencias, exámenes y procedimientos, con fecha e institución— (\@ref(sec-instrumento-recoleccion)). Esa misma capacidad de detección podría reutilizarse para enviar una notificación push focalizada poco después de registrarse una atención, en lugar de depender exclusivamente de que el usuario ingrese por iniciativa propia.
+- **Llamado a participar desde la pestaña Desempeño.** La pestaña "Desempeño" de *ClicSalud* ya muestra al usuario un tablero de indicadores de calidad de su EPS, construido sobre atributos análogos a los que mide ENUS 2026 —acceso, tiempo de espera, humanización del trato, entrega de medicamentos— (\@ref(sec-instrumento-recoleccion)). Podría incorporarse allí un llamado a participar en la encuesta, presentando la relación directa entre responder y la información que ese mismo tablero despliega.
+- **Acceso asistido en el punto de atención.** Para el paso de verificación por SMS, *ClicSalud* ya contempla que un funcionario asista al usuario sin celular propio mediante una tableta institucional en el punto de atención de su EPS (\@ref(sec-instrumento-recoleccion)); ese mismo canal asistido podría promoverse activamente como vía de acceso para usuarios con menor autonomía digital, en lugar de operar solo como respaldo ante la ausencia de celular.
+
+### Coordinación institucional
+
+- **Campañas institucionales del Ministerio.** Divulgación general a través de los canales del Ministerio de Salud y Protección Social, complementaria a los canales institucionales de cada EPS o IPS.
+- **Articulación con la Superintendencia Nacional de Salud y los entes de inspección, vigilancia y control**, en la medida en que la participación de los usuarios en ENUS 2026 es también insumo para el seguimiento del desempeño de las EPS que esos entes supervisan (\@ref(sec-antecedentes)).
+
+### Trazabilidad del canal de difusión
+
+Si el equipo operativo adopta alguno de estos mecanismos, se recomienda adicionalmente capturar en *ClicSalud* el canal por el cual cada usuario llegó a la aplicación (identificación por documento vs. QR institucional, notificación push, invitación de EPS/IPS, etc.). Sin este dato no es posible, en etapas posteriores, evaluar si un canal de difusión concentra la captación en perfiles particulares de usuario —lo que agregaría una fuente adicional de autoselección a la ya documentada en el mecanismo de cuotas (\@ref(sec-limitaciones-cuotas))— ni distinguir esa condición de la composición demográfica que sí controla la cuota.
+
+Estas alternativas se presentan exclusivamente como recomendación metodológica para consideración del equipo operativo; ninguna de ellas debe interpretarse como un mecanismo actualmente implementado en ENUS 2026 —salvo la detección de atenciones recientes y el acceso asistido en tableta, que sí están documentados en el instrumento pero no como mecanismos de difusión activa—, ni su eventual adopción está respaldada, a la fecha, por los insumos técnicos revisados para este documento.
+
+## Preguntas frecuentes
+
+**¿Cuándo puede participar un usuario en ENUS 2026?**
+Cuando está afiliado al SGSSS y ha utilizado al menos uno de los servicios de salud incluidos en el ámbito de la encuesta durante el trimestre de referencia correspondiente (\@ref(sec-poblacion-objetivo)). La recolección es continua a lo largo del año, de modo que un usuario puede acceder a *ClicSalud* en cualquier momento posterior a la utilización del servicio, dentro del trimestre en curso.
+
+**¿Qué pasa si no he utilizado servicios de salud recientemente?**
+El árbol de decisión incluye explícitamente esta situación en su primera pregunta de bifurcación (la pregunta trazadora, "¿ha utilizado servicios de salud?"): quien responde "No" es dirigido a un módulo específico sobre barreras de acceso (Ruta 1 · EPS – Módulo 1, 27 preguntas), en lugar del módulo temático asociado a un servicio efectivamente recibido (\@ref(sec-flujo-rutas)).
+
+**¿Qué pasa si me cambié de EPS?**
+La EPS se captura por autorreporte —el usuario la selecciona de un listado— y no se valida individualmente contra el registro de BDUA en el momento de responder; la validación contra BDUA que sí ocurre se limita a confirmar que la afiliación al SGSSS esté activa, no a verificar que la EPS reportada coincida con la registrada en un momento específico (\@ref(sec-variables-clasificacion)). Los insumos técnicos disponibles no documentan una regla específica para el caso de un usuario que se afilió recientemente a una EPS distinta de aquella con la que recibió el servicio sobre el que responde; si en la operación real existe un criterio para este caso, debe incorporarse aquí con su evidencia correspondiente.
+
+**¿Puedo participar más de una vez?**
+Sí, pero no para evaluar a la misma entidad. Un usuario puede acceder a *ClicSalud* y diligenciar el cuestionario en más de una ocasión durante el periodo de recolección; sin embargo, una vez que diligencia un formulario para evaluar una entidad determinada (EPS, IPS o gestor farmacéutico), queda bloqueado para volver a evaluar esa misma entidad (\@ref(sec-mecanismo-seleccion)). El bloqueo opera por entidad evaluada y no impide que el mismo usuario participe nuevamente para evaluar una entidad distinta de la ya evaluada.
+
+**¿Qué pasa si empiezo el cuestionario y no lo termino?**
+*ClicSalud* conserva la sesión de identificación ya verificada, pero los insumos disponibles no documentan un mecanismo que guarde el avance de un cuestionario parcialmente respondido para permitir su reanudación (\@ref(sec-mecanismo-seleccion)). El criterio con el que un registro incompleto se incluye o se excluye de la base analítica se documenta, en la medida en que los insumos lo permiten, en el capítulo de procesamiento (\@ref(sec-procesamiento)).
+
+**¿Qué pasa si mi celda demográfica ya alcanzó su meta de cuota?**
+Con la evidencia disponible, nada distinto: *ClicSalud* no documenta una verificación de disponibilidad de la celda de cuota en el momento en que el usuario la completa, por lo que todo usuario elegible que se clasifica avanza y es aceptado, independientemente del estado de su celda (\@ref(sec-mecanismo-seleccion)).
+
+**¿Se selecciona un subconjunto de EPS, IPS o gestores farmacéuticos para participar en ENUS 2026?**
+No. El diseño no contempla una etapa de selección institucional: todas las entidades del universo son, en principio, canal potencial de acceso y objeto de medición (\@ref(sec-diseno-muestral)).
+
+**¿Qué ocurre cuando el usuario reporta su EPS en *ClicSalud*?**
+Se registra como dato de identificación, de la misma forma que el documento o la ubicación geográfica. No convierte a la EPS en una unidad muestral ni interviene en la construcción de la cuota o en la calibración de los pesos.
+
+**¿Las EPS o las IPS invitan o promueven activamente la participación de sus usuarios?**
+Con la evidencia técnica disponible, no hay documentación de un canal institucional de este tipo (invitaciones, códigos de acceso, listados remitidos). Si en la operación real existe, debe incorporarse con su evidencia correspondiente.
+
+**¿La EPS o la IPS determinan qué módulo del cuestionario responde el usuario?**
+Sí, en función del tipo de entidad y del tipo de servicio recibido. La lógica completa de esa asignación —rutas, nodos y módulos— se documenta en el capítulo de flujo y rutas del cuestionario (\@ref(sec-flujo-rutas)), no en este capítulo.
+
+**¿Existen ya métodos de difusión institucional definidos para ENUS 2026?**
+No. Los propuestos en la sección anterior son una recomendación metodológica para evaluación del equipo operativo, no una decisión adoptada ni un mecanismo en funcionamiento.
+
+**¿Dónde se explica en detalle qué es y cómo funciona *ClicSalud*?**
+En el capítulo de instrumento de recolección (\@ref(sec-instrumento-recoleccion)), que documenta su estructura, pantallas y recorrido completo de uso.

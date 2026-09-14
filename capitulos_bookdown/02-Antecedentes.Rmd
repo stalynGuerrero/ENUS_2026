@@ -1,0 +1,623 @@
+# Antecedentes {#sec-antecedentes}
+
+Este capítulo tiene tres propósitos: presentar la evolución de las mediciones sobre la percepción de calidad, la satisfacción y la experiencia de los usuarios del sistema de salud colombiano entre 2005 y 2025; identificar los principales antecedentes nacionales e internacionales que sirven de referencia para la ENUS 2026; y recoger los principales aprendizajes derivados de estas experiencias.
+
+Estos antecedentes sirven como contexto para el diseño de la ENUS 2026, pero no definen por sí mismos las decisiones metodológicas de la encuesta. Los aspectos relacionados con el diseño muestral, el instrumento, el procesamiento, la ponderación y la estimación se presentan en los capítulos correspondientes.
+
+Para la elaboración de este capítulo se revisaron los documentos originales de las principales mediciones realizadas por el Ministerio de Salud y Protección Social, así como las fuentes utilizadas para los antecedentes nacionales e internacionales. Cuando alguna información no pudo ser comprobada directamente en las fuentes disponibles, se señala para su posterior verificación.
+
+
+## Marco normativo: el Sistema Obligatorio de Garantía de Calidad en Salud {#sec-marco-normativo}
+
+La medición de la experiencia y la satisfacción de los usuarios del Sistema General de Seguridad Social en Salud (SGSSS) no es una iniciativa aislada: se inscribe en el Sistema Obligatorio de Garantía de Calidad de la Atención de Salud (SOGCS), que constituye el marco reglamentario bajo el cual el sector salud genera, mantiene y mejora la calidad de los servicios. El SOGCS fue establecido originalmente mediante el Decreto 1011 de 2006 [@Decreto1011_2006] y sus disposiciones fueron posteriormente compiladas —sin modificación sustantiva de su contenido— en el Decreto 780 de 2016, Decreto Único Reglamentario del Sector Salud y Protección Social, que hoy constituye la norma reglamentaria vigente en la materia [@Decreto780_2016]. Por esta razón, las referencias normativas de este documento se hacen al Decreto 780 de 2016, señalando cuando corresponda su origen en el Decreto 1011 de 2006.
+
+De acuerdo con el Decreto 780 de 2016, las acciones del SOGCS se orientan al mejoramiento de los resultados de la atención en salud centrados en el usuario, superando la verificación aislada de la existencia de estructuras o de la documentación de procesos, los cuales constituyen únicamente prerrequisitos para alcanzar dichos resultados. Para efectos de evaluar y mejorar la calidad de la atención, la norma define cinco características esenciales: accesibilidad, oportunidad, seguridad, pertinencia y continuidad. Dos de ellas resultan directamente constitutivas del objeto de medición de ENUS 2026. La accesibilidad se define como la posibilidad que tiene el usuario de utilizar los servicios de salud que le garantiza el SGSSS; la oportunidad, como la posibilidad de obtener los servicios requeridos sin que se presenten retrasos que pongan en riesgo su vida o su salud. Ambas dimensiones son retomadas explícitamente por el marco conceptual de este documento para definir la experiencia del usuario (véase la Sección \@ref(sec-marco-conceptual)).
+
+Estructuralmente, el SOGCS se articula en cuatro componentes: el Sistema Único de Habilitación, la Auditoría para el Mejoramiento de la Calidad de la Atención de Salud, el Sistema Único de Acreditación y el Sistema de Información para la Calidad (SIC). Este último es el componente de anclaje directo de ENUS 2026, en tanto define los mecanismos mediante los cuales el sistema produce, reporta y difunde información sobre la calidad de los servicios desde la perspectiva del usuario. La Resolución 256 de 2016 desarrolló este componente al establecer las disposiciones del SIC y definir el conjunto de indicadores de monitoreo de la calidad, bajo un enfoque orientado al mejoramiento continuo y al impacto sobre los usuarios [@Resolucion256_2016]. Es en este mismo componente donde se enmarcan las mediciones institucionales previas del Ministerio —incluidas las encuestas de evaluación de los servicios de las EPS, según lo declaran expresamente sus respectivos informes metodológicos [@MSPS2017; @MSPS2020]—, lo que permite leer ENUS 2026 como continuidad y no como ruptura respecto de la serie de mediciones anteriores descritas en este capítulo.
+
+Sobre esa base normativa acumulada, la medición de la satisfacción y de las dimensiones asociadas a la interacción de las personas con el sistema de salud ha operado durante casi dos décadas como mecanismo regular de seguimiento de la calidad. Estas mediciones constituyen el antecedente institucional de una ampliación conceptual de mayor alcance: la incorporación, junto a la medición de satisfacción —construida sobre juicios evaluativos globales del usuario—, de una medición de experiencia del usuario, que documenta ocurrencias concretas y verificables en dimensiones como el acceso, la oportunidad, la continuidad, el trato recibido y la resolución efectiva de la necesidad en salud.
+
+Esta evolución se consolida formalmente con la Resolución 1642 de 2026, que establece lineamientos para la Carta de Derechos y Deberes de las personas afiliadas al SGSSS y adopta la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS) como instrumento oficial para la medición de la experiencia del usuario [@Resolucion1642_2026]. Dicha resolución constituye el acto administrativo que confiere a ENUS 2026 su carácter de operación estadística institucional y define su alcance dentro del SIC.
+
+En síntesis, el marco normativo de ENUS 2026 opera en tres niveles jerárquicos y complementarios: el SOGCS (Decreto 780 de 2016, que compila el Decreto 1011 de 2006) aporta el marco general de calidad y el mandato de orientación al usuario, junto con las definiciones de accesibilidad y oportunidad que la encuesta operacionaliza; el Sistema de Información para la Calidad (Resolución 256 de 2016) establece los mecanismos de monitoreo, los indicadores y las obligaciones de reporte; y la Resolución 1642 de 2026 adopta la ENUS como el instrumento específico mediante el cual se materializa la medición de la experiencia del usuario en salud. Este encadenamiento normativo es el fundamento institucional que sostiene la existencia, la periodicidad y la exigibilidad de las mediciones de experiencia del usuario en el sistema de salud colombiano.
+
+## Evolución conceptual: de la percepción de calidad a la medición de la experiencia
+
+Las mediciones realizadas en Colombia a lo largo del período revisado no han abordado necesariamente el mismo objeto de medición que la ENUS 2026. Se observa una evolución progresiva desde mediciones centradas en la percepción de la calidad y la satisfacción hacia un enfoque que busca caracterizar de manera más amplia la experiencia de las personas durante su interacción con los servicios de salud.
+
+Esta evolución puede entenderse a partir de tres enfoques relacionados, pero conceptualmente diferenciables:
+
+1. **Percepción de calidad.** Las mediciones asociadas con PECASUSS se orientaron a conocer la valoración que los usuarios realizaban sobre la calidad de los servicios recibidos [@PECASUSS2008]. Este enfoque constituye uno de los antecedentes de la medición de la calidad desde la perspectiva de los usuarios en Colombia.
+
+2. **Satisfacción.** Las mediciones desarrolladas posteriormente por la Defensoría del Pueblo y, de manera sistemática, por el Ministerio de Salud y Protección Social, incorporaron la satisfacción como una medida de valoración de los usuarios respecto de los servicios y de las entidades responsables de su atención [@DefensoriaPueblo2009; @MSPS2017; @MSPS2018; @MSPS2020; @MSPS2022; @MSPS2023; @MSPS2024; @MSPS2025]. Estas mediciones permitieron realizar seguimiento a la percepción de los usuarios y generar información para el monitoreo de la calidad de los servicios.
+
+3. **Satisfacción y experiencia del usuario.** La ENUS 2026 mide ambos fenómenos de manera complementaria: una valoración global de satisfacción, en continuidad con la serie histórica, y un conjunto de dimensiones específicas de experiencia —hechos concretos de la interacción de las personas con el sistema y los servicios de salud, distintos de esa valoración global—. La definición de cada concepto y las dimensiones específicas de experiencia se desarrollan en el marco conceptual de este documento (\@ref(sec-marco-conceptual)).
+
+Los referentes internacionales contribuyen a esta evolución conceptual. Instrumentos como CAHPS, el enfoque de *responsiveness* desarrollado por la Organización Mundial de la Salud y el programa PaRIS de la OECD muestran diferentes formas de medir aspectos de la atención desde la perspectiva de las personas que utilizan los servicios. Estos referentes incorporan dimensiones específicas de la interacción con los servicios y permiten avanzar desde una valoración general hacia mediciones más desagregadas de la experiencia.
+
+En este documento se conserva la terminología utilizada en las fuentes originales. Por esta razón, las mediciones anteriores se presentan como mediciones de percepción de calidad o satisfacción cuando ese es el concepto utilizado por sus respectivos instrumentos, y no se homologan retrospectivamente como mediciones de experiencia del usuario.
+
+Esta precisión es importante porque algunos instrumentos anteriores incorporaron el término “experiencia” en determinadas preguntas o indicadores. Por ejemplo, documentos del ciclo de mediciones del Ministerio de Salud y Protección Social utilizan expresiones relacionadas con la experiencia global de los usuarios [@MSPS2017; @MSPS2023]. Sin embargo, el uso del término en una pregunta particular no implica necesariamente que toda la operación haya tenido como objeto una medición multidimensional de la experiencia del usuario.
+
+En este sentido, los antecedentes presentados en este capítulo no deben interpretarse como una serie de mediciones homogéneas del mismo indicador. Constituyen, más bien, el proceso mediante el cual el sistema de salud colombiano ha desarrollado diferentes mecanismos para conocer la percepción, satisfacción y experiencia de los usuarios. La ENUS 2026 se desarrolla sobre este recorrido y establece la satisfacción y la experiencia del usuario como objetos explícitos y complementarios de medición, de acuerdo con el marco conceptual y normativo que se presenta en los capítulos siguientes.
+
+
+## Primeros antecedentes: 2003-2011
+
+Entre los primeros antecedentes identificados se encuentran las evaluaciones realizadas por la *Defensoría del Pueblo* y el desarrollo del instrumento *PECASUSS (Percepción de Calidad según Usuarios de Servicios de Salud)*. Estas experiencias constituyen antecedentes importantes para la posterior incorporación de mediciones sistemáticas de la percepción de los usuarios sobre la calidad de los servicios de salud.
+
+*Defensoría del Pueblo.* En los documentos del Ministerio de Salud y Protección Social revisados para este capítulo se menciona una evaluación de los servicios de las EPS desde la perspectiva de los usuarios, atribuida a la Defensoría del Pueblo y correspondiente al año *2005* [@MSPS2017; @MSPS2020]. Sin embargo, no fue posible localizar ni validar la fuente primaria de esta evaluación; por tanto, se presenta únicamente como un antecedente mencionado en la documentación institucional, sin atribuirle un alcance o contenido específico.
+
+El entonces Ministerio de la Protección Social desarrolló el instrumento *PECASUSS* para evaluar la percepción de los usuarios sobre la calidad de los servicios en el marco del Programa de Reestructuración de Redes de Servicios de Salud [@PECASUSS2008]. De acuerdo con los antecedentes documentados por el Ministerio, el instrumento fue aplicado en una medición de línea de base y una medición de seguimiento, correspondientes a *2006* y *2008*, respectivamente [@MSPS2017; @MSPS2020].
+
+A diferencia de las evaluaciones de satisfacción que se desarrollarían posteriormente, PECASUSS se centró en la **percepción de la calidad de los servicios** y estuvo dirigido a las instituciones intervenidas por el programa. Por tanto, constituye un antecedente relevante de la medición de la calidad desde la perspectiva de los usuarios, aunque su alcance y objeto de medición fueron diferentes a los de las encuestas posteriores del Ministerio.
+
+## Consolidación de las mediciones del MSPS: 2012-2019 {#sec-mediciones-msps}
+
+A partir de 2012 el MSPS institucionalizó una medición anual de la satisfacción de
+los usuarios, inscrita en el **Sistema de Información para la Calidad (SIC)**, a
+diferencia de los ejercicios previos de la Defensoría del Pueblo (2005) y de
+PECASUSS (2006 y 2008), desarrollados antes de la creación del SIC. La serie
+comprende las mediciones realizadas entre 2012 y 2019 [@MSPS2017; @MSPS2020].
+
+La continuidad institucional de esta serie no implica que sus características
+metodológicas hayan permanecido constantes. Durante el período se presentan
+cambios en la población objetivo, los criterios de inclusión y exclusión, los
+marcos muestrales, las unidades de estratificación y los criterios utilizados para
+determinar el tamaño y la precisión de las muestras. Estas diferencias son
+relevantes para interpretar la evolución de los resultados y para establecer
+comparaciones con ENUS 2026.
+
+### Evolución de la población objetivo {#sec-poblacion-objetivo-serie}
+
+| Año | Población objetivo declarada | Periodo de referencia | Exclusiones | Muestra efectiva | Fuente |
+|-----|------------------------------|----------------------|-------------|------------------|--------|
+| 2012 | No disponible | — | — | — | — |
+| 2013 | No disponible | — | — | — | — |
+| 2014 | Ciudadanos usuarios de servicios de las EPS, **solo población mayor de 18 años** | Últimos 6 meses | Regímenes especiales y exentos | 20.361 encuestas efectivas, en 85 municipios de 32 departamentos y el Distrito Capital | @MSPS2016 |
+| 2015 | Ciudadanos usuarios de servicios de las EPS, **incluidos menores de edad** | Últimos 6 meses | Regímenes especiales (FFMM, Policía, Ecopetrol) y exentos (universidades públicas) | 29.761 encuestas efectivas (54.852 contactos), en 73 municipios de 32 departamentos y el Distrito Capital | @MSPS2014_2015 |
+| 2016 | Afiliados al SGSSS con uso de servicio en 6 meses previos; excluye regímenes especiales, medicina prepagada y planes complementarios | Últimos 6 meses | Regímenes especiales; medicina prepagada, plan complementario | 26.502 encuestas efectivas (81.049 contactos), en 95 municipios de 32 departamentos y el Distrito Capital | @MSPS2016 |
+| 2017 | Afiliados al SGSSS que usaron servicios de su EPS, **todas las edades**, urbano y rural (centros poblados) | Últimos 6 meses | Regímenes especiales y exentos; medicina prepagada, plan complementario y seguro privado | 24.586 encuestas efectivas, en 95 municipios de 32 departamentos y el Distrito Capital | @MSPS2017 |
+| 2018-2019 | No disponible | — | — | — | — |
+
+<!-- VERIFICAR FUENTE: una versión anterior de esta tabla presentaba datos específicos para 2012 (población objetivo, periodo de referencia dual "último año"/"últimos 6 meses", exclusión de EPS en liquidación, 16.578 encuestas en 70 municipios) que no se encontraron en ninguna de las fuentes disponibles para este capítulo -- ni en MSPS2017 ni en MSPS2020 (que solo mencionan 2012 como parte de la serie institucionalizada, sin ficha técnica), ni en la sección de antecedentes de MSPS2016 (que sí compara 2014, 2015 y 2016, pero no menciona 2012). Se retiraron esos datos por instrucción explícita del responsable metodológico (2026-08-23: "quítalas si no se pueden verificar"). Si existe una ficha técnica de 2012, debe incorporarse con su cita correspondiente. -->
+
+La población incluida en las mediciones no fue exactamente la misma durante todo
+el periodo. Se identifican dos cambios importantes, ambos documentados en la
+sección de antecedentes de la encuesta técnica de 2016, que compara explícitamente
+las tres ediciones [@MSPS2016].
+
+- *La incorporación de menores de edad en 2015.* Hasta 2014, las encuestas
+consideraban únicamente a las personas mayores de 18 años. A partir de 2015 se
+incluyeron también los menores de edad; en 2016 la encuesta también cubrió a toda
+la población, sin restricción de edad [@MSPS2016]. Este cambio amplió de manera
+importante el número de personas que podían participar en la encuesta: el
+universo de estudio pasó de 11.425.380 personas en 2014 a 16.555.627 en 2015
+[@MSPS2014_2015]. Por esta razón, las diferencias observadas entre estos dos años
+no pueden interpretarse únicamente como cambios en la satisfacción de los
+usuarios, ya que también cambió el grupo de personas al que se referían los
+resultados —advertencia que hacen explícitamente tanto el informe de 2014-2015
+como el propio informe de 2016 [@MSPS2014_2015; @MSPS2016].
+
+- *Los cambios en las personas excluidas de la encuesta.* En las ediciones de
+2014 y 2016 se excluyeron los afiliados a regímenes especiales y exentos, y a
+partir de 2017 se agregaron exclusiones relacionadas con quienes contaban con
+medicina prepagada, planes complementarios o seguros privados de salud
+[@MSPS2016; @MSPS2017]. Estos cambios hicieron que el grupo de personas al que se
+referían los resultados no fuera exactamente el mismo en todos los años.
+
+Por estas razones, los resultados de las encuestas realizadas entre 2012 y 2019
+no deben interpretarse como una serie completamente homogénea. Al compararlos
+con la ENUS 2026 será necesario tener en cuenta quiénes fueron incluidos en cada
+medición y bajo qué condiciones se realizaron las encuestas.
+
+### Evolución del diseño muestral {#sec-diseno-serie}
+
+Los cambios en la población objetivo estuvieron acompañados por modificaciones
+en el diseño muestral. Aunque las **EPS permanecieron como unidad de análisis**, la
+unidad de estratificación y la organización de las etapas de selección cambiaron
+entre las diferentes ediciones.
+
+| Año | Diseño declarado | Unidad de estratificación | Etapas y unidades de muestreo | Marco muestral | Criterio de tamaño y precisión | Fuente |
+|-----|------------------|---------------------------|-------------------------------|----------------|-------------------------------|--------|
+| 2012 | No disponible | — | — | — | — | — |
+| 2013 | No disponible | — | — | — | — | — |
+| 2014-2015 | Probabilístico de conglomerados | No declarada | Unidades de selección: secciones cartográficas DANE. Unidades de análisis: cada EPS | Tres marcos complementarios: dos de áreas (DANE 2005, actualización 2012, y catastro) y uno de lista, provisto por el MSPS, para EPS de muy baja participación | Variable trazadora tipo proporción con *P* = 50 %; error máximo esperado inferior al 5 % para proporciones de mínimo 50 % | @MSPS2014_2015 |
+| 2016 | Probabilístico, multietápico, estratificado y de conglomerados (mismo diseño que 2017) | **Grupos de municipios** según categoría DNP (tres estratos) | 1.ª municipios (32 capitales de inclusión forzosa, 23 de categoría 1-5 DNP y 40 de categoría 6, estos dos últimos con probabilidad proporcional al tamaño); 2.ª manzanas; 3.ª personas | Lista de municipios con caracterización; áreas de manzanas sobre cartografía censal DANE; lista de miembros del hogar levantada en campo | 26.502 encuestas efectivas (81.049 contactos), 18 % sobre la meta fijada por el Ministerio | @MSPS2016 |
+| 2017 | Probabilístico, multietápico, estratificado y de conglomerados | **Grupos de municipios** según categoría DNP (tres estratos) | 1.ª municipios; 2.ª manzanas (proporcional a hogares); 3.ª personas. Unidad de análisis: EPS | Lista de municipios con caracterización; áreas de manzanas sobre cartografía censal DANE (Censo 2005, actualización 2012); lista de miembros del hogar levantada en campo | Error relativo inferior al 5 % para proporciones superiores al 20 %, nacional y por nivel de desagregación | @MSPS2017 |
+| 2018-2019 | No disponible | — | — | — | — | — |
+
+
+La comparación de las ediciones documentadas muestra tres cambios importantes en
+la forma en que se organizaron las encuestas.
+
+- *El diseño de 2016 fue heredado, no reinventado, por la edición 2017.* Las
+ediciones 2016 y 2017 comparten exactamente los mismos tres estratos DNP y los
+mismos 95 municipios como unidades primarias de muestreo [@MSPS2016; @MSPS2017],
+lo que indica que la arquitectura de estratificación territorial se fijó en 2016
+y se mantuvo sin cambios en la edición siguiente. En ambas, la selección comenzó
+por los municipios, agrupados según su categoría DNP, y posteriormente se
+seleccionaron manzanas y personas dentro de esos territorios.
+
+- *También cambió el criterio para determinar el tamaño y la precisión de las
+muestras.* En las mediciones de 2014-2015 se utilizó un criterio basado en una
+proporción esperada del 50 % y un error máximo inferior al 5 % [@MSPS2014_2015].
+En 2017 se estableció un error relativo inferior al 5 % para proporciones
+superiores al 20 % [@MSPS2017]. Estos criterios no son directamente comparables,
+por lo que las diferencias en la precisión de los resultados entre años deben
+interpretarse con cautela. La fuente de 2016 no documenta un criterio de
+precisión comparable a los anteriores, más allá de reportar el porcentaje de
+encuestas logradas sobre la meta fijada [@MSPS2016].
+
+- *El marco de área se mantuvo basado en información censal de 2005.* Tanto las
+mediciones de 2014-2015 como la de 2017 utilizaron cartografía del DANE
+correspondiente al Censo General 2005, actualizada a la vigencia 2012
+[@MSPS2014_2015; @MSPS2017]. Esto significa que, aunque las encuestas se
+realizaron varios años después del censo, la selección de los hogares partía de
+esa estructura territorial. Esta característica es importante al analizar la
+cobertura de las encuestas y la forma en que representaban a la población en
+cada momento.
+
+
+### La medición de 2017 {#sec-medicion-2017}
+
+La **Encuesta Nacional de Evaluación de los Servicios de las EPS 2017**
+[@MSPS2017] constituye un punto importante dentro de esta evolución. Se enmarca
+explícitamente en el SOGCS y dentro del SIC, en línea con el marco normativo de la
+Sección \@ref(sec-marco-normativo), y adoptó un diseño **probabilístico,
+multietápico, estratificado y de conglomerados**, con tres etapas anidadas:
+
+- *Primera etapa — municipios.* El marco estuvo constituido por una lista de los
+  municipios del país con información de caracterización, entre ella cantidad de
+  afiliados, clasificación DNP y número de EPS con afiliados en el municipio. El
+  territorio se estratificó en tres grupos según la categoría municipal DNP:
+  32 municipios capitales de departamento, incluida Bogotá D.C.; 23 municipios de
+  categoría 1 a 5; y 40 municipios de categoría 6. En total, 95 municipios
+  constituyeron las unidades primarias de muestreo.
+
+- *Segunda etapa — manzanas.* Dentro de cada municipio seleccionado se realizó la
+  selección de manzanas con probabilidad proporcional a la cantidad de hogares.
+  El marco de áreas se construyó sobre la cartografía censal del DANE, con los
+  polígonos de sector, sección y manzana y la información de viviendas, hogares y
+  personas del Censo General 2005, actualizada a la vigencia 2012. En las áreas
+  rurales el marco correspondió a las manzanas urbanas de los centros poblados de
+  los municipios seleccionados.
+
+- *Tercera etapa — personas.* El marco estuvo constituido por una lista de los
+  miembros del hogar construida durante la recolección. Sobre este listado se
+  seleccionó **una persona** que hubiera utilizado los servicios de salud en los
+  seis meses previos. Para los menores de edad se solicitó como informante al
+  adulto que acompañaba al menor al servicio de salud.
+
+Las unidades de análisis fueron las EPS y los niveles de desagregación previstos
+correspondieron al régimen, la EPS y el departamento. El operativo se realizó entre
+julio y agosto de 2017, mediante entrevista personal cara a cara con un cuestionario
+estructurado de 60 preguntas organizadas en 18 capítulos. Se obtuvo una muestra
+efectiva de 24.586 encuestas en 95 municipios de los 32 departamentos y el Distrito
+Capital, a partir de la cual los resultados se infirieron a una población estimada
+de 16.815.482 usuarios. La precisión declarada correspondió a un error relativo
+inferior al 5 % para proporciones superiores al 20 %.
+
+El cuestionario articuló siete ejes temáticos: **satisfacción, oportunidad,
+acceso, trato digno, respuesta, caracterización del usuario y corresponsabilidad
+del usuario** [@MSPS2017]. Varios de estos temas reaparecen, con una definición
+propia, entre las dimensiones de experiencia del usuario del marco conceptual de
+este documento (\@ref(sec-marco-conceptual)). La encuesta de 2017 constituye así
+un antecedente importante de la incorporación progresiva de dimensiones
+relacionadas con la interacción de los usuarios con los servicios de salud, aunque
+su objeto principal continuaba siendo la evaluación de los servicios de las EPS y
+la satisfacción de sus usuarios.
+
+## Continuidad y transformaciones de las mediciones del MSPS: 2018-2025 {#sec-mediciones-msps-2018-2025}
+
+Entre 2018 y 2025 las mediciones del MSPS mantuvieron la evaluación de la
+satisfacción de los usuarios como eje principal, pero incorporaron cambios en los
+instrumentos, los temas abordados y las formas de recolección. En este periodo se
+observan además dos momentos particulares: la modificación del operativo durante
+la pandemia de COVID-19 en 2020 y el retorno a la recolección presencial en 2022.
+Las mediciones de 2023, 2024 y 2025 muestran la continuidad de la serie hasta los
+años inmediatamente anteriores a la ENUS 2026.
+
+### Comparación de las mediciones 2018-2025 {#sec-comparacion-mediciones-2018-2025}
+
+| Año | Medición | Enfoque principal | Recolección / diseño | Muestra | Principales características |
+|:---|:---|:---|:---|---:|:---|
+| **2018** | Ranking de Satisfacción EPS | Satisfacción, oportunidad y trámites | Análisis secundario de la información de 2017 | Información de 2017 | 51 indicadores agrupados en tres dimensiones: oportunidad, satisfacción y trámites. Incorporación de *bootstrapping* para comparar diferencias entre EPS |
+| **2020** | Estudio Nacional de Evaluación de los Servicios de las EPS | Evaluación de servicios y satisfacción | Entrevista telefónica; muestreo de lista | 18.630 personas, 36 EPS | Cambio del muestreo de áreas a muestreo de lista. Ampliación de 157 a 541 municipios por las dificultades de respuesta telefónica. Inclusión de módulo sobre COVID-19 |
+| **2022** | Encuesta Nacional de Satisfacción de los Usuarios frente a los Servicios de las EPS | Satisfacción, acceso, recomendación y trámites | Entrevista presencial; selección aleatoria de barrios y manzanas y barrido de hogares | 18.360 encuestas | Retorno a la recolección presencial. Resultados expandidos a 42.897.182 personas |
+| **2023** | Encuesta con énfasis en Atención Primaria en Salud | Satisfacción y atención primaria en salud | Probabilístico, estratificado, de conglomerados y trietápico; entrevista presencial | 14.845 encuestas válidas (mín. contractual 12.096) | Selección de municipios, sectores censales y personas. Desagregación en seis macrorregiones. Instrumento de aproximadamente 75 preguntas |
+| **2024** | Encuesta para Evaluar la Satisfacción de los Usuarios del Sistema de Salud Colombiano | Satisfacción de los usuarios | Diseño no documentado en los antecedentes revisados | — | Continuidad de la medición de satisfacción. El título oficial no incorpora el énfasis en atención primaria de 2023 |
+| **2025** | Encuesta para Evaluar la Satisfacción de los Usuarios del Sistema de Salud Colombiano | Satisfacción de los usuarios | Diseño no documentado en los antecedentes revisados | 18.639 usuarios | Levantamiento entre septiembre y diciembre. Cobertura en seis regiones del sistema de salud |
+
+### 2018 — Ranking de Satisfacción EPS
+
+La edición de 2018 [@MSPS2018] no correspondió a una nueva encuesta, sino a un
+análisis de la información obtenida en 2017. El cambio principal estuvo en la forma
+de organizar y presentar los resultados: la dimensión de acceso fue sustituida por
+la dimensión de trámites y se construyó un ranking a partir de 51 indicadores
+agrupados en tres dimensiones con igual ponderación: oportunidad (33,3 %),
+satisfacción (33,3 %) y trámites (33,3 %).
+
+Para comparar los resultados entre EPS se utilizó un procedimiento de remuestreo
+(*bootstrapping*) que replicó el ejercicio 1.000 veces y permitió establecer un
+umbral para determinar cuándo las diferencias entre los puntajes podían
+considerarse estadísticamente significativas [@MSPS2018].
+
+### 2020 — Estudio Nacional de Evaluación de los Servicios de las EPS
+
+La medición de 2020 [@MSPS2020] estuvo marcada por las condiciones generadas por
+la pandemia de COVID-19. La encuesta, que tradicionalmente se realizaba mediante
+entrevistas presenciales, pasó a realizarse por vía telefónica. Este cambio estuvo
+acompañado por una modificación del diseño muestral: se pasó de un muestreo de
+áreas a un muestreo de lista [@MSPS2020].
+
+Las dificultades para obtener las entrevistas previstas llevaron a ampliar la
+cobertura inicialmente establecida de 157 a 541 municipios. Finalmente se
+realizaron 18.630 encuestas a usuarios de 36 EPS en los 33 departamentos
+[@MSPS2020]. La encuesta incorporó además un módulo específico sobre diagnóstico
+y atención relacionados con COVID-19.
+
+El cambio en la modalidad de recolección constituye uno de los principales
+elementos metodológicos de esta edición, ya que modifica la forma de contacto con
+los usuarios y el marco utilizado para seleccionarlos.
+
+### 2022 — Encuesta Nacional de Satisfacción de los Usuarios frente a los Servicios de las EPS
+
+La medición de 2022 [@MSPS2022] retomó la recolección presencial. La selección se
+realizó mediante una combinación de selección aleatoria de barrios y manzanas,
+apoyada en cartografía, y un barrido de hogares dentro de las manzanas
+seleccionadas. Cuando no se alcanzaba la cantidad de encuestas prevista en una
+manzana, se realizaba el reemplazo por otra manzana [@MSPS2022].
+
+El trabajo de campo se desarrolló entre el 2 de agosto y el 31 de octubre de 2022.
+Se realizaron 18.360 encuestas: 7.325 correspondientes al régimen contributivo,
+9.574 al régimen subsidiado y 1.461 al régimen subsidiado/indígena. Los resultados
+fueron expandidos a 42.897.182 personas, sobre un universo de 48.899.985 afiliados
+a las EPS con corte a septiembre de 2022, equivalente a una cobertura del estudio
+del 87,72 % [@MSPS2022].
+
+El instrumento abordó aspectos relacionados con las características de los
+afiliados, satisfacción global, acceso, recomendación, estado de salud y trámites.
+Esta estructura muestra la continuidad de algunos temas de las mediciones
+anteriores, junto con una reorganización del contenido del cuestionario.
+
+### 2023 — Encuesta con énfasis en Atención Primaria en Salud
+
+La medición de 2023 [@MSPS2023] incorporó un énfasis explícito en la **Atención
+Primaria en Salud**, aspecto que se refleja tanto en el título como en el contenido
+del informe. El diseño fue **probabilístico, estratificado, de conglomerados y
+trietápico**, con selección de municipios, sectores censales y personas, mediante
+entrevista personal en los hogares.
+
+El instrumento tuvo aproximadamente 75 preguntas y la presentación de los
+resultados incorporó seis macrorregiones: **Pacífico, Caribe, Central, Oriental,
+Bogotá y Orinoquía-Amazonía** [@MSPS2023]. Esta desagregación amplió la forma de
+presentar los resultados frente a las ediciones anteriores.
+
+Los principales elementos de diseño y muestra de esta edición se presentan en la
+tabla comparativa de la Sección \@ref(sec-comparacion-mediciones-2018-2025); los
+aprendizajes metodológicos que deja el conjunto del ciclo se sintetizan en la
+Sección \@ref(sec-sintesis-antecedentes).
+
+### 2024-2025 — Mediciones inmediatamente anteriores a ENUS 2026
+
+Las mediciones de 2024 y 2025 corresponden a las etapas más recientes de la serie
+de encuestas de satisfacción desarrolladas por la Oficina de Calidad del MSPS
+[@MSPS2024; @MSPS2025].
+
+En 2024, el informe se presentó bajo el título **“Informe de Resultados: Encuesta
+para Evaluar la Satisfacción de los Usuarios del Sistema de Salud Colombiano
+2024”** [@MSPS2024]. A diferencia de la edición 2023, el título no incorpora una
+mención específica a la Atención Primaria en Salud, por lo que este énfasis debe
+entenderse como una característica particular de la medición de 2023.
+
+Para 2025, el informe documenta un levantamiento realizado entre el 15 de
+septiembre y el 21 de diciembre, con **18.639 usuarios encuestados** en seis
+regiones del sistema de salud [@MSPS2025]. Los resultados muestran que el 53 %
+de las respuestas calificó la satisfacción como “buena” y el 10 % como “muy
+buena”; el 28 % respondió “ni buena ni mala” y el 8 % correspondió a las
+categorías negativas. En 18 de las 26 EPS evaluadas se registró una disminución
+de la satisfacción frente al año anterior [@MSPS2025].
+
+Estas mediciones constituyen los antecedentes más recientes de ENUS 2026 y
+muestran la continuidad de la medición de satisfacción de los usuarios hasta el
+periodo inmediatamente anterior a la nueva encuesta.
+
+## Aprendizajes de las mediciones históricas {#sec-sintesis-antecedentes}
+
+Las mediciones realizadas entre 2005 y 2025 constituyen un antecedente importante
+para la ENUS 2026 y muestran una trayectoria institucional sostenida del Ministerio
+de Salud y Protección Social en el seguimiento de la percepción y satisfacción de
+los usuarios frente a los servicios de salud. Durante este periodo se desarrollaron
+diferentes ejercicios de medición que permitieron conocer la valoración de los
+usuarios e incorporar progresivamente nuevos temas relacionados con su interacción
+con el sistema de salud.
+
+Sin embargo, estas mediciones no fueron realizadas bajo condiciones constantes. A
+lo largo del periodo cambiaron la población incluida, el periodo de referencia, la
+forma de seleccionar a los participantes, los instrumentos, los temas evaluados y
+las modalidades de recolección. En consecuencia, los resultados publicados para
+los diferentes años no constituyen una única serie estadística homogénea.
+
+Esta diferencia es fundamental para interpretar los resultados históricos. Una
+variación observada entre dos años puede reflejar un cambio real en la percepción
+de los usuarios, pero también puede estar relacionada con modificaciones en las
+personas incluidas en la encuesta, la forma en que fueron seleccionadas, las
+preguntas utilizadas o las condiciones en las que se realizó la recolección.
+
+### Cambios en la población incluida
+
+La población considerada en las mediciones no permaneció constante. Hasta 2014,
+las mediciones documentadas se concentraban en personas mayores de 18 años,
+mientras que desde 2015 se incorporaron también los menores de edad. También
+cambiaron las condiciones de inclusión y exclusión de los usuarios y, en algunas
+ediciones, el periodo utilizado para determinar si una persona había utilizado los
+servicios de salud.
+
+El cambio ocurrido entre 2014 y 2015 es especialmente ilustrativo. La inclusión
+de menores de edad amplió el grupo de personas al que se referían los resultados.
+El universo de estudio pasó de 11.425.380 usuarios en 2014 a 16.555.627 en 2015.
+Por esta razón, una diferencia en los resultados entre estos dos años no puede
+interpretarse directamente como un cambio en la satisfacción de los usuarios, ya
+que también cambió la población a la que se referían esos resultados.
+
+Algo similar ocurrió con las exclusiones. A lo largo de la serie se incorporaron
+diferentes grupos que no fueron considerados en las mediciones, entre ellos
+afiliados a regímenes especiales, personas con medicina prepagada, planes
+complementarios o seguros privados. Como resultado, el grupo de personas
+representado por los resultados fue cambiando con el tiempo.
+
+### Cambios en la forma de seleccionar a los usuarios
+
+También cambió la forma en que se seleccionaron las personas que participaron en
+las encuestas. En 2017, por ejemplo, la muestra se construyó mediante la selección
+de municipios, manzanas y personas, mientras que en 2020, como consecuencia de la
+pandemia de COVID-19, se pasó de un diseño basado en áreas a uno basado en listas
+de afiliados y se sustituyó la entrevista presencial por entrevistas telefónicas.
+
+En 2022 se retomó la recolección presencial, mediante selección de barrios y
+manzanas y un barrido de hogares. En 2023 nuevamente se implementó un diseño
+probabilístico trietápico.
+
+Estos cambios pueden modificar la composición de las personas que finalmente
+participan en la encuesta y la forma en que los resultados representan a la
+población. Por ello, aun cuando dos mediciones utilicen preguntas similares, sus
+resultados no necesariamente son directamente comparables.
+
+### Cambios en los temas y preguntas
+
+La comparabilidad también se ve afectada por los cambios en el contenido de las
+mediciones.
+
+Las primeras experiencias estuvieron orientadas a la percepción de calidad y,
+posteriormente, las mediciones del MSPS se concentraron principalmente en la
+satisfacción de los usuarios. Dentro de este ciclo también cambiaron los temas
+incluidos y la forma de organizar los resultados. El ranking de 2018, por ejemplo,
+reorganizó los indicadores de la medición de 2017 y sustituyó la dimensión de
+acceso por trámites. En 2023 se incorporó un énfasis explícito en atención primaria
+en salud.
+
+Esto significa que los resultados de diferentes años no siempre representan
+exactamente el mismo aspecto de la relación entre los usuarios y el sistema de
+salud. Por tanto, observar que un porcentaje aumentó o disminuyó entre dos años no
+es suficiente para concluir que existe una tendencia histórica de mejora o
+deterioro.
+
+### El cambio de modalidad de recolección en 2020
+
+La medición de 2020 constituye un punto particularmente importante de esta
+trayectoria. La pandemia obligó a sustituir la entrevista presencial por la
+entrevista telefónica y llevó a modificar el diseño muestral. La cobertura
+inicialmente prevista de 157 municipios tuvo que ampliarse a 541 municipios debido
+a las dificultades para alcanzar el número de entrevistas requerido.
+
+Este cambio no fue únicamente operativo. La modificación de la forma de contactar
+a los usuarios y del marco utilizado para seleccionarlos cambió las condiciones
+bajo las cuales se obtuvieron los resultados. Por esta razón, los resultados de
+2020 deben interpretarse dentro de las condiciones particulares de esa medición y
+no como una observación completamente equivalente a las mediciones presenciales
+anteriores o posteriores.
+
+## ENUS 2026 como nueva línea base de medición
+
+En conjunto, las mediciones históricas muestran una trayectoria institucional
+importante y permiten identificar los temas que han sido relevantes para los
+usuarios, así como los principales aprendizajes relacionados con la población
+estudiada, el diseño de las encuestas, la recolección y la construcción de los
+indicadores. Al mismo tiempo, las diferencias acumuladas entre las distintas
+ediciones hacen que **la serie 2005-2025 no sea adecuada para establecer una
+única línea de tendencia de satisfacción o experiencia del usuario**: los
+resultados de cada operación conservan su valor como evidencia histórica, pero
+no deben interpretarse como observaciones sucesivas de una misma encuesta
+realizada bajo condiciones constantes.
+
+A esta discontinuidad metodológica se suma una discontinuidad normativa. Las
+mediciones descritas en este capítulo corresponden a ejercicios sucesivos del
+Ministerio de Salud y Protección Social, cada uno con su propia ficha técnica,
+sin un marco normativo específico que los articulara como una única serie. ENUS
+2026, en cambio, cuenta con un fundamento normativo propio: la Resolución 1642 de
+2026, expedida el 31 de julio de 2026, adopta la **Encuesta Nacional de
+Experiencia del Usuario en Salud (ENUS)** como instrumento oficial y establece
+que su naturaleza es permanente y continua. La resolución define la ENUS como un
+instrumento digital para recoger información sobre la experiencia del afiliado
+frente a los servicios recibidos, y dispone que su diseño metodológico debe
+garantizar la representatividad estadística, el control sobre la generación de la
+información, la comparabilidad de los resultados en el tiempo y la reducción de
+los sesgos asociados a la autoselección de los participantes
+[@Resolucion1642_2026].
+
+La resolución establece además que la ENUS debe generar información sobre el
+desempeño de las EPS, las IPS y los gestores farmacéuticos, mediante indicadores
+organizados de acuerdo con los atributos de calidad definidos en la normativa
+vigente. El Ministerio deberá establecer mediante lineamientos técnicos los
+indicadores, sus fuentes, periodicidad y metodología de cálculo, así como los
+estándares técnicos necesarios para la operación del aplicativo y el intercambio
+de información [@Resolucion1642_2026].
+
+<!-- VERIFICAR FUENTE: el carácter de "instrumento digital" de ENUS (mediante una aplicación en desarrollo) fue confirmado directamente por el responsable metodológico (2026-08-23). Sin embargo, las afirmaciones específicas sobre lo que la Resolución 1642 de 2026 dispone textualmente -- que el diseño metodológico debe garantizar representatividad estadística, control sobre la generación de la información, comparabilidad de los resultados en el tiempo y reducción de los sesgos de autoselección, y que los indicadores se organizan "de acuerdo con los atributos de calidad definidos en la normativa vigente" -- no se verificaron contra el texto oficial de la resolución, solo contra una fuente secundaria (ConsultorSalud; ver nota en referencias.bib). Deben confirmarse contra el Diario Oficial o minsalud.gov.co antes de una publicación institucional definitiva. -->
+
+Por estas dos razones —metodológica y normativa—, la ENUS 2026 no debe
+entenderse como una nueva edición de las encuestas históricas de satisfacción,
+sino como el **punto de partida de una nueva serie de medición de la
+satisfacción y la experiencia del usuario en salud**. La primera medición
+establecerá la línea base sobre la cual se realizarán las mediciones
+posteriores.
+
+Para que esta nueva serie sea comparable, la ENUS 2026 debe mantener estables,
+desde su primera aplicación, una definición clara de la población objetivo, un
+diseño muestral documentado, procedimientos reproducibles de selección y
+ponderación, un instrumento estructurado a partir de una definición estable de
+experiencia del usuario, y reglas claras para el procesamiento, estimación y
+cálculo de indicadores. Cuando sea necesario introducir cambios en alguno de
+estos elementos, deberán documentarse y evaluarse antes de incorporarlos a la
+serie, de manera que sea posible identificar y tratar adecuadamente cualquier
+ruptura de comparabilidad.
+
+De esta manera, las mediciones realizadas antes de 2026 cumplen una función
+fundamental como **antecedentes históricos** —metodológicos y de contenido—, y la
+Resolución 1642 de 2026 aporta el fundamento institucional que ninguna de ellas
+tuvo. A partir de esta línea base, los cambios observados en las mediciones
+posteriores de ENUS podrán interpretarse con mayor confianza como cambios en la
+experiencia de los usuarios y no como consecuencia de modificaciones en la propia
+operación estadística.
+
+
+## Referentes internacionales para la medición de la experiencia del usuario en salud  {#sec-referentes-internacionales}
+
+La medición de la experiencia de las personas usuarias se ha desarrollado en
+diferentes sistemas de salud como una forma de complementar la información
+proveniente de registros administrativos, indicadores clínicos y evaluaciones
+institucionales. Estos instrumentos parten de una idea común: algunos aspectos de
+la calidad de la atención solo pueden conocerse preguntando directamente a las
+personas que recibieron el servicio.
+
+Para ENUS 2026 se consideran tres referentes internacionales particularmente
+relevantes: **CAHPS**, desarrollado en Estados Unidos; el marco de
+**responsiveness** de la Organización Mundial de la Salud; y **PaRIS**, promovido
+por la OCDE. Estos referentes no constituyen modelos que ENUS 2026 adopte o
+replique directamente. Su utilidad consiste en aportar antecedentes para definir
+el concepto de experiencia del usuario, identificar dimensiones relevantes y
+reconocer buenas prácticas para producir información comparable.
+
+### CAHPS: medición estandarizada de la experiencia del paciente
+
+El programa **Consumer Assessment of Healthcare Providers and Systems (CAHPS)**,
+desarrollado por la Agency for Healthcare Research and Quality (AHRQ) de Estados
+Unidos, constituye uno de los referentes más consolidados para la medición
+estandarizada de la experiencia de los pacientes. El programa se inició en 1995 y
+ha desarrollado diferentes instrumentos para evaluar experiencias con planes de
+salud, profesionales, hospitales y otros servicios de atención [@AHRQ_CAHPS].
+
+
+Un aspecto central de CAHPS es la distinción entre **experiencia del paciente y
+satisfacción**. Las encuestas buscan conocer lo que ocurrió durante la atención,
+por ejemplo, si los profesionales se comunicaron adecuadamente, si el usuario
+pudo acceder a la atención que necesitaba o si recibió la atención de manera
+oportuna. Esto se complementa con preguntas de valoración global sobre el
+proveedor o el servicio [@AHRQ_CAHPS].
+
+Los instrumentos CAHPS utilizan preguntas estandarizadas y producen medidas
+individuales y medidas compuestas. Estas últimas agrupan varias preguntas
+relacionadas para representar dimensiones específicas de la experiencia. El
+programa señala que los elementos centrales de sus cuestionarios se mantienen
+estandarizados para favorecer la consistencia y comparabilidad de las mediciones
+[@AHRQ_CAHPS_Measures].
+
+Para ENUS 2026, el principal aprendizaje de CAHPS es la necesidad de diferenciar
+entre **lo que el usuario experimentó durante la atención** y **la valoración
+general que hace del servicio**. Esta distinción es fundamental para la definición
+de las dimensiones e indicadores de experiencia desarrollada en el marco
+conceptual (\@ref(sec-marco-conceptual)).
+
+CAHPS también constituye un referente para la construcción de una serie de largo
+plazo: la estandarización de un núcleo de preguntas permite comparar resultados
+entre proveedores y a través del tiempo, sin impedir la incorporación de módulos o
+preguntas complementarias cuando sean necesarias [@AHRQ_CAHPS].
+
+
+### OMS: capacidad de respuesta de los sistemas de salud
+
+La Organización Mundial de la Salud incorporó el concepto de **responsiveness**
+como uno de los componentes para evaluar el desempeño de los sistemas de salud
+en el *World Health Report 2000* [@WHO2000Responsiveness]. El concepto se refiere
+a la manera en que el sistema responde a las expectativas legítimas de las
+personas en aspectos que no corresponden directamente a los resultados clínicos
+de la atención.
+
+El marco desarrollado por la OMS agrupa estas expectativas en dos grandes
+componentes: **respeto por las personas** y **orientación al usuario**. El primero
+incluye aspectos como dignidad, confidencialidad y autonomía; el segundo incorpora
+elementos como atención oportuna, calidad de las condiciones básicas, posibilidad
+de elegir proveedor y acceso a redes de apoyo durante la atención
+[@WHO2000Responsiveness].
+
+Este referente resulta relevante porque amplía la mirada sobre la calidad de los
+servicios de salud. La experiencia del usuario no se limita a determinar si el
+tratamiento fue clínicamente adecuado, sino que también incluye la forma en que
+la persona fue tratada, escuchada, informada y atendida.
+
+Para ENUS 2026, el principal aporte de este marco es la incorporación de
+dimensiones relacionadas con **trato digno, autonomía, confidencialidad,
+oportunidad, comunicación y condiciones de atención**, que pueden ser observadas
+directamente desde la perspectiva de las personas usuarias.
+
+### OCDE-PaRIS: experiencias y resultados reportados por los pacientes
+
+El programa **Patient-Reported Indicator Surveys (PaRIS)** de la OCDE representa
+una etapa más reciente en el desarrollo de mediciones internacionales centradas
+en la perspectiva de los pacientes. Su objetivo es desarrollar indicadores
+estandarizados sobre los resultados y las experiencias de atención que son
+relevantes para las personas [@OECD2025PaRIS]. 
+
+El primer ciclo de PaRIS, desarrollado entre 2017 y 2025, reunió información de
+más de **107.000 pacientes**, atendidos en más de **1.800 centros de atención
+primaria de 19 países**. La población estudiada estuvo conformada por pacientes
+de atención primaria de 45 años o más, con especial atención a personas con
+enfermedades crónicas [@OECD2025PaRIS].
+
+Una característica importante de PaRIS es la integración de dos tipos de
+información: los **resultados reportados por los pacientes (PROM)** y las
+**experiencias reportadas por los pacientes (PREM)**. Esta distinción permite
+separar lo que ocurrió durante la atención de los resultados que la persona
+percibe en relación con su salud y bienestar.
+
+Para ENUS 2026, PaRIS aporta principalmente dos elementos. El primero es la
+importancia de construir indicadores estandarizados que permitan comparar
+resultados entre territorios y a través del tiempo. El segundo es la conveniencia
+de distinguir entre **experiencia de atención** y **resultados de salud reportados
+por las personas**, evitando que ambos conceptos se mezclen en un mismo indicador.
+
+### Elementos comunes de los referentes internacionales
+
+Aunque CAHPS, el marco de *responsiveness* de la OMS y PaRIS tienen objetivos,
+poblaciones y contextos diferentes, presentan algunos elementos comunes que
+resultan relevantes para ENUS 2026:
+
+1. **La persona usuaria es una fuente directa de información sobre la calidad de
+   la atención.** Determinados aspectos de la atención no pueden conocerse
+   únicamente mediante registros clínicos o administrativos.
+
+2. **La experiencia debe distinguirse de la satisfacción.** La experiencia se
+   centra principalmente en hechos y situaciones ocurridas durante la atención,
+   mientras que la satisfacción corresponde a una valoración global de esa
+   experiencia.
+
+3. **La experiencia es multidimensional.** Aspectos como comunicación, acceso,
+   oportunidad, trato, participación y coordinación pueden medirse por separado
+   y posteriormente integrarse en un sistema de indicadores.
+
+4. **La estandarización es necesaria para la comparación.** Mantener definiciones,
+   preguntas e indicadores centrales permite interpretar los cambios observados
+   entre mediciones como cambios en la experiencia y no como efectos derivados de
+   modificaciones en el instrumento.
+
+5. **La información debe estar orientada a la mejora.** Estos instrumentos no se
+   limitan a producir un resultado agregado; buscan identificar dimensiones en las
+   que existen diferencias entre proveedores, territorios o grupos de población.
+
+Estos elementos constituyen referentes para la construcción del marco conceptual
+de ENUS 2026, pero no determinan por sí mismos el diseño de la operación. La
+definición de las dimensiones, el instrumento, la población objetivo, el mecanismo
+de captación, el diseño muestral, la ponderación y los procedimientos de estimación
+se establecen de acuerdo con las características del sistema de salud colombiano
+y se desarrollan en los capítulos correspondientes de este documento.

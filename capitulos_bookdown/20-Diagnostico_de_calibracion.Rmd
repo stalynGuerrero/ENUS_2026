@@ -1,0 +1,48 @@
+# Diagnóstico de calibración {#sec-diagnostico-calibracion}
+
+Este capítulo documenta el protocolo con el que se evalúa, para cada uno de los nueve modelos de calibración por entropía de ENUS 2026 (el modelo transversal y los ocho modelos módulo-específicos; \@ref(sec-pesos-calibracion)), si el ajuste obtenido es numéricamente correcto, si produce pesos razonables y qué efecto tiene sobre las estimaciones. El diagnóstico se aplica sobre resultados reales de calibración —de la muestra completa y de cada una de las $B=1\,000$ réplicas—, por lo que sus salidas numéricas (tasas de convergencia observadas, distribución efectiva de los factores de ajuste, límites $L_i,U_i$ finalmente adoptados) solo existen una vez se ejecuta el procedimiento sobre una base de encuestas real; lo que se fija aquí, como parte del documento metodológico, es el protocolo completo y los criterios con los que esas salidas deberán leerse.
+
+## Convergencia del algoritmo
+
+El algoritmo de Newton–Raphson descrito en el capítulo de ponderación y calibración se declara convergente cuando la discrepancia máxima entre la suma ponderada y el total de referencia, para las cinco variables auxiliares, cae por debajo de la tolerancia $\varepsilon$ (\@ref(sec-pesos-calibracion)). El diagnóstico de convergencia registra, para cada uno de los nueve modelos y para cada una de sus réplicas:
+
+- el número de iteraciones hasta alcanzar $\varepsilon$;
+- si el algoritmo convergió dentro de un número máximo de iteraciones o si debió detenerse sin alcanzar la tolerancia;
+- la discrepancia residual máxima $\max_j \left|\sum_{i} w_i x_{ij} - X_j\right|$ al momento de detenerse, incluso en los casos convergentes, como verificación de cuadre.
+
+La no convergencia de un modelo —más probable en los modelos módulo-específicos, cuyo tamaño de muestra $n_m$ es sustancialmente menor que el de la muestra completa (\@ref(sec-pesos-calibracion))— indica que los totales de referencia $X_j$ no son alcanzables dentro del rango de variación de las variables auxiliares observado en ese subconjunto de respondientes: por ejemplo, que un módulo particular no captó ningún respondiente en alguna combinación de categorías necesaria para cumplir simultáneamente las cinco restricciones. En ese caso, el criterio adoptado es reducir el conjunto de restricciones del modulo afectado —agregando categorías contiguas de la variable auxiliar problemática (por ejemplo, colapsando dos grupos de edad adyacentes) en lugar de omitir por completo esa variable auxiliar— y documentar explícitamente cuáles restricciones debieron colapsarse y en qué módulo.
+
+## Cumplimiento de restricciones
+
+Una vez declarado convergente un modelo, se verifica —como control de calidad independiente del criterio de parada del algoritmo— que la muestra ponderada final reproduzca los totales de referencia dentro de un margen de redondeo despreciable, comparando, para cada una de las diecinueve categorías de la tabla de totales de referencia (\@ref(sec-pesos-calibracion)), el total ponderado obtenido $\sum_i w_i x_{ij}$ contra $X_j$. Esta verificación es la comprobación de que el resultado reportado del algoritmo corresponde efectivamente a la solución del problema de calibración, y no a una salida intermedia.
+
+## Distribución de los factores de ajuste
+
+Para cada modelo se calcula y se reporta la distribución completa de los factores de ajuste $g_i = w_i/d_i$ (\@ref(sec-pesos-calibracion)): mínimo, percentiles 1, 5, 25, 50 (mediana), 75, 95 y 99, máximo, media y coeficiente de variación $CV(g)$. Como la distancia de raking garantiza $g_i>0$ para todo registro (\@ref(sec-pesos-calibracion)), el diagnóstico no necesita verificar la ausencia de pesos negativos —una comprobación que sí sería indispensable bajo la distancia lineal—, y se concentra en la dispersión de $g_i$: valores de $g_i$ muy alejados de 1 indican registros cuya combinación de variables auxiliares está sub- o sobrerrepresentada en la muestra respecto a la población de referencia, y que el algoritmo debe corregir con un ajuste desproporcionado.
+
+## Valores extremos y límites $L_i, U_i$
+
+Un factor de ajuste $g_i$ inusualmente grande incrementa la varianza del estimador ponderado sin una ganancia proporcional de reducción de sesgo, un efecto bien documentado en la literatura de recorte de pesos extremos (*weight trimming*) [@Potter1990; @Fuller2009]. Siguiendo la decisión adoptada de no fijar los límites $L_i, U_i$ a priori (\@ref(sec-pesos-calibracion)), el procedimiento para determinarlos empíricamente, una vez calculada la distribución de $g_i$ de la sección anterior, es:
+
+1. Identificar como potencialmente extremos los registros cuyo $g_i$ cae por fuera del rango entre los percentiles 1 y 99 de la distribución observada en ese modelo.
+2. Evaluar, para el conjunto de indicadores de ese modelo (transversal o del módulo correspondiente), la sensibilidad del estimador y de su varianza replicada (\@ref(sec-pesos-calibracion)) a la inclusión o exclusión de esos registros mediante un recorte (truncamiento de $g_i$ al percentil límite, con redistribución de la masa recortada entre el resto de la muestra para preservar $\sum_i w_i = \sum_i d_i$).
+3. Adoptar como $L_i, U_i$ definitivos, para ese modelo, los percentiles de recorte que reducen de manera apreciable la varianza replicada sin desplazar el valor puntual del estimador más allá de su propio intervalo de incertidumbre sin recortar; si ningún recorte cumple esa condición, se documenta que el modelo no requiere truncamiento y $g_i$ se deja sin acotar.
+
+Este procedimiento se ejecuta de forma independiente para cada uno de los nueve modelos, porque la dispersión de $g_i$ —y, por tanto, la necesidad de truncamiento— depende del tamaño de muestra y de la composición de cada uno (\@ref(sec-pesos-calibracion)).
+
+## Impacto de la calibración sobre las estimaciones
+
+El efecto de la calibración se evalúa comparando, para cada indicador, el estimador sin calibrar (con el peso de referencia $d_i$ únicamente) contra el estimador calibrado (con $w_i$ o $w_i^{(m)}$ según corresponda), y registrando:
+
+- la magnitud del desplazamiento entre ambas estimaciones puntuales;
+- la pérdida o ganancia de precisión atribuible a la ponderación, mediante el efecto de diseño por ponderación (*weighting design effect*) de @Kish1965, extendido por @ChenRust2017:
+
+$$
+DEFF_w = 1 + CV^2(w)
+$$
+
+donde $CV(w)$ es el coeficiente de variación de los pesos finales del modelo. Un $DEFF_w$ sustancialmente mayor que 1 indica que la calibración, aunque necesaria para corregir la composición de la muestra, incrementa la varianza del estimador respecto a un escenario hipotético de pesos iguales, y es la contraparte cuantitativa de la reducción de sesgo que motiva la calibración: ambos efectos se reportan conjuntamente, nunca por separado, para no sugerir que la calibración mejora la precisión sin condiciones.
+
+## Reporte del diagnóstico
+
+Para cada uno de los nueve modelos, el diagnóstico de calibración se resume en una ficha con: tamaño de muestra del modelo ($n$ o $n_m$), número de iteraciones hasta convergencia, discrepancia residual máxima, distribución de $g_i$ (percentiles listados arriba), límites $L_i,U_i$ adoptados y porcentaje de registros afectados por el truncamiento, y $DEFF_w$. Esta ficha, aplicada a los resultados reales de la calibración, es el insumo con el que el capítulo de calidad estadística evalúa el desempeño global de la ponderación de la operación (\@ref(sec-calidad-estadistica)).

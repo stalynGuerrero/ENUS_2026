@@ -1,0 +1,47 @@
+# Limitaciones del muestreo por cuotas {#sec-limitaciones-cuotas}
+
+Este capítulo consolida las limitaciones inferenciales que se derivan específicamente del mecanismo de captación por cuotas de ENUS 2026, anticipadas en los capítulos de diseño muestral, relación entre cuestionario y cuotas, y mecanismo de selección (\@ref(sec-diseno-muestral), \@ref(sec-relacion-cuestionario-cuotas), \@ref(sec-mecanismo-seleccion)). Estas limitaciones son distintas de las limitaciones generales de la operación (ver capítulo de limitaciones), que abarcan cobertura, participación y dependencia de variables auxiliares desde una perspectiva más amplia.
+
+## Ausencia de probabilidad de inclusión conocida
+
+En ningún punto de la secuencia de captación —identificación, clasificación, aceptación, finalización e inclusión en la base analítica (\@ref(sec-mecanismo-seleccion))— existe una probabilidad de inclusión $\pi_i$ observable o controlada por un mecanismo aleatorio formal. En consecuencia, los estimadores de ENUS 2026 no son insesgados por diseño en el sentido clásico del muestreo probabilístico [@Cochran1977; @HorvitzThompson1952]: su validez depende de supuestos adicionales —en particular, del supuesto de ignorabilidad condicional que sustenta la calibración (ver capítulo de ponderación y calibración)— y no de una propiedad garantizada por el mecanismo de selección. Esta es la razón por la cual se adoptó un peso de referencia uniforme ($d_i = 1$) en lugar de un peso derivado de una probabilidad de inclusión.
+
+## Autoselección dentro de la celda de cuota
+
+La inclusión de un usuario dentro de su celda de cuota es determinística y exhaustiva —todo usuario elegible y clasificado es aceptado—, pero depende enteramente de su propia decisión de acceder a *ClicSalud* y completar el cuestionario (\@ref(sec-mecanismo-seleccion)). La cuota controla la composición observable de la muestra en cinco variables demográficas, pero no controla, ni puede controlar por construcción, la autoselección en variables no observadas [@ElliottValliant2017; @WangValliant2015; @LeeValliant2006] que pueden estar asociadas simultáneamente con la probabilidad de participar y con las respuestas sustantivas del cuestionario —por ejemplo, la intensidad de una experiencia negativa reciente, la motivación para participar, o el nivel de alfabetización digital. La calibración posterior (ver capítulo de ponderación y calibración) ajusta la muestra para que reproduzca los totales poblacionales conocidos en las variables auxiliares utilizadas, pero ese ajuste opera exclusivamente sobre esas variables observables: no elimina, ni puede eliminar, un sesgo de autoselección que opere a través de variables no incluidas en la calibración.
+
+## Ausencia de un mecanismo verificable de cierre de cuota
+
+Los insumos técnicos disponibles no documentan un mecanismo de cierre automático de una celda de cuota una vez alcanzada su meta, ni un procedimiento de monitoreo continuo del avance de cada celda durante el levantamiento (\@ref(sec-mecanismo-seleccion)). En ausencia de un control verificable de este tipo, la composición real de la muestra —la que efectivamente entra a la base analítica— puede desviarse de la meta de la matriz de cuotas (Anexo E) por exceso en perfiles de fácil acceso a *ClicSalud* o por defecto en perfiles de menor afluencia, sin que exista, hasta donde documentan los insumos técnicos, una corrección aplicada durante la captación misma. Cualquier desviación de este tipo debe evaluarse empíricamente sobre los datos de campo y, en la medida en que las variables de cuota coincidan con las variables de calibración, puede compensarse parcialmente en la etapa de ponderación —pero no antes de ella.
+
+## Precisión no controlada a nivel de módulo
+
+La cuota fija la composición demográfica de la muestra, pero no controla el tamaño de muestra que finalmente recae en cada uno de los nueve módulos del cuestionario: esa distribución depende de la regla de asignación al módulo, ajena a las cinco variables de cuota y cuyo criterio operativo exacto no está documentado en los insumos disponibles (\@ref(sec-relacion-cuestionario-cuotas), \@ref(sec-reconciliacion-estructuras)). Un módulo asociado a un evento de baja frecuencia —por ejemplo, un procedimiento quirúrgico reciente— puede terminar con un número de respuestas sustancialmente menor que un módulo asociado a un evento frecuente, incluso si las 336 celdas de la cuota demográfica se cumplen exactamente. Los indicadores que dependan de un módulo con baja afluencia tendrán, en consecuencia, menor precisión que los indicadores del bloque transversal, sin que el diseño ofrezca un mecanismo para igualar esa precisión entre módulos.
+
+## Dependencia de las variables auxiliares utilizadas
+
+La eficacia de la cuota —y, más adelante, de la calibración— para reducir el desequilibrio de la muestra depende de que sexo, grupo de edad, región, zona y régimen de afiliación (\@ref(sec-variables-clasificacion)) capturen adecuadamente los mecanismos reales de autoselección. Si la probabilidad de que un usuario acceda y complete *ClicSalud* está asociada a factores no capturados por estas cinco variables —por ejemplo, el tipo de EPS, la severidad o urgencia de la necesidad de salud, o el grado de alfabetización digital dentro de un mismo grupo demográfico—, ni la cuota ni la calibración posterior corrigen ese desbalance, porque ambas operan exclusivamente sobre las variables efectivamente incluidas [@ChenLiWu2020; @ElliottValliant2017].
+
+## Cobertura de la población accesible
+
+La cuota opera únicamente sobre la población que ya superó las condiciones de accesibilidad y elegibilidad descritas en el capítulo de población objetivo (\@ref(sec-poblacion-objetivo)): usuarios con acceso digital directo o con presencia física en un punto de atención habilitado con código QR, y con afiliación verificable en BDUA. Ningún mecanismo de cuota puede compensar la exclusión estructural de usuarios elegibles que, por falta de acceso a estos canales, nunca llegan a ser clasificados ni captados. Esta limitación de cobertura es anterior a la cuota misma y se hereda íntegramente en la muestra final.
+
+## Rezago en la habilitación de usuarios recién elegibles
+
+La base de usuarios habilitados para acceder a *ClicSalud* se actualiza cada cuatro meses, con el propósito de incorporar a los usuarios que se afiliaron al SGSSS o utilizaron un servicio de salud con posterioridad a la actualización anterior (\@ref(sec-diseno-muestral)). Esta cadencia implica que un usuario recién elegible no queda habilitado de forma inmediata: dependiendo del momento en que ocurra su afiliación o utilización del servicio respecto del ciclo de actualización vigente, puede transcurrir hasta un periodo de cuatro meses antes de que quede habilitado para diligenciar el cuestionario. Este rezago es un componente adicional, distinto de la cuota misma, de la brecha entre la población objetivo definida de manera continua (\@ref(sec-poblacion-objetivo)) y la población efectivamente accesible en un momento dado.
+
+## Distinción entre error de muestreo y sesgo de selección
+
+Las limitaciones anteriores no deben confundirse con la estimación de la incertidumbre de los indicadores (ver capítulo de precisión e incertidumbre). El procedimiento de replicación de pesos calibrados que se adoptará para esa estimación cuantifica la variabilidad del estimador bajo el procedimiento de ponderación y calibración efectivamente aplicado [@RaoWu1988; @Wolter2007]; no cuantifica, ni puede cuantificar, la magnitud de un sesgo de autoselección en variables no observadas. Un intervalo de incertidumbre estrecho no es evidencia de ausencia de sesgo de selección, y una calibración que cumple exactamente sus restricciones de totales poblacionales no implica que la muestra sea representativa en dimensiones no incluidas en esas restricciones. Mantener esta distinción es indispensable para no atribuir al muestreo por cuotas de ENUS 2026 propiedades de inferencia probabilística que su diseño no sustenta.
+
+## Síntesis
+
+| Limitación | Origen | ¿La calibración la mitiga? |
+|---|---|---|
+| Ausencia de probabilidad de inclusión conocida | Naturaleza no probabilística del diseño (\@ref(sec-diseno-muestral)) | No; cambia el fundamento inferencial, no lo restaura |
+| Autoselección dentro de la celda | Decisión individual de participar (\@ref(sec-mecanismo-seleccion)) | Solo en la medida en que esté asociada a las variables de calibración |
+| Ausencia de cierre de cuota verificable | Sin evidencia de control en tiempo real (\@ref(sec-mecanismo-seleccion)) | Parcialmente, si la desviación coincide con variables de calibración |
+| Precisión no controlada por módulo | El módulo responde a una regla de asignación ajena a la cuota, sin criterio operativo documentado (\@ref(sec-relacion-cuestionario-cuotas)) | No; la calibración no aumenta el tamaño de muestra de un módulo |
+| Dependencia de las variables auxiliares | Solo cinco variables capturadas para cuota y calibración (\@ref(sec-variables-clasificacion)) | No, para factores no capturados por esas variables |
+| Cobertura de la población accesible | Exclusión estructural previa a la cuota (\@ref(sec-poblacion-objetivo)) | No; es anterior a la muestra sobre la que opera la calibración |
+| Rezago en la habilitación de usuarios recién elegibles | Actualización de la base de usuarios cada cuatro meses (\@ref(sec-diseno-muestral)) | No; es un rezago operativo previo a la captación |

@@ -1,0 +1,33 @@
+# Variables de clasificación {#sec-variables-clasificacion}
+
+Este capítulo consolida, en una sola matriz, todas las variables efectivamente utilizadas por ENUS 2026 para identificar, clasificar y encausar a un usuario, con su fuente, el momento del recorrido por *ClicSalud* en el que se obtiene y el uso que cumple dentro de la operación —cuota, ruta del cuestionario o calibración—, siguiendo la distinción ya establecida entre estas tres funciones (\@ref(sec-diseno-muestral)).
+
+## Momento de captura dentro del recorrido del usuario
+
+Las variables se obtienen en tres momentos sucesivos y con dos mecanismos distintos:
+
+1. **Identificación (antes del cuestionario).** El usuario reporta su documento de identificación y su EPS, y el sistema valida el documento contra la Base de Datos Única de Afiliados (BDUA) y confirma el número de contacto mediante un código enviado por SMS (\@ref(sec-poblacion-objetivo)). Estas variables se autorreportan y se validan contra un registro administrativo, pero no se completan automáticamente a partir de él.
+2. **Bloque de identificación y caracterización (inicio del árbol de decisión).** El usuario responde, en un orden fijo, cinco preguntas de clasificación: sexo, grupo de edad, ubicación geográfica, zona y régimen de afiliación. A diferencia de la etapa anterior, estas cinco variables se **autorreportan directamente como respuesta a una pregunta del cuestionario**, sin validación posterior contra BDUA u otro registro administrativo dentro del recorrido del usuario.
+3. **Pregunta trazadora y gestión institucional (después de la identificación).** El usuario reporta si ha utilizado servicios de salud recientemente y, de ser así, con qué tipo de entidad y qué tipo de servicio, lo que determina el módulo del cuestionario que responde (\@ref(sec-flujo-rutas)).
+
+## Matriz de variables
+
+| Variable | Categorías | Fuente | Momento de obtención | Uso |
+|---|---|---|---|---|
+| Documento de identificación | Cédula de ciudadanía, cédula de extranjería y demás tipos habilitados en *ClicSalud* | Autorreporte, validado contra BDUA | Identificación, antes del cuestionario | Elegibilidad (\@ref(sec-poblacion-objetivo)); no es variable de clasificación |
+| EPS | Listado de EPS del SGSSS | Autorreporte (selección de una lista) | Identificación, antes del cuestionario | Identificación del usuario; no es variable de cuota ni de calibración (\@ref(sec-papel-eps-ips)) |
+| Sexo | Femenino, Masculino | Autorreporte (pregunta del árbol) | Bloque de identificación y caracterización | Cuota; variable auxiliar de calibración |
+| Grupo de edad | 00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más | Autorreporte, capturado directamente en rangos de 10 años (no como edad exacta) | Bloque de identificación y caracterización | Cuota; variable auxiliar de calibración |
+| Ubicación geográfica (región) | Bogotá, Caribe, Central, Oriental, Orinoquía-Amazonía, Pacífica | Autorreporte (pregunta del árbol, etiquetada "Departamento", con las seis regiones como únicas opciones de respuesta) | Bloque de identificación y caracterización | Cuota; dominio geográfico de análisis; variable auxiliar de calibración |
+| Zona | Urbano, Rural | Autorreporte (pregunta del árbol) | Bloque de identificación y caracterización | Cuota; variable auxiliar de calibración |
+| Régimen de afiliación | Contributivo, Subsidiado | Autorreporte (pregunta del árbol) | Bloque de identificación y caracterización | Cuota; variable auxiliar de calibración |
+| Uso reciente de servicios de salud (pregunta trazadora) | Sí, No | Autorreporte | Bloque de pregunta trazadora, tras la identificación y caracterización | Determina la ruta del cuestionario; no es variable de cuota ni de calibración |
+| Entidad prestadora y tipo de servicio | Nueve combinaciones posibles, correspondientes a los nueve módulos del cuestionario (\@ref(sec-flujo-rutas)) | Autorreporte | Bloque de gestión institucional, tras respuesta afirmativa a la pregunta trazadora | Determina el módulo final del cuestionario (ruta); no es variable de cuota ni de calibración |
+
+## Precisión sobre la fuente: autorreporte, no consulta automática a BDUA
+
+Aunque sexo, edad, régimen y ubicación geográfica son variables que, conceptualmente, también existen en los registros de la BDUA a nivel poblacional —de hecho, la BDUA es la fuente de los totales poblacionales usados tanto para calcular el tamaño de muestra como para los totales de referencia de la calibración (\@ref(sec-diseno-muestral))—, el dato **individual** de cada encuestado en ENUS 2026 no se completa automáticamente a partir de una consulta a BDUA por persona: se obtiene mediante autorreporte directo, como respuesta a una pregunta del árbol de decisión. La validación contra BDUA que sí ocurre dentro del recorrido del usuario (\@ref(sec-poblacion-objetivo)) se limita a confirmar la condición de afiliación activa a partir del documento de identificación, y no se extiende a completar automáticamente sexo, edad, régimen o ubicación geográfica.
+
+## Precisión sobre la granularidad geográfica: región, no departamento
+
+La BDUA permite construir totales poblacionales con granularidad departamental (32 departamentos más el Distrito Capital). Sin embargo, la variable geográfica que efectivamente se captura en el cuestionario —la pregunta de ubicación geográfica del bloque de identificación y caracterización— solo distingue seis regiones, no los 32 departamentos individuales. En consecuencia, los totales de referencia que se utilicen para la calibración en esta variable deben construirse a la misma granularidad de seis regiones —agregando los departamentos de la BDUA según el esquema de regionalización adoptado (\@ref(sec-diseno-muestral))—, y no a nivel departamental, porque no existe en el cuestionario un dato individual de departamento contra el cual calibrar una desagregación más fina.
