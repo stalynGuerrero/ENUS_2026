@@ -1,0 +1,671 @@
+/* ==========================================================================
+   VARIABLES GLOBALES Y TEMAS
+   ========================================================================== */
+:root {
+    --color-base-azul: #3182ce;
+    --color-decision-naranja: #dd6b20;
+    --color-entidad-verde: #38a169;
+    --color-modulo-morado: #805ad5;
+    --color-ruta-resaltada: #1a365d;    /* Azul oscuro para el camino iluminado */
+    --color-nodo-seleccionado: #ecc94b;
+
+    --bg-workspace: #f7fafc;
+    --bg-toolbar: #ffffff;
+    --border-color: #e2e8f0;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+
+    --font-family: 'Segoe UI', -apple-system, sans-serif;
+    --transition-speed: 0.25s;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   RESET Y REGLAS BASE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-family);
+    color: var(--text-main);
+    background-color: var(--bg-workspace);
+}
+
+/* Contenedor de Aplicación Grid de Tres Áreas */
+.app-container {
+    display: grid;
+    grid-template-rows: 60px 1px calc(100vh - 61px);
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "header header"
+        "divider divider"
+        "main sidebar";
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ==========================================================================
+   BARRA DE HERRAMIENTAS (TOOLBAR)
+   ========================================================================== */
+.toolbar {
+    grid-area: header;
+    background-color: var(--bg-toolbar);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    gap: 16px;
+    z-index: 30;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.toolbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toolbar-brand h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.version-tag {
+    background-color: #edf2f7;
+    color: var(--text-muted);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-color);
+}
+
+.toolbar-actions, .toolbar-export {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botones Estilo Minimalista UI */
+.btn {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-main);
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+    background-color: #edf2f7;
+}
+
+.btn-secondary {
+    background-color: #edf2f7;
+    border-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+
+/* ==========================================================================
+   BUSCADOR INTEGRADO
+   ========================================================================== */
+.search-container {
+    position: relative;
+    width: 320px;
+    margin-left: auto;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+#search-input {
+    width: 100%;
+    padding: 8px 36px;
+    font-size: 13px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    background-color: #f7fafc;
+    transition: all var(--transition-speed) ease;
+}
+
+#search-input:focus {
+    background-color: #ffffff;
+    border-color: var(--color-base-azul);
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.btn-clear {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: none;
+}
+
+.btn-clear.visible {
+    display: block;
+}
+
+/* Desplegable de Resultados de Búsqueda */
+.search-results-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+    z-index: 50;
+}
+
+.search-results-dropdown.hidden {
+    display: none;
+}
+
+.search-result-item {
+    padding: 10px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    border-bottom: 1px solid #f7fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #f7fafc;
+}
+
+.search-result-title {
+    font-weight: 600;
+}
+
+.search-result-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   ÁREA DE TRABAJO Y BREADCRUMB
+   ========================================================================== */
+.workspace {
+    grid-area: main;
+    position: relative;
+    overflow: hidden;
+}
+
+.breadcrumb-container {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    box-shadow: var(--shadow-sm);
+}
+
+.breadcrumb-path {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.breadcrumb-item {
+    color: var(--text-muted);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.breadcrumb-separator {
+    color: var(--border-color);
+}
+
+.stats-badge {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ==========================================================================
+   CALCULADORA DE TAMAÑO DE MUESTRA (Selección acumulada Sexo/Edad/Depto/Régimen)
+   ========================================================================== */
+.sample-panel {
+    position: absolute;
+    top: 72px;
+    right: 16px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    z-index: 10;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sample-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.sample-panel-header h3 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-main);
+}
+
+.btn-sample-reset {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-sample-reset:hover {
+    background-color: #f7fafc;
+    color: var(--text-main);
+}
+
+.sample-panel-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sample-panel-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.sample-panel-label {
+    color: var(--text-muted);
+}
+
+.sample-panel-value {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.sample-panel-value.pending {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+.sample-panel-hint {
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.sample-panel-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+}
+
+.sample-panel-result-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.sample-panel-result-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.sample-panel.complete .sample-panel-result-value {
+    color: #2f855a;
+}
+
+/* ==========================================================================
+   LIENZO INFINITO SVG (CANVAS) Y ENLACES
+   ========================================================================== */
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    overflow: hidden;
+}
+
+.canvas-container:active {
+    cursor: grabbing;
+}
+
+.svg-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    user-select: none;
+}
+
+/* --- ESTADOS DE LAS LINEAS DE CONEXIÓN (EDGES) --- */
+.svg-edge {
+    fill: none;
+    stroke: #a0aec0;
+    stroke-width: 2;
+    transition: stroke var(--transition-speed) ease, stroke-width var(--transition-speed) ease;
+}
+
+/* El Camino Elegido / Iluminado, simulando el flujo eléctrico por el tramo */
+.svg-edge.highlighted {
+    stroke: var(--color-ruta-resaltada);
+    stroke-width: 4.5px;
+    stroke-dasharray: 8 4;
+    animation: flowLine 25s linear infinite;
+    marker-end: url(#arrowhead-highlight);
+}
+
+@keyframes flowLine {
+    from { stroke-dashoffset: 500; }
+    to { stroke-dashoffset: 0; }
+}
+
+/* --- ESTADOS DE LOS NODOS --- */
+.svg-node-g {
+    cursor: pointer;
+}
+
+.svg-node-rect {
+    fill: #ffffff;
+    stroke-width: 2;
+    transition: transform var(--transition-speed), filter var(--transition-speed);
+}
+
+.node-type-base .svg-node-rect { stroke: var(--color-base-azul); }
+.node-type-decision .svg-node-rect { stroke: var(--color-decision-naranja); }
+.node-type-entidad .svg-node-rect { stroke: var(--color-entidad-verde); }
+.node-type-modulo .svg-node-rect { stroke: var(--color-modulo-morado); }
+
+.svg-node-g:hover .svg-node-rect {
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+
+/* Nodo Seleccionado manualmente por el usuario */
+.svg-node-g.selected .svg-node-rect {
+    fill: #fffdf5;
+    stroke: var(--color-nodo-seleccionado);
+    stroke-width: 4px;
+}
+
+/* Nodo Iluminado por pertenecer a la ruta activa */
+.svg-node-g.highlighted .svg-node-rect {
+    stroke: var(--color-ruta-resaltada);
+    stroke-width: 4px;
+    filter: drop-shadow(0 4px 6px rgba(26, 54, 93, 0.25));
+}
+
+/* Nodo elegido como parte de la selección acumulada de la calculadora de muestra */
+.svg-node-g.chosen .svg-node-rect {
+    fill: #f0fff4;
+    stroke: #2f855a;
+    stroke-width: 3px;
+    stroke-dasharray: 5 2;
+}
+
+.svg-node-text-id {
+    font-size: 11px;
+    font-weight: 700;
+    fill: var(--text-muted);
+}
+
+.svg-node-text-label {
+    font-size: 13px;
+    font-weight: 600;
+    fill: var(--text-main);
+}
+
+.svg-edge-text {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--text-muted);
+}
+
+/* ==========================================================================
+   PANEL LATERAL (SIDEBAR)
+   ========================================================================== */
+.sidebar-panel {
+    grid-area: sidebar;
+    width: 360px;
+    background-color: #ffffff;
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-panel.collapsed {
+    transform: translateX(100%);
+    position: absolute;
+    right: 0;
+    height: calc(100vh - 61px);
+}
+
+.sidebar-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-close-sidebar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.sidebar-content {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.meta-value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sidebar-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-section h3 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.node-id-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #edf2f7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.node-type-text {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+.node-description-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+.sidebar-routes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-route-item {
+    font-size: 12px;
+    padding: 6px 10px;
+    background-color: #f7fafc;
+    border-left: 3px solid var(--color-ruta-resaltada);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color var(--transition-speed);
+}
+
+.sidebar-route-item:hover {
+    background-color: #edf2f7;
+}
+
+/* ==========================================================================
+   TOOLTIP GLOBAL FLOTANTE
+   ========================================================================== */
+.global-tooltip {
+    position: fixed;
+    background-color: rgba(26, 32, 44, 0.95);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+    max-width: 240px;
+    line-height: 1.4;
+}
+
+.global-tooltip.hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   UTILIDADES
+   ========================================================================== */
+.hidden {
+    display: none !important;
+}

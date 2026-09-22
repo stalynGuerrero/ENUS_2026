@@ -1,0 +1,281 @@
+---
+title: "Informe Metodológico"
+subtitle: "Árbol de Decisión y Asignación del Tamaño de Muestra de la Encuesta Nacional de Salud"
+lang: es
+format:
+  docx:
+    number-sections: true
+    toc: false
+---
+
+## 1. Introducción y Objetivo
+
+Este documento presenta la estructura completa del árbol de decisión utilizado para clasificar a cada persona encuestada según su perfil sociodemográfico y su trayectoria de atención en el sistema de salud, y describe la metodología mediante la cual el tamaño de muestra —**ya definido previamente**— se asigna entre las distintas categorías (cajas) que componen dicho árbol. El objetivo no es calcular o derivar el tamaño de muestra, sino documentar de forma reproducible y verificable cómo se reparte ese tamaño ya establecido en cada nivel de desagregación del árbol: bloque de caracterización, pregunta trazadora, gestión institucional y módulos finales del cuestionario.
+
+## 2. Estructura del Árbol de Decisión
+
+El instrumento se organiza en cuatro bloques secuenciales, compuestos en conjunto por **48 cajas (nodos)**. Cada persona encuestada recorre los cuatro bloques en orden, y las respuestas dadas en un bloque determinan la caja específica a la que se avanza en el bloque siguiente.
+
+| Bloque | Nombre | N.° de cajas | Función |
+|---|---|---|---|
+| 1 | Identificación y Caracterización | 25 | Variables sociodemográficas: sexo, grupo de edad, departamento, zona y régimen de afiliación |
+| 2 | Pregunta Trazadora | 1 | Filtro dicotómico: uso o no de servicios de salud en los últimos seis meses |
+| 3 | Gestión Institucional | 14 | Identifica la entidad prestadora (EPS, IPS o Gestor Farmacéutico) y el tipo de servicio recibido |
+| 4 | Módulos Finales | 8 | Ocho formularios especializados según el servicio de salud recibido |
+| **Total** | | **48** | |
+
+### 2.1 Bloque 1 — Identificación y Caracterización (25 cajas)
+
+Comprende cinco variables de clasificación, presentadas en el siguiente orden fijo. Cada pregunta converge en la siguiente sin importar la respuesta dada previamente, de modo que todas las combinaciones posibles de estas cinco variables son alcanzables. El listado completo de cajas de este bloque es el siguiente:
+
+| N.° | Caja (nodo) | Tipo de caja |
+|---|---|---|
+| 1 | Cédula | Identificador |
+| 2 | Sexo | Pregunta |
+| 3 | Hombre | Respuesta — Sexo |
+| 4 | Mujer | Respuesta — Sexo |
+| 5 | Edad | Pregunta |
+| 6 | 0–9 | Respuesta — Grupo de edad |
+| 7 | 10–19 | Respuesta — Grupo de edad |
+| 8 | 20–29 | Respuesta — Grupo de edad |
+| 9 | 30–39 | Respuesta — Grupo de edad |
+| 10 | 40–49 | Respuesta — Grupo de edad |
+| 11 | 50–59 | Respuesta — Grupo de edad |
+| 12 | 60+ | Respuesta — Grupo de edad |
+| 13 | Departamento | Pregunta |
+| 14 | Bogotá | Respuesta — Departamento |
+| 15 | Oriental | Respuesta — Departamento |
+| 16 | Caribe | Respuesta — Departamento |
+| 17 | Central | Respuesta — Departamento |
+| 18 | Pacífica | Respuesta — Departamento |
+| 19 | Orinoquía-Amazonía | Respuesta — Departamento |
+| 20 | Zona | Pregunta |
+| 21 | Urbano | Respuesta — Zona |
+| 22 | Rural | Respuesta — Zona |
+| 23 | Régimen | Pregunta |
+| 24 | Contributivo | Respuesta — Régimen |
+| 25 | Subsidiado | Respuesta — Régimen |
+
+### 2.2 Bloque 2 — Pregunta Trazadora (1 caja)
+
+| N.° | Caja (nodo) | Tipo de caja |
+|---|---|---|
+| 26 | ¿Ha utilizado servicios de salud? | Pregunta trazadora (B0) |
+
+Una respuesta negativa dirige a la persona directamente a la caja de módulo de barreras de acceso (bloque 4); una respuesta afirmativa continúa hacia el bloque 3.
+
+### 2.3 Bloque 3 — Gestión Institucional (14 cajas)
+
+Para quienes reportan uso de servicios, se identifica la entidad y el tipo de servicio recibido, lo que determina el módulo final aplicable. El listado completo de cajas de este bloque es el siguiente:
+
+| N.° | Caja (nodo) | Tipo de caja |
+|---|---|---|
+| 27 | Empresa Prestadora (EPS) | Entidad |
+| 28 | Institución Prestadora (IPS) | Entidad |
+| 29 | Entidad Gestora Farmacéutica | Entidad |
+| 30 | ¿Qué servicio utilizó en EPS? | Pregunta |
+| 31 | ¿Qué servicio utilizó en IPS? | Pregunta |
+| 32 | ¿El acceso fue por medicamentos? | Pregunta |
+| 33 | Ambulatorio (EPS) | Respuesta — Servicio EPS |
+| 34 | Otro Servicio (EPS) | Respuesta — Servicio EPS |
+| 35 | Ambulatorio (IPS) | Respuesta — Servicio IPS |
+| 36 | Urgencias (IPS) | Respuesta — Servicio IPS |
+| 37 | Internación (IPS) | Respuesta — Servicio IPS |
+| 38 | Quirúrgico (IPS) | Respuesta — Servicio IPS |
+| 39 | Medicamentos (Gestor) | Respuesta — Servicio Gestor |
+| 40 | No Medicamentos (Gestor) | Respuesta — Servicio Gestor |
+
+La correspondencia entre estas cajas y el módulo destino del bloque 4 es la siguiente:
+
+| Entidad | Servicio / sub-servicio | Módulo destino |
+|---|---|---|
+| EPS | Ambulatorio | EPS – Módulo 3 |
+| EPS | Urgencias, internación o especializado | EPS – Módulo 2 |
+| IPS | Ambulatorio | IPS – Módulo 1 |
+| IPS | Urgencias | IPS – Módulo 2 |
+| IPS | Internación | IPS – Módulo 3 |
+| IPS | Quirúrgico | IPS – Módulo 4 |
+| Gestor Farmacéutico | Medicamentos | Gestor – Módulo 1 |
+| Gestor Farmacéutico | No medicamentos | EPS – Módulo 2 (ruta transversal) |
+
+### 2.4 Bloque 4 — Módulos Finales (8 cajas)
+
+| N.° | Caja (nodo) | Preguntas | Enfoque |
+|---|---|---|---|
+| 41 | EPS – Módulo 1 | 27 | Barreras de acceso en población sin uso reciente de servicios |
+| 42 | EPS – Módulo 2 | 36 | Urgencias, internación o especializado por EPS; también canal no farmacológico del Gestor |
+| 43 | EPS – Módulo 3 | 34 | Consulta ambulatoria / externa por EPS |
+| 44 | IPS – Módulo 1 | 34 | Consulta ambulatoria directa en red IPS |
+| 45 | IPS – Módulo 2 | 32 | Atención de urgencias en red IPS |
+| 46 | IPS – Módulo 3 | 29 | Internación y hospitalización |
+| 47 | IPS – Módulo 4 | 33 | Procedimientos quirúrgicos |
+| 48 | Gestor – Módulo 1 | 34 | Entrega de medicamentos y dispositivos médicos |
+
+## 3. Asignación del Tamaño de Muestra (ya definido)
+
+El tamaño de muestra de la Encuesta Nacional de Salud **ya se encuentra definido**: corresponde a **7 876 encuestas** a nivel nacional, equivalentes a una meta de aproximadamente **1 313 encuestas por cada una de las seis regiones**. Este documento no calcula ni deriva dicho tamaño; se limita a describir la metodología mediante la cual ese tamaño, ya fijado, se **asigna (reparte)** entre los dominios de análisis y las celdas demográficas representadas en las cajas del bloque de caracterización.
+
+### 3.1 Parámetros de referencia del tamaño ya definido
+
+Los siguientes parámetros corresponden a la meta de precisión con la que fue definido el tamaño de muestra, y se incluyen únicamente como referencia contextual:
+
+| Parámetro | Símbolo | Valor |
+|---|---|---|
+| Proporción esperada | $P$ | 0,50 |
+| Nivel de confianza | $1-\alpha$ | 95 % |
+| Margen de error relativo | $e/P$ | 7,84 % |
+| Efecto de diseño aplicado | $D_{ef}$ | 1,5 |
+| Factor operativo aplicado | $f$ | 1,4 |
+| Población de referencia | $N$ | 50 168 746 personas afiliadas |
+| **Tamaño de muestra nacional ya definido** | $n_{nacional}$ | **7 876 encuestas** |
+| **Tamaño de muestra ya definido por región** | $n_{región}$ | **≈ 1 313 encuestas** |
+
+### 3.2 Asignación por dominio de análisis (nivel regional)
+
+El tamaño de muestra ya definido para cada dominio regional ($n_{región} \approx 1\,313$) se asigna de manera **igual e independiente** a cada una de las seis regiones, en lugar de repartir proporcionalmente el tamaño nacional entre ellas. Esto garantiza una precisión equivalente en cada región, sin penalizar a las de menor población:
+
+$$n_{región}(r) = n_{región} \quad \text{para cada región } r = 1, \ldots, 6$$
+
+El tamaño de muestra nacional ya definido corresponde a la suma de los seis dominios regionales, con leves ajustes de redondeo en el dominio de menor tamaño poblacional:
+
+$$n_{nacional} = \sum_{r=1}^{6} n_{región}(r) \approx 6 \times 1\,313 = 7\,876$$
+
+### 3.3 Asignación proporcional por régimen dentro de cada región
+
+Dentro de cada región, el tamaño de muestra regional ya definido se distribuye entre los dos regímenes de afiliación de forma proporcional a su peso poblacional dentro de esa región:
+
+$$n(región, régimen) = n_{región} \times \frac{N(región, régimen)}{N_{región}}$$
+
+### 3.4 Asignación proporcional por celda demográfica
+
+Finalmente, dentro de cada combinación de región y régimen, el tamaño de muestra ya definido para ese estrato se distribuye entre las celdas formadas por sexo (2), grupo de edad (7) y zona (2) —28 celdas por estrato de región y régimen— de forma proporcional a su peso poblacional, garantizando un mínimo de encuestas por celda para preservar la posibilidad de análisis desagregado incluso en subgrupos poco numerosos:
+
+$$n_{celda} = \max \left\{ n(región, régimen) \times \frac{N_{celda}}{N(región, régimen)} \;;\; n_{mín} \right\}$$
+
+$$n_{mín} = 10 \text{ encuestas por celda de sexo} \times \text{grupo de edad} \times \text{zona}$$
+
+Cuando la suma de los mínimos garantizados excede el tamaño de muestra disponible para el estrato, se aplica un reajuste proporcional entre las celdas restantes de modo que la suma de las celdas coincida con el tamaño de muestra ya definido para el estrato, admitiendo diferencias de redondeo menores a una unidad.
+
+## 4. Resultados: Asignación del Tamaño de Muestra por Bloque
+
+### 4.1 Bloque 1 — Caracterización
+
+El tamaño de muestra nacional ya definido (7 876 encuestas) se distribuye, mediante la metodología de asignación anterior, entre las categorías de las cinco cajas de pregunta del bloque 1. A continuación se presentan los totales marginales —es decir, la suma sobre el resto de variables— para cada una de ellas, y los cruces más relevantes para la planificación operativa.
+
+**Asignación por sexo**
+
+| Sexo | n asignado | % |
+|---|---|---|
+| Femenino | 3 993 | 50,7 % |
+| Masculino | 3 883 | 49,3 % |
+| **Total** | **7 876** | **100 %** |
+
+**Asignación por grupo de edad**
+
+| Grupo de edad | n asignado | % |
+|---|---|---|
+| 00-09 | 1 014 | 12,9 % |
+| 10-19 | 1 163 | 14,8 % |
+| 20-29 | 1 203 | 15,3 % |
+| 30-39 | 1 203 | 15,3 % |
+| 40-49 | 1 086 | 13,8 % |
+| 50-59 | 975 | 12,4 % |
+| 60 o más | 1 232 | 15,6 % |
+| **Total** | **7 876** | **100 %** |
+
+**Asignación por departamento (región)**
+
+| Departamento | n asignado |
+|---|---|
+| Bogotá | 1 313 |
+| Caribe | 1 313 |
+| Central | 1 313 |
+| Oriental | 1 313 |
+| Orinoquía-Amazonía | 1 311 |
+| Pacífica | 1 313 |
+| **Total** | **7 876** |
+
+> La leve variación en Orinoquía-Amazonía obedece al redondeo del mínimo garantizado por celda (numeral 3.4).
+
+**Asignación por zona**
+
+| Zona | n asignado | % |
+|---|---|---|
+| Urbano | 5 147 | 65,4 % |
+| Rural | 2 729 | 34,6 % |
+| **Total** | **7 876** | **100 %** |
+
+**Asignación por régimen**
+
+| Régimen | n asignado | % |
+|---|---|---|
+| Subsidiado | 4 207 | 53,4 % |
+| Contributivo | 3 669 | 46,6 % |
+| **Total** | **7 876** | **100 %** |
+
+**Cruce departamento × régimen**
+
+| Departamento | Contributivo | Subsidiado | Total |
+|---|---|---|---|
+| Bogotá | 855 | 458 | 1 313 |
+| Caribe | 494 | 819 | 1 313 |
+| Central | 663 | 650 | 1 313 |
+| Oriental | 629 | 684 | 1 313 |
+| Orinoquía-Amazonía | 453 | 858 | 1 311 |
+| Pacífica | 575 | 738 | 1 313 |
+
+**Cruce departamento × zona**
+
+| Departamento | Urbano | Rural | Total |
+|---|---|---|---|
+| Bogotá | 1 020 (13,0 %) | 293 (3,7 %) | 1 313 |
+| Caribe | 854 (10,8 %) | 459 (5,8 %) | 1 313 |
+| Central | 887 (11,3 %) | 426 (5,4 %) | 1 313 |
+| Oriental | 868 (11,0 %) | 445 (5,7 %) | 1 313 |
+| Orinoquía-Amazonía | 686 (8,7 %) | 625 (7,9 %) | 1 311 |
+| Pacífica | 832 (10,6 %) | 481 (6,1 %) | 1 313 |
+
+### 4.2 Bloque 2 — Pregunta Trazadora
+
+La caja de pregunta trazadora no introduce una estratificación de diseño adicional: la totalidad de las 7 876 encuestas ya asignadas la responde, y el resultado (uso o no uso de servicios) clasifica posteriormente a cada persona hacia las cajas de los bloques 3 y 4, sin alterar el tamaño de muestra ya definido.
+
+### 4.3 Bloques 3 y 4 — Gestión Institucional y Módulos Finales
+
+A diferencia del bloque de caracterización, las cajas de entidad prestadora y tipo de servicio recibido no son variables de estratificación definidas a priori: se determinan a partir de la respuesta real de cada persona durante la aplicación del cuestionario. En consecuencia, no existe una cuota de asignación independiente para cada una de las nueve rutas posibles; todas ellas se nutren del mismo universo muestral de 7 876 encuestas ya asignado y descrito en el numeral 4.1, y el número de casos que finalmente recae en cada ruta es un resultado observado en campo, no un parámetro de asignación previa.
+
+Las nueve rutas posibles del árbol de decisión, con las cajas de módulo final en las que terminan, son las siguientes:
+
+| Ruta | Descripción | Módulo destino (caja) | Preguntas |
+|---|---|---|---|
+| 1 | Sin uso de servicios de salud | EPS – Módulo 1 | 27 |
+| 2 | EPS – atención ambulatoria | EPS – Módulo 3 | 34 |
+| 3 | EPS – urgencias, internación o especializado | EPS – Módulo 2 | 36 |
+| 4 | IPS – atención ambulatoria | IPS – Módulo 1 | 34 |
+| 5 | IPS – urgencias | IPS – Módulo 2 | 32 |
+| 6 | IPS – internación | IPS – Módulo 3 | 29 |
+| 7 | IPS – procedimiento quirúrgico | IPS – Módulo 4 | 33 |
+| 8 | Gestor farmacéutico – medicamentos | Gestor – Módulo 1 | 34 |
+| 9 | Gestor farmacéutico – no medicamentos | EPS – Módulo 2 (transversal) | 36 |
+
+Para caracterizar un subgrupo de interés dentro de cualquiera de las nueve rutas (por ejemplo, mujeres del régimen subsidiado en zona rural de la región Caribe), el tamaño de muestra aplicable corresponde a la celda o al cruce respectivo ya asignado en el bloque de caracterización, según la metodología del numeral 3.4.
+
+## 5. Control de Calidad de la Asignación
+
+Se verifica que la suma de las celdas asignadas dentro de cada estrato de región coincida con el tamaño de muestra ya definido para ese estrato. Las diferencias observadas, atribuibles exclusivamente al redondeo entero de las celdas, se encuentran en un rango de -0,2 a -0,8 encuestas por región, un margen despreciable frente al tamaño de muestra regional (≈1 313):
+
+| Región | n objetivo (ya definido) | n asignado | Diferencia |
+|---|---|---|---|
+| Bogotá | 1 313,2 | 1 313 | -0,2 |
+| Caribe | 1 313,2 | 1 313 | -0,2 |
+| Central | 1 313,2 | 1 313 | -0,2 |
+| Oriental | 1 313,2 | 1 313 | -0,2 |
+| Orinoquía-Amazonía | 1 311,8 | 1 311 | -0,8 |
+| Pacífica | 1 313,2 | 1 313 | -0,2 |
+
+## 6. Conclusiones
+
+El árbol de decisión está compuesto por 48 cajas distribuidas en cuatro bloques: 25 en Identificación y Caracterización, 1 en la Pregunta Trazadora, 14 en Gestión Institucional y 8 en Módulos Finales. El tamaño de muestra de la encuesta ya está definido (7 876 encuestas a nivel nacional) y este informe describe únicamente su asignación entre esas cajas, no su cálculo.
+
+La asignación otorga un tamaño de muestra igual e independiente a cada uno de los seis dominios regionales (≈1 313 encuestas cada uno) en lugar de un reparto puramente proporcional a la población, lo que garantiza una precisión equivalente en cada región. Dentro de cada dominio regional, la asignación proporcional por régimen, sexo, grupo de edad y zona —con un mínimo garantizado de 10 encuestas por celda— asegura que incluso los subgrupos demográficos menos numerosos conserven una base mínima de análisis, a costa de una ligera sobrerrepresentación relativa frente a su peso poblacional real.
+
+Las cajas de gestión institucional y módulos finales del árbol de decisión no reciben una asignación de diseño independiente: la ruta que sigue cada persona depende de su respuesta real durante la aplicación del cuestionario, por lo que el número de casos en cada una de las nueve rutas es un resultado observado y no un parámetro de asignación previa.
