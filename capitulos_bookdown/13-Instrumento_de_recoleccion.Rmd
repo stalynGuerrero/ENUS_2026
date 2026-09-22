@@ -2,6 +2,8 @@
 
 El instrumento de ENUS 2026 se administra en su totalidad a través de *ClicSalud*, la aplicación en la que se implementan la identificación del usuario, la validación de su elegibilidad, la navegación del árbol de decisión y el registro de las respuestas. Este capítulo documenta la estructura funcional de la aplicación como guía de uso paso a paso —qué ve y qué hace un usuario en cada pantalla— con evidencia visual de cada paso, siguiendo el recorrido completo desde el ingreso a la aplicación hasta el cuestionario de ENUS 2026.
 
+> **Nota sobre la evidencia visual (septiembre de 2026).** El mecanismo de captación de *ClicSalud* se actualizó (sorteo Bernoulli, elección de prestador y asignación aleatoria de módulo; \@ref(sec-mecanismo-captacion)) con posterioridad a la toma de las capturas de pantalla que ilustran los pasos 9 a 11. El texto de esos pasos se actualizó con base en el código fuente vigente de la aplicación, pero las capturas de pantalla correspondientes (figuras `fig-clicsalud-06` y `fig-clicsalud-12`) **no se han vuelto a tomar** y muestran pantallas de la versión anterior. Se conservan únicamente donde su contenido no cambió (identificación, verificación, pantallas informativas) y se marcan explícitamente como pendientes de actualización donde sí cambió.
+
 ## Estructura general de la aplicación {#sec-app-clicsalud}
 
 La aplicación se organiza en doce pantallas identificables, agrupadas en tres bloques funcionales:
@@ -77,38 +79,43 @@ La pestaña "Normas" enumera el marco normativo que respalda la aplicación y lo
 
 ### Paso 9. Acceso al módulo Encuesta ENUS
 
-Desde la pestaña "Encuesta" o desde la opción "Contar mi experiencia" en Inicio, el usuario llega a la pantalla de entrada del cuestionario de ENUS 2026, que muestra su sesión activa y verificada, y una sección de atenciones de salud detectadas para el usuario en los últimos seis meses (consulta externa, urgencias, exámenes y procedimientos, con fecha e institución). El usuario inicia la encuesta desde esta pantalla.
+Desde la pestaña "Encuesta" o desde la opción "Contar mi experiencia" en Inicio, el usuario llega a la pantalla de entrada del cuestionario de ENUS 2026, que muestra su sesión activa y verificada, y una vista previa de los prestadores disponibles para evaluar —los que tiene habilitados en BDUA y que no estén bloqueados por haber sido evaluados en el último año (\@ref(sec-mecanismo-captacion))—. El usuario inicia la encuesta desde esta pantalla.
 
-![Pantalla de entrada al módulo Encuesta ENUS, con las atenciones de salud recientes detectadas para el usuario.](figuras/fig-clicsalud-06-modulo-encuesta.png){width=45%}
+**Pendiente de actualización visual.** La figura `fig-clicsalud-06-modulo-encuesta.png` corresponde a la versión anterior de esta pantalla, que mostraba en su lugar las atenciones de salud detectadas para el usuario (FEVRIPS); no se incluye aquí por no representar ya la pantalla vigente.
 
-### Paso 10. Bloque de preguntas generales (trazadoras)
+### Paso 10. Parte 2 — Preguntas comunes
 
-Al iniciar la encuesta, el usuario responde un primer bloque de seis preguntas, etiquetadas en la aplicación como "Trazadoras" bajo el encabezado "Preguntas generales":
+Al iniciar la encuesta, el usuario responde Parte 2: once preguntas comunes de respuesta directa, tomadas de la sección de trazadoras y transversales del instrumento (\@ref(sec-mecanismo-captacion)). Las dos primeras coinciden con los ejemplos capturados en las figuras siguientes:
 
 1. ¿Quién se encuentra diligenciando esta encuesta? (Usted mismo / Un pariente o tutor legal / Otra persona)
-2. ¿Cuenta con algún plan voluntario de salud? (Plan Complementario / Medicina Prepagada / Póliza de salud / Ninguno)
+2. ¿Cuenta usted con algún plan voluntario de salud? (Plan Complementario / Medicina Prepagada / Póliza de salud / Ninguno)
 3. ¿Cuál es su percepción general de su salud? (Excelente / Muy buena / Buena / Regular / Mala / Muy mala)
-4. En los últimos 6 meses ¿ha utilizado un servicio de salud? (Sí / No)
-5. En los últimos 6 meses ¿ha cambiado de EPS o se afilió por primera vez? (Sí / No)
-6. ¿Quién le facilitó el servicio de salud que requería? (EPS / Secretaría de Salud / Hospital, Clínica o IPS / Ninguna de las anteriores)
+4. En los últimos 6 meses, ¿ha utilizado un servicio de salud? (Sí / No)
+5. En los últimos 6 meses, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? (Sí / No)
+6. ¿Quién le ayudó a gestionar el servicio de salud que requería? (EPS / Secretaría de Salud / IPS pública / IPS privada de su EPS / IPS privada particular / Ninguna de las anteriores)
+7. ¿Cuál de los siguientes servicios utilizó la última vez? (Urgencias / Hospitalización / Cirugía / Consulta Externa / Atención Domiciliaria / Entrega de medicamentos o dispositivos médicos / Laboratorio clínico / Imágenes diagnósticas / Otro / Ninguna de las anteriores)
+8. ¿Se encuentra usted en estado de embarazo? (Sí / No)
+9. ¿Ha sido diagnosticado con alguna de estas condiciones? (Hipertensión Arterial / Diabetes Mellitus Tipo 2 / Hemofilia / Enfermedad Huérfana o Rara / VIH / Hepatitis C / Artritis reumatoide u otras enfermedades autoinmunes / Cáncer / Ninguna de las anteriores)
+10. En los últimos seis meses, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? (Sí / No)
+11. ¿Conoce o ha tenido acceso al informe anual de tutelas? (Sí / No)
 
-Cada pregunta se presenta en pantalla completa, con un indicador de avance ("Pregunta N de 6") y un botón "Siguiente" para continuar.
+Cada pregunta se presenta en pantalla completa, con un indicador de avance ("Pregunta N de 11") y un botón "Siguiente" para continuar. Las dos figuras siguientes siguen siendo válidas como ejemplo del diseño de pantalla (tarjeta de pregunta, opciones, barra de progreso): el texto de sus preguntas no cambió, aunque el indicador "de 6" que muestran quedó desactualizado por el aumento a once preguntas.
 
-![Primera pregunta del bloque de trazadoras: identificación de quién diligencia la encuesta.](figuras/fig-clicsalud-07-pregunta-ejemplo.png){width=45%}
+![Primera pregunta de Parte 2: identificación de quién diligencia la encuesta.](figuras/fig-clicsalud-07-pregunta-ejemplo.png){width=45%}
 
-![Cuarta pregunta trazadora: uso de servicios de salud en los últimos seis meses.](figuras/fig-clicsalud-11-trazadora-ejemplo.png){width=45%}
+![Cuarta pregunta de Parte 2: uso de servicios de salud en los últimos seis meses.](figuras/fig-clicsalud-11-trazadora-ejemplo.png){width=45%}
 
-### Paso 11. Bloque temático asignado
+### Paso 11. Sorteo, elección de prestador y módulo asignado
 
-Completado el bloque de trazadoras, el usuario avanza a un bloque temático específico —en el caso observado, "Consulta externa"—, identificado en la aplicación con una etiqueta de forma ("Forma A"), un código de bloque ("Cod. 01") y un indicador de posición dentro de una secuencia de bloques ("Bloque 1 de 3"). La primera pregunta del bloque indaga qué tipo de servicio recibió el usuario; las preguntas siguientes profundizan sobre esa atención (por ejemplo, tiempo de espera en días desde la solicitud hasta la atención).
+Al terminar Parte 2 de su primer ingreso, la aplicación ejecuta el sorteo Bernoulli ($u\sim\text{Uniforme}(0,1)$, $\pi=0,8$) sin mostrar una pantalla intermedia: si el resultado es negativo, el usuario pasa directamente a la pantalla de agradecimiento; si es positivo, se le presenta una pantalla para **elegir cuál prestador desea evaluar** (EPS, IPS o gestor farmacéutico) entre los que tiene habilitados y no bloqueados. Elegido el prestador, la aplicación asigna al azar uno de sus módulos disponibles y presenta sus preguntas bajo el encabezado "Parte 3" y el código del módulo asignado (por ejemplo, "Parte 3 · Cod. eps_m3"), sin la etiqueta de forma ("Forma A/B") de la versión anterior de la aplicación, que fue retirada junto con el mecanismo de selección determinística por servicio efectivamente recibido.
 
-![Primera pregunta del bloque temático "Consulta externa", con las etiquetas "Forma A", "Cod. 01" y "Bloque 1 de 3" propias de la aplicación.](figuras/fig-clicsalud-12-modulo-forma-a.png){width=45%}
+**Pendiente de actualización visual.** La figura `fig-clicsalud-12-modulo-forma-a.png` corresponde a la versión anterior de esta pantalla (con las etiquetas "Forma A", "Cod. 01" y "Bloque 1 de 3", ya retiradas) y a la pantalla de elección de prestador no existe todavía una captura; no se incluyen aquí por no representar la aplicación vigente.
 
-La etiquetación interna de este bloque —"Forma A", "Cod. 01", "Bloque 1 de 3"— es propia de la aplicación y distinta de la terminología de "rutas" y "módulos" (por ejemplo, "EPS – Módulo 3") utilizada en los demás capítulos de este documento a partir del árbol de decisión (\@ref(sec-flujo-rutas), \@ref(sec-relacion-cuestionario-cuotas)). Ambas representan el mismo instrumento —el cuestionario de ENUS 2026— pero con esquemas de identificación de bloques distintos entre sí. La correspondencia formal entre ambos esquemas, y la determinación de cuál es la estructura vigente para efectos de este documento, se desarrolla en el capítulo de reconciliación de estructuras.
+La correspondencia formal entre la terminología de "módulos" utilizada en este documento a partir del árbol de decisión (\@ref(sec-diseno-muestral)) y cualquier esquema de identificación interno de la aplicación se desarrolla, cuando corresponda, en el capítulo de reconciliación de estructuras.
 
 ## Sesión y reingreso
 
-El comportamiento de sesión —persistencia en el dispositivo mediante la clave `clicsalud_sesion_v1` y su relación con la ausencia de un mecanismo de selección aleatoria dentro de la celda de cuota— se documenta de forma completa en el capítulo de mecanismo de selección (\@ref(sec-mecanismo-seleccion)) y no se repite aquí. La pantalla de Reingreso es la implementación visual de ese reconocimiento automático de sesión.
+El comportamiento de sesión —persistencia en el dispositivo mediante la clave `clicsalud_sesion_v1`— se documenta de forma completa en el capítulo de instrumento de recolección (paso 9 y siguientes) y no se repite aquí. La pantalla de Reingreso es la implementación visual de ese reconocimiento automático de sesión. Nótese que, a diferencia de la sesión de identificación, sí existe un mecanismo aleatorio en la captación: el sorteo Bernoulli y la asignación de módulo descritos en \@ref(sec-mecanismo-captacion), que operan después de que la persona ya fue clasificada dentro de su celda de cuota, no dentro de ella.
 
 ## Almacenamiento de datos durante la recolección
 
@@ -116,4 +123,4 @@ Los insumos técnicos disponibles no documentan si las respuestas del cuestionar
 
 ## Alcance de esta documentación frente a otras estructuras del instrumento
 
-Este capítulo documenta la estructura funcional de *ClicSalud* como aplicación de recolección, con evidencia visual de su recorrido completo. La estructura del cuestionario mismo —los nueve rutas y ocho módulos finales que se derivan del árbol de decisión— es la que se ha utilizado de forma consistente en todo este documento y se documenta de forma completa en el capítulo de flujo y rutas del cuestionario (\@ref(sec-flujo-rutas)). Como se señaló en el paso 11, existen en los insumos disponibles representaciones adicionales de la estructura del cuestionario —el esquema de bloques y formas propio de la aplicación, y un consolidado de preguntas organizado en bloques— cuya reconciliación formal con la estructura del árbol de decisión se desarrolla en el capítulo de reconciliación de estructuras.
+Este capítulo documenta la estructura funcional de *ClicSalud* como aplicación de recolección, con evidencia visual de su recorrido completo, salvo en los pasos donde esa evidencia quedó pendiente de actualización (pasos 9 y 11). La estructura del cuestionario mismo —los nueve desenlaces y ocho módulos finales que resultan del sorteo Bernoulli, la elección de prestador y la asignación aleatoria de módulo— es la que se ha utilizado de forma consistente en todo este documento y se documenta de forma completa en el capítulo de diseño muestral (\@ref(sec-mecanismo-captacion)).

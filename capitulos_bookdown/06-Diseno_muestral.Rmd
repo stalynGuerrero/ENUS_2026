@@ -6,11 +6,11 @@ La ENUS 2026 emplea un esquema de **muestreo no probabilístico por cuotas**. Po
 
 La definición de las cuotas parte de la población objetivo establecida en el capítulo anterior (\@ref(sec-poblacion-objetivo)) y utiliza información poblacional de la Base de Datos Única de Afiliados (BDUA) como referencia para determinar la distribución esperada de la muestra. Esta información permite orientar la composición de la muestra hacia la estructura observada de la población de referencia, sin que ello convierta a la BDUA en un marco de selección probabilística.
 
-El diseño se estructura en dos niveles. Primero, se determina un tamaño objetivo para cada región, de manera que la operación disponga de un número suficiente de observaciones para producir resultados con el nivel de desagregación territorial previsto. Segundo, el tamaño asignado a cada región se distribuye entre las celdas definidas por régimen de afiliación, sexo, grupo de edad y zona, utilizando la estructura poblacional de referencia y estableciendo mínimos de participación para las celdas de menor tamaño.
+El diseño se estructura en dos niveles. Primero, se determina un tamaño objetivo para cada **departamento**, de manera que la operación disponga de un número suficiente de observaciones para producir resultados representativos a ese nivel de desagregación territorial —condicionado, como se precisa más adelante (\@ref(sec-alcance-departamental)), a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección—. Segundo, el tamaño asignado a cada departamento se distribuye entre las celdas definidas por régimen de afiliación, sexo, grupo de edad y zona, utilizando la estructura poblacional de referencia y estableciendo mínimos de participación para las celdas de menor tamaño. La región (agrupación estándar DANE/ENDS de los 32 departamentos y Bogotá D.C.) se conserva como nivel de agregación para el reporte de resultados, pero deja de ser el nivel en el que se fija la meta de participación.
 
 En consecuencia, las cuotas constituyen **metas de composición de la muestra y no probabilidades de selección**. Su función es orientar la captación y reducir desequilibrios conocidos entre la muestra y la población de referencia. Los ajustes posteriores mediante ponderación y calibración cumplen una función complementaria y se desarrollan en el capítulo correspondiente.
 
-A partir de esta estructura, el presente capítulo desarrolla la determinación del tamaño objetivo, la asignación de las cuotas, la definición de las celdas de participación y la diferenciación entre los conceptos de cuota, estrato, dominio y variable de calibración. Finalmente, se precisan las implicaciones del diseño para el alcance inferencial de los resultados.
+A partir de esta estructura, el presente capítulo desarrolla la determinación del tamaño objetivo, la asignación de las cuotas, el mecanismo de captación y asignación de módulo posterior a la cuota (sorteo Bernoulli, elección de prestador y asignación aleatoria de módulo), la definición de las celdas de participación y la diferenciación entre los conceptos de cuota, estrato, dominio y variable de calibración. Finalmente, se precisan las implicaciones del diseño para el alcance inferencial de los resultados.
 
 ## Esquema de cuotas y composición de la muestra
 
@@ -27,6 +27,67 @@ De manera general, la operación comprende la siguiente secuencia:
 ![Secuencia operativa de la ENUS 2026, desde la población objetivo hasta la producción de resultados.](figuras/fig-flujo-operacion.png){width=80%}
 
 Los procedimientos específicos asociados con la determinación y distribución de las cuotas, la captación, el procesamiento de la información y la estimación se desarrollan en las secciones correspondientes del documento.
+
+## Mecanismo de captación y asignación de módulo {#sec-mecanismo-captacion}
+
+Las secciones anteriores documentan **cuántas** personas se busca captar en cada celda de cuota (región × régimen × sexo × grupo de edad × zona). Esta sección documenta un mecanismo distinto y posterior: una vez que una persona ya fue captada dentro de su celda, qué determina **si responde Parte 3** del cuestionario y **cuál módulo específico** le corresponde. Ambos mecanismos son independientes entre sí: el sorteo y la asignación que se describen a continuación no alteran el tamaño de muestra fijado en la sección anterior, y la cuota no condiciona de ninguna forma el resultado del sorteo ni la asignación de módulo.
+
+### Estructura de la encuesta en tres partes
+
+El formulario de *ClicSalud* se estructura en tres partes secuenciales:
+
+- **Parte 1 (datos administrativos).** Se completa automáticamente a partir de BDUA en cada ingreso: identificación del usuario y datos demográficos que definen su celda de cuota.
+- **Parte 2 (preguntas comunes).** Preguntas de respuesta directa del usuario sobre experiencia general de atención y servicio. Todas las personas que avanzan más allá de Parte 1 la responden; en ingresos posteriores al primero, ya completada, no se repite.
+- **Parte 3 (módulo específico).** Diez o más preguntas adicionales sobre las características particulares de un prestador. Solo se responde si el mecanismo descrito a continuación lo determina.
+
+### Primer ingreso: sorteo, elección y asignación
+
+Al finalizar Parte 2 en su primer ingreso, la persona queda sujeta a un sorteo Bernoulli $u\sim\text{Uniforme}(0,1)$ con corte $\pi=0,8$:
+
+$$
+\text{Accede a Parte 3} =
+\begin{cases}
+\text{Sí}, & \text{si } u \leq 0,8\\
+\text{No}, & \text{si } u > 0,8
+\end{cases}
+$$
+
+Si el sorteo es negativo ($u>0,8$), la encuesta finaliza sin Parte 3. Si es positivo ($u\leq0,8$), la persona **elige** cuál prestador desea evaluar entre los que tiene habilitados en BDUA (registro de uso de EPS, IPS o gestor farmacéutico) y que no estén bloqueados (ver más adelante). Elegido el prestador, el sistema le asigna **al azar** uno de los módulos disponibles para ese prestador, con probabilidad $P(\text{módulo}\mid\text{prestador}) = 1/n_{\text{prestador}}$:
+
+| Prestador elegido | Módulos disponibles | $P$(módulo) |
+|---|---|---|
+| EPS | 3 | 1/3 |
+| IPS | 4 | 1/4 |
+| Gestor farmacéutico | 1 | 1 |
+
+El módulo asignado **no depende del servicio efectivamente recibido**: es una asignación aleatoria dentro del prestador elegido. Esto introduce un sesgo de disponibilidad —el módulo puede no coincidir con la experiencia real de la persona— que se retoma como limitación del diseño más adelante en el documento.
+
+### Ingresos posteriores
+
+En un ingreso posterior al primero, el prestador evaluado en la ocasión anterior queda **bloqueado por un año calendario**: la persona solo puede elegir entre los prestadores habilitados que aún no haya evaluado o cuyo bloqueo ya haya expirado. En estos ingresos, Parte 1 se actualiza con la información más reciente de BDUA, Parte 2 no se repite (ya fue completada) y **no se ejecuta el sorteo Bernoulli**: la persona accede directamente a la elección de prestador. Una misma persona puede así generar hasta tres registros completos (uno por prestador), cada uno con su propia Parte 1 actualizada y su propio módulo asignado.
+
+### Módulos de Parte 3
+
+ENUS 2026 define ocho módulos de Parte 3, cuyo contenido proviene de la especificación del instrumento por módulo (`00_Cuestionario/ENUS_Formato_por_Modulos.xlsx`):
+
+| Prestador | Módulo | Enfoque |
+|---|---|---|
+| EPS | Módulo 1 | Barreras de acceso (contenido original, para población sin uso de servicios) |
+| EPS | Módulo 2 | Deberes y derechos |
+| EPS | Módulo 3 | Ambulatorio |
+| IPS | Módulo 1 | Ambulatorio |
+| IPS | Módulo 2 | Urgencias |
+| IPS | Módulo 3 | Internación |
+| IPS | Módulo 4 | Quirúrgico |
+| Gestor farmacéutico | Módulo 1 | Medicamentos |
+
+Table: (\#tab:modulos-parte3) Módulos de Parte 3 asignables por prestador, ENUS 2026.
+
+**Pendiente de definición.** El contenido original del módulo EPS 1 está dirigido a población que *no* ha utilizado servicios de salud (barreras de acceso), lo cual es inconsistente con el criterio de elegibilidad de la operación, que exige un registro BDUA de uso efectivo de un servicio (\@ref(sec-poblacion-objetivo)). Mientras esta inconsistencia no se resuelva, el módulo se conserva como una de las tres opciones asignables al azar dentro de EPS.
+
+### Diferenciación frente a los conceptos de cuota, estrato y dominio
+
+El mecanismo de sorteo, elección y asignación descrito en esta sección es enteramente distinto de la cuota (\@ref(sec-diseno-muestral)) y no debe confundirse con ella: la cuota controla la composición demográfica de la captación (sección anterior); el sorteo determina si una persona ya captada responde Parte 3; la elección de prestador y la asignación aleatoria de módulo determinan, dentro de esa persona, qué contenido específico responde. Ninguno de estos tres elementos constituye un estrato en el sentido probabilístico clásico, y ninguno amplía ni reduce el tamaño de muestra ya fijado por celda de cuota.
 
 ## Determinación del tamaño de muestra {#sec-tamano-muestra}
 
@@ -116,7 +177,7 @@ $$
 
 La corrección por población finita reduce el tamaño requerido cuando la fracción de muestreo deja de ser despreciable. Para poblaciones grandes respecto del tamaño de muestra, su efecto es prácticamente nulo [@Cochran1977].
 
-En la ENUS 2026, los dominios considerados presentan tamaños poblacionales suficientemente grandes para que esta corrección tenga un efecto reducido. Para el dominio de menor tamaño, correspondiente a Orinoquía-Amazonía del régimen contributivo, con $N\approx331\,029$, el tamaño se reduce de aproximadamente 938 a 935.
+En la ENUS 2026, la corrección se aplica al nivel en el que efectivamente se fija la meta —la región (\@ref(sec-tamano-muestra))—, no a una combinación región × régimen: el régimen se distribuye después, dentro del presupuesto ya fijado para la región. Para la región de menor tamaño poblacional, Orinoquía-Amazonía, con $N\approx1\,428\,022$, el tamaño se reduce de manera prácticamente nula, de aproximadamente 938 a 937.
 
 ### Ajuste operativo y meta de captación
 
@@ -126,7 +187,7 @@ $$
 n_{meta}=n_{ajustado}\times f.
 $$
 
-Para los dominios considerados, este procedimiento conduce a una meta de captación del orden de **1 309 a 1 313 participaciones por dominio**.
+Para las seis regiones, este procedimiento conduce a una meta de captación del orden de **1 311 a 1 313 participaciones por región**.
 
 Este resultado debe leerse como el *tamaño objetivo (meta) de cada cuota*, y no como el resultado de un cálculo de precisión bajo selección aleatoria: la fórmula se utiliza para fijar una meta de captación con una precisión nominal deseada, no para certificar que esa precisión se alcanza mediante un mecanismo probabilístico.
 
@@ -150,11 +211,11 @@ Table: (\#tab:parametros-tamano-muestra) Parámetros adoptados para la determina
 La evaluación de la composición alcanzada, así como los procedimientos de ponderación y calibración utilizados posteriormente, se desarrollan en las secciones correspondientes.
 
 
-### Tamaño adoptado: asignación por región
+### Tamaño adoptado: asignación por departamento
 
-El tamaño objetivo se establece en función del nivel de desagregación territorial previsto para la producción de resultados. Dado que la ENUS 2026 contempla a las seis regiones como dominios de análisis, la meta de participación se determina de manera independiente para cada una de ellas. De esta forma, la precisión nominal utilizada como referencia para definir el tamaño no se concentra únicamente en el agregado nacional, sino que se establece para cada región.
+**Decisión metodológica adoptada.** El tamaño objetivo se establece en función del departamento, y no de la región, como nivel de desagregación territorial previsto para la producción de resultados. La razón de este cambio es que Parte 1 (datos administrativos) y Parte 2 (preguntas comunes) son obligatorias para la totalidad de las personas captadas, con independencia del resultado del sorteo Bernoulli y de la asignación de módulo de Parte 3 (\@ref(sec-mecanismo-captacion)); ampliar la meta de participación al nivel departamental aprovecha esa obligatoriedad para que los indicadores construidos con Parte 1-2 puedan, sujeto a lo indicado en \@ref(sec-alcance-departamental), desagregarse por departamento y no solo por región.
 
-Las seis regiones siguen el esquema estándar de regionalización DANE/ENDS y agrupan los 32 departamentos del país junto con Bogotá D.C.:
+Los 32 departamentos del país y Bogotá D.C. (33 dominios en total) se agrupan, para efectos de reporte, en el esquema estándar de regionalización DANE/ENDS de seis regiones:
 
 | Región                 | Departamentos que la conforman |
 | ---------------------- | ------------------------------ |
@@ -165,47 +226,86 @@ Las seis regiones siguen el esquema estándar de regionalización DANE/ENDS y ag
 | Pacífica                | Cauca, Chocó, Nariño, Valle |
 | Orinoquía-Amazonía     | Arauca, Casanare, Vichada, Amazonas, Guainía, Guaviare, Putumayo, Vaupés |
 
-Table: (\#tab:regiones-departamentos) Composición departamental de las seis regiones utilizadas como dominios de análisis, ENUS 2026.
+Table: (\#tab:regiones-departamentos) Composición departamental de las seis regiones, utilizadas como agrupación de reporte, ENUS 2026.
 
-El cálculo realizado para el total nacional constituye únicamente una referencia para una estimación agregada del país. Si se utilizara exclusivamente ese valor, la muestra sería suficiente para establecer una meta de participación nacional, pero no para reproducir ese mismo criterio de tamaño en cada uno de los seis dominios regionales.
+El cálculo realizado para el total nacional constituye únicamente una referencia para una estimación agregada del país. Si se utilizara exclusivamente ese valor, la muestra sería suficiente para establecer una meta de participación nacional, pero no para reproducir ese mismo criterio de tamaño en cada uno de los 33 departamentos.
 
-Por esta razón, el tamaño objetivo nacional se obtiene mediante la suma de las metas regionales:
+Por esta razón, el tamaño objetivo nacional se obtiene mediante la suma de las metas departamentales:
 
 $$
 n_{\text{nacional}}
 =
-\sum_{r=1}^{6} n_r.
+\sum_{d=1}^{33} n_d.
 $$
 
-Con los tamaños adoptados para las seis regiones, se obtiene una meta nacional de **7.876 participaciones**. La diferencia entre los tamaños regionales responde al proceso de redondeo y ajuste requerido para que las metas regionales sean compatibles con la distribución posterior de las cuotas.
+Con los tamaños adoptados para los 33 departamentos, se obtiene una meta nacional de **43.176 participaciones** (43.159 tras el redondeo del reparto por celda que se describe en la siguiente sección, con diferencias de -0,2 a -0,8 por departamento atribuibles al mismo procedimiento de redondeo ya documentado para el reparto por celda). El detalle completo de las metas departamentales se presenta a continuación:
 
-El régimen de afiliación no se utiliza como un nivel adicional e independiente para determinar el tamaño total. En consecuencia, no se asigna una meta de 1.313 participaciones a cada combinación región × régimen. Hacerlo implicaría establecer 12 metas independientes y elevaría sustancialmente el tamaño total de la operación.
+| Región | Departamento | N (BDUA) | Meta ($n_{\text{efectivo}}$) |
+| --- | --- | ---: | ---: |
+| Bogotá | Bogotá D.C. | 7.780.253 | 1.313 |
+| Caribe | Atlántico | 2.806.306 | 1.313 |
+| Caribe | Bolívar | 2.345.340 | 1.313 |
+| Caribe | Cesar | 1.284.077 | 1.312 |
+| Caribe | Córdoba | 1.670.770 | 1.312 |
+| Caribe | La Guajira | 1.151.490 | 1.312 |
+| Caribe | Magdalena | 1.402.034 | 1.312 |
+| Caribe | San Andrés | 61.282 | 1.294 |
+| Caribe | Sucre | 944.956 | 1.312 |
+| Central | Antioquia | 6.959.952 | 1.313 |
+| Central | Caldas | 911.331 | 1.312 |
+| Central | Caquetá | 411.841 | 1.310 |
+| Central | Huila | 1.184.153 | 1.312 |
+| Central | Quindío | 569.685 | 1.310 |
+| Central | Risaralda | 1.076.349 | 1.312 |
+| Central | Tolima | 1.300.917 | 1.312 |
+| Oriental | Boyacá | 1.171.268 | 1.312 |
+| Oriental | Cundinamarca | 2.765.132 | 1.313 |
+| Oriental | Meta | 1.080.475 | 1.312 |
+| Oriental | Norte de Santander | 1.746.638 | 1.312 |
+| Oriental | Santander | 2.270.133 | 1.313 |
+| Orinoquía-Amazonía | Amazonas | 76.629 | 1.298 |
+| Orinoquía-Amazonía | Arauca | 319.492 | 1.309 |
+| Orinoquía-Amazonía | Casanare | 434.332 | 1.310 |
+| Orinoquía-Amazonía | Guainía | 54.596 | 1.291 |
+| Orinoquía-Amazonía | Guaviare | 85.937 | 1.299 |
+| Orinoquía-Amazonía | Putumayo | 332.640 | 1.309 |
+| Orinoquía-Amazonía | Vaupés | 34.307 | 1.278 |
+| Orinoquía-Amazonía | Vichada | 90.089 | 1.299 |
+| Pacífica | Cauca | 1.329.172 | 1.312 |
+| Pacífica | Chocó | 441.422 | 1.310 |
+| Pacífica | Nariño | 1.447.016 | 1.312 |
+| Pacífica | Valle | 4.628.732 | 1.313 |
+| **Total nacional** | **33 departamentos** | **50.168.746** | **43.176** |
 
-En su lugar, el tamaño correspondiente a cada región constituye un presupuesto fijo de participación que posteriormente se distribuye entre los dos regímenes de afiliación de acuerdo con su participación poblacional en la BDUA. El régimen, por tanto, interviene en la **composición de la cuota regional**, pero no genera un tamaño adicional que deba sumarse al tamaño regional.
+Table: (\#tab:departamentos-meta) Meta de participación por departamento (BDUA marzo de 2026, DEFF=1,5, factor operativo=1,4), ENUS 2026. Fuente: `03_Encuesta/01_Tamaño_Muestra/Output/02_tamanos_muestra_deff_1.5.xlsx`, hoja `3_Departamento`.
 
-Esta decisión permite mantener el objetivo de participación establecido para cada región y, simultáneamente, reproducir dentro de cada una de ellas la estructura poblacional de los regímenes de afiliación. Las metas obtenidas para las combinaciones región × régimen constituyen, por tanto, componentes del tamaño regional y no dominios independientes de tamaño.
+El régimen de afiliación no se utiliza como un nivel adicional e independiente para determinar el tamaño total. En consecuencia, no se asigna una meta independiente a cada combinación departamento × régimen. Hacerlo implicaría establecer 66 metas independientes y elevaría sustancialmente el tamaño total de la operación.
+
+En su lugar, el tamaño correspondiente a cada departamento constituye un presupuesto fijo de participación que posteriormente se distribuye entre los dos regímenes de afiliación de acuerdo con su participación poblacional en la BDUA. El régimen, por tanto, interviene en la **composición de la cuota departamental**, pero no genera un tamaño adicional que deba sumarse al tamaño departamental.
+
+Esta decisión permite mantener el objetivo de participación establecido para cada departamento y, simultáneamente, reproducir dentro de cada uno de ellos la estructura poblacional de los regímenes de afiliación. Las metas obtenidas para las combinaciones departamento × régimen constituyen, por tanto, componentes del tamaño departamental y no dominios independientes de tamaño.
 
 ### Asignación del tamaño de muestra por cuotas
 
-Una vez definidos los tamaños objetivo regionales, cada región se desagrega en las celdas que conforman la estructura de cuotas. Las celdas resultan del cruce de cuatro variables:
+Una vez definidos los tamaños objetivo departamentales, cada departamento se desagrega en las celdas que conforman la estructura de cuotas. Las celdas resultan del cruce de cuatro variables:
 
 * régimen de afiliación: contributivo y subsidiado;
 * sexo: femenino y masculino;
 * grupo de edad: 00–09, 10–19, 20–29, 30–39, 40–49, 50–59 y 60 años o más;
 * zona: urbana y rural.
 
-Esta estructura genera **56 celdas por región** y **336 celdas para el conjunto nacional**.
+Esta estructura genera **56 celdas por departamento** y **1.848 celdas para el conjunto nacional** (33 departamentos × 56 celdas).
 
-La asignación inicial de cada celda se realiza de manera proporcional a su peso poblacional dentro de la región, utilizando como referencia la distribución observada en la BDUA con corte a marzo de 2026:
+La asignación inicial de cada celda se realiza de manera proporcional a su peso poblacional dentro del departamento, utilizando como referencia la distribución observada en la BDUA con corte a marzo de 2026:
 
 $$
 n_{c}
 =
-n_{r}
-\frac{N_c}{N_r},
+n_{d}
+\frac{N_c}{N_d},
 $$
 
-donde \(n_c\) corresponde al tamaño inicial de la celda \(c\), \(n_r\) al tamaño objetivo de la región a la que pertenece, \(N_c\) al número de personas de la celda en la BDUA y \(N_r\) al total de personas de la región.
+donde \(n_c\) corresponde al tamaño inicial de la celda \(c\), \(n_d\) al tamaño objetivo del departamento al que pertenece, \(N_c\) al número de personas de la celda en la BDUA y \(N_d\) al total de personas del departamento.
 
 Sobre esta asignación proporcional se establece un **mínimo de 10 participaciones por celda**, con el propósito de evitar que las categorías de menor tamaño poblacional queden excluidas de la estructura de cuotas:
 
@@ -214,69 +314,82 @@ n_c^{*}
 =
 \max
 \left\{
-n_r\frac{N_c}{N_r},\;10
+n_d\frac{N_c}{N_d},\;10
 \right\}.
 $$
 
-La aplicación del mínimo puede generar una suma superior o inferior al tamaño regional inicialmente distribuido. Por esta razón, la asignación definitiva incorpora un procedimiento de ajuste que conserva el tamaño total establecido para cada región y mantiene, en la medida permitida por las restricciones de mínimo, la relación proporcional derivada de la estructura poblacional.
+La aplicación del mínimo puede generar una suma superior o inferior al tamaño departamental inicialmente distribuido. Por esta razón, la asignación definitiva incorpora un procedimiento de ajuste que conserva el tamaño total establecido para cada departamento y mantiene, en la medida permitida por las restricciones de mínimo, la relación proporcional derivada de la estructura poblacional.
 
-Una vez obtenidas las asignaciones enteras, el ajuste final se realiza mediante el **método del resto mayor**. Para ello, se asigna inicialmente la parte entera de cada cuota y las unidades restantes se distribuyen entre las celdas con las mayores partes fraccionarias, hasta completar exactamente el tamaño regional establecido.
+Una vez obtenidas las asignaciones enteras, el ajuste final se realiza mediante el **método del resto mayor**. Para ello, se asigna inicialmente la parte entera de cada cuota y las unidades restantes se distribuyen entre las celdas con las mayores partes fraccionarias, hasta completar exactamente el tamaño departamental establecido.
 
-El procedimiento produce una estructura nacional de 336 cuotas. De ellas, 17 corresponden al mínimo de 10 participaciones, mientras que la cuota de mayor tamaño alcanza 72 participaciones. El establecimiento de un mínimo implica una sobrerrepresentación deliberada de las celdas demográficamente menos numerosas respecto de su peso poblacional. Esta decisión responde a la necesidad operativa de conservar participación en los grupos de menor tamaño y será considerada posteriormente en la construcción y calibración de los pesos analíticos.
+El procedimiento produce una estructura nacional de 1.848 cuotas. De ellas, 40 corresponden al mínimo de 10 participaciones —concentradas en los departamentos de menor población, como Vaupés, Guainía y San Andrés—, mientras que la cuota de mayor tamaño alcanza 72 participaciones. El establecimiento de un mínimo implica una sobrerrepresentación deliberada de las celdas demográficamente menos numerosas respecto de su peso poblacional. Esta decisión responde a la necesidad operativa de conservar participación en los grupos de menor tamaño y será considerada posteriormente en la construcción y calibración de los pesos analíticos.
+
+La matriz completa de las 1.848 celdas se generó ejecutando, a nivel departamento, el mismo procedimiento ya adoptado a nivel región (proporcional a población + mínimo garantizado + resto mayor), y se encuentra en `03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx`. El **Anexo E — Matriz de cuotas** (\@ref(sec-diseno-muestral)), organizado hasta ahora por región, queda pendiente de regenerar a partir de este nuevo archivo para reflejar la estructura departamental.
 
 ### Resultado agregado por región y régimen
 
-La agregación de las 56 celdas correspondientes a cada región permite obtener la distribución de la meta regional entre los dos regímenes de afiliación:
+Aunque la meta se fija por departamento, la agregación de los departamentos que conforman cada región permite obtener, con fines de reporte, la distribución de la meta regional entre los dos regímenes de afiliación:
 
 | Región             | Contributivo | Subsidiado | Total región |
 | ------------------ | -----------: | ---------: | -----------: |
 | Bogotá             |          855 |        458 |        1.313 |
-| Caribe             |          494 |        819 |        1.313 |
-| Central            |          663 |        650 |        1.313 |
-| Oriental           |          629 |        684 |        1.313 |
-| Orinoquía-Amazonía |          453 |        858 |        1.311 |
-| Pacífica           |          575 |        738 |        1.313 |
-| **Total nacional** |    **3.669** |  **4.207** |    **7.876** |
+| Caribe             |        4.068 |      6.406 |       10.474 |
+| Central            |        4.212 |      4.965 |        9.177 |
+| Oriental           |        3.038 |      3.521 |        6.559 |
+| Orinoquía-Amazonía |        3.405 |      6.986 |       10.391 |
+| Pacífica           |        1.921 |      3.324 |        5.245 |
+| **Total nacional** |   **17.499** | **25.660** |   **43.159** |
 
-Table: (\#tab:cuota-region-regimen) Distribución de la meta de cuota por región y régimen de afiliación, ENUS 2026.
+Table: (\#tab:cuota-region-regimen) Distribución de la meta de cuota por región (agregación de departamentos) y régimen de afiliación, ENUS 2026.
 
-La distribución muestra que la composición por régimen varía entre regiones de acuerdo con la estructura poblacional de referencia. No obstante, las metas de ambos regímenes se encuentran contenidas dentro del tamaño total definido para cada región.
+La distribución muestra que la composición por régimen varía entre regiones de acuerdo con la estructura poblacional de referencia. No obstante, las metas de ambos regímenes se encuentran contenidas dentro del tamaño total definido para cada región. El detalle por cada uno de los 33 departamentos se presenta en \@ref(tab:departamentos-meta) y en el archivo fuente de la matriz de celdas (\@ref(sec-tamano-muestra)).
 
 ### Composición agregada de las cuotas
 
 La agregación de las cuotas a nivel nacional produce la siguiente composición según sexo:
 
-| Sexo      | \(n\) |      % |
-| --------- | ----: | -----: |
-| Femenino  | 3.993 | 50,7 % |
-| Masculino | 3.883 | 49,3 % |
+| Sexo      |    \(n\) |      % |
+| --------- | -------: | -----: |
+| Femenino  |   21.760 | 50,4 % |
+| Masculino |   21.399 | 49,6 % |
 
 Table: (\#tab:cuota-sexo) Composición agregada de la cuota nacional por sexo, ENUS 2026.
 
 Por grupo de edad:
 
-| Grupo de edad | \(n\) |      % |
-| ------------- | ----: | -----: |
-| 00–09         | 1.014 | 12,9 % |
-| 10–19         | 1.163 | 14,8 % |
-| 20–29         | 1.203 | 15,3 % |
-| 30–39         | 1.203 | 15,3 % |
-| 40–49         | 1.086 | 13,8 % |
-| 50–59         |   975 | 12,4 % |
-| 60 o más      | 1.232 | 15,6 % |
+| Grupo de edad |  \(n\) |      % |
+| ------------- | -----: | -----: |
+| 00–09         |  5.952 | 13,8 % |
+| 10–19         |  6.686 | 15,5 % |
+| 20–29         |  6.532 | 15,1 % |
+| 30–39         |  6.416 | 14,9 % |
+| 40–49         |  5.814 | 13,5 % |
+| 50–59         |  5.246 | 12,2 % |
+| 60 o más      |  6.513 | 15,1 % |
 
 Table: (\#tab:cuota-edad) Composición agregada de la cuota nacional por grupo de edad, ENUS 2026.
 
 Y por zona:
 
-| Zona   | \(n\) |      % |
-| ------ | ----: | -----: |
-| Urbana | 5.147 | 65,4 % |
-| Rural  | 2.729 | 34,6 % |
+| Zona   |    \(n\) |      % |
+| ------ | -------: | -----: |
+| Urbana |   25.751 | 59,7 % |
+| Rural  |   17.408 | 40,3 % |
 
 Table: (\#tab:cuota-zona) Composición agregada de la cuota nacional por zona, ENUS 2026.
 
-La matriz completa de cuotas, correspondiente a las 336 combinaciones de región, régimen, sexo, grupo de edad y zona, se presenta como anexo externo al documento en el **Anexo E — Matriz de cuotas**, organizado en una hoja independiente para cada región.
+La matriz completa de cuotas, correspondiente a las 1.848 combinaciones de departamento, régimen, sexo, grupo de edad y zona, se generó en `03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx`. El **Anexo E — Matriz de cuotas**, organizado hasta ahora en una hoja por región (336 combinaciones), queda **pendiente de regenerar** a partir de este archivo, con una hoja por departamento.
+
+### Alcance de los resultados por departamento {#sec-alcance-departamental}
+
+**Decisión metodológica adoptada, con alcance condicionado.** La ampliación del tamaño objetivo a 43.176 participaciones (\@ref(tab:departamentos-meta)) abre la posibilidad de producir resultados representativos por departamento, pero esa posibilidad está **condicionada a que la meta de cada departamento se cumpla efectivamente al cierre del periodo de recolección**. La ENUS 2026 es un diseño de captación no probabilístico por cuotas (\@ref(sec-diseno-muestral)): no existe, con la evidencia disponible, un mecanismo que garantice ni verifique en tiempo real el cierre de cada celda de cuota (\@ref(sec-papel-eps-ips)), por lo que alcanzar la meta departamental es un resultado operativo de la captación, no una propiedad garantizada por el diseño.
+
+En consecuencia:
+
+- Un departamento que alcance su meta de 1.278 a 1.313 participaciones (según su tamaño poblacional; \@ref(tab:departamentos-meta)) puede, en principio, habilitarse para la producción de resultados representativos a ese nivel para los indicadores construidos con Parte 1 y Parte 2, que responde la totalidad de las personas captadas.
+- Un departamento que no alcance su meta al cierre del periodo de recolección **no debe tratarse como representativo a nivel departamental**; sus resultados deberán limitarse a análisis descriptivos, agregarse al nivel de región, o presentarse con las advertencias metodológicas correspondientes, conforme al criterio general ya establecido para cualquier dominio con baja participación (\@ref(sec-diseno-muestral)).
+
+**Esta ampliación no extiende la representatividad departamental a los indicadores de Parte 3 (módulo específico).** Aun si un departamento alcanza su meta de 1.278 a 1.313 participaciones en Parte 1-2, el número de personas que además accede a un módulo determinado dentro de ese departamento es sustancialmente menor, por la doble dilución del sorteo Bernoulli ($\pi=0,8$) y de la asignación aleatoria entre los módulos de un mismo prestador ($P=1/3$ en EPS, $1/4$ en IPS, 1 en el gestor; \@ref(sec-mecanismo-captacion)). Por ejemplo, para un departamento con meta de 1.313 participaciones, el número esperado de personas que elige un prestador con IPS y recibe un módulo IPS específico es del orden de $1.313\times0,8\times P(\text{elige IPS})/4$, una fracción pequeña del total departamental. Este documento no define un tamaño objetivo por combinación departamento × módulo, y no debe interpretarse que la ampliación aquí adoptada garantiza esa desagregación.
 
 ### Actualización periódica de la base de usuarios habilitados
 
@@ -302,21 +415,21 @@ En consecuencia, la cantidad de participantes provenientes de cada EPS, IPS o ge
 
 Para la interpretación de los resultados es necesario distinguir entre los conceptos utilizados para organizar la captación y aquellos utilizados posteriormente para producir y analizar los resultados. Aunque una misma variable puede intervenir en más de una de estas funciones, su propósito estadístico es diferente.
 
-- *Cuota.* Corresponde a una meta de composición establecida previamente para orientar la captación. En la ENUS 2026, las cuotas se definen mediante el cruce de región, régimen, sexo, grupo de edad y zona. Su función es controlar la composición de la muestra durante la operación.
+- *Cuota.* Corresponde a una meta de composición establecida previamente para orientar la captación. En la ENUS 2026, las cuotas se definen mediante el cruce de departamento, régimen, sexo, grupo de edad y zona. Su función es controlar la composición de la muestra durante la operación.
 
-  Por ejemplo, una cuota podría corresponder a Caribe – régimen subsidiado – femenino – 30 a 39 años – urbano, con una meta determinada de participaciones. Si durante la captación ya se alcanzó la meta de esta celda, nuevas personas con esas mismas características no incrementan esa cuota y la operación debe orientar la captación hacia otras celdas que aún tengan participación disponible.
+  Por ejemplo, una cuota podría corresponder a Atlántico – régimen subsidiado – femenino – 30 a 39 años – urbano, con una meta determinada de participaciones. Si durante la captación ya se alcanzó la meta de esta celda, nuevas personas con esas mismas características no incrementan esa cuota y la operación debe orientar la captación hacia otras celdas que aún tengan participación disponible.
 
   La cuota, por tanto, responde a la pregunta: *¿cuántas personas se espera captar con determinadas características?*
 
 - *Estrato.* En el muestreo probabilístico, un estrato corresponde a una partición de la población dentro de la cual se realiza la selección de unidades mediante un mecanismo de muestreo definido. Las celdas utilizadas para las cuotas de la ENUS 2026 no deben interpretarse automáticamente como estratos probabilísticos, dado que la captación dentro de ellas no se realiza mediante selección aleatoria con probabilidades de inclusión conocidas [@Cochran1977; @Kish1965].
 
-  Por ejemplo, la celda Caribe – subsidiado – femenino – 30 a 39 años – urbano puede ser una cuota de captación, pero no constituye por sí misma un estrato probabilístico. Para que existiera un estrato en el sentido clásico, debería existir una población definida dentro de ese grupo y un mecanismo de selección probabilística de las unidades que lo conforman.
+  Por ejemplo, la celda Atlántico – subsidiado – femenino – 30 a 39 años – urbano puede ser una cuota de captación, pero no constituye por sí misma un estrato probabilístico. Para que existiera un estrato en el sentido clásico, debería existir una población definida dentro de ese grupo y un mecanismo de selección probabilística de las unidades que lo conforman.
 
   El estrato, por tanto, responde a una pregunta diferente: *¿dentro de qué partición de la población se realiza la selección probabilística?*
 
 - *Dominio de análisis.* Es un grupo de personas para el cual se desea producir un resultado específico. A diferencia de la cuota, el dominio se define por la necesidad de análisis y no necesariamente corresponde a una categoría con una meta de captación.
 
-  Por ejemplo, la cuota puede definirse para Caribe × Subsidiado × Femenino × 30–39 × Urbano, mientras que posteriormente puede analizarse el resultado para todo el régimen subsidiado, agrupando personas de todas las regiones, edades, sexos y zonas. En este caso, “régimen subsidiado” es un dominio, pero no una cuota independiente.
+  Por ejemplo, la cuota puede definirse para Atlántico × Subsidiado × Femenino × 30–39 × Urbano, mientras que posteriormente puede analizarse el resultado para todo el régimen subsidiado, agrupando personas de todos los departamentos, edades, sexos y zonas. En este caso, "régimen subsidiado" es un dominio, pero no una cuota independiente. La región es, en el mismo sentido, un dominio de agregación de departamentos (\@ref(sec-diseno-muestral)): a diferencia de otros dominios, sí tiene un tamaño mínimo garantizado, porque resulta de sumar cuotas departamentales que sí están fijadas de antemano.
 
   También pueden analizarse dominios que no hacen parte de la estructura de cuotas, como *EPS, IPS o tipo de servicio recibido*. En estos casos, el número de observaciones dependerá de la participación efectiva de los usuarios, por lo que no se garantiza un tamaño mínimo para cada categoría.
 
@@ -327,7 +440,7 @@ Para la interpretación de los resultados es necesario distinguir entre los conc
 
   Por ejemplo, sexo puede utilizarse durante la captación para establecer cuotas de participación y posteriormente utilizarse como variable de calibración para ajustar los pesos de la muestra a la distribución poblacional de referencia. En el primer caso, la variable contribuye a determinar cuántas personas se busca captar; en el segundo, contribuye a determinar cómo se ajustan los pesos de las personas que finalmente participaron.
 
-  De manera similar, región, régimen, grupo de edad o zona pueden formar parte de la estructura de cuotas y, posteriormente, incorporarse al procedimiento de calibración, de acuerdo con los totales poblacionales disponibles y la estrategia de ajuste definida.
+  De manera similar, departamento, régimen, grupo de edad o zona pueden formar parte de la estructura de cuotas y, posteriormente, incorporarse al procedimiento de calibración, de acuerdo con los totales poblacionales disponibles y la estrategia de ajuste definida.
 
   La variable de calibración, por tanto, responde a la pregunta: *¿contra qué información poblacional se ajustan posteriormente los pesos de las personas que participaron?*
 
@@ -335,13 +448,13 @@ En síntesis, las cuatro nociones cumplen funciones diferentes:
 
 | Concepto                    | Función principal                                                              | Ejemplo en ENUS 2026                                      |
 | --------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| **Cuota**                   | Controlar la composición de la captación                                       | Meta para Caribe × Subsidiado × Femenino × 30–39 × Urbano |
+| **Cuota**                   | Controlar la composición de la captación                                       | Meta para Atlántico × Subsidiado × Femenino × 30–39 × Urbano |
 | **Estrato**                 | Organizar una selección probabilística dentro de una partición de la población | No corresponde a las celdas de cuota de ENUS 2026         |
-| **Dominio**                 | Definir un grupo para producir o analizar resultados                           | Régimen subsidiado, una región o una EPS                  |
-| **Variable de calibración** | Ajustar los pesos respecto de totales poblacionales conocidos                  | Sexo, edad, régimen, región o zona                        |
+| **Dominio**                 | Definir un grupo para producir o analizar resultados                           | Régimen subsidiado, un departamento, una región o una EPS |
+| **Variable de calibración** | Ajustar los pesos respecto de totales poblacionales conocidos                  | Sexo, edad, régimen, departamento o zona                  |
 Table: (\#tab:concepto-y-uso) Diferenciación conceptual entre cuota, estrato, dominio y variable de calibración, ENUS 2026.
 
-Esta diferenciación es particularmente importante en la ENUS 2026 porque una misma variable puede aparecer en varias etapas del proceso sin que ello signifique que desempeña la misma función. Por ejemplo, **región** puede utilizarse para establecer una cuota, definir un dominio de análisis y participar posteriormente en la calibración de los pesos. Lo que cambia no es la variable, sino la función que cumple en cada etapa del diseño y del análisis.
+Esta diferenciación es particularmente importante en la ENUS 2026 porque una misma variable puede aparecer en varias etapas del proceso sin que ello signifique que desempeña la misma función. Por ejemplo, **departamento** puede utilizarse para establecer una cuota, definir un dominio de análisis y participar posteriormente en la calibración de los pesos, mientras que **región** —al ser una agregación de departamentos— funciona como dominio de análisis y, potencialmente, como variable de calibración, pero no define directamente una celda de cuota. Lo que cambia no es la variable, sino la función que cumple en cada etapa del diseño y del análisis.
 
 
 ### Alcance de los análisis por dominio y estructura de la participación

@@ -4,11 +4,13 @@ Este glosario reúne, en orden alfabético, los términos técnicos y metodológ
 
 **Anexo E — Matriz de cuotas.** Anexo externo al documento que contiene la matriz completa de las 336 celdas de cuota (región × régimen de afiliación × sexo × grupo de edad × zona), con su meta y su mínimo garantizado, organizada en una hoja por cada una de las seis regiones (\@ref(sec-diseno-muestral)).
 
-**Árbol de decisión.** Estructura que define la secuencia de preguntas, las condiciones de entrada y los saltos que sigue cada participante durante el cuestionario. Se organiza en 48 nodos distribuidos en cuatro bloques secuenciales y define las nueve rutas que convergen en ocho módulos finales (\@ref(sec-flujo-rutas)).
+**Árbol de decisión.** Estructura que define la secuencia de preguntas, las condiciones de entrada y los saltos que sigue cada participante durante el cuestionario. Se organiza en 41 nodos distribuidos en seis bloques secuenciales (identificación y caracterización, Parte 2, sorteo Bernoulli, elección de prestador, asignación aleatoria de módulo y módulos finales) y define nueve desenlaces posibles: uno sin Parte 3 (sorteo negativo) y ocho que corresponden a un módulo asignado al azar (\@ref(sec-diseno-muestral)).
 
 **Base analítica.** Conjunto de registros que, superados los controles de validación y consistencia del procesamiento, se incorpora a la base sobre la cual se calculan los pesos y los estimadores de la operación (\@ref(sec-procesamiento)).
 
 **BDUA (Base de Datos Única de Afiliados).** Registro administrativo del Sistema General de Seguridad Social en Salud (SGSSS) utilizado como fuente de los totales poblacionales de referencia de ENUS 2026, tanto para determinar el tamaño objetivo de muestra como para los totales de calibración de los pesos (\@ref(sec-diseno-muestral)).
+
+**Bloqueo de prestador.** Restricción de un año calendario, contado desde que un usuario diligencia Parte 3 para un prestador determinado (EPS, IPS o gestor farmacéutico), durante la cual ese mismo prestador deja de estar disponible para que el mismo usuario lo vuelva a elegir en un ingreso posterior (\@ref(sec-diseno-muestral)).
 
 **Calibración por entropía.** Procedimiento mediante el cual el peso de referencia de cada registro se ajusta para que la muestra reproduzca los totales poblacionales conocidos de un conjunto de variables auxiliares, minimizando una función de distancia de entropía sujeta a esas restricciones. Es, en un diseño de captación por cuotas como el de ENUS 2026, el mecanismo formal que sustituye a la expansión probabilística clásica (\@ref(sec-pesos-calibracion)).
 
@@ -32,7 +34,7 @@ Este glosario reúne, en orden alfabético, los términos técnicos y metodológ
 
 **Margen de error (ME) y margen de error relativo (MER).** Parámetros de diseño utilizados para fijar la meta nominal de precisión del tamaño de muestra de referencia. ENUS 2026 adopta $ME = 0,0392$ y un margen de error relativo ($MER$) de 7,84 % (\@ref(sec-tamano-muestra)).
 
-**Módulo.** Bloque específico de preguntas del cuestionario que responde un usuario, determinado por el tipo de entidad prestadora y el tipo de servicio recibido. ENUS 2026 define ocho módulos finales (\@ref(sec-flujo-rutas)).
+**Módulo.** Bloque específico de preguntas de Parte 3 del cuestionario que responde un usuario, asignado al azar dentro del prestador que este eligió evaluar —no según el servicio efectivamente recibido—. ENUS 2026 define ocho módulos finales: EPS (3), IPS (4) y gestor farmacéutico (1) (\@ref(sec-diseno-muestral)).
 
 **Muestreo por cuotas.** Mecanismo de captación no probabilístico adoptado por ENUS 2026, en el que se establecen metas de participación para un conjunto de celdas definidas por características demográficas y de afiliación, sin selección aleatoria dentro de cada celda (\@ref(sec-diseno-muestral)).
 
@@ -42,17 +44,21 @@ Este glosario reúne, en orden alfabético, los términos técnicos y metodológ
 
 **Población efectivamente observada.** Personas de la población objetivo que son captadas mediante los procedimientos establecidos y que proporcionan información válida para la estimación de los indicadores (\@ref(sec-poblacion-objetivo)).
 
-**Pregunta trazadora.** Primera pregunta del árbol de decisión tras el bloque de identificación y caracterización del usuario (¿ha utilizado servicios de salud?); su respuesta determina la bifurcación hacia el módulo de barreras de acceso o hacia el bloque de gestión institucional (\@ref(sec-flujo-rutas)).
+**Pregunta trazadora.** Cada una de las preguntas de respuesta directa que integran Parte 2 del cuestionario (preguntas comunes), tras el bloque de identificación y caracterización del usuario. A diferencia del mecanismo previo, ninguna pregunta trazadora determina por sí sola una bifurcación hacia un módulo: al terminar Parte 2 se ejecuta el sorteo Bernoulli que decide el acceso a Parte 3 (\@ref(sec-diseno-muestral)).
+
+**Prestador (elección de).** Paso del mecanismo de captación, posterior a un sorteo Bernoulli positivo, en el que el usuario elige cuál de sus prestadores habilitados y no bloqueados —EPS, IPS o gestor farmacéutico— desea evaluar. La elección del prestador no determina el módulo específico, que se asigna después al azar dentro de ese prestador (\@ref(sec-diseno-muestral)).
 
 **Réplica (de pesos calibrados).** Repetición del proceso de generación del peso de referencia y de calibración sobre una remuestra de los datos, utilizada para estimar la varianza de los estimadores a partir de la variabilidad entre las estimaciones replicadas (\@ref(sec-pesos-calibracion)).
 
 **Resto mayor (método del).** Procedimiento de ajuste utilizado para que la suma de las cuotas enteras de las celdas coincida exactamente con el tamaño ya asignado a la región: el remanente entero se reparte una unidad a la vez a las celdas con mayor parte fraccionaria pendiente (\@ref(sec-diseno-muestral)).
 
-**Ruta.** Secuencia específica de nodos del árbol de decisión que recorre un usuario según sus respuestas, desde la raíz hasta un módulo final. ENUS 2026 define nueve rutas posibles, que convergen en ocho módulos (\@ref(sec-flujo-rutas)).
+**Ruta.** Secuencia específica de nodos del árbol de decisión que recorre un usuario, desde la raíz hasta un desenlace final. ENUS 2026 define nueve desenlaces posibles según el resultado del sorteo Bernoulli, la elección de prestador y la asignación aleatoria de módulo: uno sin Parte 3 y ocho que convergen en un módulo (\@ref(sec-diseno-muestral)).
 
 **Satisfacción.** Valoración general y retrospectiva que realiza la persona usuaria sobre el servicio de salud recibido, expresando su grado de conformidad con la atención proporcionada. Se mide de forma complementaria a la experiencia del usuario (\@ref(sec-alcance)).
 
 **SGSSS.** Sistema General de Seguridad Social en Salud.
+
+**Sorteo Bernoulli.** Mecanismo probabilístico que, al terminar Parte 2, decide si un usuario en su primer ingreso accede a Parte 3: se genera $u\sim\text{Uniforme}(0,1)$ con corte $\pi=0,8$; si $u\leq0,8$ el usuario continúa a la elección de prestador, si $u>0,8$ la encuesta finaliza sin Parte 3. No se ejecuta en ingresos posteriores al primero (\@ref(sec-diseno-muestral)).
 
 **Variable auxiliar (o variable de calibración).** Variable utilizada en el ajuste posterior de los pesos contra los totales de referencia de la BDUA. Puede compartir las mismas variables que la cuota (sexo, edad, régimen, zona, región), pero cumple una función distinta: corrige desbalances remanentes en la muestra ya captada (\@ref(sec-diseno-muestral)).
 

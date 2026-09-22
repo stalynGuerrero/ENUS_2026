@@ -70,9 +70,9 @@ La información recolectada corresponde a la satisfacción y experiencia reporta
 
 ## Cobertura territorial
 
-ENUS 2026 tendrá cobertura nacional, con una distribución de la muestra que garantizará una cuota mínima de participación para cada región definida en la operación.
+ENUS 2026 tendrá cobertura nacional, con una distribución de la muestra que garantizará una cuota mínima de participación para cada uno de los 33 departamentos (32 departamentos y Bogotá D.C.) definidos en la operación.
 
-La región constituye el nivel territorial mínimo previsto para la producción de resultados. La participación efectiva de los usuarios podrá permitir desagregaciones territoriales adicionales dentro de cada región, siempre que se alcance un número suficiente de observaciones y condiciones adecuadas de calidad estadística para su interpretación.
+El departamento constituye el nivel territorial mínimo previsto para la producción de resultados, condicionado a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección (\@ref(sec-diseno-muestral)); los departamentos se agregan, para efectos de reporte, en seis regiones bajo el esquema estándar DANE/ENDS. La participación efectiva de los usuarios podrá permitir desagregaciones territoriales adicionales dentro de cada departamento, siempre que se alcance un número suficiente de observaciones y condiciones adecuadas de calidad estadística para su interpretación.
 
 
 ## Cobertura temporal y periodo de referencia

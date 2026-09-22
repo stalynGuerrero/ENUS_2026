@@ -19,6 +19,12 @@ description: |
 ---
 # Presentación {-}
 
+```{=html}
+<div style="text-align:center;margin-bottom:1.5em;">
+  <img src="styles/logo/msps-logo-color.png" width="220" alt="Ministerio de Salud y Protección Social">
+</div>
+```
+
 El presente documento constituye el Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), operación estadística del Ministerio de Salud y Protección Social (MSPS) orientada a la medición de la experiencia de los usuarios frente a los servicios de salud.
 
 El documento ha sido elaborado por la Oficina de Calidad del Ministerio de Salud y Protección Social y tiene como propósito establecer y documentar los aspectos técnicos y metodológicos que sustentan el diseño, ejecución, procesamiento, análisis y generación de resultados de la operación estadística.
