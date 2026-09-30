@@ -69,18 +69,18 @@ const EdgesData = [
     // DESENLACE 0: u > 0,8 -> la encuesta finaliza sin Parte 3
     { source: "sorteo_bernoulli", target: "fin_sin_parte3", label: "NO (u>0,8)" },
 
-    // u <= 0,8 -> el usuario elige cuál prestador evaluar (entre los habilitados y no bloqueados)
+    // u <= 0,8 -> Parte 3 del actor de la atención que originó la invitación (no lo elige la persona)
     { source: "sorteo_bernoulli", target: "entidad_eps", label: "SI (u≤0,8)" },
     { source: "sorteo_bernoulli", target: "entidad_ips", label: "SI (u≤0,8)" },
     { source: "sorteo_bernoulli", target: "entidad_gestor", label: "SI (u≤0,8)" },
 
-    // Asignación aleatoria de módulo dentro de la EPS elegida (P = 1/3 por módulo)
+    // Asignación aleatoria de módulo dentro de la EPS de la atención (P = 1/3 por módulo)
     { source: "entidad_eps", target: "asignacion_eps" },
     { source: "asignacion_eps", target: "eps_m1", label: "1/3" }, // Desenlace 1
     { source: "asignacion_eps", target: "eps_m2", label: "1/3" }, // Desenlace 2
     { source: "asignacion_eps", target: "eps_m3", label: "1/3" }, // Desenlace 3
 
-    // Asignación aleatoria de módulo dentro de la IPS elegida (P = 1/4 por módulo)
+    // Asignación aleatoria de módulo dentro de la IPS de la atención (P = 1/4 por módulo)
     { source: "entidad_ips", target: "asignacion_ips" },
     { source: "asignacion_ips", target: "ips_m1", label: "1/4" }, // Desenlace 4
     { source: "asignacion_ips", target: "ips_m2", label: "1/4" }, // Desenlace 5

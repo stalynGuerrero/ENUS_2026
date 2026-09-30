@@ -135,7 +135,7 @@ Table: (\#tab:modulos-parte3) Módulos de Parte 3 asignables por prestador, ENUS
 
 ### Diferenciación frente a las metas de respuesta
 
-El mecanismo de sorteo, elección y asignación descrito en esta sección es distinto de las metas de respuesta (\@ref(sec-diseno-muestral)): las metas fijan cuántas respuestas se espera obtener en cada grupo; el sorteo determina si una persona que respondió la Parte 2 responde la Parte 3; la elección de prestador y la asignación aleatoria de módulo determinan qué contenido específico responde. Ninguno de estos elementos constituye un estrato, y ninguno modifica las metas de respuesta por celda.
+El mecanismo de sorteo y asignación descrito en esta sección es distinto de las metas de respuesta (\@ref(sec-diseno-muestral)): las metas fijan cuántas respuestas se espera obtener en cada grupo; el sorteo determina si una persona que respondió la Parte 2 responde la Parte 3; el actor de la atención que originó la invitación y la asignación aleatoria de módulo determinan qué contenido específico responde. Ninguno de estos elementos constituye un estrato, y ninguno modifica las metas de respuesta por celda.
 
 ## Determinación del tamaño de muestra {#sec-tamano-muestra}
 

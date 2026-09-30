@@ -46,15 +46,15 @@ const NodesData = [
     { id: "fin_sin_parte3", label: "Fin de la encuesta (sin Parte 3)", type: "base", block: "BLOQUE_2B" },
 
     // ==========================================================================
-    // BLOQUE 3: ELECCIÓN DE PRESTADOR (el usuario elige cuál evaluar,
-    // entre los prestadores habilitados en BDUA y no bloqueados)
+    // BLOQUE 3: ACTOR DE LA ATENCIÓN (lo determina la atención registrada que
+    // originó la invitación; la persona no lo elige)
     // ==========================================================================
     { id: "entidad_eps", label: "Empresa Prestadora (EPS)", type: "entidad", block: "BLOQUE_3" },
     { id: "entidad_ips", label: "Institución Prestadora (IPS)", type: "entidad", block: "BLOQUE_3" },
     { id: "entidad_gestor", label: "Entidad Gestora Farmacéutica", type: "entidad", block: "BLOQUE_3" },
 
     // ==========================================================================
-    // BLOQUE 4: ASIGNACIÓN ALEATORIA DE MÓDULO DENTRO DEL PRESTADOR ELEGIDO
+    // BLOQUE 4: ASIGNACIÓN ALEATORIA DE MÓDULO DENTRO DEL ACTOR DE LA ATENCIÓN
     // ==========================================================================
     { id: "asignacion_eps", label: "Asignación aleatoria (P=1/3 por módulo)", type: "decision", block: "BLOQUE_4" },
     { id: "asignacion_ips", label: "Asignación aleatoria (P=1/4 por módulo)", type: "decision", block: "BLOQUE_4" },

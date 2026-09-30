@@ -14,7 +14,7 @@ class RoutesManager {
             "ruta_0": {
                 id: "ruta_0",
                 name: "Desenlace 0: Sorteo negativo (sin Parte 3)",
-                description: "El sorteo Bernoulli resulta u>0,8: la encuesta finaliza al terminar Parte 2, sin acceso a la elección de prestador ni a un módulo específico.",
+                description: "El sorteo Bernoulli resulta u>0,8: la encuesta finaliza al terminar Parte 2, sin Parte 3 ni módulo específico.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -27,7 +27,7 @@ class RoutesManager {
             "ruta_1": {
                 id: "ruta_1",
                 name: "Desenlace 1: EPS - Módulo 1 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar EPS y el sistema le asigna al azar (P=1/3) el Módulo 1.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con la EPS y el sistema le asigna al azar (P=1/3) el Módulo 1.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -40,7 +40,7 @@ class RoutesManager {
             "ruta_2": {
                 id: "ruta_2",
                 name: "Desenlace 2: EPS - Módulo 2 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar EPS y el sistema le asigna al azar (P=1/3) el Módulo 2.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con la EPS y el sistema le asigna al azar (P=1/3) el Módulo 2.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -53,7 +53,7 @@ class RoutesManager {
             "ruta_3": {
                 id: "ruta_3",
                 name: "Desenlace 3: EPS - Módulo 3 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar EPS y el sistema le asigna al azar (P=1/3) el Módulo 3.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con la EPS y el sistema le asigna al azar (P=1/3) el Módulo 3.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -66,7 +66,7 @@ class RoutesManager {
             "ruta_4": {
                 id: "ruta_4",
                 name: "Desenlace 4: IPS - Módulo 1 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar IPS y el sistema le asigna al azar (P=1/4) el Módulo 1.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con una IPS y el sistema le asigna al azar (P=1/4) el Módulo 1.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -79,7 +79,7 @@ class RoutesManager {
             "ruta_5": {
                 id: "ruta_5",
                 name: "Desenlace 5: IPS - Módulo 2 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar IPS y el sistema le asigna al azar (P=1/4) el Módulo 2.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con una IPS y el sistema le asigna al azar (P=1/4) el Módulo 2.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -92,7 +92,7 @@ class RoutesManager {
             "ruta_6": {
                 id: "ruta_6",
                 name: "Desenlace 6: IPS - Módulo 3 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar IPS y el sistema le asigna al azar (P=1/4) el Módulo 3.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con una IPS y el sistema le asigna al azar (P=1/4) el Módulo 3.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -105,7 +105,7 @@ class RoutesManager {
             "ruta_7": {
                 id: "ruta_7",
                 name: "Desenlace 7: IPS - Módulo 4 (asignación aleatoria)",
-                description: "Sorteo positivo, el usuario elige evaluar IPS y el sistema le asigna al azar (P=1/4) el Módulo 4.",
+                description: "Sorteo positivo; la atención que originó la invitación fue con una IPS y el sistema le asigna al azar (P=1/4) el Módulo 4.",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -118,7 +118,7 @@ class RoutesManager {
             "ruta_8": {
                 id: "ruta_8",
                 name: "Desenlace 8: Gestor - Módulo 1 (único módulo)",
-                description: "Sorteo positivo, el usuario elige evaluar el Gestor farmacéutico; al existir un único módulo, la asignación es determinística (P=1).",
+                description: "Sorteo positivo; la atención que originó la invitación fue con el gestor farmacéutico; al existir un único módulo, la asignación es determinística (P=1).",
                 nodes: [
                     "cedula", "sexo", "sexo_hombre", "sexo_mujer", "edad",
                     "grupo_edad_0_9", "grupo_edad_10_19", "grupo_edad_20_29", "grupo_edad_30_39",
@@ -175,7 +175,7 @@ class RoutesManager {
      * (Hombre > 0-9 > Bogotá > Urbano > Contributivo). En su lugar, para ese tramo se listan
      * TODAS las opciones de cada nivel inferior y solo el nodo propio en el nivel del clic.
      *
-     * Los Bloques 3 y 4 (Elección de prestador > Asignación aleatoria > Módulo) sí son una
+     * Los Bloques 3 y 4 (Actor de la atención > Asignación aleatoria > Módulo) sí son una
      * bifurcación real, así que ese tramo se reconstruye remontando las aristas específicas
      * hasta el nodo del sorteo Bernoulli.
      *
@@ -199,7 +199,7 @@ class RoutesManager {
             });
         }
 
-        // Tramo institucional real (Bloques 3 y 4), remontado nodo a nodo desde el clic hasta B0
+        // Tramo institucional real (Bloques 3 y 4), remontado nodo a nodo desde el clic hasta el sorteo Bernoulli
         if (targetRank > traceRank) {
             const institutionalPath = [nodeId];
             const visited = new Set([nodeId]);
