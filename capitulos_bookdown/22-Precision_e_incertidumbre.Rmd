@@ -1,14 +1,6 @@
 # Precisión e incertidumbre
 
-Stalyn adoptó y cerró el 2026-08-17 el método de estimación de precisión
-para ENUS 2026 (ver \@ref(sec-anexo-l), decisión #6): **replicación de pesos
-calibrados por entropía**, con remuestreo bootstrap y recalibración por
-réplica, $B$ = 500 a 1000 réplicas, e intervalos de confianza al 95% por
-percentiles empíricos de la distribución de réplicas. El método no requiere
-supuestos de normalidad asintótica y no debe interpretarse como si
-derivara de un diseño probabilístico con $\pi_i$ conocida (ver
-\@ref(sec-limitaciones-cuotas)). Especificación matemática completa,
-procedimiento paso a paso e interpretación de límites en \@ref(sec-anexo-h).
+La precisión de los indicadores de ENUS 2026 se estima mediante **réplicas *bootstrap* de los respondientes con recalibración por entropía en cada réplica** (decisión de septiembre de 2026), con $B = 1\,000$ réplicas, remuestreo dentro de cada departamento (región en los modelos de la Parte 3), totales del marco del año fijos en todas las réplicas e intervalos de confianza al 95 % por percentiles empíricos. El procedimiento se fundamenta en el marco de inferencia para muestras con participación voluntaria de @ChenLiWu2020 y @Beresewicz2025: la calibración por entropía equivale a estimar la propensión de respuesta de cada persona invitada, y la recalibración en cada réplica incorpora la incertidumbre de esa estimación. Como contraste se usa la aproximación analítica de la varianza, en la que el término asociado a la estimación de los totales es nulo porque los totales provienen del marco completo. La varianza es condicional a los supuestos de ignorabilidad y positividad de la respuesta, que no corrige. Especificación completa en el capítulo de ponderación y calibración (\@ref(sec-varianza)).
 
 ::: {.pendiente-definicion}
 **Pendiente de definición:** resultados numéricos de la replicación

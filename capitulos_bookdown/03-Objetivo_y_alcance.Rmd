@@ -39,27 +39,27 @@ ENUS 2026 mide percepciones y valoraciones reportadas directamente por las perso
 
 ## Población objetivo {#sec-poblacion-objetivo}
 
-La población objetivo de ENUS 2026 está constituida por las *personas afiliadas al Sistema General de Seguridad Social en Salud (SGSSS) que hayan utilizado, durante alguno de los trimestres del año de referencia, al menos uno de los servicios de salud incluidos en el ámbito de medición de la encuesta*.
+La población objetivo de ENUS 2026 está constituida por las *personas afiliadas al Sistema General de Seguridad Social en Salud (SGSSS) que hayan utilizado, durante los seis meses anteriores al diligenciamiento de la encuesta, al menos uno de los servicios de salud incluidos en el ámbito de medición de la encuesta*.
 
-La población comprende las personas afiliadas a los regímenes considerados por el SGSSS, independientemente de su sexo, edad, territorio de residencia u otras características sociodemográficas. La utilización de un servicio de salud durante el año de referencia constituye la condición que vincula a la persona con el fenómeno objeto de medición, dado que las preguntas de satisfacción y experiencia se refieren a una atención o servicio efectivamente utilizado.
+La población comprende las personas afiliadas a los regímenes considerados por el SGSSS, independientemente de su sexo, edad, territorio de residencia u otras características sociodemográficas. La utilización de un servicio de salud durante el periodo de referencia constituye la condición que vincula a la persona con el fenómeno objeto de medición, dado que las preguntas de satisfacción y experiencia se refieren a una atención o servicio efectivamente utilizado.
 
-Para efectos de la operación estadística, la identificación de las personas elegibles se realiza de manera continua durante el año, tomando como periodo de referencia para la utilización del servicio cada trimestre calendario. En consecuencia, para cada trimestre se consideran las personas que cumplen simultáneamente las siguientes condiciones:
+**Decisión metodológica adoptada (septiembre de 2026).** El periodo de referencia para la utilización del servicio es de **seis meses**, contados hacia atrás desde el momento en que la persona diligencia la encuesta, en concordancia con la pregunta de la Parte 2 sobre utilización de servicios «en los últimos 6 meses». Para efectos de la operación estadística, la identificación de las personas elegibles se realiza de manera continua durante el año, considerando las personas que cumplen simultáneamente las siguientes condiciones:
 
 1. *Afiliación al SGSSS:* encontrarse afiliadas al Sistema General de Seguridad Social en Salud durante el periodo correspondiente a la utilización del servicio.
 
 2. *Utilización de servicios de salud:* haber utilizado al menos uno de los servicios de salud incluidos en el ámbito de ENUS 2026.
 
-3. *Periodo de referencia:* que la utilización del servicio haya ocurrido durante el trimestre correspondiente.
+3. *Periodo de referencia:* que la utilización del servicio haya ocurrido durante los seis meses anteriores al diligenciamiento de la encuesta.
 
-Los cuatro trimestres conforman el periodo anual de referencia de la operación. De esta manera, la recolección se desarrolla de forma continua a lo largo del año, mientras que la producción principal de resultados corresponde al *año de referencia*, integrando la información recolectada durante sus respectivos periodos trimestrales.
+La recolección se desarrolla de forma continua a lo largo del año, mientras que la producción principal de resultados corresponde al *año de recolección*, integrando todas las respuestas obtenidas durante ese año, cada una referida a los seis meses anteriores a su diligenciamiento.
 
-La identificación y selección de las personas pertenecientes a la población objetivo se realizará mediante los mecanismos de captación y verificación definidos para la operación estadística. Estos mecanismos podrán apoyarse en diferentes fuentes de información y herramientas tecnológicas y podrán modificarse durante el ciclo de vida de la encuesta sin alterar la definición conceptual de la población objetivo.
+La identificación de las personas pertenecientes a la población objetivo se realiza mediante el marco muestral de la operación, conformado con la BDUA y el registro de atenciones, y la verificación de identidad y afiliación en *ClicSalud* (\@ref(sec-marco-invitacion)). Estos mecanismos podrán apoyarse en diferentes fuentes de información y herramientas tecnológicas y podrán modificarse durante el ciclo de vida de la encuesta sin alterar la definición conceptual de la población objetivo.
 
-La base de usuarios habilitados para acceder a *ClicSalud* y diligenciar el cuestionario se actualiza cada cuatro meses a lo largo del año. El propósito de esta actualización periódica es incorporar a la base a los usuarios que, por haberse afiliado al SGSSS o haber utilizado un servicio de salud con posterioridad al corte anterior, aún no se encontraban habilitados para participar. De esta manera, la base de usuarios se mantiene alineada, a lo largo del año, con la definición continua de la población objetivo establecida en esta sección, aunque la habilitación efectiva de un usuario recientemente elegible queda sujeta al ciclo de actualización vigente y no ocurre en tiempo real (\@ref(sec-diseno-muestral)).
+El marco muestral se conforma periódicamente durante el año con las personas afiliadas que registran una atención en salud en el registro de atenciones —la factura electrónica de venta con RIPS (FEV-RIPS), los registros de dispensación y los registros propios de las EPS—, que las EPS actualizan de manera permanente a partir de la facturación. Las invitaciones se generan al menos mensualmente y, cuando la fuente lo permita, de forma automática al ingresar un nuevo registro de atención. De esta manera, el marco se mantiene alineado a lo largo del año con la definición continua de la población objetivo, aunque la inclusión de una persona recién atendida depende del rezago del ciclo de facturación (\@ref(sec-marco-invitacion)).
 
-La población efectivamente observada estará constituida por las personas de la población objetivo que sean captadas o seleccionadas mediante los procedimientos establecidos y que proporcionen información válida para la estimación de los indicadores.
+La población efectivamente observada estará constituida por las personas del marco que respondan la encuesta y proporcionen información válida para la estimación de los indicadores. Las personas invitadas que no respondan constituyen la no respuesta de la operación, que se ajusta mediante calibración (\@ref(sec-marco-invitacion)).
 
-La definición de la población objetivo, los criterios de elegibilidad y los procedimientos de selección deberán garantizar que la información recolectada durante los cuatro trimestres permita producir estimaciones anuales representativas de la población objetivo del año correspondiente.
+La definición de la población objetivo, los criterios de elegibilidad, la invitación y el ajuste por no respuesta deberán garantizar que la información recolectada durante el año permita producir estimaciones anuales representativas de la población objetivo del año correspondiente.
 
 
 ## Unidad de observación
@@ -70,20 +70,20 @@ La información recolectada corresponde a la satisfacción y experiencia reporta
 
 ## Cobertura territorial
 
-ENUS 2026 tendrá cobertura nacional, con una distribución de la muestra que garantizará una cuota mínima de participación para cada uno de los 33 departamentos (32 departamentos y Bogotá D.C.) definidos en la operación.
+ENUS 2026 tendrá cobertura nacional, con metas de respuesta para cada uno de los 33 departamentos (32 departamentos y Bogotá D.C.) definidos en la operación (\@ref(sec-tamano-muestra)).
 
 El departamento constituye el nivel territorial mínimo previsto para la producción de resultados, condicionado a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección (\@ref(sec-diseno-muestral)); los departamentos se agregan, para efectos de reporte, en seis regiones bajo el esquema estándar DANE/ENDS. La participación efectiva de los usuarios podrá permitir desagregaciones territoriales adicionales dentro de cada departamento, siempre que se alcance un número suficiente de observaciones y condiciones adecuadas de calidad estadística para su interpretación.
 
 
 ## Cobertura temporal y periodo de referencia
 
-ENUS 2026 adopta un esquema de *recolección continua durante el año*, organizado en cuatro periodos trimestrales de referencia.
+ENUS 2026 adopta un esquema de *recolección continua durante el año*, con un periodo de referencia de seis meses para la utilización del servicio.
 
-El periodo de referencia corresponde al *trimestre en el que la persona utilizó el servicio de salud* objeto de la medición. La satisfacción y experiencia reportadas se refieren a dicha utilización.
+El periodo de referencia corresponde a los *seis meses anteriores al diligenciamiento de la encuesta*, durante los cuales la persona utilizó el servicio de salud objeto de la medición. La satisfacción y experiencia reportadas se refieren a dicha utilización. Un periodo de seis meses amplía la población que puede responder frente a un periodo más corto, pero aumenta el potencial sesgo de recuerdo cuando la atención evaluada ocurrió al inicio del periodo; por esta razón se procura que la invitación se envíe lo más pronto posible después de la atención.
 
 La recolección continua permite aproximar el momento de la encuesta al momento de utilización del servicio, reduciendo el potencial efecto del recuerdo retrospectivo.
 
-Los resultados de ENUS 2026 se producirán con *periodicidad anual*, integrando la información recolectada durante los cuatro trimestres del año de referencia.
+Los resultados de ENUS 2026 se producirán con *periodicidad anual*, integrando la información recolectada durante el año, en concordancia con la publicación anual prevista en el artículo 14 de la Resolución 1642 de 2026 [@Resolucion1642_2026].
 
 ## Servicios de salud objeto de medición
 
@@ -95,7 +95,7 @@ La clasificación de los servicios considerados y la asignación de las pregunta
 
 ## Dominios de análisis
 
-ENUS 2026 contempla la producción de resultados para el *total nacional y para las regiones definidas en la operación*, de acuerdo con las cuotas mínimas de participación establecidas para cada una.
+ENUS 2026 contempla la producción de resultados para el *total nacional, las regiones y los departamentos que alcancen su meta de respuesta*; las regiones se obtienen por agregación de los departamentos (\@ref(sec-alcance-departamental)).
 
 La información recolectada permitirá explorar desagregaciones adicionales según características de las personas usuarias, de su afiliación y del servicio utilizado. La disponibilidad de estas desagregaciones dependerá de la participación efectiva alcanzada en las categorías correspondientes y de las condiciones de calidad requeridas para su presentación e interpretación.
 
@@ -108,8 +108,8 @@ El alcance de ENUS 2026 está determinado por la población objetivo, los servic
 
 Los resultados corresponden a la *satisfacción y experiencia reportadas por las personas participantes* respecto de los servicios de salud utilizados. No constituyen una medición integral del desempeño del SGSSS ni sustituyen otras fuentes de información requeridas para evaluar resultados clínicos, desenlaces en salud, efectividad de tratamientos o calidad técnica de la atención.
 
-La cobertura mínima por región se establece mediante cuotas de participación. Las desagregaciones adicionales estarán condicionadas por la participación efectiva alcanzada y por criterios de suficiencia y calidad de la información.
+La cobertura territorial se fija mediante metas de respuesta por departamento. Las desagregaciones adicionales estarán condicionadas por la respuesta efectivamente alcanzada y por criterios de suficiencia y calidad de la información.
 
-La Resolución 1642 de 2026 habilita la desagregación de los resultados de ENUS por EPS, institución prestadora, departamento, distrito y municipio, entre otros niveles [@Resolucion1642_2026]. Esta habilitación normativa no debe confundirse con una garantía de precisión estadística en esos niveles: el diseño muestral de la operación solo asegura la precisión nominal a nivel de región; las desagregaciones por EPS, institución prestadora o municipio dependerán de la participación efectivamente alcanzada en cada categoría y podrán no ser publicables si no cumplen los criterios de suficiencia y calidad establecidos.
+La Resolución 1642 de 2026 habilita la desagregación de los resultados de ENUS por EPS, institución prestadora, departamento, distrito y municipio, entre otros niveles [@Resolucion1642_2026]. Esta habilitación normativa no debe confundirse con una garantía de precisión estadística en esos niveles: el diseño muestral de la operación fija metas de respuesta a nivel de departamento; las desagregaciones por EPS, institución prestadora o municipio dependerán del número de respuestas alcanzado en cada categoría y se publicarán como estimaciones representativas, como resultados descriptivos o no se publicarán, según los criterios establecidos para la publicación de resultados por entidad (\@ref(sec-publicacion-entidad)).
 
-Dado el carácter no probabilístico de la operación, las desagregaciones y resultados deberán interpretarse de acuerdo con el alcance del diseño de selección y con las condiciones bajo las cuales se obtuvo la información.
+Aunque la invitación y la asignación de la Parte 3 son probabilísticas, la participación de las personas invitadas es voluntaria. Por ello, las desagregaciones y resultados deberán interpretarse considerando la tasa de respuesta alcanzada y el ajuste por no respuesta mediante calibración, que corrige la composición de quienes responden en las variables auxiliares, pero no necesariamente en otras características (\@ref(sec-marco-invitacion)).

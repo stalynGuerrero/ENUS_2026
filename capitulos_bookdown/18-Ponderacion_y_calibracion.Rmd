@@ -1,18 +1,18 @@
 # Ponderación y calibración {#sec-pesos-calibracion}
 
-Este capítulo documenta, con el detalle matemático completo, el procedimiento de ponderación de ENUS 2026: el peso de referencia con el que entra cada registro al proceso de estimación, la familia de distancias de calibración y la que efectivamente se adopta, la solución formal del problema de optimización y el algoritmo con el que esa solución se calcula, las variables auxiliares y sus totales poblacionales de referencia, y el procedimiento de replicación con el que se estima la incertidumbre de los pesos calibrados. La calibración es, en un diseño de captación por cuotas como el de ENUS 2026, el mecanismo formal que sustituye a la expansión probabilística clásica.
+Este capítulo documenta, con el detalle matemático completo, el procedimiento de ponderación de ENUS 2026: el peso de referencia con el que entra cada registro al proceso de estimación, la familia de distancias de calibración y la que efectivamente se adopta, la solución formal del problema de optimización y el algoritmo con el que esa solución se calcula, las variables auxiliares y sus totales poblacionales de referencia, y el procedimiento de replicación con el que se estima la incertidumbre de los pesos calibrados. En el diseño de ENUS 2026, con invitación a la totalidad del marco (\@ref(sec-marco-invitacion)), la calibración cumple la función de ajuste por no respuesta: es la forma en que se estima la propensión de responder de cada persona invitada.
 
 ## Peso de referencia
 
-El mecanismo de selección de usuarios dentro de una celda de cuota no incluye un paso de selección aleatoria: la participación depende de que el usuario se identifique en *ClicSalud*, sea clasificado en una celda de cuota y complete el cuestionario, sin que exista un sorteo, un listado de marco muestral individual ni un registro de intentos no exitosos dentro de la celda (\@ref(sec-mecanismo-seleccion)). En consecuencia, no existe una probabilidad de inclusión individual $\pi_i$ que pueda estimarse a partir del diseño, y el peso de diseño clásico $d_i = 1/\pi_i$ [@HorvitzThompson1952; @SarndalSwenssonWretman1992] no tiene un valor definido para ENUS 2026.
-
-Por esta razón, se adopta como peso de referencia:
+**Decisión metodológica adoptada (septiembre de 2026).** Con el diseño por invitación a la totalidad del marco (\@ref(sec-marco-invitacion)), toda persona del marco tiene probabilidad de invitación igual a 1. El peso de referencia de las Partes 1 y 2 es, por tanto, el inverso de esa probabilidad:
 
 $$
-d_i = 1 \qquad \forall i \in s
+d_i = \frac{1}{\pi_i^{\text{inv}}} = 1 \qquad \forall i \in s
 $$
 
-Este valor no debe interpretarse como el inverso de una probabilidad de inclusión, sino como el punto de partida neutro del problema de calibración: todos los registros observados entran al ajuste con la misma ponderación inicial, y es la calibración —no el peso de referencia— la que introduce la información poblacional que corrige la composición de la muestra. Este uso de un peso de referencia uniforme como punto de partida de la calibración, sin que provenga de un diseño probabilístico, sigue el tratamiento que la literatura reciente de calibración por entropía generalizada da a las muestras voluntarias y a los esquemas de captación no probabilística [@KwonKimQiu2025; @ChenLiWu2018; @ElliottValliant2017].
+Para la Parte 3, el peso de referencia incorpora las probabilidades conocidas del sorteo y de la asignación de módulo dentro del actor de la atención (\@ref(sec-mecanismo-captacion)): $d_i = n_{\text{actor}}/0{,}8$ en el primer ingreso y $d_i = n_{\text{actor}}$ en los ingresos posteriores.
+
+Este peso de referencia no corrige por sí mismo la no respuesta: quienes responden son un subconjunto del marco cuya composición depende de su propensión a participar, que no es conocida. Esa corrección es la función de la calibración, como se desarrolla en las secciones siguientes [@ChenLiWu2020; @Beresewicz2025].
 
 ## Familia de distancias de calibración
 
@@ -50,7 +50,7 @@ $$
 \sum_{i \in s} w_i \, x_{ij} = X_j \qquad j = 1, \dots, J
 $$
 
-La razón de esta elección, frente a la alternativa lineal, es que la distancia de raking garantiza $w_i>0$ para cualquier valor de $\boldsymbol\lambda$, mientras que la distancia lineal puede producir pesos negativos cuando la muestra está muy desbalanceada frente a los totales de referencia [@DevilleSarndal1992; @deville1993generalized] —un riesgo real en un diseño por cuotas, en el que la composición de la muestra depende de la captación efectiva y no de un sorteo controlado. Esta misma formulación de entropía es, además, la que permite incorporar de manera coherente un peso de referencia $d_i=1$ que no proviene de una probabilidad de inclusión: el desarrollo de calibración por entropía generalizada para muestras no probabilísticas [@KwonKimQiu2025; @ChenLiWu2018] muestra que la validez del ajuste no depende de que $d_i$ represente una expansión de diseño, sino de que las variables auxiliares $x_{ij}$ capturen adecuadamente la composición de la población y de que se sostenga el supuesto de que la participación, condicionada a esas variables auxiliares, sea independiente de las respuestas de interés:
+La razón de esta elección, frente a la alternativa lineal, es que la distancia de raking garantiza $w_i>0$ para cualquier valor de $\boldsymbol\lambda$, mientras que la distancia lineal puede producir pesos negativos cuando la muestra está muy desbalanceada frente a los totales de referencia [@DevilleSarndal1992; @deville1993generalized] —un riesgo real cuando la respuesta voluntaria produce una composición de respondientes muy distinta a la del marco. Esta formulación tiene, además, una interpretación directa en términos de propensión de respuesta, que se desarrolla en la sección de estimación de la incertidumbre: los pesos calibrados por entropía son el inverso de una propensión de respuesta estimada con un modelo de enlace exponencial [@Beresewicz2025; @KwonKimQiu2025]. La validez del ajuste depende de que las variables auxiliares $x_{ij}$ capturen adecuadamente los factores asociados a la respuesta y de que se sostenga el supuesto de que la participación, condicionada a esas variables auxiliares, sea independiente de las respuestas de interés:
 
 $$
 Y_i \perp S_i \mid X_i
@@ -123,29 +123,36 @@ $$
 \max_{j} \left| \sum_{i \in s} w_i^{(t)} x_{ij} - X_j \right| < \varepsilon
 $$
 
-Cuando las variables auxiliares $x_{ij}$ son indicadoras de categorías (como sexo, grupo de edad, región, régimen y zona en ENUS 2026), este procedimiento equivale exactamente al ajuste iterativo proporcional multivariado (*iterative proportional fitting*, IPF) sobre las categorías cruzadas, con la ventaja de admitir restricciones sobre variables continuas o combinaciones de variables en la misma formulación [@deville1993generalized; @Fuller2009].
+Cuando las variables auxiliares $x_{ij}$ son indicadoras de categorías (como sexo, grupo de edad, departamento, régimen y zona en ENUS 2026), este procedimiento equivale exactamente al ajuste iterativo proporcional multivariado (*iterative proportional fitting*, IPF) sobre las categorías cruzadas, con la ventaja de admitir restricciones sobre variables continuas o combinaciones de variables en la misma formulación [@deville1993generalized; @Fuller2009].
 
 ## Variables auxiliares
 
-Las variables auxiliares de la calibración son las mismas cinco dimensiones de clasificación que ya se usan para construir las cuotas de captación (\@ref(sec-variables-clasificacion), \@ref(sec-diseno-muestral)):
+Las variables auxiliares de la calibración son las mismas cinco dimensiones de clasificación que se usan para construir las metas de respuesta (\@ref(sec-diseno-muestral)). El departamento reemplaza a la región, en coherencia con el nivel en que se fijan las metas y se publican los resultados; la región se obtiene por agregación:
 
 | Variable auxiliar | Categorías |
 |---|---|
 | Sexo | Femenino, Masculino |
 | Grupo de edad | 00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más |
-| Región | Bogotá, Caribe, Central, Oriental, Pacífica, Orinoquía-Amazonía |
+| Departamento | 32 departamentos y Bogotá D.C. |
 | Régimen de afiliación | Contributivo, Subsidiado |
 | Zona | Urbano, Rural |
 
-Que la calibración use las mismas variables que la cuota no las vuelve equivalentes: la cuota fija un mínimo de captación por celda durante el trabajo de campo, mientras que la calibración impone una igualdad exacta entre la suma ponderada de la muestra y el total poblacional una vez cerrada la recolección. La distinción conceptual completa entre cuota, estrato, dominio y variable de calibración se desarrolla en el capítulo siguiente (\@ref(sec-distincion-cuotas-calibracion)).
+Que la calibración use las mismas variables que las metas de respuesta no las vuelve equivalentes: la meta orienta el seguimiento de la respuesta durante la operación, mientras que la calibración impone una igualdad exacta entre la suma ponderada de quienes responden y el total del marco una vez cerrada la recolección. La distinción conceptual completa entre meta de respuesta, estrato, dominio y variable de calibración se desarrolla en el capítulo de diseño muestral (\@ref(sec-diseno-muestral)).
 
 ## Totales de referencia
 
-Los totales poblacionales $X_j$ de la calibración se obtienen del extracto de la BDUA correspondiente al periodo de referencia que se está calibrando: se actualizan con la periodicidad trimestral de la operación (\@ref(sec-diseno-muestral)), de modo que cada ronda se calibra contra la composición de la afiliación vigente en su propio trimestre, y no permanecen fijos en un único corte durante toda la vida de la operación. Esto distingue a los totales de calibración del tamaño de muestra y de las 336 celdas de cuota, que sí se fijan una única vez como parámetro de diseño (\@ref(sec-diseno-muestral)).
+**Decisión metodológica adoptada (septiembre de 2026).** Los totales $X_j$ de la calibración se calculan sobre el **marco del año de referencia**: las personas afiliadas en el **corte más reciente de la BDUA** que registran al menos una atención en salud durante el año (\@ref(sec-marco-invitacion)). De esta manera, el universo contra el cual se calibra coincide con la población objetivo —quienes utilizaron un servicio— y no con la totalidad de los afiliados. Cada persona se cuenta una sola vez, aunque registre varias atenciones.
 
-Para la ronda inicial de ENUS 2026, el extracto de referencia es el corte de la BDUA a marzo de 2026: un registro de afiliados por municipio, EPS, sexo, grupo de edad y régimen, con 736 153 combinaciones y 50 168 746 afiliados en total a nivel nacional —el mismo corte que se usó para calcular el tamaño de muestra y para tabular las celdas de cuota (\@ref(sec-diseno-muestral))—. Al agregar ese registro por cada una de las cinco variables auxiliares por separado se obtienen los totales marginales de referencia de esa ronda:
+Esta decisión tiene dos consecuencias:
 
-| Variable | Categoría | $X_j$ (afiliados BDUA, ronda inicial — marzo 2026) | % |
+- Los totales de calibración **no coinciden** con los totales de afiliados de la BDUA con corte a marzo de 2026 que se usaron para calcular el tamaño de muestra y distribuir las metas de respuesta (\@ref(sec-tamano-muestra)): aquellos describen a todos los afiliados; estos, a los afiliados que usaron un servicio. La diferencia de composición entre ambos universos —por ejemplo, la mayor proporción de personas mayores entre quienes usan servicios— es precisamente la que la calibración debe reproducir.
+- Dado que el marco identifica el actor de cada atención, los modelos de la Parte 3 pueden calibrarse contra los totales del **subconjunto del marco con atención en el tipo de actor correspondiente** (EPS, IPS o gestor farmacéutico), en lugar de contra los totales de todo el marco (\@ref(sec-pesos-calibracion)).
+
+**Pendiente de definición:** los valores de $X_j$, que solo pueden calcularse una vez conformado el marco del año con el registro de atenciones (\@ref(sec-marco-invitacion)).
+
+A título de referencia, la composición del conjunto de afiliados en la BDUA con corte a marzo de 2026 —que **no** corresponde a los totales de calibración— es la siguiente:
+
+| Variable | Categoría | Afiliados BDUA, marzo 2026 | % |
 |---|---|---:|---:|
 | Sexo | Femenino | 25 775 997 | 51,4 % |
 | Sexo | Masculino | 24 392 749 | 48,6 % |
@@ -156,121 +163,157 @@ Para la ronda inicial de ENUS 2026, el extracto de referencia es el corte de la 
 | Grupo de edad | 40-49 | 6 751 667 | 13,5 % |
 | Grupo de edad | 50-59 | 5 600 016 | 11,2 % |
 | Grupo de edad | 60 o más | 8 719 431 | 17,4 % |
-| Región | Bogotá | 7 780 253 | 15,5 % |
-| Región | Caribe | 11 666 255 | 23,3 % |
-| Región | Central | 12 414 228 | 24,7 % |
-| Región | Oriental | 9 033 646 | 18,0 % |
-| Región | Pacífica | 7 846 342 | 15,6 % |
-| Región | Orinoquía-Amazonía | 1 428 022 | 2,8 % |
 | Régimen | Contributivo | 23 224 623 | 46,3 % |
 | Régimen | Subsidiado | 26 944 123 | 53,7 % |
 | Zona | Urbano | 40 083 538 | 79,9 % |
 | Zona | Rural | 10 085 208 | 20,1 % |
 
-Cada fila de la tabla es una restricción $\sum_{i\in s} w_i x_{ij} = X_j$ del problema de calibración de la ronda inicial; para esa ronda, los totales por región y por régimen coinciden, además, con los que sustentan la tabla de tamaño de muestra por región × régimen del capítulo de diseño muestral (\@ref(sec-diseno-muestral)), de modo que el universo frente al cual se evalúa la calibración de esa primera ronda es idéntico al universo frente al cual se calculó el tamaño de muestra y se asignaron las cuotas. En las rondas posteriores esa coincidencia deja de ser exacta por construcción: el tamaño de muestra y las celdas de cuota permanecen fijos en el parámetro de diseño de marzo de 2026 (\@ref(sec-diseno-muestral)), mientras que los totales de calibración de esta sección se actualizan con el corte de la BDUA vigente en cada periodo de referencia.
+Los totales por departamento del mismo corte se presentan en el capítulo de diseño muestral (\@ref(tab:departamentos-meta)).
 
 ## Multiplicidad de modelos: peso transversal y pesos por módulo
 
-Las secciones anteriores formulan la calibración como si existiera un único modelo, resuelto una sola vez sobre toda la muestra. Esto es válido para las variables comunes a los ocho módulos, pero no para el cuestionario completo: cada usuario diligencia un único formulario, preasignado entre ocho módulos independientes, en el que solo la Sección A (identificación) y la Sección B (catorce variables trazadoras) son comunes a los ocho; la Sección C —y, con ella, la mayoría de las preguntas e indicadores de contenido— es específica del módulo asignado (\@ref(sec-instrumento-recoleccion), \@ref(sec-procesamiento)). Además, la regla que asigna a cada usuario su módulo no está documentada como un mecanismo aleatorio condicional a sexo, edad, región, régimen o zona (\@ref(sec-reconciliacion-estructuras)).
+Las Partes 1 y 2 las responden todas las personas que ingresan, mientras que cada módulo de la Parte 3 lo responde solo una fracción de ellas: quienes resultan favorecidas en el sorteo, tienen una atención con el tipo de actor correspondiente y reciben ese módulo en la asignación aleatoria (\@ref(sec-mecanismo-captacion)). Un único modelo de calibración sobre todos los respondientes reproduce los totales para el conjunto, pero no garantiza que la submuestra de cada módulo, tomada por separado, también los reproduzca.
 
-Esto tiene una consecuencia directa sobre la calibración: un único modelo, calibrado sobre el total de la muestra ($n=7\,876$ o el tamaño efectivamente logrado), garantiza por construcción que la suma ponderada del conjunto completo de respondientes reproduzca los totales $X_j$ de la tabla anterior, pero **no garantiza que la submuestra de cada módulo, tomada por separado, también los reproduzca**. Si la composición demográfica de los usuarios preasignados a un módulo difiere sistemáticamente de la del conjunto completo —algo que la regla de asignación no permite descartar—, un indicador construido únicamente con los respondientes de ese módulo y ponderado con el peso del modelo transversal quedaría sesgado en relación con esa misma estructura poblacional, aun cuando el modelo transversal converja correctamente a nivel agregado.
+Por esta razón, ENUS 2026 ejecuta **nueve modelos de calibración independientes**:
 
-Por esta razón, ENUS 2026 no ejecuta un único modelo de calibración, sino **nueve, independientes entre sí**:
+- **Un modelo transversal**, calibrado sobre el conjunto $s$ de personas que completan la Parte 2, sujeto a los totales del marco del año. Produce el peso $w_i$ de los indicadores construidos con las Partes 1 y 2.
+- **Ocho modelos módulo-específicos**, uno por módulo $m=1,\dots,8$, calibrado cada uno sobre el subconjunto $s_m$ de respondientes de ese módulo, con el peso de referencia de la Parte 3 y sujeto a los totales del subconjunto del marco con atención en el tipo de actor al que pertenece el módulo. Cada uno produce un peso $w_i^{(m)}$, que se usa únicamente para los indicadores de ese módulo.
 
-- **Un modelo transversal**, calibrado sobre el conjunto completo de respondientes $s$, sujeto a los totales de referencia $X_j$ de la tabla anterior. Produce el peso $w_i$ que se usa para los indicadores construidos a partir de la Sección A y la Sección B (las catorce trazadoras, comunes a los ocho módulos).
-- **Ocho modelos módulo-específicos**, uno por cada módulo $m=1,\dots,8$, calibrado cada uno únicamente sobre el subconjunto $s_m \subset s$ de respondientes preasignados a ese módulo ($n_m = |s_m|$), sujeto a los **mismos** totales de referencia $X_j$ de la tabla anterior —porque no existe, en los insumos disponibles, una subpoblación de referencia distinta de la BDUA nacional para "usuarios del módulo $m$"—. Cada uno produce un peso $w_i^{(m)}$, propio de ese modelo, que se usa únicamente para los indicadores construidos a partir de la Sección C de ese módulo.
-
-Formalmente, para el módulo $m$ el problema es el mismo de las secciones anteriores, resuelto sobre $s_m$ en lugar de sobre $s$:
+Formalmente, para el módulo $m$ del actor $a$:
 
 $$
-\min_{\mathbf w^{(m)}} \sum_{i \in s_m} d_i \log\!\left(\frac{w_i^{(m)}}{d_i}\right)
+\min_{\mathbf w^{(m)}} \sum_{i \in s_m} d_i \, G\!\left(\frac{w_i^{(m)}}{d_i}\right)
 \qquad
 \text{sujeto a}
 \qquad
-\sum_{i \in s_m} w_i^{(m)} \, x_{ij} = X_j \qquad j=1,\dots,J
+\sum_{i \in s_m} w_i^{(m)} \, x_{ij} = X_j^{(a)} \qquad j=1,\dots,J
 $$
 
-con solución $w_i^{(m)} = d_i \exp(\mathbf x_i' \boldsymbol\lambda^{(m)})$, donde $\boldsymbol\lambda^{(m)}$ se obtiene resolviendo, de manera independiente para cada módulo, el mismo algoritmo de Newton–Raphson de la sección anterior.
+donde $X_j^{(a)}$ es el total de la variable $j$ en el subconjunto del marco con atención en el actor $a$. La solución es $w_i^{(m)} = d_i \exp(\mathbf x_i' \boldsymbol\lambda^{(m)})$, obtenida con el mismo algoritmo de Newton–Raphson.
 
-Como consecuencia, cada respondiente queda representado en la base analítica por **dos pesos calibrados distintos y no intercambiables**: $w_i$ (del modelo transversal, para sus respuestas de la Sección B) y $w_i^{(m)}$ (del modelo de su propio módulo $m$, para sus respuestas de la Sección C), obtenidos de dos ejecuciones separadas del mismo procedimiento de calibración, sobre universos muestrales de tamaño distinto ($n$ frente a $n_m$) y con sistemas de multiplicadores $\boldsymbol\lambda$ propios. Cuál de los dos pesos corresponde usar depende del indicador —criterio que se documenta, indicador por indicador, en la columna "Peso" de la matriz de indicadores (capítulo de indicadores)—. Dado que $n_m$ varía entre módulos según la regla de preasignación (\@ref(sec-diseno-muestral), \@ref(sec-flujo-rutas)), la cantidad de observaciones disponible para satisfacer las $J$ restricciones también varía por módulo; ese punto se retoma en el diagnóstico de calibración (\@ref(sec-diagnostico-calibracion)).
+Cada respondiente de la Parte 3 queda representado por dos pesos no intercambiables: $w_i$, para sus respuestas de las Partes 1 y 2, y $w_i^{(m)}$, para las de su módulo. El peso que corresponde a cada indicador se documenta en la matriz de indicadores. Dado que $n_m$ es sustancialmente menor que $n$, la convergencia y la estabilidad de los modelos módulo-específicos se evalúan en el diagnóstico de calibración (\@ref(sec-diagnostico-calibracion)); con muestras pequeñas puede ser necesario colapsar categorías de las variables auxiliares, por ejemplo usar la región en lugar del departamento.
 
-La estimación de la incertidumbre descrita más adelante en este capítulo se ejecuta, en consecuencia, también nueve veces —una para el peso transversal y una para cada peso módulo-específico—, no una sola vez sobre un peso final único.
+## Diferencia entre metas de respuesta y calibración
 
-## Diferencia entre control de cuotas y calibración
+La calibración y las metas de respuesta comparten variables auxiliares, pero operan en momentos y con lógicas distintas: la meta orienta, durante la recolección, el seguimiento de la respuesta por celda y el refuerzo de la invitación donde es insuficiente; la calibración, una vez cerrada la recolección, ajusta los pesos para que quienes responden reproduzcan exactamente los totales del marco. La distinción entre meta de respuesta, estrato, dominio y variable de calibración se desarrolla en el capítulo de diseño muestral (\@ref(sec-diseno-muestral)).
 
-La calibración y la cuota comparten variables auxiliares, pero operan en momentos y con lógicas distintas: la cuota controla, durante la recolección, que ninguna celda quede vacía o subrepresentada (una restricción de mínimo, $n_h \geq 10$); la calibración, una vez cerrada la recolección, ajusta los pesos para que la muestra completa reproduzca exactamente los totales poblacionales de la tabla anterior (una restricción de igualdad). La distinción conceptual completa entre cuota, estrato, dominio y variable de calibración —incluyendo por qué la cuota no es un estrato de diseño probabilístico— se desarrolla en el capítulo siguiente (\@ref(sec-distincion-cuotas-calibracion)).
+## Estimación de la incertidumbre {#sec-varianza}
 
-## Estimación de la incertidumbre: replicación de pesos calibrados
+Esta sección documenta cómo se estima la variabilidad de los indicadores de ENUS 2026. El procedimiento se fundamenta en el marco de inferencia para muestras con participación voluntaria desarrollado por @ChenLiWu2020 y extendido por @Beresewicz2025, adaptado a una condición favorable de la operación: las variables auxiliares se conocen para **todas** las personas del marco.
 
-Dado que ENUS 2026 no tiene probabilidades de inclusión definidas, la varianza de un estimador calibrado no puede obtenerse mediante las fórmulas clásicas de varianza bajo diseño (basadas en $\pi_{ik}$). El procedimiento adoptado es la **replicación de pesos calibrados por entropía**: generar réplicas de la muestra, repetir sobre cada réplica el proceso completo de ponderación y calibración ya descrito en este capítulo, y usar la variabilidad entre las estimaciones replicadas como medida de la incertidumbre del estimador [@RaoWu1988; @Wolter2007; @EfronTibshirani1993; @Fuller2009].
+### Marco de inferencia
 
-Este procedimiento se aplica de manera independiente a cada uno de los nueve modelos de calibración descritos en la sección anterior: una vez sobre la muestra completa $s$ para obtener la incertidumbre de los indicadores transversales, y una vez sobre cada submuestra $s_m$ para obtener la incertidumbre de los indicadores propios del módulo $m$. Para no repetir la notación nueve veces, las fórmulas siguientes se presentan para un modelo genérico, sobre una muestra genérica que se denota $s$ (que representa, según el modelo, a la muestra completa o a la submuestra de un módulo) y un peso de referencia genérico $d_i$ (que representa, según el modelo, a $d_i=1$ o a la $d_i$ del respondiente dentro de su módulo).
-
-### Generación de réplicas
-
-Sea $h = 1,\dots,336$ el índice de las celdas de cuota (\@ref(sec-diseno-muestral)) y $n_h$ el número de encuestas efectivamente observadas en la celda $h$ **dentro de la muestra que se está replicando** ($s$ o $s_m$ según el modelo), con $n = \sum_h n_h$. Para cada réplica $b = 1,\dots,B$, dentro de cada celda $h$ se extrae, con reemplazo, una muestra aleatoria de tamaño $n_h$ de las $n_h$ unidades observadas en esa celda. Sea $m_i^{(b)}$ el número de veces que la unidad $i$ resulta seleccionada en ese remuestreo; el peso de referencia replicado es:
+Sea $U=\{1,\dots,N\}$ el marco del año de referencia —las personas afiliadas en el corte más reciente de la BDUA con al menos una atención registrada en el año (\@ref(sec-marco-invitacion))—, $\mathbf x_k$ el vector de variables auxiliares de la persona $k$ (departamento, régimen, sexo, grupo de edad y zona) e $y_k$ la variable de interés. Sea $R_k=1$ si la persona $k$, invitada, completa la Parte 2, y $R_k=0$ en caso contrario; el conjunto de respondientes es $s=\{k\in U: R_k=1\}$, de tamaño $n$. La **propensión de respuesta** es:
 
 $$
-d_i^{(b)} = m_i^{(b)}
+\pi_k^{A} = P\left(R_k = 1 \mid \mathbf x_k\right).
 $$
 
-La celda de cuota se usa aquí únicamente como partición operativa de remuestreo —para que cada réplica conserve la misma distribución de captación observada por celda— y no como un estrato de diseño probabilístico: esa distinción se mantiene también en este procedimiento (\@ref(sec-distincion-cuotas-calibracion)).
+La validez de los estimadores descansa en tres supuestos [@ChenLiWu2020; @Beresewicz2025]:
 
-### Recalibración de cada réplica
+- **A1 (ignorabilidad):** condicionado a $\mathbf x_k$, responder o no es independiente de $y_k$.
+- **A2 (positividad):** toda persona del marco tiene una propensión de respuesta positiva, $\pi_k^{A}>0$.
+- **A3 (independencia):** las decisiones de responder $R_1,\dots,R_N$ son independientes entre sí, dado $\mathbf x$.
 
-Para cada réplica $b$ se resuelve el mismo problema de calibración por entropía de las secciones anteriores, reemplazando el peso de referencia por $d_i^{(b)}$ y manteniendo los mismos totales poblacionales $X_j$:
+El supuesto A1 no es verificable con los datos de la operación; A2 se incumple para las personas del marco que no pueden recibir el aviso de invitación, por ejemplo por falta de datos de contacto (\@ref(sec-marco-invitacion)). Ambas condiciones se documentan como limitaciones y no son corregidas por la estimación de varianza.
+
+### Calibración como estimación de la propensión
+
+En el planteamiento general de @ChenLiWu2020, las variables auxiliares solo se conocen en una muestra probabilística de referencia, y la propensión se estima con una pseudo-verosimilitud que depende de esa muestra. ENUS 2026 se encuentra en el caso que esos autores describen como hipotético y más favorable: $\mathbf x_k$ es conocido para todo $k\in U$, porque el marco se construye con la BDUA y el registro de atenciones. En consecuencia, los totales $\sum_{k\in U}\mathbf x_k$ son exactos y no estimados.
+
+La propensión puede estimarse resolviendo las ecuaciones de estimación de tipo calibración [@Beresewicz2025, sección 3.2]:
 
 $$
-\min_{\mathbf w^{(b)}} \sum_{i \in s} d_i^{(b)} \, G\!\left(\frac{w_i^{(b)}}{d_i^{(b)}}\right)
+\sum_{k\in s}\frac{\mathbf x_k}{\pi(\mathbf x_k;\boldsymbol\gamma)} \;=\; \sum_{k\in U}\mathbf x_k .
+$$
+
+Con un modelo de enlace exponencial, $1/\pi(\mathbf x_k;\boldsymbol\gamma)=\exp(\mathbf x_k'\boldsymbol\gamma)$, estas ecuaciones son exactamente las de la calibración por entropía de este capítulo con $d_k=1$, y el peso calibrado es el inverso de la propensión estimada:
+
+$$
+w_k = \exp\!\left(\mathbf x_k'\hat{\boldsymbol\lambda}\right) = \frac{1}{\hat\pi_k^{A}} .
+$$
+
+Por esta razón la calibración de ENUS 2026 no es un ajuste cosmético de composición, sino la estimación de la propensión de respuesta, y la variabilidad de esa estimación debe incorporarse en la varianza de los indicadores. Para la Parte 3, la probabilidad conocida del sorteo y de la asignación de módulo se incorpora en el peso de referencia $d_k$, de modo que $w_k = d_k/\hat\pi_k^{A}$.
+
+### Estimador
+
+Los indicadores de ENUS 2026 son proporciones o medias, y se estiman con el estimador de razón (de tipo Hájek):
+
+$$
+\hat\theta = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k}.
+$$
+
+### Método adoptado: réplicas *bootstrap* con recalibración
+
+**Decisión metodológica adoptada (septiembre de 2026).** La varianza se estima mediante réplicas *bootstrap* de los respondientes, recalculando la calibración en cada réplica. Recalibrar es indispensable: si se reutilizaran los pesos finales sin volver a estimarlos, la varianza omitiría la incertidumbre de la propensión estimada, y @ChenLiWu2020 muestran que esa omisión produce varianzas incorrectas.
+
+Para cada réplica $b=1,\dots,B$:
+
+1. **Remuestreo.** Dentro de cada departamento $h$, se extraen con reemplazo $n_h$ respondientes de los $n_h$ observados. Sea $m_k^{(b)}$ el número de veces que el respondiente $k$ resulta seleccionado; el peso de referencia replicado es $d_k^{(b)} = m_k^{(b)}\, d_k$. El departamento se usa como partición de remuestreo porque es el nivel en que se fijan las metas de respuesta; las 1.848 celdas de meta no se usan porque muchas tendrán muy pocos respondientes. En los modelos de la Parte 3, donde el número de respondientes por departamento es pequeño, la partición se hace por región.
+2. **Recalibración.** Se resuelve el mismo problema de calibración con los **mismos totales del marco** $X_j$, que no se remuestrean porque son exactos:
+
+$$
+w_k^{(b)} = d_k^{(b)} \exp\!\left(\mathbf x_k'\boldsymbol\lambda^{(b)}\right),
 \qquad
-\text{sujeto a}
+\sum_{k\in s} w_k^{(b)}\mathbf x_k = \mathbf X .
+$$
+
+3. **Estimación replicada:**
+
+$$
+\hat\theta^{(b)} = \frac{\sum_{k\in s} w_k^{(b)}\, y_k}{\sum_{k\in s} w_k^{(b)}}.
+$$
+
+La varianza es la variabilidad entre réplicas:
+
+$$
+\bar\theta = \frac{1}{B}\sum_{b=1}^{B}\hat\theta^{(b)},
 \qquad
-\sum_{i \in s} w_i^{(b)} \, x_{ij} = X_j
+\widehat V(\hat\theta) = \frac{1}{B-1}\sum_{b=1}^{B}\left(\hat\theta^{(b)}-\bar\theta\right)^2 ,
 $$
 
-cuya solución, siguiendo la sección de solución del problema de calibración, es:
+de la que se derivan el error estándar $ee(\hat\theta)=\sqrt{\widehat V(\hat\theta)}$ y el coeficiente de variación $cv(\hat\theta)=ee(\hat\theta)/\hat\theta$. El intervalo de confianza al 95 % se construye con los percentiles empíricos 2,5 y 97,5 de las réplicas, más robustos que el intervalo normal cuando la distribución de las réplicas es asimétrica, como ocurre con proporciones cercanas a 0 o a 1.
+
+**Número de réplicas.** Se adopta $B = 1\,000$. @Beresewicz2025 utilizan $B=500$ en su aplicación; se adopta un número mayor para reducir el error de Monte Carlo de los percentiles extremos que definen el intervalo.
+
+**Comparaciones.** Las diferencias entre estimaciones —por ejemplo, entre una entidad y el valor nacional de su tipo de actor (\@ref(sec-publicacion-entidad))— se estiman con las mismas réplicas, calculando la diferencia en cada réplica, de modo que la varianza de la diferencia incorpore la dependencia entre ambas estimaciones.
+
+### Aproximación analítica de contraste
+
+Como verificación del procedimiento de réplicas, la varianza puede aproximarse analíticamente. Bajo los supuestos A1–A3, el teorema 1 de @ChenLiWu2020 descompone la varianza del estimador de razón en un término debido a la respuesta y un término debido a la estimación de los totales con la muestra de referencia. En ENUS 2026 este segundo término es nulo, porque los totales provienen del marco completo. La aproximación resultante, con residuos de la regresión ponderada de $y$ sobre $\mathbf x$, es:
 
 $$
-w_i^{(b)} = d_i^{(b)} \exp\!\left(\mathbf x_i' \boldsymbol\lambda^{(b)}\right)
+v(\hat\theta) \;=\; \frac{1}{\hat N^{2}}\sum_{k\in s} \frac{1-\hat\pi_k^{A}}{\left(\hat\pi_k^{A}\right)^{2}}\,\hat e_k^{\,2}
+\;=\; \frac{1}{\hat N^{2}}\sum_{k\in s} w_k\,(w_k-1)\,\hat e_k^{\,2},
 $$
 
-con $\boldsymbol\lambda^{(b)}$ obtenido mediante el mismo algoritmo de Newton–Raphson descrito antes, aplicado a la réplica $b$.
-
-### Estimador replicado y varianza
-
-Para un indicador con estimador puntual $\hat\theta = \dfrac{\sum_{i \in s} w_i y_i}{\sum_{i \in s} w_i}$ (razón de medias ponderadas, la forma general de los indicadores del capítulo de estimación), el estimador replicado es:
+con
 
 $$
-\hat\theta^{(b)} = \frac{\sum_{i \in s} w_i^{(b)} y_i}{\sum_{i \in s} w_i^{(b)}}
+\hat e_k = y_k - \hat\theta - \hat{\mathbf B}'\mathbf x_k ,
+\qquad
+\hat{\mathbf B} = \Big(\sum_{k\in s} w_k\,\mathbf x_k\mathbf x_k'\Big)^{-1}\sum_{k\in s} w_k\,\mathbf x_k\,(y_k-\hat\theta),
+\qquad
+\hat N=\sum_{k\in s} w_k .
 $$
 
-Repitiendo el proceso para $b=1,\dots,B$, la varianza se estima como la variabilidad entre las $B$ estimaciones replicadas alrededor de su propio promedio:
+Esta aproximación se usa para contrastar los resultados de las réplicas: una discrepancia importante entre ambas señala problemas de convergencia, de pesos extremos o de estabilidad en modelos con pocos respondientes, y se revisa en el diagnóstico de calibración (\@ref(sec-diagnostico-calibracion)). La forma general de la varianza asintótica para ecuaciones de estimación de este tipo es la del estimador sándwich [@Beresewicz2025, sección 4.2].
 
-$$
-\bar\theta = \frac{1}{B}\sum_{b=1}^{B}\hat\theta^{(b)}
-\qquad\qquad
-\widehat V(\hat\theta) = \frac{1}{B-1}\sum_{b=1}^{B}\left(\hat\theta^{(b)}-\bar\theta\right)^2
-$$
+### Interpretación
 
-A partir de $\widehat V(\hat\theta)$ se derivan las medidas de precisión reportadas para cada indicador:
+La varianza estimada mide la variabilidad del indicador debida a **qué personas del marco respondieron**, bajo el modelo de propensión y los supuestos A1–A3. No incorpora:
 
-$$
-ee(\hat\theta) = \sqrt{\widehat V(\hat\theta)}
-\qquad\qquad
-cv(\hat\theta) = \frac{ee(\hat\theta)}{\hat\theta}
-$$
+- el sesgo que persiste si la respuesta depende de la satisfacción o experiencia de la persona aun después de condicionar por las variables auxiliares (incumplimiento de A1);
+- la exclusión de las personas que no pueden recibir el aviso de invitación o cuya atención no ingresa al marco (incumplimiento de A2 y error de cobertura).
 
-y el intervalo de incertidumbre, que puede reportarse en su forma normal:
+Los intervalos de confianza deben leerse, por tanto, como medidas de precisión condicionadas a esos supuestos, y publicarse junto con la tasa de respuesta (\@ref(sec-marco-invitacion)).
 
-$$
-\hat\theta \; \pm \; z_{1-\alpha/2}\, ee(\hat\theta)
-$$
+### Extensiones consideradas
 
-o, de forma más robusta frente a asimetrías en la distribución de las réplicas, mediante los percentiles empíricos $\alpha/2$ y $1-\alpha/2$ de $\{\hat\theta^{(1)},\dots,\hat\theta^{(B)}\}$ [@EfronTibshirani1993]. El desarrollo completo de la estimación puntual por indicador y del reporte de precisión se presenta en los capítulos de estimación y de precisión e incertidumbre (\@ref(sec-diagnostico-calibracion) y siguientes).
+**Recomendación metodológica.** Las siguientes extensiones se documentan para evaluación, pero no hacen parte del método adoptado:
 
-### Número de réplicas
-
-Se adopta $B = 1\,000$ réplicas. La literatura de métodos de replicación (*bootstrap*, *jackknife*, *balanced repeated replication*) documenta que la varianza estimada por replicación se estabiliza con algunos cientos de réplicas y que $B$ entre 500 y 1 000 es una práctica estándar en la producción de encuestas oficiales [@Wolter2007; @RaoWu1988]; se adopta el extremo superior de ese rango para reducir el error de Monte Carlo introducido por el propio procedimiento de remuestreo, dado que ENUS 2026 no cuenta, a diferencia de un diseño probabilístico, con una fórmula analítica alternativa de varianza contra la cual contrastar el resultado.
+- **Estimador doblemente robusto** [@ChenLiWu2020]: combina la propensión con un modelo de regresión de $y$ sobre $\mathbf x$ y es consistente si al menos uno de los dos modelos es correcto. Con $\mathbf x$ conocido para todo el marco, coincide con el estimador de diferencia generalizada. Su adopción requiere especificar un modelo por indicador.
+- **Balanceo de cuantiles (QBIPW)** [@Beresewicz2025]: añade a la calibración restricciones sobre cuantiles de variables auxiliares continuas, lo que mejora la robustez frente a errores de especificación del modelo de propensión. Solo aporta cuando el marco contiene variables continuas —por ejemplo, la edad en años o el número de atenciones del año—, y los propios autores advierten que agregar restricciones puede aumentar la varianza.
 
 ## Diagnóstico de la calibración
 

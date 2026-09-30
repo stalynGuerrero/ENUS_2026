@@ -223,3 +223,16 @@ figcaption {
   padding: 0.5em 1em;
   margin: 1em 0;
 }
+
+
+/*-- Marcas de revisión: contenido por ajustar (se retiran al corregir) --*/
+.por-ajustar {
+  border-left: 4px solid #C62828;
+  background-color: #fdecea;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+.por-ajustar > p:first-child strong:first-child,
+.pendiente-rojo {
+  color: #C62828;
+}

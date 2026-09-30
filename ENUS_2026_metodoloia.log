@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.18)  21 SEP 2026 18:30
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.9.18)  28 SEP 2026 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1095,105 +1095,109 @@ File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 [3]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 73.
-LaTeX Info: Redefining \% on input line 73.
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
 [4]
 LaTeX Font Info:    Font shape `TU/NunitoSans(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 73.
-)
+(Font)              scaled to size 10.0pt on input line 77.
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[5])
 \tf@toc=\write3
 \openout3 = `ENUS_2026_metodoloia.toc'.
 
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-[5]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-[6
-
-]
-
-LaTeX Warning: Reference `sec-procesamiento' on page 7 undefined on input line 262.
-
-
-LaTeX Warning: Reference `sec-pesos-calibracion' on page 7 undefined on input line 268.
-
+[6]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [7
 
 ]
 
-LaTeX Warning: Reference `sec-pesos-calibracion' on page 8 undefined on input line 274.
+LaTeX Warning: Reference `sec-procesamiento' on page 8 undefined on input line 262.
+
+
+LaTeX Warning: Reference `sec-pesos-calibracion' on page 8 undefined on input line 268.
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+[8
+
+]
+
+LaTeX Warning: Reference `sec-pesos-calibracion' on page 9 undefined on input line 274.
+
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
-[8]
-
-LaTeX Warning: Reference `sec-pesos-calibracion' on page 9 undefined on input line 294.
-
-
-LaTeX Warning: Reference `sec-pesos-calibracion' on page 9 undefined on input line 304.
-
-LaTeX Info: Redefining \. on input line 307.
-LaTeX Info: Redefining \% on input line 307.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [9]
+
+LaTeX Warning: Reference `sec-pesos-calibracion' on page 10 undefined on input line 294.
+
+
+LaTeX Warning: Reference `sec-pesos-calibracion' on page 10 undefined on input line 304.
+
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 307.
+LaTeX Info: Redefining \% on input line 307.
+[10]
 LaTeX Font Info:    Font shape `TU/NunitoSans(0)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 314.
 LaTeX Font Info:    Font shape `TU/NunitoSans(0)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 314.
 
-LaTeX Warning: Reference `sec-variables-clasificacion' on page 10 undefined on input line 318.
+LaTeX Warning: Reference `sec-variables-clasificacion' on page 11 undefined on input line 318.
 
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 320.
 LaTeX Info: Redefining \% on input line 320.
-[10]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[11
+[11]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[12
 
 ]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 339.
 LaTeX Info: Redefining \% on input line 339.
-[12]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[13]
 Capítulo 1.
 LaTeX Font Info:    Font shape `TU/NunitoSans_10pt-ExtraBold(0)/m/n' will be
 (Font)              scaled to size 14.22574pt on input line 347.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[13
+[14
 
 ]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 356.
 LaTeX Info: Redefining \% on input line 356.
-[14]
-LaTeX Info: Redefining \. on input line 372.
-LaTeX Info: Redefining \% on input line 372.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [15]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 372.
+LaTeX Info: Redefining \% on input line 372.
+[16]
 LaTeX Info: Redefining \. on input line 384.
 LaTeX Info: Redefining \% on input line 384.
-[16]
-LaTeX Info: Redefining \. on input line 402.
-LaTeX Info: Redefining \% on input line 402.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [17]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
+[18]
 LaTeX Font Info:    Font shape `TU/NunitoSans_10pt-SemiBold(0)/m/n' will be
 (Font)              scaled to size 11.95111pt on input line 411.
 
@@ -1316,18 +1320,18 @@ Overfull \hbox (9.15335pt too wide) in paragraph at lines 445--445
 \TU/NunitoSans(0)/m/n/10 2019|  
  []
 
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
-[18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 453.
-LaTeX Info: Redefining \% on input line 453.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 453.
+LaTeX Info: Redefining \% on input line 453.
+[20]
 Overfull \hbox (8.83246pt too wide) in paragraph at lines 499--500
 []\TU/NunitoSans(0)/m/n/10 Año  
  []
@@ -1462,11 +1466,6 @@ Overfull \hbox (13.95245pt too wide) in paragraph at lines 522--522
 \TU/NunitoSans(0)/m/n/10 2019|  
  []
 
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 523.
-LaTeX Info: Redefining \% on input line 523.
-[20]
 LaTeX Info: Redefining \. on input line 523.
 LaTeX Info: Redefining \% on input line 523.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
@@ -1477,21 +1476,26 @@ File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 LaTeX Info: Redefining \. on input line 523.
 LaTeX Info: Redefining \% on input line 523.
 [22]
-LaTeX Info: Redefining \. on input line 539.
-LaTeX Info: Redefining \% on input line 539.
+LaTeX Info: Redefining \. on input line 523.
+LaTeX Info: Redefining \% on input line 523.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [23]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 539.
+LaTeX Info: Redefining \% on input line 539.
+[24]
 LaTeX Info: Redefining \. on input line 577.
 LaTeX Info: Redefining \% on input line 577.
-[24]
-LaTeX Info: Redefining \. on input line 620.
-LaTeX Info: Redefining \% on input line 620.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [25]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 620.
+LaTeX Info: Redefining \% on input line 620.
+[26]
 Overfull \hbox (7.99985pt too wide) in paragraph at lines 639--640
 []\TU/NunitoSans(0)/m/n/10 Recolección 
  []
@@ -1556,11 +1560,6 @@ Overfull \hbox (22.52986pt too wide) in paragraph at lines 654--655
 []|\TU/NunitoSans(0)/m/n/10 Levantamiento 
  []
 
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 655.
-LaTeX Info: Redefining \% on input line 655.
-[26]
 LaTeX Info: Redefining \. on input line 655.
 LaTeX Info: Redefining \% on input line 655.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
@@ -1571,370 +1570,374 @@ File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 LaTeX Info: Redefining \. on input line 655.
 LaTeX Info: Redefining \% on input line 655.
 [28]
-LaTeX Info: Redefining \. on input line 685.
-LaTeX Info: Redefining \% on input line 685.
+LaTeX Info: Redefining \. on input line 655.
+LaTeX Info: Redefining \% on input line 655.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [29]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 685.
+LaTeX Info: Redefining \% on input line 685.
+[30]
 LaTeX Info: Redefining \. on input line 722.
 LaTeX Info: Redefining \% on input line 722.
-[30]
-LaTeX Info: Redefining \. on input line 767.
-LaTeX Info: Redefining \% on input line 767.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [31]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 767.
+LaTeX Info: Redefining \% on input line 767.
+[32]
 LaTeX Info: Redefining \. on input line 807.
 LaTeX Info: Redefining \% on input line 807.
-[32]
-LaTeX Info: Redefining \. on input line 859.
-LaTeX Info: Redefining \% on input line 859.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [33]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 859.
+LaTeX Info: Redefining \% on input line 859.
+[34]
 LaTeX Info: Redefining \. on input line 899.
 LaTeX Info: Redefining \% on input line 899.
-[34]
-LaTeX Info: Redefining \. on input line 933.
-LaTeX Info: Redefining \% on input line 933.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [35]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 933.
+LaTeX Info: Redefining \% on input line 933.
+[36]
 LaTeX Info: Redefining \. on input line 975.
 LaTeX Info: Redefining \% on input line 975.
-[36]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[37]
 Underfull \hbox (badness 1082) in paragraph at lines 985--985
 |[]\TU/NunitoSans_10pt-SemiBold(0)/m/n/12 OCDE-PaRIS: experiencias y resultados reportados
  []
 
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 1024.
 LaTeX Info: Redefining \% on input line 1024.
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-[37]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
+[38]
 LaTeX Info: Redefining \. on input line 1050.
 LaTeX Info: Redefining \% on input line 1050.
-[38]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[39]
 Capítulo 2.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[39
+[40
 
 ]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 1076.
 LaTeX Info: Redefining \% on input line 1076.
-[40]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[41]
 Capítulo 3.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[41
+[42
 
 ]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
 LaTeX Info: Redefining \. on input line 1111.
 LaTeX Info: Redefining \% on input line 1111.
-[42]
-LaTeX Info: Redefining \. on input line 1129.
-LaTeX Info: Redefining \% on input line 1129.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [43]
-LaTeX Font Info:    Font shape `TU/NunitoSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1150.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 1129.
+LaTeX Info: Redefining \% on input line 1129.
+[44]
+LaTeX Font Info:    Font shape `TU/NunitoSans(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 1150.
 LaTeX Info: Redefining \. on input line 1150.
 LaTeX Info: Redefining \% on input line 1150.
-[44]
-LaTeX Info: Redefining \. on input line 1169.
-LaTeX Info: Redefining \% on input line 1169.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [45]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 1169.
+LaTeX Info: Redefining \% on input line 1169.
+[46]
 LaTeX Info: Redefining \. on input line 1170.
 LaTeX Info: Redefining \% on input line 1170.
-[46]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[47]
 Capítulo 4.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[47
+[48
 
 ]
-Underfull \hbox (badness 1708) in paragraph at lines 1184--1184
-|[]\TU/NunitoSans_10pt-ExtraBold(0)/m/n/14.4 Esquema de cuotas y composición de la
- []
-
-File: ENUS_2026_metodoloia_files/figuras/fig-flujo-operacion.png Graphic file (type bmp)
-<ENUS_2026_metodoloia_files/figuras/fig-flujo-operacion.png>
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1200.
-LaTeX Info: Redefining \% on input line 1200.
-[48]
-LaTeX Info: Redefining \. on input line 1207.
-LaTeX Info: Redefining \% on input line 1207.
+LaTeX Info: Redefining \. on input line 1202.
+LaTeX Info: Redefining \% on input line 1202.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [49]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1251.
-LaTeX Info: Redefining \% on input line 1251.
+LaTeX Info: Redefining \. on input line 1226.
+LaTeX Info: Redefining \% on input line 1226.
 [50]
-Overfull \hbox (96.71333pt too wide) in paragraph at lines 1258--1259
-\TU/NunitoSans(0)/m/n/10 especificación del instrumento por módulo (\TU/lmtt/m/n/10 00_Cuestionario/ENUS_Formato_por_Modulos.xlsx\TU/NunitoSans(0)/m/n/10 ): 
- []
+File: ENUS_2026_metodoloia_files/figuras/fig-flujo-operacion.png Graphic file (type bmp)
+<ENUS_2026_metodoloia_files/figuras/fig-flujo-operacion.png>
 
-LaTeX Info: Redefining \. on input line 1299.
-LaTeX Info: Redefining \% on input line 1299.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1242.
+LaTeX Info: Redefining \% on input line 1242.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [51]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1319.
-LaTeX Info: Redefining \% on input line 1319.
+LaTeX Info: Redefining \. on input line 1249.
+LaTeX Info: Redefining \% on input line 1249.
 [52]
-LaTeX Info: Redefining \. on input line 1365.
-LaTeX Info: Redefining \% on input line 1365.
+LaTeX Info: Redefining \. on input line 1296.
+LaTeX Info: Redefining \% on input line 1296.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [53]
+Overfull \hbox (96.71333pt too wide) in paragraph at lines 1338--1339
+\TU/NunitoSans(0)/m/n/10 especificación del instrumento por módulo (\TU/lmtt/m/n/10 00_Cuestionario/ENUS_Formato_por_Modulos.xlsx\TU/NunitoSans(0)/m/n/10 ): 
+ []
+
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1396.
-LaTeX Info: Redefining \% on input line 1396.
+LaTeX Info: Redefining \. on input line 1375.
+LaTeX Info: Redefining \% on input line 1375.
 [54]
-LaTeX Info: Redefining \. on input line 1432.
-LaTeX Info: Redefining \% on input line 1432.
+LaTeX Info: Redefining \. on input line 1388.
+LaTeX Info: Redefining \% on input line 1388.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [55]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1479.
-LaTeX Info: Redefining \% on input line 1479.
+LaTeX Info: Redefining \. on input line 1425.
+LaTeX Info: Redefining \% on input line 1425.
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
-[]\TU/NunitoSans(0)/m/n/10 Cuadro 4.4: []  Meta de participación por depar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
-\TU/NunitoSans(0)/m/n/10 tamento (BDUA marzo de 2026, DEFF=1,5,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1485
-\TU/NunitoSans(0)/m/n/10 factor operativo=1,4), ENUS 2026. Fuente:
- []
-
-
-Overfull \hbox (74.39pt too wide) in paragraph at lines 1485--1485
-\TU/lmtt/m/n/10 03_Encuesta/01_Tamaño_Muestra/Output/02_tamanos_muestra_deff_1.5.xlsx\TU/NunitoSans(0)/m/n/10 ,
- []
-
-
-Overfull \hbox (2.50302pt too wide) in paragraph at lines 1490--1491
-[]\TU/NunitoSans(0)/m/n/10 Departamento  
- []
-
-
-Overfull \hbox (2.50302pt too wide) in paragraph at lines 1502--1503
-[]\TU/NunitoSans(0)/m/n/10 Departamento  
- []
-
-
-Overfull \hbox (1.52303pt too wide) in paragraph at lines 1529--1529
-[]|\TU/NunitoSans(0)/m/n/10 Cundinamarca|  
- []
-
-LaTeX Info: Redefining \. on input line 1546.
-LaTeX Info: Redefining \% on input line 1546.
+LaTeX Info: Redefining \. on input line 1470.
+LaTeX Info: Redefining \% on input line 1470.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [57]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1567.
-LaTeX Info: Redefining \% on input line 1567.
+LaTeX Info: Redefining \. on input line 1490.
+LaTeX Info: Redefining \% on input line 1490.
 [58]
-LaTeX Font Info:    Font shape `TU/NunitoSans(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 1588.
-LaTeX Font Info:    Font shape `TU/NunitoSans(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1588.
-LaTeX Font Info:    Font shape `TU/NunitoSans(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1588.
-
-Overfull \hbox (117.73pt too wide) in paragraph at lines 1600--1601
-\TU/lmtt/m/n/10 03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx\TU/NunitoSans(0)/m/n/10 .
- []
-
-LaTeX Info: Redefining \. on input line 1601.
-LaTeX Info: Redefining \% on input line 1601.
+LaTeX Info: Redefining \. on input line 1548.
+LaTeX Info: Redefining \% on input line 1548.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [59]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1647.
-LaTeX Info: Redefining \% on input line 1647.
-[60]
-Overfull \hbox (117.73pt too wide) in paragraph at lines 1690--1691
-\TU/lmtt/m/n/10 03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx\TU/NunitoSans(0)/m/n/10 .
+Underfull \hbox (badness 10000) in paragraph at lines 1567--1567
+[]\TU/NunitoSans(0)/m/n/10 Cuadro 4.5: []  Meta de respuesta por depar-
  []
 
-LaTeX Info: Redefining \. on input line 1695.
-LaTeX Info: Redefining \% on input line 1695.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1567--1567
+\TU/NunitoSans(0)/m/n/10 tamento (BDUA marzo de 2026, DEFF=1,5,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1567--1567
+\TU/NunitoSans(0)/m/n/10 factor operativo=1,4), ENUS 2026. Fuente:
+ []
+
+
+Overfull \hbox (74.39pt too wide) in paragraph at lines 1567--1567
+\TU/lmtt/m/n/10 03_Encuesta/01_Tamaño_Muestra/Output/02_tamanos_muestra_deff_1.5.xlsx\TU/NunitoSans(0)/m/n/10 ,
+ []
+
+
+Overfull \hbox (2.50302pt too wide) in paragraph at lines 1572--1573
+[]\TU/NunitoSans(0)/m/n/10 Departamento  
+ []
+
+
+Overfull \hbox (2.50302pt too wide) in paragraph at lines 1584--1585
+[]\TU/NunitoSans(0)/m/n/10 Departamento  
+ []
+
+
+Overfull \hbox (1.52303pt too wide) in paragraph at lines 1611--1611
+[]|\TU/NunitoSans(0)/m/n/10 Cundinamarca|  
+ []
+
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 1628.
+LaTeX Info: Redefining \% on input line 1628.
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1631.
+LaTeX Info: Redefining \% on input line 1631.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [61]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1713.
-LaTeX Info: Redefining \% on input line 1713.
+LaTeX Info: Redefining \. on input line 1666.
+LaTeX Info: Redefining \% on input line 1666.
 [62]
+LaTeX Font Info:    Font shape `TU/NunitoSans(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 1670.
+LaTeX Font Info:    Font shape `TU/NunitoSans(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 1670.
+LaTeX Font Info:    Font shape `TU/NunitoSans(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 1670.
 
-LaTeX Warning: Reference `sec-limitaciones-cuotas' on page 63 undefined on input line 1714.
+Overfull \hbox (117.73pt too wide) in paragraph at lines 1682--1683
+\TU/lmtt/m/n/10 03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx\TU/NunitoSans(0)/m/n/10 .
+ []
 
-LaTeX Info: Redefining \. on input line 1727.
-LaTeX Info: Redefining \% on input line 1727.
+LaTeX Info: Redefining \. on input line 1707.
+LaTeX Info: Redefining \% on input line 1707.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [63]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1747.
-LaTeX Info: Redefining \% on input line 1747.
+LaTeX Info: Redefining \. on input line 1752.
+LaTeX Info: Redefining \% on input line 1752.
 [64]
-LaTeX Info: Redefining \. on input line 1796.
-LaTeX Info: Redefining \% on input line 1796.
+Overfull \hbox (117.73pt too wide) in paragraph at lines 1772--1773
+\TU/lmtt/m/n/10 03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx\TU/NunitoSans(0)/m/n/10 .
+ []
+
+LaTeX Info: Redefining \. on input line 1786.
+LaTeX Info: Redefining \% on input line 1786.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [65]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1807.
-LaTeX Info: Redefining \% on input line 1807.
+LaTeX Info: Redefining \. on input line 1801.
+LaTeX Info: Redefining \% on input line 1801.
 [66]
-Overfull \hbox (0.18338pt too wide) in paragraph at lines 1810--1811
-\TU/NunitoSans(0)/m/n/10 das y no observadas y afectar la representatividad de los resultados ([]Elliott
- []
-
-LaTeX Info: Redefining \. on input line 1814.
-LaTeX Info: Redefining \% on input line 1814.
+LaTeX Info: Redefining \. on input line 1852.
+LaTeX Info: Redefining \% on input line 1852.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [67]
-Capítulo 5.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[68
-
-]
-
-LaTeX Warning: Reference `sec-variables-clasificacion' on page 69 undefined on input line 1830.
-
-
-LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 69 undefined on input line 1834.
-
-LaTeX Info: Redefining \. on input line 1835.
-LaTeX Info: Redefining \% on input line 1835.
+LaTeX Info: Redefining \. on input line 1864.
+LaTeX Info: Redefining \% on input line 1864.
+[68]
+LaTeX Info: Redefining \. on input line 1870.
+LaTeX Info: Redefining \% on input line 1870.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [69]
-
-LaTeX Warning: Reference `sec-limitaciones-cuotas' on page 70 undefined on input line 1842.
-
+Capítulo 5.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1855.
-LaTeX Info: Redefining \% on input line 1855.
-[70]
+[70
 
-LaTeX Font Warning: Font shape `TU/NunitoSans_10pt-SemiBold(0)/m/it' undefined
-(Font)              using `TU/NunitoSans_10pt-SemiBold(0)/m/n' instead on input line 1858.
+]
 
-LaTeX Info: Redefining \. on input line 1878.
-LaTeX Info: Redefining \% on input line 1878.
+LaTeX Warning: Reference `sec-variables-clasificacion' on page 71 undefined on input line 1886.
+
+
+LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 71 undefined on input line 1890.
+
+LaTeX Info: Redefining \. on input line 1891.
+LaTeX Info: Redefining \% on input line 1891.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [71]
 
-LaTeX Warning: Reference `sec-limitaciones-cuotas' on page 72 undefined on input line 1882.
-
-
-LaTeX Warning: Reference `sec-variables-clasificacion' on page 72 undefined on input line 1895.
+LaTeX Warning: Reference `sec-limitaciones-cuotas' on page 72 undefined on input line 1898.
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1896.
-LaTeX Info: Redefining \% on input line 1896.
+LaTeX Info: Redefining \. on input line 1911.
+LaTeX Info: Redefining \% on input line 1911.
 [72]
 
-LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 73 undefined on input line 1901.
+LaTeX Font Warning: Font shape `TU/NunitoSans_10pt-SemiBold(0)/m/it' undefined
+(Font)              using `TU/NunitoSans_10pt-SemiBold(0)/m/n' instead on input line 1914.
 
-
-LaTeX Warning: Reference `sec-procesamiento' on page 73 undefined on input line 1901.
-
-
-LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 73 undefined on input line 1904.
-
-LaTeX Font Info:    Font shape `TU/NunitoSans(0)/b/it' will be
-(Font)              scaled to size 10.0pt on input line 1909.
-LaTeX Info: Redefining \. on input line 1917.
-LaTeX Info: Redefining \% on input line 1917.
+LaTeX Info: Redefining \. on input line 1934.
+LaTeX Info: Redefining \% on input line 1934.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [73]
-Underfull \hbox (badness 1584) in paragraph at lines 1918--1920
+
+LaTeX Warning: Reference `sec-limitaciones-cuotas' on page 74 undefined on input line 1938.
+
+
+LaTeX Warning: Reference `sec-variables-clasificacion' on page 74 undefined on input line 1951.
+
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 1952.
+LaTeX Info: Redefining \% on input line 1952.
+[74]
+
+LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 75 undefined on input line 1957.
+
+
+LaTeX Warning: Reference `sec-procesamiento' on page 75 undefined on input line 1957.
+
+
+LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 75 undefined on input line 1960.
+
+LaTeX Font Info:    Font shape `TU/NunitoSans(0)/b/it' will be
+(Font)              scaled to size 10.0pt on input line 1965.
+LaTeX Info: Redefining \. on input line 1973.
+LaTeX Info: Redefining \% on input line 1973.
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[75]
+Underfull \hbox (badness 1584) in paragraph at lines 1974--1976
 \TU/NunitoSans(0)/m/n/10 metodológica para evaluación del equipo operativo, no una decisión
  []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1924.
-LaTeX Info: Redefining \% on input line 1924.
-[74]
+LaTeX Info: Redefining \. on input line 1980.
+LaTeX Info: Redefining \% on input line 1980.
+[76]
 Capítulo 6.
 
 Underfull \vbox (badness 2582) has occurred while \output is active []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[75
+[77
 
 ]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1965.
-LaTeX Info: Redefining \% on input line 1965.
-[76]
+LaTeX Info: Redefining \. on input line 2021.
+LaTeX Info: Redefining \% on input line 2021.
+[78]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-01-publicidad.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-01-publicidad.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1983.
-LaTeX Info: Redefining \% on input line 1983.
+LaTeX Info: Redefining \. on input line 2039.
+LaTeX Info: Redefining \% on input line 2039.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[77]
+[79]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-02-identificacion.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-02-identificacion.png>
 
@@ -1942,21 +1945,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 1993.
-LaTeX Info: Redefining \% on input line 1993.
-[78]
+LaTeX Info: Redefining \. on input line 2049.
+LaTeX Info: Redefining \% on input line 2049.
+[80]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-03-codigo-sms.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-03-codigo-sms.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2003.
-LaTeX Info: Redefining \% on input line 2003.
+LaTeX Info: Redefining \. on input line 2059.
+LaTeX Info: Redefining \% on input line 2059.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[79]
+[81]
 
-LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 80 undefined on input line 2006.
+LaTeX Warning: Reference `sec-mecanismo-seleccion' on page 82 undefined on input line 2062.
 
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-04-verificacion-bdua.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-04-verificacion-bdua.png>
@@ -1965,19 +1968,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2013.
-LaTeX Info: Redefining \% on input line 2013.
-[80]
+LaTeX Info: Redefining \. on input line 2069.
+LaTeX Info: Redefining \% on input line 2069.
+[82]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-05-inicio.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-05-inicio.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2023.
-LaTeX Info: Redefining \% on input line 2023.
+LaTeX Info: Redefining \. on input line 2079.
+LaTeX Info: Redefining \% on input line 2079.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[81]
+[83]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-08-tab-derechos.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-08-tab-derechos.png>
 
@@ -1985,19 +1988,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2033.
-LaTeX Info: Redefining \% on input line 2033.
-[82]
+LaTeX Info: Redefining \. on input line 2089.
+LaTeX Info: Redefining \% on input line 2089.
+[84]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-09-tab-desempeno.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-09-tab-desempeno.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2043.
-LaTeX Info: Redefining \% on input line 2043.
+LaTeX Info: Redefining \. on input line 2099.
+LaTeX Info: Redefining \% on input line 2099.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[83]
+[85]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-10-tab-normas.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-10-tab-normas.png>
 
@@ -2005,18 +2008,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2053.
-LaTeX Info: Redefining \% on input line 2053.
-[84]
-Overfull \hbox (49.44534pt too wide) in paragraph at lines 2058--2059
+LaTeX Info: Redefining \. on input line 2109.
+LaTeX Info: Redefining \% on input line 2109.
+[86]
+Overfull \hbox (49.44534pt too wide) in paragraph at lines 2114--2115
 []\TU/NunitoSans(0)/b/n/10 Pendiente de actualización visual. \TU/NunitoSans(0)/m/n/10 La figura \TU/lmtt/m/n/10 fig-clicsalud-06-modulo-encuesta.png
  []
 
-LaTeX Info: Redefining \. on input line 2060.
-LaTeX Info: Redefining \% on input line 2060.
+LaTeX Info: Redefining \. on input line 2116.
+LaTeX Info: Redefining \% on input line 2116.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[85]
+[87]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-07-pregunta-ejemplo.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-07-pregunta-ejemplo.png>
 
@@ -2024,146 +2027,146 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2098.
-LaTeX Info: Redefining \% on input line 2098.
-[86]
+LaTeX Info: Redefining \. on input line 2154.
+LaTeX Info: Redefining \% on input line 2154.
+[88]
 File: ENUS_2026_metodoloia_files/figuras/fig-clicsalud-11-trazadora-ejemplo.png Graphic file (type bmp)
 <ENUS_2026_metodoloia_files/figuras/fig-clicsalud-11-trazadora-ejemplo.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2104.
-LaTeX Info: Redefining \% on input line 2104.
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-[87]
-File: styles/logo/msps-logo-color.png Graphic file (type bmp)
-<styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2109.
-LaTeX Info: Redefining \% on input line 2109.
-[88]
-Overfull \hbox (44.19534pt too wide) in paragraph at lines 2109--2110
-[]\TU/NunitoSans(0)/b/n/10 Pendiente de actualización visual. \TU/NunitoSans(0)/m/n/10 La figura \TU/lmtt/m/n/10 fig-clicsalud-12-modulo-forma-a.png
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 2121--2121
-|[]\TU/NunitoSans_10pt-ExtraBold(0)/m/n/14.4 Alcance de esta documentación frente a
- []
-
-LaTeX Info: Redefining \. on input line 2124.
-LaTeX Info: Redefining \% on input line 2124.
+LaTeX Info: Redefining \. on input line 2160.
+LaTeX Info: Redefining \% on input line 2160.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
 [89]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2125.
-LaTeX Info: Redefining \% on input line 2125.
+LaTeX Info: Redefining \. on input line 2165.
+LaTeX Info: Redefining \% on input line 2165.
 [90]
+Overfull \hbox (44.19534pt too wide) in paragraph at lines 2165--2166
+[]\TU/NunitoSans(0)/b/n/10 Pendiente de actualización visual. \TU/NunitoSans(0)/m/n/10 La figura \TU/lmtt/m/n/10 fig-clicsalud-12-modulo-forma-a.png
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 2177--2177
+|[]\TU/NunitoSans_10pt-ExtraBold(0)/m/n/14.4 Alcance de esta documentación frente a
+ []
+
+LaTeX Info: Redefining \. on input line 2180.
+LaTeX Info: Redefining \% on input line 2180.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[91
+[91]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+LaTeX Info: Redefining \. on input line 2181.
+LaTeX Info: Redefining \% on input line 2181.
+[92]
+File: styles/logo/msps-logo-color.png Graphic file (type bmp)
+<styles/logo/msps-logo-color.png>
+[93
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2170--2171
+Underfull \hbox (badness 10000) in paragraph at lines 2226--2227
 $[][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][] [] [][] [] [][][][][][][] [][] [][][][][][][][][][][][] [][] [][][] [][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
+Underfull \hbox (badness 10000) in paragraph at lines 2235--2236
 \TU/NunitoSans(0)/m/n/10 cial. []$[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][][][][][][] [] [][][][][][][] [] [][][][][][][] [][] [][][][][] [][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2185--2186
+Underfull \hbox (badness 10000) in paragraph at lines 2241--2242
 \TU/NunitoSans(0)/m/n/10 Social. []$[][][][][] [] [] [] [][][][][][][][] [] [][][] [] [][] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] []$
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 2188--2189
+Underfull \hbox (badness 1231) in paragraph at lines 2244--2245
 []\TU/NunitoSans(0)/m/n/10 Ministerio de Salud y Protección Social. 2017. \TU/NunitoSans(0)/m/it/10 Encuesta Nacional de
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 2188--2189
+Underfull \hbox (badness 1221) in paragraph at lines 2244--2245
 \TU/NunitoSans(0)/m/n/10 Ministerio de Salud y Protección Social. []$[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2188--2189
+Underfull \hbox (badness 10000) in paragraph at lines 2244--2245
 $[][] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][] [] [][] [] [][][][][][][] [][] [][][][][][][][] [][]$
  []
 
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2189.
-LaTeX Info: Redefining \% on input line 2189.
-[92]
-Underfull \hbox (badness 2564) in paragraph at lines 2191--2192
+LaTeX Info: Redefining \. on input line 2245.
+LaTeX Info: Redefining \% on input line 2245.
+[94]
+Underfull \hbox (badness 2564) in paragraph at lines 2247--2248
 []\TU/NunitoSans(0)/m/n/10 Ministerio de Salud y Protección Social. 2020. \TU/NunitoSans(0)/m/it/10 Estudio Nacional de
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 2191--2192
+Underfull \hbox (badness 1189) in paragraph at lines 2247--2248
 \TU/NunitoSans(0)/m/it/10 Evaluación de los Servicios de las EPS – Régimen Contributivo y
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 2191--2192
+Underfull \hbox (badness 1648) in paragraph at lines 2247--2248
 \TU/NunitoSans(0)/m/it/10 Subsidiado 2020: Informe Final\TU/NunitoSans(0)/m/n/10 . Oficina de Calidad, Ministerio de
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 2194--2195
+Underfull \hbox (badness 1231) in paragraph at lines 2250--2251
 []\TU/NunitoSans(0)/m/n/10 Ministerio de Salud y Protección Social. 2022. \TU/NunitoSans(0)/m/it/10 Encuesta Nacional de
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 2194--2195
+Underfull \hbox (badness 1221) in paragraph at lines 2250--2251
 \TU/NunitoSans(0)/m/n/10 Ministerio de Salud y Protección Social. []$[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2194--2195
+Underfull \hbox (badness 10000) in paragraph at lines 2250--2251
 $[][] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][] [] [][] [] [][][][][][][][] [][] [][][][][][][][][][][][] [][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2197--2198
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2254
 $[][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][] [] [][] [] [][][][][][][][][][] [][] [][][][][][][][] [][] [][][][][][][][][][][][] [][]$
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 2200--2201
+Underfull \hbox (badness 1454) in paragraph at lines 2256--2257
 \TU/NunitoSans(0)/m/it/10 de Salud Colombiano 2024\TU/NunitoSans(0)/m/n/10 . Oficina de Calidad, Ministerio de Sa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2200--2201
+Underfull \hbox (badness 10000) in paragraph at lines 2256--2257
 \TU/NunitoSans(0)/m/n/10 lud y Protección Social. []$[][][][][] [] [] [] [][][] [] [][][][][][] [] [][][] [] [][] [] [][][][][][][][][][][][][] []$
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 2203--2204
+Underfull \hbox (badness 1210) in paragraph at lines 2259--2260
 \TU/NunitoSans(0)/m/it/10 2025\TU/NunitoSans(0)/m/n/10 . Oficina de Calidad, Ministerio de Salud y Protección Social.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2259--2260
 []$[][][][][] [] [] [] [][][] [] [][][][][][][][] [] [][][] [] [][] [] [][][][][] [] [][][] [] [][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][] [] [][] []$
  []
 
-LaTeX Info: Redefining \. on input line 2211.
-LaTeX Info: Redefining \% on input line 2211.
+LaTeX Info: Redefining \. on input line 2267.
+LaTeX Info: Redefining \% on input line 2267.
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-[93]
+[95]
 File: styles/logo/msps-logo-color.png Graphic file (type bmp)
 <styles/logo/msps-logo-color.png>
-LaTeX Info: Redefining \. on input line 2222.
-LaTeX Info: Redefining \% on input line 2222.
-[94] (./ENUS_2026_metodoloia.aux
+LaTeX Info: Redefining \. on input line 2278.
+LaTeX Info: Redefining \% on input line 2278.
+[96] (./ENUS_2026_metodoloia.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -2179,12 +2182,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21296 strings out of 469754
- 405221 string characters out of 5465850
- 1009916 words of memory out of 5000000
- 50022 multiletter control sequences out of 15000+600000
+ 21306 strings out of 469754
+ 405277 string characters out of 5465850
+ 1014195 words of memory out of 5000000
+ 50032 multiletter control sequences out of 15000+600000
  631442 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,13n,116p,1346b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,116p,1346b,940s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ENUS_2026_metodoloia.pdf (94 pages).
+Output written on ENUS_2026_metodoloia.pdf (96 pages).

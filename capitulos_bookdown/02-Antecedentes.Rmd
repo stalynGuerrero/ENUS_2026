@@ -437,14 +437,19 @@ Ministerio de Salud y Protección Social, cada uno con su propia ficha técnica,
 sin un marco normativo específico que los articulara como una única serie. ENUS
 2026, en cambio, cuenta con un fundamento normativo propio: la Resolución 1642 de
 2026, expedida el 31 de julio de 2026, adopta la **Encuesta Nacional de
-Experiencia del Usuario en Salud (ENUS)** como instrumento oficial y establece
-que su naturaleza es permanente y continua. La resolución define la ENUS como un
-instrumento digital para recoger información sobre la experiencia del afiliado
-frente a los servicios recibidos, y dispone que su diseño metodológico debe
-garantizar la representatividad estadística, el control sobre la generación de la
-información, la comparabilidad de los resultados en el tiempo y la reducción de
-los sesgos asociados a la autoselección de los participantes
-[@Resolucion1642_2026].
+Experiencia del Usuario en Salud (ENUS)** como instrumento oficial para la
+medición del desempeño de las EPS y de otros actores del sector salud, y la
+define como un «instrumento digital de captura continua de la experiencia del
+afiliado sobre la calidad y oportunidad de los servicios recibidos» (art. 3). Su
+artículo 9 establece que la encuesta es de naturaleza permanente y continua, que
+captura la experiencia del afiliado tras cada atención en salud, y que su diseño
+metodológico «garantizará la representatividad estadística de los resultados
+mediante un marco muestral probabilístico que asegure el control sobre la
+generación de la información, la comparabilidad de los resultados en el tiempo y
+la reducción de sesgos por autoselección de los respondientes». El mismo artículo
+dispone que el instrumento generará datos representativos a nivel de EPS,
+prestador de servicios de salud, departamento, distrito, municipio y tipo de
+servicio [@Resolucion1642_2026].
 
 La resolución establece además que la ENUS debe generar información sobre el
 desempeño de las EPS, las IPS y los gestores farmacéuticos, mediante indicadores
@@ -454,7 +459,7 @@ indicadores, sus fuentes, periodicidad y metodología de cálculo, así como los
 estándares técnicos necesarios para la operación del aplicativo y el intercambio
 de información [@Resolucion1642_2026].
 
-<!-- VERIFICAR FUENTE: el carácter de "instrumento digital" de ENUS (mediante una aplicación en desarrollo) fue confirmado directamente por el responsable metodológico (2026-08-23). Sin embargo, las afirmaciones específicas sobre lo que la Resolución 1642 de 2026 dispone textualmente -- que el diseño metodológico debe garantizar representatividad estadística, control sobre la generación de la información, comparabilidad de los resultados en el tiempo y reducción de los sesgos de autoselección, y que los indicadores se organizan "de acuerdo con los atributos de calidad definidos en la normativa vigente" -- no se verificaron contra el texto oficial de la resolución, solo contra una fuente secundaria (ConsultorSalud; ver nota en referencias.bib). Deben confirmarse contra el Diario Oficial o minsalud.gov.co antes de una publicación institucional definitiva. -->
+<!-- FUENTE VERIFICADA (2026-09-30): las citas de los artículos 3, 9 y 11 de la Resolución 1642 de 2026 se contrastaron con el texto oficial de la resolución (PDF firmado del 31 de julio de 2026). -->
 
 Por estas dos razones —metodológica y normativa—, la ENUS 2026 no debe
 entenderse como una nueva edición de las encuestas históricas de satisfacción,
