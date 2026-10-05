@@ -43,7 +43,7 @@ La población objetivo de ENUS 2026 está constituida por las *personas afiliada
 
 La población comprende las personas afiliadas a los regímenes considerados por el SGSSS, independientemente de su sexo, edad, territorio de residencia u otras características sociodemográficas. La utilización de un servicio de salud durante el periodo de referencia constituye la condición que vincula a la persona con el fenómeno objeto de medición, dado que las preguntas de satisfacción y experiencia se refieren a una atención o servicio efectivamente utilizado.
 
-**Decisión metodológica adoptada (septiembre de 2026).** El periodo de referencia para la utilización del servicio es de **seis meses**, contados hacia atrás desde el momento en que la persona diligencia la encuesta, en concordancia con la pregunta de la Parte 2 sobre utilización de servicios «en los últimos 6 meses». Para efectos de la operación estadística, la identificación de las personas elegibles se realiza de manera continua durante el año, considerando las personas que cumplen simultáneamente las siguientes condiciones:
+El periodo de referencia para la utilización del servicio es de *seis meses*, contados hacia atrás desde el momento en que la persona diligencia la encuesta, en concordancia con la pregunta de la Parte 2 sobre utilización de servicios «en los últimos 6 meses». Para efectos de la operación estadística, la identificación de las personas elegibles se realiza de manera continua durante el año, considerando las personas que cumplen simultáneamente las siguientes condiciones:
 
 1. *Afiliación al SGSSS:* encontrarse afiliadas al Sistema General de Seguridad Social en Salud durante el periodo correspondiente a la utilización del servicio.
 
@@ -72,7 +72,7 @@ La información recolectada corresponde a la satisfacción y experiencia reporta
 
 ENUS 2026 tendrá cobertura nacional, con metas de respuesta para cada uno de los 33 departamentos (32 departamentos y Bogotá D.C.) definidos en la operación (\@ref(sec-tamano-muestra)).
 
-El departamento constituye el nivel territorial mínimo previsto para la producción de resultados, condicionado a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección (\@ref(sec-diseno-muestral)); los departamentos se agregan, para efectos de reporte, en seis regiones bajo el esquema estándar DANE/ENDS. La participación efectiva de los usuarios podrá permitir desagregaciones territoriales adicionales dentro de cada departamento, siempre que se alcance un número suficiente de observaciones y condiciones adecuadas de calidad estadística para su interpretación.
+El departamento constituye el nivel territorial mínimo previsto para la producción de resultados, condicionado a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección (\@ref(sec-diseno-muestral)); los departamentos se agregan, para efectos de reporte, en las seis regiones de reporte adoptadas para ENUS 2026. La participación efectiva de los usuarios podrá permitir desagregaciones territoriales adicionales dentro de cada departamento, siempre que se alcance un número suficiente de observaciones y condiciones adecuadas de calidad estadística para su interpretación.
 
 
 ## Cobertura temporal y periodo de referencia
@@ -95,7 +95,9 @@ La clasificación de los servicios considerados y la asignación de las pregunta
 
 ## Dominios de análisis
 
-ENUS 2026 contempla la producción de resultados para el *total nacional, las regiones y los departamentos que alcancen su meta de respuesta*; las regiones se obtienen por agregación de los departamentos (\@ref(sec-alcance-departamental)).
+La meta de respuesta es una referencia de seguimiento. La habilitación de un resultado debe decidirse por indicador considerando respuestas válidas, precisión, cobertura, tasa de respuesta y estabilidad de los pesos. El cumplimiento de la meta, por sí solo, no garantiza representatividad; las estimaciones ajustadas dependen de los supuestos de la calibración.
+
+ENUS 2026 contempla la producción de resultados para el *total nacional, las regiones y los departamentos cuyos indicadores cumplan los criterios de calidad para publicación*; las regiones se obtienen por agregación de los departamentos (\@ref(sec-alcance-departamental)).
 
 La información recolectada permitirá explorar desagregaciones adicionales según características de las personas usuarias, de su afiliación y del servicio utilizado. La disponibilidad de estas desagregaciones dependerá de la participación efectiva alcanzada en las categorías correspondientes y de las condiciones de calidad requeridas para su presentación e interpretación.
 

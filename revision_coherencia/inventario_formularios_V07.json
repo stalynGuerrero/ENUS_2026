@@ -1,0 +1,1441 @@
+[
+  {
+    "module": "EPS - Módulo 1",
+    "t_rows": 19,
+    "t_unique": 19,
+    "p_count": 12,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su EPS a familiares y amigos?"
+      ],
+      [
+        "T18",
+        "A104",
+        "De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos?"
+      ],
+      [
+        "M1EPS_P01",
+        "A108",
+        "¿Cuál ha sido el o los principales motivo(s) por el que no ha hecho uso de estos servicios?"
+      ],
+      [
+        "M1EPS_P02",
+        "A113",
+        "¿A dónde asistió para recibir la atención en salud requerida?"
+      ],
+      [
+        "M1EPS_P03",
+        "A119",
+        "Cuando necesita atención en salud de rutina, ¿hay alguna persona, IPS u otro lugar al que suela acudir normalmente?"
+      ],
+      [
+        "M1EPS_P04",
+        "A121",
+        "¿Hay algún problema de salud que no ha logrado resolver a través de las formas que utiliza hoy en día para atender su salud?"
+      ],
+      [
+        "M1EPS_P04a",
+        "A123",
+        "¿Cuál de los siguientes problemas de salud no ha logrado resolver? (Lista desplegable — respuesta múltiple)"
+      ],
+      [
+        "M1EPS_P05",
+        "A132",
+        "En su hogar, ¿le realizaron o aplicaron la encuesta sobre las condiciones de salud de su familia, por parte de los Equipos Básicos en Salud?"
+      ],
+      [
+        "M1EPS_P06",
+        "A134",
+        "¿Le realizaron una evaluación de su condición de salud a usted o a algún miembro de su hogar por parte de los Equipos Básicos en Salud?"
+      ],
+      [
+        "M1EPS_P07",
+        "A136",
+        "¿Le realizaron alguna intervención o atención en salud por parte de algún miembro del Equipo Básico en Salud que lo visitó?"
+      ],
+      [
+        "M1EPS_P08",
+        "A138",
+        "¿Le realizaron orientación en temas preventivos y/o de autocuidado a través de algún miembro del Equipo Básico en Salud?"
+      ],
+      [
+        "M1EPS_P09",
+        "A140",
+        "De la visita realizada por los Equipos Básicos en Salud, ¿le realizaron alguna remisión a algún servicio de salud?"
+      ],
+      [
+        "M1EPS_P09a",
+        "A142",
+        "¿A cuál de los siguientes servicios de salud lo remitieron? (Lista desplegable — respuesta múltiple)"
+      ],
+      [
+        "M1EPS_P10",
+        "A154",
+        "¿Se ha automedicado para resolver su atención en salud requerida?\n"
+      ]
+    ]
+  },
+  {
+    "module": "EPS - Módulo 2",
+    "t_rows": 21,
+    "t_unique": 19,
+    "p_count": 24,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T07",
+        "A44",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T06",
+        "A46",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata.)"
+      ],
+      [
+        "T09",
+        "A48",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n"
+      ],
+      [
+        "T08",
+        "A65",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T14",
+        "A75",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T13",
+        "A77",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T10",
+        "A79",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A81",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A95",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A97",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A108",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A110",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A112",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido?"
+      ],
+      [
+        "T16",
+        "A113",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido?"
+      ],
+      [
+        "T17",
+        "A114",
+        "De 1 a 10, ¿recomendaría su EPS a familiares y amigos?"
+      ],
+      [
+        "T18",
+        "A115",
+        "De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos?"
+      ],
+      [
+        "M2EPS_P01",
+        "A119",
+        "¿Sabe que la EPS está obligada a mantener publicada y actualizada la Carta de Derechos y Deberes (portal web, aplicación móvil, puntos de atención)?"
+      ],
+      [
+        "M2EPS_P02",
+        "A121",
+        "En el último año, ¿la EPS o la IPS le ha entregado o dado a conocer cuáles son sus derechos y deberes como afiliado (Carta de Derechos y Deberes)?"
+      ],
+      [
+        "M2EPS_P03",
+        "A124",
+        "En el último año, ¿ha consultado o revisado el contenido de la Carta de Derechos y Deberes?"
+      ],
+      [
+        "M2EPS_P04",
+        "A127",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Solicitar copia de su historia clínica."
+      ],
+      [
+        "M2EPS_P05",
+        "A132",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Solicitar una segunda opinión médica ante dudas sobre su diagnóstico o manejo."
+      ],
+      [
+        "M2EPS_P06",
+        "A137",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Presentar peticiones, quejas, reclamos o denuncias (PQRD) ante la EPS."
+      ],
+      [
+        "M2EPS_P07",
+        "A142",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Acudir a la Superintendencia Nacional de Salud, la Defensoría del Pueblo o las personerías por un conflicto con su EPS."
+      ],
+      [
+        "M2EPS_P08",
+        "A147",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Interponer una acción de tutela para proteger su derecho a la salud."
+      ],
+      [
+        "M2EPS_P09",
+        "A152",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Calificar la atención recibida a través del aplicativo móvil oficial."
+      ],
+      [
+        "M2EPS_P10",
+        "A157",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Consultar el posicionamiento en el Ranking o los indicadores de desempeño de su EPS."
+      ],
+      [
+        "M2EPS_P11",
+        "A162",
+        "Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Aceptar o rechazar, por decisión propia, una actividad, intervención, medicamento o tratamiento propuesto por su EPS o IPS."
+      ],
+      [
+        "M2EPS_P12",
+        "A167",
+        "Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Atiende las recomendaciones de autocuidado del personal de salud y los programas de promoción y prevención."
+      ],
+      [
+        "M2EPS_P13",
+        "A173",
+        "Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Actúa de manera solidaria ante situaciones que pongan en peligro la vida o la salud de otras personas."
+      ],
+      [
+        "M2EPS_P14",
+        "A179",
+        "Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Respeta al personal responsable de la prestación de los servicios de salud, personal administrativo y los demás pacientes."
+      ],
+      [
+        "M2EPS_P15",
+        "A185",
+        "Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Usa de manera adecuada y racional los servicios de salud y los recursos del Sistema General de Seguridad Social en Salud."
+      ],
+      [
+        "M2EPS_P16",
+        "A191",
+        "Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Suministra de manera voluntaria, oportuna y suficiente la información que se requiere para recibir el servicio de salud."
+      ],
+      [
+        "M2EPS_P17",
+        "A197",
+        "Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Contribuye al financiamiento de los gastos en salud de acuerdo con su capacidad de pago."
+      ],
+      [
+        "M2EPS_P18",
+        "A203",
+        "Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: El acceso oportuno a la atención, los exámenes y los tratamientos recibidos."
+      ],
+      [
+        "M2EPS_P19",
+        "A208",
+        "Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: El trato digno, respetuoso, seguro y sin discriminación que recibió durante la atención."
+      ],
+      [
+        "M2EPS_P20",
+        "A213",
+        "¿Con qué frecuencia el profesional de salud lo involucró en las decisiones sobre su tratamiento tanto como usted deseaba?"
+      ],
+      [
+        "M2EPS_P22",
+        "A218",
+        "¿Con qué frecuencia el profesional tuvo en cuenta sus opiniones y preferencias al decidir sobre su atención?"
+      ],
+      [
+        "M2EPS_P24",
+        "A223",
+        "¿Con qué frecuencia le explicaron las opciones de tratamiento de una manera fácil de comprender?"
+      ],
+      [
+        "M2EPS_P25",
+        "A228",
+        "¿Con qué frecuencia se sintió escuchado y respetado por los profesionales que lo atendieron?"
+      ],
+      [
+        "M2EPS_P28",
+        "A233",
+        "Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: La oportunidad en la entrega de los medicamentos, insumos y dispositivos que necesitó para su tratamiento."
+      ]
+    ]
+  },
+  {
+    "module": "EPS - Módulo 3",
+    "t_rows": 19,
+    "t_unique": 19,
+    "p_count": 18,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su EPS a familiares y amigos?"
+      ],
+      [
+        "T18",
+        "A104",
+        "De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos?"
+      ],
+      [
+        "M3EPS_P01",
+        "A108",
+        "¿Cuál de los siguientes servicios utilizó?"
+      ],
+      [
+        "M3EPS_P02",
+        "A114",
+        "Si el servicio requerido fue de consulta externa, ¿cuál de las siguientes fue la consulta externa requerida?"
+      ],
+      [
+        "M3EPS_P03",
+        "A126",
+        "¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio?"
+      ],
+      [
+        "M3EPS_P04",
+        "A127",
+        "¿Requirió autorización para acceder a este servicio?"
+      ],
+      [
+        "M3EPS_P05",
+        "A129",
+        "¿Le autorizaron el servicio?"
+      ],
+      [
+        "M3EPS_P06",
+        "A131",
+        "¿Cuál de los siguientes medios utilizó para agendar el servicio autorizado?"
+      ],
+      [
+        "M3EPS_P07",
+        "A134",
+        "En el último año, ¿le han cancelado un servicio requerido previamente agendado?"
+      ],
+      [
+        "M3EPS_P08",
+        "A136",
+        "Cuando se lo cancelaron, ¿se lo reagendaron?"
+      ],
+      [
+        "M3EPS_P09",
+        "A138",
+        "En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado?"
+      ],
+      [
+        "M3EPS_P10",
+        "A143",
+        "¿Cuántos tiempo transcurrió desde el momento en qué solicitó el servicio hasta que fue atendido?"
+      ],
+      [
+        "M3EPS_P10a",
+        "A144",
+        "¿Qué medio(s) de transporte utilizó para ese desplazamiento? (Lista desplegable — respuesta múltiple)"
+      ],
+      [
+        "M3EPS_P11",
+        "A154",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo?"
+      ],
+      [
+        "M3EPS_P12",
+        "A159",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba?"
+      ],
+      [
+        "M3EPS_P13",
+        "A164",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la consulta o el procedimiento?"
+      ],
+      [
+        "M3EPS_P14",
+        "A169",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud conoció aspectos importantes de su historia clínica?"
+      ],
+      [
+        "M3EPS_P15",
+        "A174",
+        "En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación)"
+      ],
+      [
+        "M3EPS_P15a",
+        "A176",
+        "En el último año, ¿cuál fue el valor aproximado que tuvo que pagar con recursos propios o familiares por cada uno de los siguientes servicios? (Marque un rango por cada servicio: a. consulta médica; b. exámenes de laboratorio; c. imágenes diagnósticas; d. medicamentos; e. transporte para la atención)"
+      ],
+      [
+        "M3EPS_P16",
+        "A182",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M3EPS_P01?"
+      ]
+    ]
+  },
+  {
+    "module": "IPS - Módulo 1",
+    "t_rows": 19,
+    "t_unique": 19,
+    "p_count": 17,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su EPS a familiares y amigos?"
+      ],
+      [
+        "T18",
+        "A104",
+        "De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos?"
+      ],
+      [
+        "M1IPS_P01",
+        "A108",
+        "¿Cuál de los siguientes servicios utilizó?"
+      ],
+      [
+        "M1IPS_P02",
+        "A114",
+        "Si el servicio requerido fue de consulta externa, ¿cuál de las siguientes fue la consulta externa requerida?"
+      ],
+      [
+        "M1IPS_P03",
+        "A126",
+        "¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio?"
+      ],
+      [
+        "M1IPS_P04",
+        "A127",
+        "¿Requirió autorización para acceder a este servicio?"
+      ],
+      [
+        "M1IPS_P05",
+        "A129",
+        "¿Le autorizaron el servicio?"
+      ],
+      [
+        "M1IPS_P06",
+        "A131",
+        "¿Cuál de los siguientes medios utilizó para agendar el servicio autorizado?"
+      ],
+      [
+        "M1IPS_P07",
+        "A134",
+        "En el último año, ¿le han cancelado un servicio requerido previamente agendado?"
+      ],
+      [
+        "M1IPS_P08",
+        "A136",
+        "Cuando se lo cancelaron, ¿se lo reagendaron?"
+      ],
+      [
+        "M1IPS_P09",
+        "A138",
+        "En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado?"
+      ],
+      [
+        "M1IPS_P10",
+        "A143",
+        "¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio?"
+      ],
+      [
+        "M1IPS_P10a",
+        "A144",
+        "¿Qué medio(s) de transporte utilizó para ese desplazamiento? (Lista desplegable — respuesta múltiple)"
+      ],
+      [
+        "M1IPS_P11",
+        "A154",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo?"
+      ],
+      [
+        "M1IPS_P12",
+        "A159",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba?"
+      ],
+      [
+        "M1IPS_P13",
+        "A164",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la consulta o el procedimiento?"
+      ],
+      [
+        "M1IPS_P14",
+        "A169",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud conoció aspectos importantes de su historia clínica?"
+      ],
+      [
+        "M1IPS_P15",
+        "A174",
+        "En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación)"
+      ],
+      [
+        "M1IPS_P16",
+        "A176",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M1IPS_P01?"
+      ]
+    ]
+  },
+  {
+    "module": "IPS - Módulo 2",
+    "t_rows": 19,
+    "t_unique": 19,
+    "p_count": 14,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio de urgencias?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio de urgencias?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos?"
+      ],
+      [
+        "T18",
+        "A104",
+        "De 1 a 10, ¿recomendaría su prestador a familiares y amigos?"
+      ],
+      [
+        "M2IPS_P01",
+        "A108",
+        "¿Sabe usted que los servicios de urgencias cuentan con un sistema de selección y clasificación de pacientes denominado 'triage'?"
+      ],
+      [
+        "M2IPS_P02",
+        "A110",
+        "¿Por cuál de las siguientes razones utilizó el servicio de urgencias?"
+      ],
+      [
+        "M2IPS_P03",
+        "A118",
+        "La última vez que utilizó el servicio de urgencias, ¿a qué tipo de institución acudió?"
+      ],
+      [
+        "M2IPS_P04",
+        "A123",
+        "Cuando asistió al servicio de urgencias, ¿lo atendieron?"
+      ],
+      [
+        "M2IPS_P05",
+        "A125",
+        "¿Cuál fue la razón principal por la que no recibió atención médica en el servicio de urgencias?\n(Si no fue atendido, continúe directamente en M2IPS_P13.)"
+      ],
+      [
+        "M2IPS_P06",
+        "A133",
+        "¿Cuánto tiempo transcurrió entre el momento de llegar al servicio de urgencias (después del triage) y el momento de ser atendido(a) por el médico?"
+      ],
+      [
+        "M2IPS_P07",
+        "A134",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo?"
+      ],
+      [
+        "M2IPS_P08",
+        "A139",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba?"
+      ],
+      [
+        "M2IPS_P09",
+        "A144",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la atención en urgencias?"
+      ],
+      [
+        "M2IPS_P10",
+        "A149",
+        "Derivada de la consulta de urgencias, ¿requirió usted hospitalización dentro de la misma institución?"
+      ],
+      [
+        "M2IPS_P11",
+        "A151",
+        "Desde el servicio de urgencias, ¿cuánto tiempo transcurrió entre el momento en que se le informó que debía ser hospitalizado y el momento en que se instaló efectivamente en la cama de hospitalización?"
+      ],
+      [
+        "M2IPS_P12",
+        "A152",
+        "Dado su problema de salud, ¿requirió alguna autorización de su EPS para recibir algún servicio durante su atención en urgencias?"
+      ],
+      [
+        "M2IPS_P12b",
+        "A154",
+        "¿Cuánto tiempo transcurrió desde el momento en que le notificaron que el servicio debía ser autorizado por su EPS hasta el momento en que le prestaron el servicio?"
+      ],
+      [
+        "M2IPS_P13",
+        "A155",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio de urgencias?"
+      ]
+    ]
+  },
+  {
+    "module": "IPS - Módulo 3",
+    "t_rows": 19,
+    "t_unique": 19,
+    "p_count": 11,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio de hospitalización?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio de hospitalización?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su EPS a familiares y amigos?"
+      ],
+      [
+        "T18",
+        "A104",
+        "De 1 a 10, ¿recomendaría su prestador de servicios de salud a familiares y amigos?"
+      ],
+      [
+        "M3IPS_P01",
+        "A108",
+        "¿Por cuál de las siguientes razones utilizó el servicio de internación - hospitalización?"
+      ],
+      [
+        "M3IPS_P02",
+        "A113",
+        "La última vez que utilizó el servicio de hospitalización, ¿a qué tipo de institución acudió?"
+      ],
+      [
+        "M3IPS_P03",
+        "A117",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo?"
+      ],
+      [
+        "M3IPS_P04",
+        "A122",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba?"
+      ],
+      [
+        "M3IPS_P05",
+        "A127",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la atención hospitalaria?"
+      ],
+      [
+        "M3IPS_P06",
+        "A132",
+        "Dado su problema de salud, ¿requirió ser remitido a otra institución de mayor nivel para su hospitalización?"
+      ],
+      [
+        "M3IPS_P07",
+        "A134",
+        "¿Requirió ser remitido a otra institución para hospitalización por no disponibilidad de autorización o convenio con la institución por parte de su EPS?"
+      ],
+      [
+        "M3IPS_P08",
+        "A136",
+        "¿Cuánto tiempo transcurrió desde el momento en que le notificaron que debía ser remitido a otra institución hasta el momento en que lo admitieron en la institución de destino?"
+      ],
+      [
+        "M3IPS_P09",
+        "A137",
+        "Dado su problema de salud, ¿requirió alguna autorización de su EPS para recibir algún servicio durante su atención en hospitalización?"
+      ],
+      [
+        "M3IPS_P10",
+        "A139",
+        "¿Cuánto tiempo transcurrió desde el momento en que le notificaron que el servicio debía ser autorizado por su EPS hasta el momento en que le prestaron el servicio?"
+      ],
+      [
+        "M3IPS_P11",
+        "A140",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio de hospitalización?"
+      ]
+    ]
+  },
+  {
+    "module": "IPS - Módulo 4",
+    "t_rows": 18,
+    "t_unique": 18,
+    "p_count": 12,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio de cirugía?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿cómo calificaría la facilidad de acceder al procedimiento quirúrgico que requería?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su prestador a familiares y amigos?"
+      ],
+      [
+        "M4IPS_P01",
+        "A107",
+        "¿Cuánto tiempo transcurrió desde la solicitud del servicio (cirugía) hasta haber recibido efectivamente el servicio?"
+      ],
+      [
+        "M4IPS_P02",
+        "A108",
+        "¿Requirió autorización para acceder a este servicio?"
+      ],
+      [
+        "M4IPS_P03",
+        "A110",
+        "¿Le autorizaron la cirugía?"
+      ],
+      [
+        "M4IPS_P04",
+        "A112",
+        "¿Cuál de los siguientes medios utilizó para agendar la cirugía requerida?"
+      ],
+      [
+        "M4IPS_P05",
+        "A115",
+        "En el último año, ¿cuántas veces le han cancelado una cirugía previamente agendada?"
+      ],
+      [
+        "M4IPS_P06",
+        "A122",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo?"
+      ],
+      [
+        "M4IPS_P07",
+        "A127",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba?"
+      ],
+      [
+        "M4IPS_P08",
+        "A132",
+        "Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con el procedimiento quirúrgico?"
+      ],
+      [
+        "M4IPS_P09",
+        "A137",
+        "¿Las citas de control con su cirujano tratante transcurrieron en los tiempos establecidos?"
+      ],
+      [
+        "M4IPS_P10",
+        "A140",
+        "¿Fue usted informado(a) sobre los riesgos o complicaciones que se podían presentar con la cirugía?"
+      ],
+      [
+        "M4IPS_P11",
+        "A142",
+        "¿Recibió la atención necesaria durante la hospitalización, la cirugía y el posoperatorio?"
+      ],
+      [
+        "M4IPS_P12",
+        "A144",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al procedimiento quirúrgico?"
+      ]
+    ]
+  },
+  {
+    "module": "Gestor - Módulo 1",
+    "t_rows": 18,
+    "t_unique": 18,
+    "p_count": 15,
+    "questions": [
+      [
+        "T01",
+        "A25",
+        "Digite su número de documento de identificación."
+      ],
+      [
+        "T02",
+        "A26",
+        "Seleccione su tipo de identificación."
+      ],
+      [
+        "T03",
+        "A32",
+        "¿Quién se encuentra diligenciando esta encuesta?"
+      ],
+      [
+        "T04",
+        "A35",
+        "¿Cuenta usted con algún plan voluntario de salud?"
+      ],
+      [
+        "T05",
+        "A39",
+        "¿Cuál es su percepción general de su estado de salud?"
+      ],
+      [
+        "T06",
+        "A44",
+        "En el último año, ¿ha utilizado algún servicio de salud?\n(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.)"
+      ],
+      [
+        "T07",
+        "A46",
+        "En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS?"
+      ],
+      [
+        "T08",
+        "A48",
+        "¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba?"
+      ],
+      [
+        "T09",
+        "A58",
+        "¿Cuál de los siguientes servicios utilizó la última vez?\n(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.)"
+      ],
+      [
+        "T10",
+        "A68",
+        "¿Se encuentra usted en estado de embarazo?"
+      ],
+      [
+        "T11",
+        "A70",
+        "¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple)"
+      ],
+      [
+        "T12",
+        "A84",
+        "En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico?"
+      ],
+      [
+        "T12a",
+        "A86",
+        "¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal)"
+      ],
+      [
+        "T13",
+        "A97",
+        "¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS?"
+      ],
+      [
+        "T14",
+        "A99",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica?"
+      ],
+      [
+        "T15",
+        "A101",
+        "De 1 a 10, ¿cómo calificaría su experiencia en el servicio de entrega de medicamentos?"
+      ],
+      [
+        "T16",
+        "A102",
+        "De 1 a 10, ¿recomendaría su gestor farmacéutico (la farmacia que le dispensó los medicamentos) a familiares y amigos?"
+      ],
+      [
+        "T17",
+        "A103",
+        "De 1 a 10, ¿recomendaría su EPS a familiares y amigos?"
+      ],
+      [
+        "M1GES_P01",
+        "A107",
+        "¿Solicitó a la EPS los medicamentos que le ordenaron?"
+      ],
+      [
+        "M1GES_P02",
+        "A109",
+        "¿Alguno(s) de estos medicamentos no estaban cubiertos en su plan de beneficios y requirió trámite adicional (Mipres)?"
+      ],
+      [
+        "M1GES_P03",
+        "A111",
+        "¿Requirió autorización por la EPS para acceder a alguno de estos medicamentos?"
+      ],
+      [
+        "M1GES_P04",
+        "A113",
+        "¿La EPS le autorizó los medicamentos?"
+      ],
+      [
+        "M1GES_P05",
+        "A115",
+        "¿Cuánto tiempo transcurrió desde el momento en que solicitó la autorización de los medicamentos ante la EPS, hasta el momento en que le dieron la autorización?"
+      ],
+      [
+        "M1GES_P06",
+        "A116",
+        "¿Por qué le negaron la autorización para los medicamentos?"
+      ],
+      [
+        "M1GES_P07",
+        "A122",
+        "¿Le entregaron todos los medicamentos la primera vez que los solicitó?"
+      ],
+      [
+        "M1GES_P08",
+        "A124",
+        "¿Cuánto tiempo transcurrió desde el momento en que asistió al punto donde le entregan sus medicamentos hasta que fue atendido por el personal que entrega los medicamentos?"
+      ],
+      [
+        "M1GES_P09",
+        "A125",
+        "¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio?"
+      ],
+      [
+        "M1GES_P10",
+        "A127",
+        "¿Aceptó usted esa opción de entrega a domicilio?"
+      ],
+      [
+        "M1GES_P11",
+        "A129",
+        "¿Le llegaron los medicamentos faltantes al domicilio?\n(Si la respuesta es Sí: indique cuántos días se tardó el domicilio —número de días, admite decimales—.)"
+      ],
+      [
+        "M1GES-P12",
+        "A131",
+        "¿Cuánto tiempo transcurrió desde el momento en que le ofrecieron el servicio de entrega de medicamentos al domicilio hasta que los recibió efectivamente?"
+      ],
+      [
+        "M1GES_P13",
+        "A132",
+        "¿Cómo obtuvo los medicamentos que no le entregaron o no le autorizaron?"
+      ],
+      [
+        "M1GES_P14",
+        "A137",
+        "En el último año, en las ocasiones en que tuvo que comprar con recursos propios o familiares los medicamentos que le ordenaron, ¿cuánto tuvo que pagar por estos? (Diferente a copagos, cuotas moderadoras y cuotas de recuperación)"
+      ],
+      [
+        "M1GES_P15",
+        "A143",
+        "¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a la entrega de los medicamentos o dispositivos médicos?"
+      ]
+    ]
+  }
+]

@@ -25,7 +25,7 @@ contenido pendiente, su línea permanece comentada en `rmd_files` dentro de
 2. Antecedentes
 3. Objetivo y alcance (incluye el marco conceptual: fenómenos medidos y su definición; y la población objetivo)
 4. Diseño muestral (incluye el marco de referencia: fuente y actualización)
-5. Papel de las EPS e IPS
+5. Responsabilidades de los actores (integradas en Diseño muestral)
 6. Muestreo por cuotas
 7. Variables de clasificación
 8. Relación entre cuestionario y cuotas

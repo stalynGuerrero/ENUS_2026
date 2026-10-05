@@ -1,0 +1,1593 @@
+SHEET Índice
+1 | 1: ENUS — ÍNDICE DE MÓDULOS (instrumentos independientes)
+2 | 1: Cada módulo = Sección A (BDUA) + Sección B (Trazadoras, común) + Sección C (bloque específico). Los módulos son formularios independientes: no hay salto de un módulo a otro.
+3 | 1: VERSIÓN 04 — incorpora las observaciones del comité técnico registradas sobre la versión 03 (comentarios de celda, textos resaltados y notas de revisión). El detalle de cada ajuste está en la hoja «Control de Cambios»; los puntos pendientes de decisión, en la hoja «Hallazgos».
+4 | 1: Hoja | 2: Actor evaluado | 3: Bloque específico | 4: N° preguntas Sección C | 5: Perfil de aplicación (preselección, sin salto entre módulos)
+5 | 1: EPS - Módulo 1 | 2: EPS | 3: B1 — No usuario / EBS | 4: 12 | 5: Personas que en T06 declaran NO haber usado servicios de salud en el último año.
+6 | 1: EPS - Módulo 2 | 2: EPS | 3: B2 — Deberes y Derechos | 4: 28 | 5: Afiliados en general; evalúa conocimiento y uso de la Carta de Derechos y Deberes, independiente del tipo de servicio usado.
+7 | 1: EPS - Módulo 3 | 2: EPS | 3: B3 — Ambulatorio | 4: 22 | 5: Preseleccionados por haber usado consulta externa, laboratorio o imágenes diagnósticas (evaluación a nivel EPS).
+8 | 1: IPS - Módulo 1 | 2: IPS | 3: B3 — Ambulatorio | 4: 21 | 5: Preseleccionados por haber usado consulta externa, laboratorio o imágenes diagnósticas (evaluación a nivel IPS).
+9 | 1: IPS - Módulo 2 | 2: IPS | 3: B4 — Urgencias | 4: 18 | 5: Preseleccionados por haber usado el servicio de urgencias.
+10 | 1: IPS - Módulo 3 | 2: IPS | 3: B5 — Internación | 4: 15 | 5: Preseleccionados por haber sido hospitalizados.
+11 | 1: IPS - Módulo 4 | 2: IPS | 3: B6 — Quirúrgico | 4: 15 | 5: Preseleccionados por haberse sometido a un procedimiento quirúrgico.
+12 | 1: Gestor - Módulo 1 | 2: Gestor farmacéutico | 3: B7 — Medicamentos | 4: 17 | 5: Preseleccionados por haber solicitado entrega de medicamentos o dispositivos médicos.
+15 | 1: Nota: dentro de cada módulo, las preguntas T06 y T09 (Sección B) se conservan únicamente como variables de clasificación y control de calidad; no generan salto entre módulos.
+16 | 1: Nota: la opción 'Atención Domiciliaria' de T9 no tiene módulo específico asignado en el archivo fuente (posible brecha de diseño, ver hoja Hallazgos).
+17 | 1: Nota: además del bloque B3 (compartido entre EPS - Módulo 3 e IPS - Módulo 1), los módulos EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 y Gestor - Módulo 1 comparten un núcleo común de preguntas de cierre (PQRS/Tutela, recomendación NPS, calificación de experiencia 1-10, facilidad de acceso 1-10 y humanización), confirmado como intencional para obtener métricas comparables entre tipos de servicio (ver hoja Hallazgos).
+18 | 1: Nota: el periodo de referencia se unificó en «el último año» para todas las preguntas que antes usaban seis meses (observación del revisor en la celda H2 de EPS - Módulo 2).
+SHEET Plan de Análisis
+1 | 1: Código ENUS | 2: Módulo (hoja) | 3: Tipo de pregunta | 4: Grupo/bloque compartido | 5: Categoría | 6: Pregunta | 7: Código en la V03
+2 | 1: SECCIÓN B — TRAZADORAS Y TRANSVERSALES (comunes a los 8 módulos)
+3 | 1: T01 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Identificación | 6: Digite su número de documento de identificación. | 7: T01
+4 | 1: T02 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Identificación | 6: Seleccione su tipo de identificación. | 7: T02
+5 | 1: T03 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Quién se encuentra diligenciando esta encuesta? | 7: T03
+6 | 1: T04 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Cuenta usted con algún plan voluntario de salud? | 7: T04
+7 | 1: T05 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Cuál es su percepción general de su estado de salud? | 7: T05
+8 | 1: T06 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 7: T06
+9 | 1: T07 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 7: T07
+10 | 1: T08 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 7: T08
+11 | 1: T09 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 7: T09
+12 | 1: T10 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Se encuentra usted en estado de embarazo? | 7: T10
+13 | 1: T11 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Trazadora | 6: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 7: T11
+14 | 1: T12 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Información y empoderamiento | 6: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 7: T12
+15 | 1: T12a | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Información y empoderamiento | 6: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 7: Nueva en V04
+16 | 1: T13 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Información y empoderamiento | 6: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 7: T13
+17 | 1: T14 | 2: Todos los módulos (8) | 3: Trazadora | 4: Sección B — común | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 7: T14
+19 | 1: SECCIÓN C — BLOQUES ESPECÍFICOS POR MÓDULO
+20 | 1: M1EPS_P01 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Información y empoderamiento | 6: ¿Cuál ha sido el o los principales motivo(s) por el que no ha hecho uso de estos servicios? | 7: M1EPS_P01
+21 | 1: M1EPS_P02 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Información y empoderamiento | 6: ¿A dónde asistió para recibir la atención en salud requerida? | 7: M1EPS_P02
+22 | 1: M1EPS_P03 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Información y empoderamiento | 6: Cuando necesita atención en salud de rutina, ¿hay alguna persona, IPS u otro lugar al que suela acudir normalmente? | 7: M1EPS_P03
+23 | 1: M1EPS_P04 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Acceso general | 6: ¿Hay algún problema de salud que no ha logrado resolver a través de las formas que utiliza hoy en día para atender su salud? | 7: M1EPS_P04
+24 | 1: M1EPS_P04a | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Acceso general | 6: ¿Cuál de los siguientes problemas de salud no ha logrado resolver? (Lista desplegable — respuesta múltiple) | 7: Nueva en V04
+25 | 1: M1EPS_P05 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Atención domiciliaria / EBS | 6: En su hogar, ¿le realizaron o aplicaron la encuesta sobre las condiciones de salud de su familia, por parte de los Equipos Básicos en Salud? | 7: M1EPS_P05
+26 | 1: M1EPS_P06 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Atención Primaria | 6: ¿Le realizaron una evaluación de su condición de salud a usted o a algún miembro de su hogar por parte de los Equipos Básicos en Salud? | 7: M1EPS_P06
+27 | 1: M1EPS_P07 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Atención Primaria | 6: ¿Le realizaron alguna intervención o atención en salud por parte de algún miembro del Equipo Básico en Salud que lo visitó? | 7: M1EPS_P07
+28 | 1: M1EPS_P08 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Atención Primaria | 6: ¿Le realizaron orientación en temas preventivos y/o de autocuidado a través de algún miembro del Equipo Básico en Salud? | 7: M1EPS_P08
+29 | 1: M1EPS_P09 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Atención Primaria | 6: De la visita realizada por los Equipos Básicos en Salud, ¿le realizaron alguna remisión a algún servicio de salud? | 7: M1EPS_P09
+30 | 1: M1EPS_P09a | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Atención Primaria | 6: ¿A cuál de los siguientes servicios de salud lo remitieron? (Lista desplegable — respuesta múltiple) | 7: Nueva en V04
+31 | 1: M1EPS_P10 | 2: EPS - Módulo 1 | 3: Única del módulo | 5: Información y empoderamiento | 6: ¿Se ha automedicado para resolver su atención en salud requerida?
+(Nota: complementa a M1EPS_P02 opción 3 —familiar o vecino, incluye automedicación—; ver hoja Hallazgos.) | 7: M1EPS_P10
+32 | 1: M2EPS_P01 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Conocimiento de la Carta de Derechos y Deberes | 6: ¿Sabe que la EPS está obligada a mantener publicada y actualizada la Carta de Derechos y Deberes (portal web, aplicación móvil, puntos de atención)? | 7: M2EPS_P01
+33 | 1: M2EPS_P02 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Conocimiento de la Carta de Derechos y Deberes | 6: En el último año, ¿la EPS o la IPS le ha entregado o dado a conocer cuáles son sus derechos y deberes como afiliado (Carta de Derechos y Deberes)? | 7: M2EPS_P02
+34 | 1: M2EPS_P03 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Conocimiento de la Carta de Derechos y Deberes | 6: En el último año, ¿ha consultado o revisado el contenido de la Carta de Derechos y Deberes? | 7: M2EPS_P03
+35 | 1: M2EPS_P04 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Solicitar copia de su historia clínica. | 7: M2EPS_P04
+36 | 1: M2EPS_P05 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Solicitar una segunda opinión médica ante dudas sobre su diagnóstico o manejo. | 7: M2EPS_P05
+37 | 1: M2EPS_P06 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Presentar peticiones, quejas, reclamos o denuncias (PQRD) ante la EPS. | 7: M2EPS_P06
+38 | 1: M2EPS_P07 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Acudir a la Superintendencia Nacional de Salud, la Defensoría del Pueblo o las personerías por un conflicto con su EPS. | 7: M2EPS_P07
+39 | 1: M2EPS_P08 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Interponer una acción de tutela para proteger su derecho a la salud. | 7: M2EPS_P08
+40 | 1: M2EPS_P09 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Calificar la atención recibida a través del aplicativo móvil oficial. | 7: M2EPS_P09
+41 | 1: M2EPS_P10 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Consultar el posicionamiento en el Ranking o los indicadores de desempeño de su EPS. | 7: M2EPS_P10
+42 | 1: M2EPS_P11 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Uso de los derechos | 6: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Aceptar o rechazar, por decisión propia, una actividad, intervención, medicamento o tratamiento propuesto por su EPS o IPS. | 7: M2EPS_P11
+43 | 1: M2EPS_P12 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Cumplimiento de deberes | 6: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Atiende las recomendaciones de autocuidado del personal de salud y los programas de promoción y prevención. | 7: M2EPS_P12
+44 | 1: M2EPS_P13 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Cumplimiento de deberes | 6: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Actúa de manera solidaria ante situaciones que pongan en peligro la vida o la salud de otras personas. | 7: M2EPS_P13
+45 | 1: M2EPS_P14 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Cumplimiento de deberes | 6: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Respeta al personal responsable de la prestación de los servicios de salud, personal administrativo y los demás pacientes. | 7: M2EPS_P14
+46 | 1: M2EPS_P15 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Cumplimiento de deberes | 6: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Usa de manera adecuada y racional los servicios de salud y los recursos del Sistema General de Seguridad Social en Salud. | 7: M2EPS_P15
+47 | 1: M2EPS_P16 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Cumplimiento de deberes | 6: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Suministra de manera voluntaria, oportuna y suficiente la información que se requiere para recibir el servicio de salud. | 7: M2EPS_P16
+48 | 1: M2EPS_P17 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Cumplimiento de deberes | 6: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Contribuye al financiamiento de los gastos en salud de acuerdo con su capacidad de pago. | 7: M2EPS_P17
+49 | 1: M2EPS_P18 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Percepción de garantía de derechos (satisfacción) | 6: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: El acceso oportuno a la atención, los exámenes y los tratamientos recibidos. | 7: M2EPS_P18
+50 | 1: M2EPS_P19 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Percepción de garantía de derechos (satisfacción) | 6: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: El trato digno, respetuoso, seguro y sin discriminación que recibió durante la atención. | 7: M2EPS_P19
+51 | 1: M2EPS_P20 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia el profesional de salud lo involucró en las decisiones sobre su tratamiento tanto como usted deseaba? | 7: Nueva en V04
+52 | 1: M2EPS_P21 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia tuvo la oportunidad de expresar sus preferencias acerca de su atención o tratamiento? | 7: Nueva en V04
+53 | 1: M2EPS_P22 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia el profesional tuvo en cuenta sus opiniones y preferencias al decidir sobre su atención? | 7: Nueva en V04
+54 | 1: M2EPS_P23 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia recibió apoyo para participar activamente en el manejo de su salud y sus cuidados? | 7: Nueva en V04
+55 | 1: M2EPS_P24 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia le explicaron las opciones de tratamiento de una manera fácil de comprender? | 7: Nueva en V04
+56 | 1: M2EPS_P25 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia se sintió escuchado y respetado por los profesionales que lo atendieron? | 7: Nueva en V04
+57 | 1: M2EPS_P26 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia los profesionales tuvieron en cuenta lo que es importante para usted en su vida diaria al planificar su atención? | 7: Nueva en V04
+58 | 1: M2EPS_P27 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Experiencia centrada en la persona (OCDE) | 6: ¿Con qué frecuencia trabajó junto con los profesionales de salud para establecer objetivos relacionados con su salud y tratamiento? | 7: Nueva en V04
+59 | 1: M2EPS_P28 | 2: EPS - Módulo 2 | 3: Única del módulo | 5: Percepción de garantía de derechos (satisfacción) | 6: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: La oportunidad en la entrega de los medicamentos, insumos y dispositivos que necesitó para su tratamiento. | 7: M2EPS_P24
+60 | 1: M3EPS_P01 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Información y empoderamiento | 6: ¿Cuál de los siguientes servicios utilizó? | 7: M3EPS_P01
+61 | 1: M3EPS_P02 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: Si el servicio requerido fue de consulta externa, ¿cuál de las siguientes fue la consulta externa requerida? | 7: M3EPS_P02
+62 | 1: M3EPS_P03 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio? | 7: M3EPS_P03
+63 | 1: M3EPS_P04 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1, IPS - Módulo 4 | 5: Acceso al servicio | 6: ¿Requirió autorización para acceder a este servicio? | 7: M3EPS_P04
+64 | 1: M3EPS_P05 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: ¿Le autorizaron el servicio? | 7: M3EPS_P05
+65 | 1: M3EPS_P06 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: ¿Cuál de los siguientes medios utilizó para agendar el servicio autorizado? | 7: M3EPS_P06
+66 | 1: M3EPS_P07 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: En el último año, ¿le han cancelado un servicio requerido previamente agendado? | 7: M3EPS_P07
+67 | 1: M3EPS_P08 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: Cuando se lo cancelaron, ¿se lo reagendaron? | 7: M3EPS_P08
+68 | 1: M3EPS_P09 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado? | 7: M3EPS_P09
+69 | 1: M3EPS_P10 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: ¿Cuántos minutos le tomó el desplazamiento desde su lugar de residencia hasta el lugar donde fue a tomar los servicios? | 7: M3EPS_P10
+70 | 1: M3EPS_P10a | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso al servicio | 6: ¿Qué medio(s) de transporte utilizó para ese desplazamiento? (Lista desplegable — respuesta múltiple) | 7: Nueva en V04
+71 | 1: M3EPS_P11 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 7: M3EPS_P11
+72 | 1: M3EPS_P12 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 7: M3EPS_P12
+73 | 1: M3EPS_P13 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la consulta o el procedimiento? | 7: M3EPS_P13
+74 | 1: M3EPS_P14 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud conoció aspectos importantes de su historia clínica? | 7: M3EPS_P14
+75 | 1: M3EPS_P15 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Gasto de bolsillo | 6: En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación) | 7: M3EPS_P15
+76 | 1: M3EPS_P15a | 2: EPS - Módulo 3 | 3: Única del módulo | 5: Gasto de bolsillo | 6: En el último año, ¿cuál fue el valor aproximado que tuvo que pagar con recursos propios o familiares por cada uno de los siguientes servicios? (Marque un rango por cada servicio: a. consulta médica; b. exámenes de laboratorio; c. imágenes diagnósticas; d. medicamentos; e. transporte para la atención) | 7: Nueva en V04
+77 | 1: M3EPS_P16 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M3EPS_P01? | 7: M3EPS_P16
+78 | 1: M3EPS_P17 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 | 5: Experiencia general | 6: De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido? | 7: M3EPS_P17
+79 | 1: M3EPS_P18 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1 | 5: Acceso general | 6: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido? | 7: M3EPS_P18
+80 | 1: M3EPS_P19 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: Gestor - Módulo 1, IPS - Módulo 1, IPS - Módulo 3 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 7: M3EPS_P19
+81 | 1: M3EPS_P20 | 2: EPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 1, IPS - Módulo 2 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 7: M3EPS_P20
+82 | 1: M1IPS_P01 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Información y empoderamiento | 6: ¿Cuál de los siguientes servicios utilizó? | 7: M1IPS_P01
+83 | 1: M1IPS_P02 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: Si el servicio requerido fue de consulta externa, ¿cuál de las siguientes fue la consulta externa requerida? | 7: M1IPS_P02
+84 | 1: M1IPS_P03 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio? | 7: M1IPS_P03
+85 | 1: M1IPS_P04 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 4 | 5: Acceso al servicio | 6: ¿Requirió autorización para acceder a este servicio? | 7: M1IPS_P04
+86 | 1: M1IPS_P05 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: ¿Le autorizaron el servicio? | 7: M1IPS_P05
+87 | 1: M1IPS_P06 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: ¿Cuál de los siguientes medios utilizó para agendar el servicio autorizado? | 7: M1IPS_P06
+88 | 1: M1IPS_P07 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: En el último año, ¿le han cancelado un servicio requerido previamente agendado? | 7: M1IPS_P07
+89 | 1: M1IPS_P08 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: Cuando se lo cancelaron, ¿se lo reagendaron? | 7: M1IPS_P08
+90 | 1: M1IPS_P09 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado? | 7: M1IPS_P09
+91 | 1: M1IPS_P10 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: ¿Cuántos minutos le tomó el desplazamiento desde su lugar de residencia hasta el lugar donde fue a tomar los servicios? | 7: M1IPS_P10
+92 | 1: M1IPS_P10a | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso al servicio | 6: ¿Qué medio(s) de transporte utilizó para ese desplazamiento? (Lista desplegable — respuesta múltiple) | 7: Nueva en V04
+93 | 1: M1IPS_P11 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 7: M1IPS_P11
+94 | 1: M1IPS_P12 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 7: M1IPS_P12
+95 | 1: M1IPS_P13 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la consulta o el procedimiento? | 7: M1IPS_P13
+96 | 1: M1IPS_P14 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud conoció aspectos importantes de su historia clínica? | 7: M1IPS_P14
+97 | 1: M1IPS_P15 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Gasto de bolsillo | 6: En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación) | 7: M1IPS_P15
+98 | 1: M1IPS_P16 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M1IPS_P01? | 7: M1IPS_P16
+99 | 1: M1IPS_P17 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 2, IPS - Módulo 3, IPS - Módulo 4 | 5: Experiencia general | 6: De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido? | 7: M1IPS_P17
+100 | 1: M1IPS_P18 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3 | 5: Acceso general | 6: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido? | 7: M1IPS_P18
+101 | 1: M1IPS_P19 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, Gestor - Módulo 1, IPS - Módulo 3 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 7: M1IPS_P19
+102 | 1: M1IPS_P20 | 2: IPS - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 2 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 7: M1IPS_P20
+103 | 1: M2IPS_P01 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Información y empoderamiento | 6: ¿Sabe usted que los servicios de urgencias cuentan con un sistema de selección y clasificación de pacientes denominado 'triage'? | 7: M2IPS_P01
+104 | 1: M2IPS_P02 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Acceso general | 6: ¿Por cuál de las siguientes razones utilizó el servicio de urgencias? | 7: M2IPS_P02
+105 | 1: M2IPS_P03 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 3 | 5: Acceso general | 6: La última vez que utilizó el servicio de urgencias, ¿a qué tipo de institución acudió? | 7: M2IPS_P03
+106 | 1: M2IPS_P04 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Acceso general | 6: Cuando asistió al servicio de urgencias, ¿lo atendieron? | 7: M2IPS_P04
+107 | 1: M2IPS_P05 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Acceso general | 6: ¿Cuál fue la razón principal por la que no recibió atención médica en el servicio de urgencias?
+(Si no fue atendido, continúe directamente en M2IPS_P13.) | 7: M2IPS_P05
+108 | 1: M2IPS_P06 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió entre el momento de llegar al servicio de urgencias (después del triage) y el momento de ser atendido(a) por el médico? | 7: M2IPS_P06
+109 | 1: M2IPS_P07 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 3, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 7: M2IPS_P07
+110 | 1: M2IPS_P08 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 3, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 7: M2IPS_P08
+111 | 1: M2IPS_P09 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la atención en urgencias? | 7: M2IPS_P09
+112 | 1: M2IPS_P10 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Calidad del servicio | 6: Derivada de la consulta de urgencias, ¿requirió usted hospitalización dentro de la misma institución? | 7: M2IPS_P10
+113 | 1: M2IPS_P11 | 2: IPS - Módulo 2 | 3: Única del módulo | 5: Tiempo de espera | 6: Desde el servicio de urgencias, ¿cuánto tiempo transcurrió entre el momento en que se le informó que debía ser hospitalizado y el momento en que se instaló efectivamente en la cama de hospitalización? | 7: M2IPS_P11
+114 | 1: M2IPS_P12 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 3 | 5: Acceso general | 6: Dado su problema de salud, ¿requirió alguna autorización de su EPS para recibir algún servicio durante su atención en urgencias? | 7: M2IPS_P12
+115 | 1: M2IPS_P12b | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 3 | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde el momento en que le notificaron que el servicio debía ser autorizado por su EPS hasta el momento en que le prestaron el servicio? | 7: M2IPS_P12b
+116 | 1: M2IPS_P13 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 3 | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio de urgencias? | 7: M2IPS_P13
+117 | 1: M2IPS_P14 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 3, IPS - Módulo 4 | 5: Experiencia general | 6: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de urgencias? | 7: M2IPS_P14
+118 | 1: M2IPS_P15 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 3 | 5: Acceso general | 6: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio de urgencias? | 7: M2IPS_P15
+119 | 1: M2IPS_P16 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 7: M2IPS_P16
+120 | 1: M2IPS_P17 | 2: IPS - Módulo 2 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 4 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su prestador a familiares y amigos? | 7: M2IPS_P17
+121 | 1: M3IPS_P01 | 2: IPS - Módulo 3 | 3: Única del módulo | 5: Acceso general | 6: ¿Por cuál de las siguientes razones utilizó el servicio de internación - hospitalización? | 7: M3IPS_P01
+122 | 1: M3IPS_P02 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 2 | 5: Acceso general | 6: La última vez que utilizó el servicio de hospitalización, ¿a qué tipo de institución acudió? | 7: M3IPS_P02
+123 | 1: M3IPS_P03 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 7: M3IPS_P03
+124 | 1: M3IPS_P04 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 4 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 7: M3IPS_P04
+125 | 1: M3IPS_P05 | 2: IPS - Módulo 3 | 3: Única del módulo | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la atención hospitalaria? | 7: M3IPS_P05
+126 | 1: M3IPS_P06 | 2: IPS - Módulo 3 | 3: Única del módulo | 5: Acceso general | 6: Dado su problema de salud, ¿requirió ser remitido a otra institución de mayor nivel para su hospitalización? | 7: M3IPS_P06
+127 | 1: M3IPS_P07 | 2: IPS - Módulo 3 | 3: Única del módulo | 5: Acceso general | 6: ¿Requirió ser remitido a otra institución para hospitalización por no disponibilidad de autorización o convenio con la institución por parte de su EPS? | 7: M3IPS_P07
+128 | 1: M3IPS_P08 | 2: IPS - Módulo 3 | 3: Única del módulo | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde el momento en que le notificaron que debía ser remitido a otra institución hasta el momento en que lo admitieron en la institución de destino? | 7: M3IPS_P08
+129 | 1: M3IPS_P09 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 2 | 5: Acceso general | 6: Dado su problema de salud, ¿requirió alguna autorización de su EPS para recibir algún servicio durante su atención en hospitalización? | 7: M3IPS_P09
+130 | 1: M3IPS_P10 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 2 | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde el momento en que le notificaron que el servicio debía ser autorizado por su EPS hasta el momento en que le prestaron el servicio? | 7: M3IPS_P10
+131 | 1: M3IPS_P11 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 2 | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio de hospitalización? | 7: M3IPS_P11
+132 | 1: M3IPS_P12 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 4 | 5: Experiencia general | 6: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de hospitalización? | 7: M3IPS_P12
+133 | 1: M3IPS_P13 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 2 | 5: Acceso general | 6: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio de hospitalización? | 7: M3IPS_P13
+134 | 1: M3IPS_P14 | 2: IPS - Módulo 3 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, Gestor - Módulo 1, IPS - Módulo 1 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 7: M3IPS_P14
+135 | 1: M3IPS_P15 | 2: IPS - Módulo 3 | 3: Única del módulo | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su prestador de servicios de salud a familiares y amigos? | 7: M3IPS_P15
+136 | 1: M4IPS_P01 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde la solicitud del servicio (cirugía) hasta haber recibido efectivamente el servicio? | 7: M4IPS_P01
+137 | 1: M4IPS_P02 | 2: IPS - Módulo 4 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1 | 5: Acceso al servicio | 6: ¿Requirió autorización para acceder a este servicio? | 7: M4IPS_P02
+138 | 1: M4IPS_P03 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Acceso al servicio | 6: ¿Le autorizaron la cirugía? | 7: M4IPS_P03
+139 | 1: M4IPS_P04 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Acceso al servicio | 6: ¿Cuál de los siguientes medios utilizó para agendar la cirugía requerida? | 7: M4IPS_P04
+140 | 1: M4IPS_P05 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Acceso al servicio | 6: En el último año, ¿cuántas veces le han cancelado una cirugía previamente agendada? | 7: M4IPS_P05 + M4IPS_P06 (fusionadas)
+141 | 1: M4IPS_P06 | 2: IPS - Módulo 4 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 7: M4IPS_P07
+142 | 1: M4IPS_P07 | 2: IPS - Módulo 4 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3 | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 7: M4IPS_P08
+143 | 1: M4IPS_P08 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Humanización | 6: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con el procedimiento quirúrgico? | 7: M4IPS_P09
+144 | 1: M4IPS_P09 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Las citas de control con su cirujano tratante transcurrieron en los tiempos establecidos? | 7: M4IPS_P10
+145 | 1: M4IPS_P10 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Fue usted informado(a) sobre los riesgos o complicaciones que se podían presentar con la cirugía? | 7: M4IPS_P11
+146 | 1: M4IPS_P11 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Recibió la atención necesaria durante la hospitalización, la cirugía y el posoperatorio? | 7: M4IPS_P12
+147 | 1: M4IPS_P12 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al procedimiento quirúrgico? | 7: M4IPS_P13
+148 | 1: M4IPS_P13 | 2: IPS - Módulo 4 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 2, IPS - Módulo 3 | 5: Experiencia general | 6: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de cirugía? | 7: M4IPS_P14
+149 | 1: M4IPS_P14 | 2: IPS - Módulo 4 | 3: Única del módulo | 5: Acceso general | 6: De 1 a 10, ¿cómo calificaría la facilidad de acceder al procedimiento quirúrgico que requería? | 7: M4IPS_P15
+150 | 1: M4IPS_P15 | 2: IPS - Módulo 4 | 3: Compartida | 4: Compartida — también en: IPS - Módulo 2 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su prestador a familiares y amigos? | 7: M4IPS_P16
+151 | 1: M1GES_P01 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso a tecnologías | 6: ¿Solicitó a la EPS los medicamentos que le ordenaron? | 7: M1GES_P01
+152 | 1: M1GES_P02 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso a tecnologías | 6: ¿Alguno(s) de estos medicamentos no estaban cubiertos en su plan de beneficios y requirió trámite adicional (Mipres)? | 7: M1GES_P02
+153 | 1: M1GES_P03 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso a tecnologías | 6: ¿Requirió autorización por la EPS para acceder a alguno de estos medicamentos? | 7: M1GES_P03
+154 | 1: M1GES_P04 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso a tecnologías | 6: ¿La EPS le autorizó los medicamentos? | 7: M1GES_P04
+155 | 1: M1GES_P05 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde el momento en que solicitó la autorización de los medicamentos ante la EPS, hasta el momento en que le dieron la autorización? | 7: M1GES_P05
+156 | 1: M1GES_P06 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso a tecnologías | 6: ¿Por qué le negaron la autorización para los medicamentos? | 7: M1GES_P06
+157 | 1: M1GES_P07 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Le entregaron todos los medicamentos la primera vez que los solicitó? | 7: M1GES_P07
+158 | 1: M1GES_P08 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Tiempo de espera | 6: ¿Cuánto tiempo transcurrió desde el momento en que asistió al punto donde le entregan sus medicamentos hasta que fue atendido por el personal que entrega los medicamentos? | 7: M1GES_P08
+159 | 1: M1GES_P09 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio? | 7: M1GES_P09
+160 | 1: M1GES_P10 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Aceptó usted esa opción de entrega a domicilio? | 7: M1GES_P10
+161 | 1: M1GES_P11 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Calidad del servicio | 6: ¿Le llegaron los medicamentos faltantes al domicilio?
+(Si la respuesta es Sí: indique cuántos días se tardó el domicilio —número de días, admite decimales—.) | 7: M1GES_P11
+162 | 1: M1GES_P12 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso a tecnologías | 6: ¿Cómo obtuvo los medicamentos que no le entregaron o no le autorizaron? | 7: M1GES_P12
+163 | 1: M1GES_P13 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Gasto de bolsillo | 6: En el último año, en las ocasiones en que tuvo que comprar con recursos propios o familiares los medicamentos que le ordenaron, ¿cuánto tuvo que pagar por estos? (Diferente a copagos, cuotas moderadoras y cuotas de recuperación) | 7: M1GES_P13
+164 | 1: M1GES_P14 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Información y empoderamiento | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a la entrega de los medicamentos o dispositivos médicos? | 7: M1GES_P14
+165 | 1: M1GES_P15 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Experiencia general | 6: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de entrega de medicamentos? | 7: M1GES_P15
+166 | 1: M1GES_P16 | 2: Gestor - Módulo 1 | 3: Única del módulo | 5: Acceso general | 6: De 1 a 10, ¿recomendaría su gestor farmacéutico (la farmacia que le dispensó los medicamentos) a familiares y amigos? | 7: M1GES_P16
+167 | 1: M1GES_P17 | 2: Gestor - Módulo 1 | 3: Compartida | 4: Compartida — también en: EPS - Módulo 3, IPS - Módulo 1, IPS - Módulo 3 | 5: Satisfacción general | 6: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 7: M1GES_P17
+SHEET EPS - Módulo 1
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO EPS 1 — NO USUARIO / EQUIPOS BÁSICOS DE SALUD
+4 | 1: Código: MSPS-ENUS-EPS1      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas que en T06 declaran NO haber usado servicios de salud en el último año. Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+104 | 1: T18 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+106 | 1: SECCIÓN C. BLOQUE B1 — NO USUARIO / EQUIPOS BÁSICOS DE SALUD (EBS)
+107 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+108 | 1: M1EPS_P01 | 2: Información y empoderamiento | 3: ¿Cuál ha sido el o los principales motivo(s) por el que no ha hecho uso de estos servicios? | 4: 1 | 5: Desconfianza en el sistema de salud
+109 | 4: 2 | 5: Recursos económicos
+110 | 4: 3 | 5: Falta de afiliación a salud
+111 | 4: 4 | 5: Difícil acceso
+112 | 4: 5 | 5: Otro: ¿cuál? ___________
+113 | 1: M1EPS_P02 | 2: Información y empoderamiento | 3: ¿A dónde asistió para recibir la atención en salud requerida? | 4: 1 | 5: Droguería (orientación y recomendación del expendedor de medicamentos)
+114 | 4: 2 | 5: Médico particular
+115 | 4: 3 | 5: Familiar o vecino (incluye automedicación)
+116 | 4: 4 | 5: Médico alternativo
+117 | 4: 5 | 5: Chamán
+118 | 4: 6 | 5: Otro: ¿cuál? ___________
+119 | 1: M1EPS_P03 | 2: Información y empoderamiento | 3: Cuando necesita atención en salud de rutina, ¿hay alguna persona, IPS u otro lugar al que suela acudir normalmente? | 4: 1 | 5: Sí
+120 | 4: 2 | 5: No
+121 | 1: M1EPS_P04 | 2: Acceso general | 3: ¿Hay algún problema de salud que no ha logrado resolver a través de las formas que utiliza hoy en día para atender su salud? | 4: 1 | 5: Sí | 6: Pase a M1EPS_P04a
+122 | 4: 2 | 5: No | 6: Pase a M1EPS_P05
+123 | 1: M1EPS_P04a | 2: Acceso general | 3: ¿Cuál de los siguientes problemas de salud no ha logrado resolver? (Lista desplegable — respuesta múltiple) | 4: 1 | 5: Dolor crónico o persistente
+124 | 4: 2 | 5: Problema de salud mental (ansiedad, depresión, consumo de sustancias)
+125 | 4: 3 | 5: Problema de salud sin control (hipertensión, diabetes u otra)
+126 | 4: 4 | 5: Problema odontológico
+127 | 4: 5 | 5: Problema de la visión o de la escucha
+128 | 4: 6 | 5: Problema de movilidad o necesidad de rehabilitación
+129 | 4: 7 | 5: Problema de salud sexual y reproductiva
+130 | 4: 8 | 5: Problema de nutrición o alimentación
+131 | 4: 9 | 5: Otro: ¿cuál? ___________
+132 | 1: M1EPS_P05 | 2: Atención domiciliaria / EBS | 3: En su hogar, ¿le realizaron o aplicaron la encuesta sobre las condiciones de salud de su familia, por parte de los Equipos Básicos en Salud? | 4: 1 | 5: Sí
+133 | 4: 2 | 5: No
+134 | 1: M1EPS_P06 | 2: Atención Primaria | 3: ¿Le realizaron una evaluación de su condición de salud a usted o a algún miembro de su hogar por parte de los Equipos Básicos en Salud? | 4: 1 | 5: Sí
+135 | 4: 2 | 5: No
+136 | 1: M1EPS_P07 | 2: Atención Primaria | 3: ¿Le realizaron alguna intervención o atención en salud por parte de algún miembro del Equipo Básico en Salud que lo visitó? | 4: 1 | 5: Sí
+137 | 4: 2 | 5: No
+138 | 1: M1EPS_P08 | 2: Atención Primaria | 3: ¿Le realizaron orientación en temas preventivos y/o de autocuidado a través de algún miembro del Equipo Básico en Salud? | 4: 1 | 5: Sí
+139 | 4: 2 | 5: No
+140 | 1: M1EPS_P09 | 2: Atención Primaria | 3: De la visita realizada por los Equipos Básicos en Salud, ¿le realizaron alguna remisión a algún servicio de salud? | 4: 1 | 5: Sí | 6: Pase a M1EPS_P09a
+141 | 4: 2 | 5: No | 6: Pase a M1EPS_P10
+142 | 1: M1EPS_P09a | 2: Atención Primaria | 3: ¿A cuál de los siguientes servicios de salud lo remitieron? (Lista desplegable — respuesta múltiple) | 4: 1 | 5: Medicina general
+143 | 4: 2 | 5: Medicina especializada
+144 | 4: 3 | 5: Odontología
+145 | 4: 4 | 5: Enfermería
+146 | 4: 5 | 5: Nutrición
+147 | 4: 6 | 5: Psicología o salud mental
+148 | 4: 7 | 5: Laboratorio clínico
+149 | 4: 8 | 5: Imágenes diagnósticas
+150 | 4: 9 | 5: Vacunación
+151 | 4: 10 | 5: Programa de promoción y mantenimiento de la salud
+152 | 4: 11 | 5: Urgencias
+153 | 4: 12 | 5: Otro: ¿cuál? ___________
+154 | 1: M1EPS_P10 | 2: Información y empoderamiento | 3: ¿Se ha automedicado para resolver su atención en salud requerida?
+ | 4: 1 | 5: Sí
+155 | 4: 2 | 5: No
+157 | 1: FIN DEL MÓDULO
+SHEET EPS - Módulo 2
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO EPS 2 — DEBERES Y DERECHOS
+4 | 1: Código: MSPS-ENUS-EPS2      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: afiliados en general, para evaluar conocimiento y uso de la Carta de Derechos y Deberes (no depende del tipo de servicio en T09). Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata.) | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+ | 4: 1 | 5: Urgencias
+49 | 4: 2 | 5: Hospitalización
+50 | 4: 3 | 5: Cirugía
+51 | 4: 4 | 5: Consulta con médico especialista
+52 | 4: 5 | 5: Consulta con médico general
+53 | 4: 6 | 5: Consulta con otro profesional
+54 | 4: 5 | 5: Atención Domiciliaria
+55 | 4: 6 | 5: Entrega de medicamentos
+56 | 4: 7 | 5: Entrega de dispositivos médicos ( sillas de ruedas, glucometros, jeringas, catéteres, prótesis, audífonos, oxímetros.)
+57 | 4: 8 | 5: Laboratorio clínico
+58 | 4: 9 | 5: Imágenes diagnósticas
+59 | 4: 10 | 5: Vacunación
+60 | 4: 11 | 5: Examen de seno o de próstata
+61 | 4: 12 | 5: Citología vaginal
+62 | 4: 13 | 5: Limpieza de los dientes
+63 | 4: 14 | 5: Otro: ¿cuál? ___________
+64 | 4: 15 | 5: Ninguna de las anteriores
+65 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+66 | 4: 2 | 5: Un familiar
+67 | 4: 3 | 5: Un amigo o conocido
+68 | 4: 4 | 5: La EPS
+69 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+70 | 4: 6 | 5: La Secretaría de Salud
+71 | 4: 7 | 5: Un defensor del usuario
+72 | 4: 8 | 5: La Personería
+73 | 4: 9 | 5: La Superintendencia Nacional de Salud
+74 | 4: 10 | 5: Otro: ¿cuál? ___________
+75 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+76 | 4: 2 | 5: No
+77 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+78 | 4: 2 | 5: No
+79 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+80 | 4: 2 | 5: No
+81 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+82 | 4: 2 | 5: Diabetes
+83 | 4: 3 | 5: Problemas cardíacos
+84 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+85 | 4: 5 | 5: Enfermedad renal
+86 | 4: 6 | 5: Cáncer
+87 | 4: 7 | 5: VIH / SIDA
+88 | 4: 8 | 5: Hepatitis C
+89 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+90 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+91 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+92 | 4: 12 | 5: Hemofilia
+93 | 4: 13 | 5: Enfermedad huérfana o rara
+94 | 4: 14 | 5: Ninguna de las anteriores
+95 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+96 | 4: 2 | 5: No | 6: Pase a T13
+97 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+98 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+99 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+100 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+101 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+102 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+103 | 4: 7 | 5: Se automedicó o usó un remedio casero
+104 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+105 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+106 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+107 | 4: 11 | 5: Otro: ¿cuál? ___________
+108 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+109 | 4: 2 | 5: No
+110 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+111 | 4: 2 | 5: No
+112 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+113 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+114 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+115 | 1: T18 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+117 | 1: SECCIÓN C. BLOQUE B2 — DEBERES Y DERECHOS (ajustado — Resolución 1642 de 2026, Formulario_Afiliado_Antiguo_V02)
+118 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+119 | 1: M2EPS_P01 | 2: Conocimiento de la Carta de Derechos y Deberes | 3: ¿Sabe que la EPS está obligada a mantener publicada y actualizada la Carta de Derechos y Deberes (portal web, aplicación móvil, puntos de atención)? | 4: 1 | 5: Sí
+120 | 4: 2 | 5: No
+121 | 1: M2EPS_P02 | 2: Conocimiento de la Carta de Derechos y Deberes | 3: En el último año, ¿la EPS o la IPS le ha entregado o dado a conocer cuáles son sus derechos y deberes como afiliado (Carta de Derechos y Deberes)? | 4: 1 | 5: Sí
+122 | 4: 2 | 5: No
+123 | 4: 3 | 5: No sabía que existía
+124 | 1: M2EPS_P03 | 2: Conocimiento de la Carta de Derechos y Deberes | 3: En el último año, ¿ha consultado o revisado el contenido de la Carta de Derechos y Deberes? | 4: 1 | 5: Sí
+125 | 4: 2 | 5: No
+126 | 4: 3 | 5: No sabía que existía
+127 | 1: M2EPS_P04 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Solicitar copia de su historia clínica. | 4: 1 | 5: Nunca
+128 | 4: 2 | 5: Una vez
+129 | 4: 3 | 5: Dos o tres veces
+130 | 4: 4 | 5: Cuatro o más veces
+131 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+132 | 1: M2EPS_P05 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Solicitar una segunda opinión médica ante dudas sobre su diagnóstico o manejo. | 4: 1 | 5: Nunca
+133 | 4: 2 | 5: Una vez
+134 | 4: 3 | 5: Dos o tres veces
+135 | 4: 4 | 5: Cuatro o más veces
+136 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+137 | 1: M2EPS_P06 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Presentar peticiones, quejas, reclamos o denuncias (PQRD) ante la EPS. | 4: 1 | 5: Nunca
+138 | 4: 2 | 5: Una vez
+139 | 4: 3 | 5: Dos o tres veces
+140 | 4: 4 | 5: Cuatro o más veces
+141 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+142 | 1: M2EPS_P07 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Acudir a la Superintendencia Nacional de Salud, la Defensoría del Pueblo o las personerías por un conflicto con su EPS. | 4: 1 | 5: Nunca
+143 | 4: 2 | 5: Una vez
+144 | 4: 3 | 5: Dos o tres veces
+145 | 4: 4 | 5: Cuatro o más veces
+146 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+147 | 1: M2EPS_P08 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Interponer una acción de tutela para proteger su derecho a la salud. | 4: 1 | 5: Nunca
+148 | 4: 2 | 5: Una vez
+149 | 4: 3 | 5: Dos o tres veces
+150 | 4: 4 | 5: Cuatro o más veces
+151 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+152 | 1: M2EPS_P09 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Calificar la atención recibida a través del aplicativo móvil oficial. | 4: 1 | 5: Nunca
+153 | 4: 2 | 5: Una vez
+154 | 4: 3 | 5: Dos o tres veces
+155 | 4: 4 | 5: Cuatro o más veces
+156 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+157 | 1: M2EPS_P10 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Consultar el posicionamiento en el Ranking o los indicadores de desempeño de su EPS. | 4: 1 | 5: Nunca
+158 | 4: 2 | 5: Una vez
+159 | 4: 3 | 5: Dos o tres veces
+160 | 4: 4 | 5: Cuatro o más veces
+161 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+162 | 1: M2EPS_P11 | 2: Uso de los derechos | 3: Indique con qué frecuencia, en el último año, ha ejercido el siguiente derecho: Aceptar o rechazar, por decisión propia, una actividad, intervención, medicamento o tratamiento propuesto por su EPS o IPS. | 4: 1 | 5: Nunca
+163 | 4: 2 | 5: Una vez
+164 | 4: 3 | 5: Dos o tres veces
+165 | 4: 4 | 5: Cuatro o más veces
+166 | 4: 5 | 5: No necesitó solicitarla / ejercerla
+167 | 1: M2EPS_P12 | 2: Cumplimiento de deberes | 3: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Atiende las recomendaciones de autocuidado del personal de salud y los programas de promoción y prevención. | 4: 1 | 5: Siempre
+168 | 4: 2 | 5: Casi siempre
+169 | 4: 3 | 5: Algunas veces
+170 | 4: 4 | 5: Casi nunca
+171 | 4: 5 | 5: Nunca
+172 | 4: 6 | 5: No aplica
+173 | 1: M2EPS_P13 | 2: Cumplimiento de deberes | 3: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Actúa de manera solidaria ante situaciones que pongan en peligro la vida o la salud de otras personas. | 4: 1 | 5: Siempre
+174 | 4: 2 | 5: Casi siempre
+175 | 4: 3 | 5: Algunas veces
+176 | 4: 4 | 5: Casi nunca
+177 | 4: 5 | 5: Nunca
+178 | 4: 6 | 5: No aplica
+179 | 1: M2EPS_P14 | 2: Cumplimiento de deberes | 3: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Respeta al personal responsable de la prestación de los servicios de salud, personal administrativo y los demás pacientes. | 4: 1 | 5: Siempre
+180 | 4: 2 | 5: Casi siempre
+181 | 4: 3 | 5: Algunas veces
+182 | 4: 4 | 5: Casi nunca
+183 | 4: 5 | 5: Nunca
+184 | 4: 6 | 5: No aplica
+185 | 1: M2EPS_P15 | 2: Cumplimiento de deberes | 3: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Usa de manera adecuada y racional los servicios de salud y los recursos del Sistema General de Seguridad Social en Salud. | 4: 1 | 5: Siempre
+186 | 4: 2 | 5: Casi siempre
+187 | 4: 3 | 5: Algunas veces
+188 | 4: 4 | 5: Casi nunca
+189 | 4: 5 | 5: Nunca
+190 | 4: 6 | 5: No aplica
+191 | 1: M2EPS_P16 | 2: Cumplimiento de deberes | 3: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Suministra de manera voluntaria, oportuna y suficiente la información que se requiere para recibir el servicio de salud. | 4: 1 | 5: Siempre
+192 | 4: 2 | 5: Casi siempre
+193 | 4: 3 | 5: Algunas veces
+194 | 4: 4 | 5: Casi nunca
+195 | 4: 5 | 5: Nunca
+196 | 4: 6 | 5: No aplica
+197 | 1: M2EPS_P17 | 2: Cumplimiento de deberes | 3: Indique con qué frecuencia usted cumple con el siguiente deber establecido en la Carta: Contribuye al financiamiento de los gastos en salud de acuerdo con su capacidad de pago. | 4: 1 | 5: Siempre
+198 | 4: 2 | 5: Casi siempre
+199 | 4: 3 | 5: Algunas veces
+200 | 4: 4 | 5: Casi nunca
+201 | 4: 5 | 5: Nunca
+202 | 4: 6 | 5: No aplica
+203 | 1: M2EPS_P18 | 2: Percepción de garantía de derechos (satisfacción) | 3: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: El acceso oportuno a la atención, los exámenes y los tratamientos recibidos. | 4: 1 | 5: Muy satisfecho
+204 | 4: 2 | 5: Satisfecho
+205 | 4: 3 | 5: Insatisfecho
+206 | 4: 4 | 5: Muy insatisfecho
+207 | 4: 5 | 5: No sabe / No aplica
+208 | 1: M2EPS_P19 | 2: Percepción de garantía de derechos (satisfacción) | 3: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: El trato digno, respetuoso, seguro y sin discriminación que recibió durante la atención. | 4: 1 | 5: Muy satisfecho
+209 | 4: 2 | 5: Satisfecho
+210 | 4: 3 | 5: Insatisfecho
+211 | 4: 4 | 5: Muy insatisfecho
+212 | 4: 5 | 5: No sabe / No aplica
+213 | 1: M2EPS_P20 | 2: Experiencia centrada en la persona (OCDE) | 3: ¿Con qué frecuencia el profesional de salud lo involucró en las decisiones sobre su tratamiento tanto como usted deseaba? | 4: 1 | 5: Nunca
+214 | 4: 2 | 5: Algunas veces
+215 | 4: 3 | 5: Frecuentemente
+216 | 4: 4 | 5: Siempre
+217 | 4: 5 | 5: No aplica
+218 | 1: M2EPS_P22 | 2: Experiencia centrada en la persona (OCDE) | 3: ¿Con qué frecuencia el profesional tuvo en cuenta sus opiniones y preferencias al decidir sobre su atención? | 4: 1 | 5: Nunca
+219 | 4: 2 | 5: Algunas veces
+220 | 4: 3 | 5: Frecuentemente
+221 | 4: 4 | 5: Siempre
+222 | 4: 5 | 5: No aplica
+223 | 1: M2EPS_P24 | 2: Experiencia centrada en la persona (OCDE) | 3: ¿Con qué frecuencia le explicaron las opciones de tratamiento de una manera fácil de comprender? | 4: 1 | 5: Nunca
+224 | 4: 2 | 5: Algunas veces
+225 | 4: 3 | 5: Frecuentemente
+226 | 4: 4 | 5: Siempre
+227 | 4: 5 | 5: No aplica
+228 | 1: M2EPS_P25 | 2: Experiencia centrada en la persona (OCDE) | 3: ¿Con qué frecuencia se sintió escuchado y respetado por los profesionales que lo atendieron? | 4: 1 | 5: Nunca
+229 | 4: 2 | 5: Algunas veces
+230 | 4: 3 | 5: Frecuentemente
+231 | 4: 4 | 5: Siempre
+232 | 4: 5 | 5: No aplica
+233 | 1: M2EPS_P28 | 2: Percepción de garantía de derechos (satisfacción) | 3: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: La oportunidad en la entrega de los medicamentos, insumos y dispositivos que necesitó para su tratamiento. | 4: 1 | 5: Muy satisfecho
+234 | 4: 2 | 5: Satisfecho
+235 | 4: 3 | 5: Insatisfecho
+236 | 4: 4 | 5: Muy insatisfecho
+237 | 4: 5 | 5: No sabe / No aplica
+239 | 1: FIN DEL MÓDULO
+SHEET EPS - Módulo 3
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO EPS 3 — AMBULATORIO
+4 | 1: Código: MSPS-ENUS-EPS3      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas preseleccionadas por haber usado consulta externa, laboratorio o imágenes diagnósticas (evaluación a nivel EPS). Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+104 | 1: T18 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+106 | 1: SECCIÓN C. BLOQUE B3 — AMBULATORIO
+107 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+108 | 1: M3EPS_P01 | 2: Información y empoderamiento | 3: ¿Cuál de los siguientes servicios utilizó? | 4: 1 | 5: Consulta externa (es una cita programada o solicitada) | 6: Pase a M3EPS_P02
+109 | 4: 2 | 5: Toma de laboratorios (exámenes de sangre, orina u otras muestras) | 6: Pase a M3EPS_P03
+110 | 4: 3 | 5: Imagenología (imágenes o procedimientos diagnósticos): exámenes o pruebas como radiografías, ecografías, tomografías u otros estudios diagnósticos | 6: Pase a M3EPS_P03
+111 | 4: 4 | 5: Tratamientos asistidos: quimioterapia, radioterapia o diálisis | 6: Pase a M3EPS_P03
+112 | 4: 5 | 5: Terapias (física, ocupacional, lenguaje, respiratoria, entre otras) | 6: Pase a M3EPS_P03
+113 | 4: 6 | 5: Otro: ¿cuál? ___________ | 6: Pase a M3EPS_P03
+114 | 1: M3EPS_P02 | 2: Acceso al servicio | 3: Si el servicio requerido fue de consulta externa, ¿cuál de las siguientes fue la consulta externa requerida? | 4: 1 | 5: Medicina General
+115 | 4: 2 | 5: Enfermería
+116 | 4: 3 | 5: Odontología
+117 | 4: 4 | 5: Psicología
+118 | 4: 5 | 5: Medicina Interna
+119 | 4: 6 | 5: Medicina Familiar
+120 | 4: 7 | 5: Cirugía General
+121 | 4: 8 | 5: Ginecología y Obstetricia
+122 | 4: 9 | 5: Pediatría
+123 | 4: 10 | 5: Psiquiatría
+124 | 4: 11 | 5: Otro: ¿cuál? ___________
+125 | 4: 12 | 5: No fue un servicio de consulta
+126 | 1: M3EPS_P03 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio? | 4: (DD - HH : MM)
+127 | 1: M3EPS_P04 | 2: Acceso al servicio | 3: ¿Requirió autorización para acceder a este servicio? | 4: 1 | 5: Sí | 6: Pase a M3EPS_P05
+128 | 4: 2 | 5: No | 6: Pase a M3EPS_P06
+129 | 1: M3EPS_P05 | 2: Acceso al servicio | 3: ¿Le autorizaron el servicio? | 4: 1 | 5: Sí
+130 | 4: 2 | 5: No
+131 | 1: M3EPS_P06 | 2: Acceso al servicio | 3: ¿Cuál de los siguientes medios utilizó para agendar el servicio autorizado? | 4: 1 | 5: Presencial
+132 | 4: 2 | 5: Virtual (app, página web, WhatsApp)
+133 | 4: 3 | 5: Telefónico
+134 | 1: M3EPS_P07 | 2: Acceso al servicio | 3: En el último año, ¿le han cancelado un servicio requerido previamente agendado? | 4: 1 | 5: Sí | 6: Pase a M3EPS_P08
+135 | 4: 2 | 5: No | 6: Pase a M3EPS_P10
+136 | 1: M3EPS_P08 | 2: Acceso al servicio | 3: Cuando se lo cancelaron, ¿se lo reagendaron? | 4: 1 | 5: Sí
+137 | 4: 2 | 5: No
+138 | 1: M3EPS_P09 | 2: Acceso al servicio | 3: En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado? | 4: 1 | 5: Una vez
+139 | 4: 2 | 5: Dos veces
+140 | 4: 3 | 5: Tres o cuatro veces
+141 | 4: 4 | 5: Cinco o más veces
+142 | 4: 5 | 5: No recuerda
+143 | 1: M3EPS_P10 | 2: Acceso al servicio | 3: ¿Cuántos tiempo transcurrió desde el momento en qué solicitó el servicio hasta que fue atendido? | 4: (DD - HH : MM)
+144 | 1: M3EPS_P10a | 2: Acceso al servicio | 3: ¿Qué medio(s) de transporte utilizó para ese desplazamiento? (Lista desplegable — respuesta múltiple) | 4: 1 | 5: Caminando
+145 | 4: 2 | 5: Bus o transporte público urbano
+146 | 4: 3 | 5: Transporte intermunicipal
+147 | 4: 4 | 5: Motocicleta
+148 | 4: 5 | 5: Bicicleta
+149 | 4: 6 | 5: Automóvil particular
+150 | 4: 7 | 5: Taxi o plataforma de transporte
+151 | 4: 8 | 5: Lancha o transporte fluvial
+152 | 4: 9 | 5: Ambulancia o transporte asistencial
+153 | 4: 10 | 5: Otro: ¿cuál? ___________
+154 | 1: M3EPS_P11 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 4: 1 | 5: Nunca
+155 | 4: 2 | 5: Algunas veces
+156 | 4: 3 | 5: Frecuentemente
+157 | 4: 4 | 5: Siempre
+158 | 4: 5 | 5: No aplica
+159 | 1: M3EPS_P12 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 4: 1 | 5: Nunca
+160 | 4: 2 | 5: Algunas veces
+161 | 4: 3 | 5: Frecuentemente
+162 | 4: 4 | 5: Siempre
+163 | 4: 5 | 5: No aplica
+164 | 1: M3EPS_P13 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la consulta o el procedimiento? | 4: 1 | 5: Nunca
+165 | 4: 2 | 5: Algunas veces
+166 | 4: 3 | 5: Frecuentemente
+167 | 4: 4 | 5: Siempre
+168 | 4: 5 | 5: No aplica
+169 | 1: M3EPS_P14 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud conoció aspectos importantes de su historia clínica? | 4: 1 | 5: Nunca
+170 | 4: 2 | 5: Algunas veces
+171 | 4: 3 | 5: Frecuentemente
+172 | 4: 4 | 5: Siempre
+173 | 4: 5 | 5: No aplica
+174 | 1: M3EPS_P15 | 2: Gasto de bolsillo | 3: En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación) | 4: 1 | 5: Sí | 6: Pase a M3EPS_P15a
+175 | 4: 2 | 5: No | 6: Pase a M3EPS_P16
+176 | 1: M3EPS_P15a | 2: Gasto de bolsillo | 3: En el último año, ¿cuál fue el valor aproximado que tuvo que pagar con recursos propios o familiares por cada uno de los siguientes servicios? (Marque un rango por cada servicio: a. consulta médica; b. exámenes de laboratorio; c. imágenes diagnósticas; d. medicamentos; e. transporte para la atención) | 4: 1 | 5: 10.000 pesos o menos
+177 | 4: 2 | 5: Entre 10.001 y 50.000 pesos
+178 | 4: 3 | 5: Entre 50.001 y 100.000 pesos
+179 | 4: 4 | 5: Entre 100.001 y 500.000 pesos
+180 | 4: 5 | 5: Más de 500.000 pesos
+181 | 4: 6 | 5: No pagó / No aplica
+182 | 1: M3EPS_P16 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M3EPS_P01? | 4: 1 | 5: Sí
+183 | 4: 2 | 5: No
+185 | 1: FIN DEL MÓDULO
+SHEET IPS - Módulo 1
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO IPS 1 — AMBULATORIO
+4 | 1: Código: MSPS-ENUS-IPS1      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas preseleccionadas por haber usado consulta externa, laboratorio o imágenes diagnósticas (evaluación a nivel IPS). Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio recibido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio requerido? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+104 | 1: T18 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+106 | 1: SECCIÓN C. BLOQUE B3 — AMBULATORIO
+107 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+108 | 1: M1IPS_P01 | 2: Información y empoderamiento | 3: ¿Cuál de los siguientes servicios utilizó? | 4: 1 | 5: Consulta externa (es una cita programada o solicitada) | 6: Pase a M1IPS_P02
+109 | 4: 2 | 5: Toma de laboratorios (exámenes de sangre, orina u otras muestras) | 6: Pase a M1IPS_P03
+110 | 4: 3 | 5: Imagenología (imágenes o procedimientos diagnósticos): exámenes o pruebas como radiografías, ecografías, tomografías u otros estudios diagnósticos | 6: Pase a M1IPS_P03
+111 | 4: 4 | 5: Tratamientos asistidos: quimioterapia, radioterapia o diálisis | 6: Pase a M1IPS_P03
+112 | 4: 5 | 5: Terapias (física, ocupacional, lenguaje, respiratoria, entre otras) | 6: Pase a M1IPS_P03
+113 | 4: 6 | 5: Otro: ¿cuál? ___________ | 6: Pase a M1IPS_P03
+114 | 1: M1IPS_P02 | 2: Acceso al servicio | 3: Si el servicio requerido fue de consulta externa, ¿cuál de las siguientes fue la consulta externa requerida? | 4: 1 | 5: Medicina General
+115 | 4: 2 | 5: Enfermería
+116 | 4: 3 | 5: Odontología
+117 | 4: 4 | 5: Psicología
+118 | 4: 5 | 5: Medicina Interna
+119 | 4: 6 | 5: Medicina Familiar
+120 | 4: 7 | 5: Cirugía General
+121 | 4: 8 | 5: Ginecología y Obstetricia
+122 | 4: 9 | 5: Pediatría
+123 | 4: 10 | 5: Psiquiatría
+124 | 4: 11 | 5: Otro: ¿cuál? ___________
+125 | 4: 12 | 5: No fue un servicio de consulta
+126 | 1: M1IPS_P03 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio? | 4: Respuesta abierta — número de días (admite decimales, ej. 0,5)
+127 | 1: M1IPS_P04 | 2: Acceso al servicio | 3: ¿Requirió autorización para acceder a este servicio? | 4: 1 | 5: Sí | 6: Pase a M1IPS_P05
+128 | 4: 2 | 5: No | 6: Pase a M1IPS_P06
+129 | 1: M1IPS_P05 | 2: Acceso al servicio | 3: ¿Le autorizaron el servicio? | 4: 1 | 5: Sí
+130 | 4: 2 | 5: No
+131 | 1: M1IPS_P06 | 2: Acceso al servicio | 3: ¿Cuál de los siguientes medios utilizó para agendar el servicio autorizado? | 4: 1 | 5: Presencial
+132 | 4: 2 | 5: Virtual (app, página web, WhatsApp)
+133 | 4: 3 | 5: Telefónico
+134 | 1: M1IPS_P07 | 2: Acceso al servicio | 3: En el último año, ¿le han cancelado un servicio requerido previamente agendado? | 4: 1 | 5: Sí | 6: Pase a M1IPS_P08
+135 | 4: 2 | 5: No | 6: Pase a M1IPS_P10
+136 | 1: M1IPS_P08 | 2: Acceso al servicio | 3: Cuando se lo cancelaron, ¿se lo reagendaron? | 4: 1 | 5: Sí
+137 | 4: 2 | 5: No
+138 | 1: M1IPS_P09 | 2: Acceso al servicio | 3: En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado? | 4: 1 | 5: Una vez
+139 | 4: 2 | 5: Dos veces
+140 | 4: 3 | 5: Tres o cuatro veces
+141 | 4: 4 | 5: Cinco o más veces
+142 | 4: 5 | 5: No recuerda
+143 | 1: M1IPS_P10 | 2: Acceso al servicio | 3: ¿Cuánto tiempo transcurrió desde la solicitud del servicio hasta haber recibido efectivamente el servicio? | 4: (DD - HH : MM)
+144 | 1: M1IPS_P10a | 2: Acceso al servicio | 3: ¿Qué medio(s) de transporte utilizó para ese desplazamiento? (Lista desplegable — respuesta múltiple) | 4: 1 | 5: Caminando
+145 | 4: 2 | 5: Bus o transporte público urbano
+146 | 4: 3 | 5: Transporte intermunicipal
+147 | 4: 4 | 5: Motocicleta
+148 | 4: 5 | 5: Bicicleta
+149 | 4: 6 | 5: Automóvil particular
+150 | 4: 7 | 5: Taxi o plataforma de transporte
+151 | 4: 8 | 5: Lancha o transporte fluvial
+152 | 4: 9 | 5: Ambulancia o transporte asistencial
+153 | 4: 10 | 5: Otro: ¿cuál? ___________
+154 | 1: M1IPS_P11 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 4: 1 | 5: Nunca
+155 | 4: 2 | 5: Algunas veces
+156 | 4: 3 | 5: Frecuentemente
+157 | 4: 4 | 5: Siempre
+158 | 4: 5 | 5: No aplica
+159 | 1: M1IPS_P12 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 4: 1 | 5: Nunca
+160 | 4: 2 | 5: Algunas veces
+161 | 4: 3 | 5: Frecuentemente
+162 | 4: 4 | 5: Siempre
+163 | 4: 5 | 5: No aplica
+164 | 1: M1IPS_P13 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la consulta o el procedimiento? | 4: 1 | 5: Nunca
+165 | 4: 2 | 5: Algunas veces
+166 | 4: 3 | 5: Frecuentemente
+167 | 4: 4 | 5: Siempre
+168 | 4: 5 | 5: No aplica
+169 | 1: M1IPS_P14 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud conoció aspectos importantes de su historia clínica? | 4: 1 | 5: Nunca
+170 | 4: 2 | 5: Algunas veces
+171 | 4: 3 | 5: Frecuentemente
+172 | 4: 4 | 5: Siempre
+173 | 4: 5 | 5: No aplica
+174 | 1: M1IPS_P15 | 2: Gasto de bolsillo | 3: En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación) | 4: 1 | 5: Sí | 6: Pase a M1IPS_P16
+175 | 4: 2 | 5: No | 6: Pase a M1IPS_P16
+176 | 1: M1IPS_P16 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M1IPS_P01? | 4: 1 | 5: Sí
+177 | 4: 2 | 5: No
+179 | 1: FIN DEL MÓDULO
+SHEET IPS - Módulo 2
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO IPS 2 — URGENCIAS
+4 | 1: Código: MSPS-ENUS-IPS2      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas preseleccionadas por haber usado el servicio de urgencias. Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud. | 8: ajustra de acuerdo a modulo de eps 
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de urgencias? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio de urgencias? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su sitio de atención a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+104 | 1: T18 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su prestador a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+106 | 1: SECCIÓN C. BLOQUE B4 — URGENCIAS
+107 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+108 | 1: M2IPS_P01 | 2: Información y empoderamiento | 3: ¿Sabe usted que los servicios de urgencias cuentan con un sistema de selección y clasificación de pacientes denominado 'triage'? | 4: 1 | 5: Sí
+109 | 4: 2 | 5: No
+110 | 1: M2IPS_P02 | 2: Acceso general | 3: ¿Por cuál de las siguientes razones utilizó el servicio de urgencias? | 4: 1 | 5: Accidente de tránsito
+111 | 4: 2 | 5: Lesiones por causas externas
+112 | 4: 3 | 5: Accidente en casa, trabajo o sitio público
+113 | 4: 4 | 5: Enfermedad repentina (dolor, fiebre, malestar general, entre otros)
+114 | 4: 5 | 5: Complicación de enfermedad ya existente
+115 | 4: 6 | 5: No pudo acceder a consulta oportuna con su EPS
+116 | 4: 7 | 5: Remisión de otro servicio de salud
+117 | 4: 8 | 5: Otro: ¿cuál? ___________
+118 | 1: M2IPS_P03 | 2: Acceso general | 3: La última vez que utilizó el servicio de urgencias, ¿a qué tipo de institución acudió? | 4: 1 | 5: Hospital público (del Estado)
+119 | 4: 2 | 5: Clínica privada
+120 | 4: 3 | 5: Centro de salud / puesto de salud
+121 | 4: 4 | 5: Institución propia de su EPS (clínica u hospital que pertenece a la misma EPS)
+122 | 4: 5 | 5: Otro: ¿cuál? ___________
+123 | 1: M2IPS_P04 | 2: Acceso general | 3: Cuando asistió al servicio de urgencias, ¿lo atendieron? | 4: 1 | 5: Sí | 6: Pase a M2IPS_P06
+124 | 4: 2 | 5: No | 6: Pase a M2IPS_P05
+125 | 1: M2IPS_P05 | 2: Acceso general | 3: ¿Cuál fue la razón principal por la que no recibió atención médica en el servicio de urgencias?
+(Si no fue atendido, continúe directamente en M2IPS_P13.) | 4: 1 | 5: Le confirmaron que su problema de salud no clasificaba como urgencia, por lo cual le recomendaron solicitar una cita médica prioritaria | 6: Pase a M2IPS_P13
+126 | 4: 2 | 5: Indicaron que allí no lo podían atender porque la EPS a la que está afiliado no tiene contrato con ellos | 6: Pase a M2IPS_P13
+127 | 4: 3 | 5: Esperó demasiado tiempo | 6: Pase a M2IPS_P13
+128 | 4: 4 | 5: Le informaron que la EPS no le ha pagado a su centro de atención o prestador | 6: Pase a M2IPS_P13
+129 | 4: 5 | 5: Indicaron que debían remitirlo a otra institución prestadora de servicios que tuviera los servicios requeridos para atenderlo | 6: Pase a M2IPS_P13
+130 | 4: 6 | 5: Le informaron que usted estaba en mora | 6: Pase a M2IPS_P13
+131 | 4: 7 | 5: No sabe | 6: Pase a M2IPS_P13
+132 | 4: 8 | 5: Otro: ¿cuál? ___________ | 6: Pase a M2IPS_P13
+133 | 1: M2IPS_P06 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió entre el momento de llegar al servicio de urgencias (después del triage) y el momento de ser atendido(a) por el médico? | 4: (DD - HH : MM)
+134 | 1: M2IPS_P07 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 4: 1 | 5: Nunca
+135 | 4: 2 | 5: Algunas veces
+136 | 4: 3 | 5: Frecuentemente
+137 | 4: 4 | 5: Siempre
+138 | 4: 5 | 5: No aplica
+139 | 1: M2IPS_P08 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 4: 1 | 5: Nunca
+140 | 4: 2 | 5: Algunas veces
+141 | 4: 3 | 5: Frecuentemente
+142 | 4: 4 | 5: Siempre
+143 | 4: 5 | 5: No aplica
+144 | 1: M2IPS_P09 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la atención en urgencias? | 4: 1 | 5: Nunca
+145 | 4: 2 | 5: Algunas veces
+146 | 4: 3 | 5: Frecuentemente
+147 | 4: 4 | 5: Siempre
+148 | 4: 5 | 5: No aplica
+149 | 1: M2IPS_P10 | 2: Calidad del servicio | 3: Derivada de la consulta de urgencias, ¿requirió usted hospitalización dentro de la misma institución? | 4: 1 | 5: Sí | 6: Pase a M2IPS_P11
+150 | 4: 2 | 5: No | 6: Pase a M2IPS_P12
+151 | 1: M2IPS_P11 | 2: Tiempo de espera | 3: Desde el servicio de urgencias, ¿cuánto tiempo transcurrió entre el momento en que se le informó que debía ser hospitalizado y el momento en que se instaló efectivamente en la cama de hospitalización? | 4: (DD - HH : MM)
+152 | 1: M2IPS_P12 | 2: Acceso general | 3: Dado su problema de salud, ¿requirió alguna autorización de su EPS para recibir algún servicio durante su atención en urgencias? | 4: 1 | 5: Sí | 6: Pase a M2IPS_P12b
+153 | 4: 2 | 5: No | 6: Pase a M2IPS_P13
+154 | 1: M2IPS_P12b | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde el momento en que le notificaron que el servicio debía ser autorizado por su EPS hasta el momento en que le prestaron el servicio? | 4: (DD - HH : MM)
+155 | 1: M2IPS_P13 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio de urgencias? | 4: 1 | 5: Sí
+156 | 4: 2 | 5: No
+158 | 1: FIN DEL MÓDULO
+SHEET IPS - Módulo 3
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO IPS 3 — INTERNACIÓN
+4 | 1: Código: MSPS-ENUS-IPS3      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas preseleccionadas por haber sido hospitalizadas. Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de hospitalización? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al servicio de hospitalización? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+104 | 1: T18 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su prestador de servicios de salud a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+106 | 1: SECCIÓN C. BLOQUE B5 — INTERNACIÓN
+107 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+108 | 1: M3IPS_P01 | 2: Acceso general | 3: ¿Por cuál de las siguientes razones utilizó el servicio de internación - hospitalización? | 4: 1 | 5: Remisión de urgencias
+109 | 4: 2 | 5: Cirugía programada
+110 | 4: 3 | 5: Enfermedad general
+111 | 4: 4 | 5: Accidente de tránsito
+112 | 4: 5 | 5: Otro: ¿cuál? ___________
+113 | 1: M3IPS_P02 | 2: Acceso general | 3: La última vez que utilizó el servicio de hospitalización, ¿a qué tipo de institución acudió? | 4: 1 | 5: Hospital local (atención básica)
+114 | 4: 2 | 5: Hospital general (más servicios)
+115 | 4: 3 | 5: Hospital de referencia (principal de la ciudad o región)
+116 | 4: 4 | 5: Clínica privada
+117 | 1: M3IPS_P03 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 4: 1 | 5: Nunca
+118 | 4: 2 | 5: Algunas veces
+119 | 4: 3 | 5: Frecuentemente
+120 | 4: 4 | 5: Siempre
+121 | 4: 5 | 5: No aplica
+122 | 1: M3IPS_P04 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 4: 1 | 5: Nunca
+123 | 4: 2 | 5: Algunas veces
+124 | 4: 3 | 5: Frecuentemente
+125 | 4: 4 | 5: Siempre
+126 | 4: 5 | 5: No aplica
+127 | 1: M3IPS_P05 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con la atención hospitalaria? | 4: 1 | 5: Nunca
+128 | 4: 2 | 5: Algunas veces
+129 | 4: 3 | 5: Frecuentemente
+130 | 4: 4 | 5: Siempre
+131 | 4: 5 | 5: No aplica
+132 | 1: M3IPS_P06 | 2: Acceso general | 3: Dado su problema de salud, ¿requirió ser remitido a otra institución de mayor nivel para su hospitalización? | 4: 1 | 5: Sí | 6: Pase a M3IPS_P07
+133 | 4: 2 | 5: No | 6: Pase a M3IPS_P09
+134 | 1: M3IPS_P07 | 2: Acceso general | 3: ¿Requirió ser remitido a otra institución para hospitalización por no disponibilidad de autorización o convenio con la institución por parte de su EPS? | 4: 1 | 5: Sí
+135 | 4: 2 | 5: No
+136 | 1: M3IPS_P08 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde el momento en que le notificaron que debía ser remitido a otra institución hasta el momento en que lo admitieron en la institución de destino? | 4: (DD - HH : MM)
+137 | 1: M3IPS_P09 | 2: Acceso general | 3: Dado su problema de salud, ¿requirió alguna autorización de su EPS para recibir algún servicio durante su atención en hospitalización? | 4: 1 | 5: Sí | 6: Pase a M3IPS_P10
+138 | 4: 2 | 5: No | 6: Pase a M3IPS_P11
+139 | 1: M3IPS_P10 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde el momento en que le notificaron que el servicio debía ser autorizado por su EPS hasta el momento en que le prestaron el servicio? | 4: Respuesta abierta — número de horas (admite decimales, ej. 0,5)
+140 | 1: M3IPS_P11 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio de hospitalización? | 4: 1 | 5: Sí
+141 | 4: 2 | 5: No
+143 | 1: FIN DEL MÓDULO
+SHEET IPS - Módulo 4
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO IPS 4 — QUIRÚRGICO
+4 | 1: Código: MSPS-ENUS-IPS4      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas preseleccionadas por haberse sometido a un procedimiento quirúrgico. Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de cirugía? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿cómo calificaría la facilidad de acceder al procedimiento quirúrgico que requería? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su prestador a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+105 | 1: SECCIÓN C. BLOQUE B6 — QUIRÚRGICO
+106 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+107 | 1: M4IPS_P01 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde la solicitud del servicio (cirugía) hasta haber recibido efectivamente el servicio? | 4: (DD - HH : MM)
+108 | 1: M4IPS_P02 | 2: Acceso al servicio | 3: ¿Requirió autorización para acceder a este servicio? | 4: 1 | 5: Sí | 6: Pase a M4IPS_P03
+109 | 4: 2 | 5: No | 6: Pase a M4IPS_P04
+110 | 1: M4IPS_P03 | 2: Acceso al servicio | 3: ¿Le autorizaron la cirugía? | 4: 1 | 5: Sí
+111 | 4: 2 | 5: No
+112 | 1: M4IPS_P04 | 2: Acceso al servicio | 3: ¿Cuál de los siguientes medios utilizó para agendar la cirugía requerida? | 4: 1 | 5: Presencial
+113 | 4: 2 | 5: Virtual (app, página web, WhatsApp)
+114 | 4: 3 | 5: Telefónico
+115 | 1: M4IPS_P05 | 2: Acceso al servicio | 3: En el último año, ¿cuántas veces le han cancelado una cirugía previamente agendada? | 4: 1 | 5: Ninguna vez
+116 | 4: 2 | 5: Una vez
+117 | 4: 3 | 5: Dos veces
+118 | 4: 4 | 5: Tres o cuatro veces
+119 | 4: 5 | 5: Cinco o más veces
+120 | 4: 6 | 5: No recuerda
+121 | 4: 7 | 5: No aplica
+122 | 1: M4IPS_P06 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dedicó suficiente tiempo? | 4: 1 | 5: Nunca
+123 | 4: 2 | 5: Algunas veces
+124 | 4: 3 | 5: Frecuentemente
+125 | 4: 4 | 5: Siempre
+126 | 4: 5 | 5: No aplica
+127 | 1: M4IPS_P07 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud lo involucró en las decisiones sobre su cuidado y tratamiento, tanto como usted deseaba? | 4: 1 | 5: Nunca
+128 | 4: 2 | 5: Algunas veces
+129 | 4: 3 | 5: Frecuentemente
+130 | 4: 4 | 5: Siempre
+131 | 4: 5 | 5: No aplica
+132 | 1: M4IPS_P08 | 2: Humanización | 3: Pensando en su última atención, ¿con qué frecuencia el profesional de la salud le dio explicaciones claras relacionadas con el procedimiento quirúrgico? | 4: 1 | 5: Nunca
+133 | 4: 2 | 5: Algunas veces
+134 | 4: 3 | 5: Frecuentemente
+135 | 4: 4 | 5: Siempre
+136 | 4: 5 | 5: No aplica
+137 | 1: M4IPS_P09 | 2: Calidad del servicio | 3: ¿Las citas de control con su cirujano tratante transcurrieron en los tiempos establecidos? | 4: 1 | 5: Sí
+138 | 4: 2 | 5: No
+139 | 4: 3 | 5: No requirió citas de control
+140 | 1: M4IPS_P10 | 2: Calidad del servicio | 3: ¿Fue usted informado(a) sobre los riesgos o complicaciones que se podían presentar con la cirugía? | 4: 1 | 5: Sí
+141 | 4: 2 | 5: No
+142 | 1: M4IPS_P11 | 2: Calidad del servicio | 3: ¿Recibió la atención necesaria durante la hospitalización, la cirugía y el posoperatorio? | 4: 1 | 5: Sí
+143 | 4: 2 | 5: No
+144 | 1: M4IPS_P12 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al procedimiento quirúrgico? | 4: 1 | 5: Sí
+145 | 4: 2 | 5: No
+147 | 1: FIN DEL MÓDULO
+SHEET Gestor - Módulo 1
+1 | 1: REPÚBLICA DE COLOMBIA — MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL
+2 | 1: ENCUESTA NACIONAL DE EXPERIENCIA DEL USUARIO EN SALUD (ENUS)
+3 | 1: MÓDULO GESTOR 1 — MEDICAMENTOS
+4 | 1: Código: MSPS-ENUS-GEST1      Versión 04      Formulario número: __________ de __________
+6 | 1: SECCIÓN A. IDENTIFICACIÓN — DATOS TOMADOS DEL BDUA (no se preguntan al encuestado, se cargan automáticamente)
+7 | 1: N° | 2: Variable | 3: Descripción
+8 | 1: 1 | 2: Sexo | 3: Sexo biológico
+9 | 1: 2 | 2: Edad | 3: Número de años cumplidos
+10 | 1: 3 | 2: Régimen de afiliación | 3: Régimen de salud al que pertenece
+11 | 1: 4 | 2: EPS actual | 3: Empresa Administradora de Planes de Beneficios a la que se encuentra afiliado
+12 | 1: 5 | 2: Tiempo afiliado a la EPS | 3: Tiempo de afiliación a la EAPB
+13 | 1: 6 | 2: Departamento | 3: Departamento de residencia (lista desplegable)
+14 | 1: 7 | 2: Municipio | 3: Municipio de residencia (lista desplegable activada según el departamento seleccionado)
+15 | 1: 8 | 2: Zona (Urbano/rural) | 3: Área en la que reside
+16 | 1: 9 | 2: Estrato (Proxy SISBÉN) | 3: Nivel estimado de ingresos económicos de acuerdo con SISBÉN
+17 | 1: 10 | 2: Grupo étnico/pueblo indígena | 3: Pertenencia a grupo étnico/pueblo indígena
+18 | 1: 11 | 2: Tipo de afiliado (cotizante/beneficiario) | 3: Rol de aporte al SGSSS
+19 | 1: 12 | 2: Tiempo en el sistema | 3: Tiempo de afiliación al SGSSS
+20 | 1: 13 | 2: Condición de discapacidad | 3: Certificación registrada de discapacidad
+22 | 1: SECCIÓN B. TRAZADORAS Y TRANSVERSALES (común a todos los módulos)
+23 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+24 | 1: Los módulos son instrumentos independientes: no hay salto de un módulo a otro dentro del formulario. Este módulo se aplica únicamente al perfil preseleccionado: personas preseleccionadas por haber solicitado entrega de medicamentos o dispositivos médicos. Las preguntas T06 y T09 se conservan como variables de clasificación y control de calidad, sin generar salto hacia otro módulo.
+25 | 1: T01 | 2: Identificación | 3: Digite su número de documento de identificación. | 4: Respuesta abierta — número entero
+26 | 1: T02 | 2: Identificación | 3: Seleccione su tipo de identificación. | 4: 1 | 5: Cédula de ciudadanía (CC)
+27 | 4: 2 | 5: Tarjeta de identidad (TI) | 6: Opciones 2 y 3: la encuesta debe ser contestada por la persona que acompaña habitualmente al afiliado a tomar los servicios de salud.
+28 | 4: 3 | 5: Registro civil (RC)
+29 | 4: 4 | 5: Pasaporte
+30 | 4: 5 | 5: Cédula de extranjería
+31 | 4: 6 | 5: Permiso de Permanencia
+32 | 1: T03 | 2: Trazadora | 3: ¿Quién se encuentra diligenciando esta encuesta? | 4: 1 | 5: Usted mismo
+33 | 4: 2 | 5: Un pariente o tutor legal | 6: Opciones 2 y 3: vienen de T02 si respondió TI o RC.
+34 | 4: 3 | 5: Otra persona
+35 | 1: T04 | 2: Trazadora | 3: ¿Cuenta usted con algún plan voluntario de salud? | 4: 1 | 5: Plan Complementario
+36 | 4: 2 | 5: Medicina Prepagada
+37 | 4: 3 | 5: Póliza de salud
+38 | 4: 4 | 5: Ninguno
+39 | 1: T05 | 2: Trazadora | 3: ¿Cuál es su percepción general de su estado de salud? | 4: 1 | 5: Deficiente
+40 | 4: 2 | 5: Malo
+41 | 4: 3 | 5: Regular
+42 | 4: 4 | 5: Buena
+43 | 4: 5 | 5: Excelente
+44 | 1: T06 | 2: Trazadora | 3: En el último año, ¿ha utilizado algún servicio de salud?
+(Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 4: 1 | 5: Sí
+45 | 4: 2 | 5: No
+46 | 1: T07 | 2: Trazadora | 3: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 4: 1 | 5: Sí
+47 | 4: 2 | 5: No
+48 | 1: T08 | 2: Trazadora | 3: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? | 4: 1 | 5: Nadie, lo gestioné yo mismo(a)
+49 | 4: 2 | 5: Un familiar
+50 | 4: 3 | 5: Un amigo o conocido
+51 | 4: 4 | 5: La EPS
+52 | 4: 5 | 5: La IPS (hospital, clínica o centro de salud)
+53 | 4: 6 | 5: La Secretaría de Salud
+54 | 4: 7 | 5: Un defensor del usuario
+55 | 4: 8 | 5: La Personería
+56 | 4: 9 | 5: La Superintendencia Nacional de Salud
+57 | 4: 10 | 5: Otro: ¿cuál? ___________
+58 | 1: T09 | 2: Trazadora | 3: ¿Cuál de los siguientes servicios utilizó la última vez?
+(Variable de clasificación y control de calidad: permite verificar que el respondiente corresponde al perfil preseleccionado para este módulo. No genera salto hacia otro módulo.) | 4: 1 | 5: Urgencias
+59 | 4: 2 | 5: Hospitalización
+60 | 4: 3 | 5: Cirugía
+61 | 4: 4 | 5: Consulta Externa
+62 | 4: 5 | 5: Atención Domiciliaria
+63 | 4: 6 | 5: Entrega de medicamentos o dispositivos médicos
+64 | 4: 7 | 5: Laboratorio clínico
+65 | 4: 8 | 5: Imágenes diagnósticas
+66 | 4: 9 | 5: Otro: ¿cuál? ___________
+67 | 4: 10 | 5: Ninguna de las anteriores
+68 | 1: T10 | 2: Trazadora | 3: ¿Se encuentra usted en estado de embarazo? | 4: 1 | 5: Sí
+69 | 4: 2 | 5: No
+70 | 1: T11 | 2: Trazadora | 3: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 4: 1 | 5: Hipertensión arterial
+71 | 4: 2 | 5: Diabetes
+72 | 4: 3 | 5: Problemas cardíacos
+73 | 4: 4 | 5: Enfisema o EPOC (enfermedad pulmonar crónica)
+74 | 4: 5 | 5: Enfermedad renal
+75 | 4: 6 | 5: Cáncer
+76 | 4: 7 | 5: VIH / SIDA
+77 | 4: 8 | 5: Hepatitis C
+78 | 4: 9 | 5: Enfermedad autoinmune (lupus, artritis reumatoide, fibromialgia u otra)
+79 | 4: 10 | 5: Enfermedades endocrinas (hipotiroidismo, hipertiroidismo)
+80 | 4: 11 | 5: Trastornos mentales y del comportamiento (depresión, esquizofrenia, trastorno bipolar u otro)
+81 | 4: 12 | 5: Hemofilia
+82 | 4: 13 | 5: Enfermedad huérfana o rara
+83 | 4: 14 | 5: Ninguna de las anteriores
+84 | 1: T12 | 2: Información y empoderamiento | 3: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 4: 1 | 5: Sí | 6: Pase a T12a
+85 | 4: 2 | 5: No | 6: Pase a T13
+86 | 1: T12a | 2: Información y empoderamiento | 3: ¿Cuál fue la razón principal por la que decidió no acudir al servicio médico? (Lista desplegable — seleccione la razón principal) | 4: 1 | 5: La cita o la atención se demoraba demasiado
+87 | 4: 2 | 5: No tenía dinero para el copago, los exámenes, los medicamentos o el transporte
+88 | 4: 3 | 5: El punto de atención quedaba muy lejos o no había transporte
+89 | 4: 4 | 5: Los trámites o las autorizaciones eran muy complicados
+90 | 4: 5 | 5: No tenía tiempo o no podía faltar al trabajo o al estudio
+91 | 4: 6 | 5: Consideró que el problema no era grave o que se le pasaría solo
+92 | 4: 7 | 5: Se automedicó o usó un remedio casero
+93 | 4: 8 | 5: Desconfianza en el sistema, en la EPS o en el personal de salud
+94 | 4: 9 | 5: Malos tratos o malas experiencias en atenciones anteriores
+95 | 4: 10 | 5: Problemas con su afiliación o estaba en mora
+96 | 4: 11 | 5: Otro: ¿cuál? ___________
+97 | 1: T13 | 2: Información y empoderamiento | 3: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? | 4: 1 | 5: Sí
+98 | 4: 2 | 5: No
+99 | 1: T14 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 4: 1 | 5: Sí
+100 | 4: 2 | 5: No
+101 | 1: T15 | 2: Experiencia general | 3: De 1 a 10, ¿cómo calificaría su experiencia en el servicio de entrega de medicamentos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+102 | 1: T16 | 2: Acceso general | 3: De 1 a 10, ¿recomendaría su gestor farmacéutico (la farmacia que le dispensó los medicamentos) a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+103 | 1: T17 | 2: Satisfacción general | 3: De 1 a 10, ¿recomendaría su EPS a familiares y amigos? | 4: Escala numérica: 1 (mínimo) a 10 (máximo)
+105 | 1: SECCIÓN C. BLOQUE B7 — MEDICAMENTOS
+106 | 1: N° | 2: Categoría | 3: Pregunta | 4: Cod. | 5: Opción de respuesta | 6: Pase a
+107 | 1: M1GES_P01 | 2: Acceso a tecnologías | 3: ¿Solicitó a la EPS los medicamentos que le ordenaron? | 4: 1 | 5: Sí
+108 | 4: 2 | 5: No
+109 | 1: M1GES_P02 | 2: Acceso a tecnologías | 3: ¿Alguno(s) de estos medicamentos no estaban cubiertos en su plan de beneficios y requirió trámite adicional (Mipres)? | 4: 1 | 5: Sí
+110 | 4: 2 | 5: No
+111 | 1: M1GES_P03 | 2: Acceso a tecnologías | 3: ¿Requirió autorización por la EPS para acceder a alguno de estos medicamentos? | 4: 1 | 5: Sí | 6: Pase a M1GES_P04
+112 | 4: 2 | 5: No | 6: Pase a M1GES_P07
+113 | 1: M1GES_P04 | 2: Acceso a tecnologías | 3: ¿La EPS le autorizó los medicamentos? | 4: 1 | 5: Sí | 6: Pase a M1GES_P05
+114 | 4: 2 | 5: No | 6: Pase a M1GES_P06
+115 | 1: M1GES_P05 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde el momento en que solicitó la autorización de los medicamentos ante la EPS, hasta el momento en que le dieron la autorización? | 4: (DD - HH : MM)
+116 | 1: M1GES_P06 | 2: Acceso a tecnologías | 3: ¿Por qué le negaron la autorización para los medicamentos? | 4: 1 | 5: Error en la prescripción
+117 | 4: 2 | 5: No disponibilidad del medicamento
+118 | 4: 3 | 5: No incluido en el Plan de Beneficios ( antiguo POS)
+119 | 4: 4 | 5: Problemas con la afiliación
+120 | 4: 5 | 5: Desabastecimiento
+121 | 4: 6 | 5: Otro: ¿cuál? ___________
+122 | 1: M1GES_P07 | 2: Calidad del servicio | 3: ¿Le entregaron todos los medicamentos la primera vez que los solicitó? | 4: 1 | 5: Sí | 6: Pase a M1GES_P12
+123 | 4: 2 | 5: No | 6: Pase a M1GES_P08
+124 | 1: M1GES_P08 | 2: Tiempo de espera | 3: ¿Cuánto tiempo transcurrió desde el momento en que asistió al punto donde le entregan sus medicamentos hasta que fue atendido por el personal que entrega los medicamentos? | 4: (DD - HH : MM)
+125 | 1: M1GES_P09 | 2: Calidad del servicio | 3: ¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio? | 4: 1 | 5: Sí | 6: Pase a M1GES_P10
+126 | 4: 2 | 5: No | 6: Pase a M1GES_P12
+127 | 1: M1GES_P10 | 2: Calidad del servicio | 3: ¿Aceptó usted esa opción de entrega a domicilio? | 4: 1 | 5: Sí | 6: Pase a M1GES_P11
+128 | 4: 2 | 5: No | 6: Pase a M1GES_P12
+129 | 1: M1GES_P11 | 2: Calidad del servicio | 3: ¿Le llegaron los medicamentos faltantes al domicilio?
+(Si la respuesta es Sí: indique cuántos días se tardó el domicilio —número de días, admite decimales—.) | 4: 1 | 5: Sí
+130 | 4: 2 | 5: No
+131 | 1: M1GES-P12 | 2: Calidad del servicio | 3: ¿Cuánto tiempo transcurrió desde el momento en que le ofrecieron el servicio de entrega de medicamentos al domicilio hasta que los recibió efectivamente? | 4: (DD - HH : MM)
+132 | 1: M1GES_P13 | 2: Acceso a tecnologías | 3: ¿Cómo obtuvo los medicamentos que no le entregaron o no le autorizaron? | 4: 1 | 5: Los compró
+133 | 4: 2 | 5: Se los regalaron
+134 | 4: 3 | 5: Usó un medicamento similar
+135 | 4: 4 | 5: No los obtuvo
+136 | 4: 5 | 5: Otro: ¿cuál? ___________
+137 | 1: M1GES_P14 | 2: Gasto de bolsillo | 3: En el último año, en las ocasiones en que tuvo que comprar con recursos propios o familiares los medicamentos que le ordenaron, ¿cuánto tuvo que pagar por estos? (Diferente a copagos, cuotas moderadoras y cuotas de recuperación) | 4: 1 | 5: 10.000 pesos o menos
+138 | 4: 2 | 5: Entre 10.001 y 50.000 pesos
+139 | 4: 3 | 5: Entre 50.001 y 100.000 pesos
+140 | 4: 4 | 5: Entre 100.001 y 500.000 pesos
+141 | 4: 5 | 5: Más de 500.000 pesos
+142 | 4: 6 | 5: No pagó / No aplica
+143 | 1: M1GES_P15 | 2: Información y empoderamiento | 3: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a la entrega de los medicamentos o dispositivos médicos? | 4: 1 | 5: Sí
+144 | 4: 2 | 5: No
+146 | 1: FIN DEL MÓDULO
+SHEET Control de Cambios
+1 | 1: CONTROL DE CAMBIOS — VERSIÓN 03 → VERSIÓN 04
+2 | 1: Ajustes incorporados a partir de los comentarios de celda, los textos resaltados en color y las notas de revisión de las columnas G, H e I del archivo V03. Las anotaciones fueron retiradas del instrumento y quedan registradas aquí.
+4 | 1: N° | 2: Hoja | 3: Ubicación en la V03 | 4: Elemento ajustado | 5: Contenido en la V03 | 6: Contenido en la V04 | 7: Origen de la observación
+5 | 1: 1 | 2: Todos los módulos | 3: Sección B — T05 | 4: Opciones de respuesta | 5: EPS - Módulo 1 y 2: «Muy malo / Malo / Ni bueno ni malo / Bueno / Muy bueno», repetidas por error en la columna «Pase a». Los otros 6 módulos: «Excelente … Muy mala». | 6: Escala única en los 8 módulos: Excelente / Muy buena / Buena / Regular / Mala / Muy mala. Se eliminó la duplicación de las opciones en la columna «Pase a». | 7: Comentario de celda (Wilman Carlos Bonett Molina) — F39, EPS - Módulo 1
+6 | 1: 2 | 2: Todos los módulos | 3: Sección B — T05 | 4: Redacción de la pregunta | 5: ¿Cuál es su percepción general de su salud? | 6: ¿Cuál es su percepción general de su estado de salud? | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C39, EPS - Módulo 2
+7 | 1: 3 | 2: Todos los módulos | 3: Sección B — T06 | 4: Redacción y periodo de referencia | 5: En los últimos 6 meses, ¿ha utilizado un servicio de salud? (Para atenciones de promoción y detección temprana, indique si las utilizó en el último año). | 6: En el último año, ¿ha utilizado algún servicio de salud? (Incluya también las atenciones para la promoción y el mantenimiento de la salud, con sus actividades de detección temprana o tamizajes —Resolución 3280 de 2018—, como vacunación, limpieza de los dientes, citología, examen de seno o de próstata. Estas atenciones dependen de su edad y de su condición de salud.) | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C44 (EPS - Módulo 1 y 2) + Nota del revisor en columna G/H/I H2
+8 | 1: 4 | 2: Todos los módulos | 3: Sección B — T07 | 4: Periodo de referencia | 5: En los últimos 6 meses, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 6: En el último año, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? | 7: Nota del revisor en columna G/H/I — H2: «unificar … sugiero dejar un año» + Decisión del equipo (definida el 15/09/2026)
+9 | 1: 5 | 2: Todos los módulos | 3: Sección B — T08 | 4: Redacción y opciones de respuesta | 5: ¿Quién le ayudó a gestionar el servicio de salud que requería? (6 a 9 opciones institucionales: EPS, Secretaría de Salud, IPS pública, IPS privada de su EPS, IPS privada particular, …) | 6: ¿Qué persona, entidad o institución le brindó apoyo para obtener, tramitar, autorizar, agendar o acceder al servicio de salud que necesitaba? Opciones propuestas por el revisor (Nadie lo gestioné yo mismo(a), Un familiar, Un amigo o conocido, La EPS, La IPS, Un defensor del usuario, La Personería, La Superintendencia Nacional de Salud, Otro) + se conservó «La Secretaría de Salud». | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C48 (EPS - Módulo 1 y 2)
+10 | 1: 6 | 2: Todos los módulos | 3: Sección B — T11 | 4: Redacción de la pregunta | 5: ¿Ha sido diagnosticado con alguna de estas condiciones? | 6: ¿Actualmente sufre de alguna de las siguientes condiciones médicas que le haya sido diagnosticada por un médico? (Respuesta múltiple) | 7: Texto resaltado en rojo — C66, EPS - Módulo 2
+11 | 1: 7 | 2: Todos los módulos | 3: Sección B — T11 | 4: Opciones de respuesta | 5: 9 opciones (Hipertensión, Diabetes Mellitus Tipo 2, Hemofilia, Enfermedad huérfana, VIH, Hepatitis C, Artritis reumatoide u otras autoinmunes, Cáncer, Ninguna). | 6: 14 opciones. Se incorporan las propuestas por el revisor (EPOC/enfisema, trastornos mentales y del comportamiento, problemas cardíacos, enfermedad renal, enfermedades endocrinas, enfermedad autoinmune) y se conservan Hemofilia, Enfermedad huérfana o rara y Hepatitis C por su relevancia para el seguimiento de alto costo. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C66, EPS - Módulo 2
+12 | 1: 8 | 2: Todos los módulos | 3: Sección B — T12 | 4: Periodo de referencia | 5: En los últimos seis meses, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 6: En el último año, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? | 7: Nota del revisor en columna G/H/I — H2 + Decisión del equipo (definida el 15/09/2026)
+13 | 1: 9 | 2: Todos los módulos | 3: Sección B — T12a (NUEVA) | 4: Pregunta nueva | 5: No existía: la pregunta T12 se cerraba en Sí/No sin indagar la causa. | 6: T12a: «¿Cuál fue la razón principal por la que decidió no acudir al servicio médico?» — 11 opciones en lista desplegable (demora de la cita, dinero, distancia/transporte, trámites, tiempo, no lo consideró grave, automedicación, desconfianza, malos tratos previos, mora/afiliación, otro). Salto condicional desde T12 = Sí. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C78, EPS - Módulo 1: «sugiero colocar las razones»
+14 | 1: 10 | 2: Todos los módulos | 3: Sección B — T13 | 4: Redacción y alcance | 5: ¿Conoce o ha tenido acceso al informe anual de tutelas? (Si la respuesta es Sí, indique si conoce el número de tutelas de su EPS; si la respuesta es No, se le mostrará el enlace donde puede encontrar dicho informe al final de la encuesta). | 6: ¿Conoce o ha tenido acceso al informe anual de tutelas de su EPS? — Sí/No. Se elimina la indagación del número de tutelas y el envío del enlace al cierre de la encuesta. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C77, EPS - Módulo 2 + Decisión del equipo (definida el 15/09/2026)
+15 | 1: 11 | 2: Todos los módulos | 3: Sección B — T14 | 4: Redacción de la pregunta | 5: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio? | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio o para la atención de su condición médica? | 7: Texto resaltado en rojo — C79, EPS - Módulo 2
+16 | 1: 12 | 2: Todos los módulos | 3: Sección B — T02 y T03 | 4: Notas de la columna «Pase a» | 5: «viene d ela pregunta T02 Sí respondío TI o RC» (con errores de digitación) y nota presente solo en EPS - Módulo 1. | 6: «Viene de la pregunta T02: aplica si respondió Tarjeta de identidad (TI) o Registro civil (RC).» Nota replicada en los 8 módulos. | 7: Verificación de consistencia del libro
+17 | 1: 13 | 2: EPS - Módulo 1 | 3: Sección C — M1EPS_P04a (NUEVA) | 4: Pregunta nueva | 5: P04 preguntaba si hay un problema de salud sin resolver, sin indagar cuál. | 6: M1EPS_P04a: «¿Cuál de los siguientes problemas de salud no ha logrado resolver?» — 9 opciones en lista desplegable con respuesta múltiple. Salto condicional desde P04 = Sí. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C99: «…si va acompañada de otra que mencione algunas opciones de respuesta»
+18 | 1: 14 | 2: EPS - Módulo 1 | 3: Sección C — M1EPS_P08 | 4: Redacción de la pregunta | 5: ¿Le realizaron orientación en temas preventivos y/o de autocuidado a tráves de algun miembro del equip basico en salud? | 6: ¿Le realizaron orientación en temas preventivos y/o de autocuidado a través de algún miembro del Equipo Básico en Salud? | 7: Texto resaltado en rojo — C107 (espacio y errores de digitación)
+19 | 1: 15 | 2: EPS - Módulo 1 | 3: Sección C — M1EPS_P09a (NUEVA) | 4: Pregunta nueva | 5: P09 preguntaba si hubo remisión, sin indagar a qué servicio. | 6: M1EPS_P09a: «¿A cuál de los siguientes servicios de salud lo remitieron?» — 12 opciones en lista desplegable con respuesta múltiple. Salto condicional desde P09 = Sí. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C109: «a cuales?, dejar los mas recurrentes … mediante lista de despliegue»
+20 | 1: 16 | 2: EPS - Módulo 2 | 3: Sección C — M2EPS_P02 | 4: Redacción de la pregunta | 5: En el último año, ¿la EPS le ha entregado la Carta de Derechos y Deberes de los afiliados? | 6: En el último año, ¿la EPS o la IPS le ha entregado o dado a conocer cuáles son sus derechos y deberes como afiliado (Carta de Derechos y Deberes)? | 7: Nota del revisor en columna G/H/I — G85
+21 | 1: 17 | 2: EPS - Módulo 2 | 3: Sección C — M2EPS_P04 a P11 | 4: Opciones de respuesta | 5: Nunca / Algunas veces / Frecuentemente (3 opciones). | 6: Nunca / Una vez / Dos o tres veces / Cuatro o más veces / No necesitó solicitarla o ejercerla (5 opciones). | 7: Nota del revisor en columna G/H/I — G92 a G112
+22 | 1: 18 | 2: EPS - Módulo 2 | 3: Sección C — M2EPS_P12 a P17 | 4: Opciones de respuesta | 5: Nunca / Algunas veces / Frecuentemente (3 opciones). | 6: Siempre / Casi siempre / Algunas veces / Casi nunca / Nunca / No aplica (6 opciones). | 7: Nota del revisor en columna G/H/I — G115 a G130
+23 | 1: 19 | 2: EPS - Módulo 2 | 3: Sección C — M2EPS_P18 y P19 | 4: Redacción de la pregunta | 5: Pensando en su experiencia con la EPS, indique qué tan satisfecho(a) está con: … que necesita / que recibe durante la atención. | 6: Pensando en su experiencia con la EPS/IPS en su última atención, indique qué tan satisfecho(a) está con: … recibidos / que recibió durante la atención. (Redacción en pasado y referida a la última atención.) | 7: Nota del revisor en columna G/H/I — G133, G134 y G138
+24 | 1: 20 | 2: EPS - Módulo 2 | 3: Sección C — M2EPS_P20 a P27 (NUEVAS) | 4: Bloque nuevo que reemplaza P20–P23 | 5: P20 a P23 de satisfacción: información clara y oportuna, respeto por sus decisiones, privacidad de la información y respeto por creencias religiosas. | 6: Bloque «Experiencia centrada en la persona (OCDE)»: las 8 preguntas OCDE textuales registradas en la columna I del V03, con escala 1–4 (1 = Nunca … 4 = Siempre) + No aplica. | 7: Columna I, celdas I142 («PREGUNTAS OCDE TEXTUALES»), I143, I145, I147, I149, I151, I153, I155 e I157 + Decisión del equipo (definida el 15/09/2026)
+25 | 1: 21 | 2: EPS - Módulo 2 | 3: Sección C — M2EPS_P24 → M2EPS_P28 | 4: Renumeración | 5: M2EPS_P24 — satisfacción con la oportunidad en la entrega de medicamentos, insumos y dispositivos. | 6: M2EPS_P28, con la redacción ajustada al nuevo encabezado («…que necesitó para su tratamiento»). | 7: Consecuencia de la incorporación del bloque OCDE
+26 | 1: 22 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P01, opción 1 | 4: Opción de respuesta | 5: Consulta externa | 6: Consulta externa (es una cita programada o solicitada) | 7: Texto resaltado en rojo — E84, IPS - Módulo 1
+27 | 1: 23 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P01, opción 3 | 4: Opción de respuesta | 5: Imagenología | 6: Imagenología (imágenes o procedimientos diagnósticos): exámenes o pruebas como radiografías, ecografías, tomografías u otros estudios diagnósticos | 7: Texto resaltado en rojo — E86, IPS - Módulo 1
+28 | 1: 24 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P01, opción 4 | 4: Opción de respuesta | 5: Procedimiento diagnóstico | 6: Tratamientos asistidos: quimioterapia, radioterapia o diálisis | 7: Comentario de celda (Wilman Carlos Bonett Molina) — E87: «se puede confundir con el anterior … mejor quitarla o colocar: Tratamientos asistidos»
+29 | 1: 25 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P02 y P03 | 4: Precisión del tipo de respuesta | 5: «Toma de laboratorios»; P03 «número de días». | 6: «Toma de laboratorios (exámenes de sangre, orina u otras muestras)»; P03 «número de días (admite decimales, ej. 0,5)». | 7: Comentario de celda (Wilman Carlos Bonett Molina) — E84: «sugiero mayor claridad en los términos»
+30 | 1: 26 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P07 | 4: Periodo de referencia | 5: ¿Le han cancelado un servicio requerido previamente agendado? | 6: En el último año, ¿le han cancelado un servicio requerido previamente agendado? | 7: Texto resaltado en rojo — C114, IPS - Módulo 1
+31 | 1: 27 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P09 | 4: Redacción y opciones de respuesta | 5: ¿Con qué frecuencia le han cancelado…? — Nunca / Pocas veces / Algunas veces / Frecuentemente / Muy frecuentemente. | 6: En el último año, ¿cuántas veces le han cancelado un servicio requerido previamente agendado? — Una vez / Dos veces / Tres o cuatro veces / Cinco o más veces / No recuerda. | 7: Nota del revisor en columna G/H/I — G114, IPS - Módulo 1
+32 | 1: 28 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P10 y P10a (NUEVA) | 4: Separación de la pregunta | 5: Una sola pregunta: «número de minutos + medio de transporte (caminando, bus, moto, lancha, bicicleta, automóvil, otro)». | 6: P10 registra únicamente los minutos de desplazamiento. P10a (nueva) pregunta el medio de transporte con lista desplegable y respuesta múltiple (10 opciones). | 7: Comentario de celda (Wilman Carlos Bonett Molina) — D119: «dejemos el medio de transporte en otra pregunta … lista de despliegue y respuesta multiple»
+33 | 1: 29 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P11 a P14 | 4: Escala y redacción | 5: «¿Qué tan a menudo el profesional de la salud …?» con escala de 5 niveles (Nunca / Pocas veces / Algunas veces / Frecuentemente / Muy frecuentemente). | 6: «Pensando en su última atención, ¿con qué frecuencia el profesional de la salud …?» con escala OCDE de 1 a 4 (Nunca / Algunas veces / Frecuentemente / Siempre) + No aplica. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C130, EPS - Módulo 3 + Nota del revisor en columna G/H/I G143 y G121
+34 | 1: 30 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P15 | 4: Redacción de la pregunta | 5: ¿Alguna vez ha tenido que pagar de su bolsillo, diferente al copago o cuota moderadora, una consulta o examen que le hayan ordenado? | 6: En el último año, para cubrir los costos de consulta médica, exámenes o medicamentos, ¿utilizó recursos propios y/o familiares? (Diferentes a copagos, cuotas moderadoras y cuotas de recuperación) | 7: Texto resaltado en rojo — C140, EPS - Módulo 3
+35 | 1: 31 | 2: EPS - Módulo 3 | 3: Sección C — M3EPS_P15a (NUEVA) | 4: Pregunta nueva | 5: Fila 142 suelta, sin número de pregunta: «En el último año, cual fue el valor que tuvo que incurrir para los siguientes servicios:» con la nota «agragar tabla con los rangos de valores y servicios a calificar». | 6: M3EPS_P15a: valor aproximado pagado con recursos propios o familiares por consulta médica, exámenes de laboratorio, imágenes diagnósticas, medicamentos y transporte, con 6 rangos de valor. Salto condicional desde P15 = Sí. | 7: Fila 142 del V03 (instrucción pendiente del equipo)
+36 | 1: 32 | 2: EPS - Módulo 3 / IPS - Módulo 1 | 3: Sección C — P16 | 4: Redacción de la pregunta | 5: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio? | 6: ¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder al servicio que indicó en la pregunta M3EPS_P01 / M1IPS_P01? | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C144: «viene de la pregunta M3EPS_P01, debe mencionar el servicio utilizado»
+37 | 1: 33 | 2: IPS - Módulo 2 | 3: Sección C — M2IPS_P03, opción 4 | 4: Opción de respuesta | 5: Institución de su EPS | 6: Institución propia de su EPS (clínica u hospital que pertenece a la misma EPS) | 7: Comentario de celda (Wilman Carlos Bonett Molina) — E97: «será que la persona entiende esta pregunta (integración vertical)»
+38 | 1: 34 | 2: IPS - Módulo 2 | 3: Sección C — M2IPS_P05 | 4: Opciones de respuesta | 5: 2 opciones: «No era una urgencia» y «Sin convenio con su EPS». | 6: 8 opciones con la redacción propuesta por el revisor (no clasificaba como urgencia, sin contrato con la EPS, esperó demasiado tiempo, la EPS no ha pagado al prestador, debían remitirlo a otra institución, estaba en mora, no sabe) + «Otro: ¿cuál?». | 7: Nota del revisor en columna G/H/I — G102
+39 | 1: 35 | 2: IPS - Módulo 2 | 3: Sección C — M2IPS_P06 | 4: Tipo de respuesta | 5: Respuesta abierta — número de horas o minutos( trieage 1-2) | 6: Respuesta abierta — registre minutos cuando el triage asignado fue 1 o 2, y horas cuando fue 3, 4 o 5 (admite decimales, ej. 0,5). | 7: Texto resaltado en rojo — D103
+40 | 1: 36 | 2: IPS - Módulo 2 | 3: Sección C — M2IPS_P07 a P09 | 4: Escala y redacción | 5: Escala de 5 niveles (Nunca / Pocas veces / … / Muy frecuentemente). | 6: Escala OCDE de 1 a 4 + No aplica, con redacción en pasado referida a la última atención. | 7: Nota del revisor en columna G/H/I — G104: «de aca en adelante es lo mismo de los primeros modulos, para ajustar»
+41 | 1: 37 | 2: IPS - Módulo 2 | 3: Sección C — M2IPS_P11 | 4: Redacción y unidad de medida | 5: ¿Cuánto tiempo transcurrió entre el momento en que se le informó que debía ser hospitalizado hasta el momento en que se instaló en la cama? — «número de días, horas». | 6: Desde el servicio de urgencias, ¿cuánto tiempo transcurrió entre el momento en que se le informó que debía ser hospitalizado y el momento en que se instaló efectivamente en la cama de hospitalización? — «número de horas (admite decimales)». | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C121: «sin perder el enfoque que es de urgencias a hospitalización» + Texto resaltado en rojo D121
+42 | 1: 38 | 2: IPS - Módulo 3 | 3: Sección C — M3IPS_P03 a P05 | 4: Escala y redacción | 5: Escala de 5 niveles (Nunca / Pocas veces / … / Muy frecuentemente). | 6: Escala OCDE de 1 a 4 + No aplica, con redacción en pasado referida a la última atención. | 7: Nota del revisor en columna G/H/I — G93: «en el modulo 1 o 2 están las sugerencias»
+43 | 1: 39 | 2: IPS - Módulo 3 | 3: Sección C — M3IPS_P08 y P10 | 4: Unidad de medida | 5: Respuesta abierta — número de días-horas (admite decimales, ej. 0,5). | 6: Respuesta abierta — número de horas (admite decimales, ej. 0,5). | 7: Texto resaltado en rojo — D112 y D115
+44 | 1: 40 | 2: IPS - Módulo 4 | 3: Sección C — M4IPS_P05 (fusión de P05 y P06) | 4: Fusión de preguntas | 5: P05: «¿en el ultimo año le han cancelado una cirugía previamente agendada?» (Sí/No) y P06: «¿Con qué frecuencia le han cancelado una cirugía previamente agendada?» (5 niveles). | 6: Una sola pregunta: «En el último año, ¿cuántas veces le han cancelado una cirugía previamente agendada?» — Ninguna vez / Una vez / Dos veces / Tres o cuatro veces / Cinco o más veces / No recuerda / No aplica. | 7: Texto resaltado en rojo — C92 + Nota del revisor en columna G/H/I G94: «de acuerdo a la respuesta anterior no veo necesario esta pregunta»
+45 | 1: 41 | 2: IPS - Módulo 4 | 3: Sección C — P07 a P16 → P06 a P15 | 4: Renumeración | 5: 16 preguntas (P01 a P16). | 6: 15 preguntas (P01 a P15), por la fusión de P05 y P06. | 7: Consecuencia de la fusión anterior
+46 | 1: 42 | 2: IPS - Módulo 4 | 3: Sección C — M4IPS_P09 (antes P10) | 4: Redacción de la pregunta | 5: ¿Las citas de control con su cirujano tratante fueron oportunas? | 6: ¿Las citas de control con su cirujano tratante transcurrieron en los tiempos establecidos? (se añade la opción «No requirió citas de control») | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C114
+47 | 1: 43 | 2: IPS - Módulo 4 | 3: Sección C — M4IPS_P10 (antes P11) | 4: Redacción de la pregunta | 5: ¿Fue usted informado sobre el riesgo que tenía de presentar la complicación que usted tuvo? | 6: ¿Fue usted informado(a) sobre los riesgos o complicaciones que se podían presentar con la cirugía? | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C116: «no se sabe cual complicación presentó»
+48 | 1: 44 | 2: IPS - Módulo 4 | 3: Sección C — M4IPS_P11 (antes P12) | 4: Redacción de la pregunta | 5: ¿Recibió la atención necesaria para atender la complicación que presentó? | 6: ¿Recibió la atención necesaria durante la hospitalización, la cirugía y el posoperatorio? | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C118: «cual complicación, no se sabe»
+49 | 1: 45 | 2: Gestor - Módulo 1 | 3: Sección C — M1GES_P08 | 4: Redacción de la pregunta | 5: ¿Cuánto tiempo transcurrió desde el momento en que asistió al punto donde le entregan sus medicamentos hasta que fue atentido y la atención del personal? | 6: ¿Cuánto tiempo transcurrió desde el momento en que asistió al punto donde le entregan sus medicamentos hasta que fue atendido por el personal que entrega los medicamentos? | 7: Texto resaltado en rojo — C101
+50 | 1: 46 | 2: Gestor - Módulo 1 | 3: Sección C — M1GES_P13 | 4: Redacción y rangos de valor | 5: En las ocasiones que ha tenido que comprar de su bolsillo los medicamentos… — 4 rangos (hasta 10.000 / 10.000–50.000 / 50.000–100.000 / más de 100.000), con topes superpuestos. | 6: En el último año, en las ocasiones en que tuvo que comprar con recursos propios o familiares… (diferente a copagos, cuotas moderadoras y cuotas de recuperación) — 6 rangos sin superposición, armonizados con EPS - Módulo 3. | 7: Nota del revisor en columna G/H/I — G119 a G121 + armonización con el resto del libro
+51 | 1: 47 | 2: Todos los módulos | 3: Sección B y bloques de humanización y cierre | 4: Réplica de las observaciones remitidas desde otros módulos | 5: Varias notas del revisor no contenían un ajuste propio sino que remitían a lo observado en los módulos 1 y 2 de EPS: C25 (IPS - Módulo 1); G25 y G104 (IPS - Módulo 2); G8, G93 y G116 (IPS - Módulo 3); G26, G99 a G113 y G122 a G124 (IPS - Módulo 4); G26 y G119 a G121 (Gestor - Módulo 1). | 6: Los ajustes definidos sobre EPS - Módulo 1 y 2 se replicaron en los 8 módulos: Sección B completa (T01 a T14 más T12a), escala OCDE de 1 a 4 en todas las preguntas de humanización y redacción homogénea de las preguntas de cierre. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C25 (IPS - Módulo 1) + Nota del revisor en columna G/H/I en IPS - Módulos 2, 3 y 4 y Gestor - Módulo 1
+52 | 1: 48 | 2: Todos los módulos | 3: Preguntas de cierre (Tutela/PQRS) | 4: Redacción de la pregunta | 5: «¿Tuvo que recurrir a una acción de Tutela o PQRS para acceder a este servicio?», sin precisar cuál servicio. | 6: En cada módulo se nombra el servicio evaluado (urgencias, hospitalización, procedimiento quirúrgico, entrega de medicamentos) o se remite a la pregunta P01 del módulo. | 7: Comentario de celda (Wilman Carlos Bonett Molina) — C144 + Nota del revisor en columna G/H/I G116 y G125
+53 | 1: 49 | 2: Todo el libro | 3: Anotaciones de revisión | 4: Depuración | 5: 23 comentarios de celda, 21 celdas con texto en rojo o azul y 45 notas en las columnas G, H e I. | 6: Se retiraron del instrumento y quedaron registradas en esta hoja de Control de Cambios. La hoja «Hallazgos» recoge los puntos que siguen pendientes de decisión. | 7: Decisión del equipo (definida el 15/09/2026)
+54 | 1: 50 | 2: Índice | 3: Columna «N° preguntas Sección C» | 4: Corrección de conteos | 5: Conteos desactualizados frente a las hojas (p. ej. EPS - Módulo 2 registraba 34 y la hoja tenía 24; Gestor - Módulo 1 registraba 18 y la hoja tenía 17). | 6: Conteos recalculados directamente desde cada hoja de módulo. | 7: Verificación de consistencia del libro
+55 | 1: 51 | 2: Hallazgos | 3: Filas nuevas | 4: Registro de pendientes | 5: 17 hallazgos registrados. | 6: Se añadieron los hallazgos derivados de esta revisión que requieren decisión del equipo técnico (preguntas faltantes en EPS - Módulo 2, cobertura de privacidad y creencias religiosas, réplica de la tabla de gasto de bolsillo, estandarización de escalas). | 7: Verificación de consistencia del libro

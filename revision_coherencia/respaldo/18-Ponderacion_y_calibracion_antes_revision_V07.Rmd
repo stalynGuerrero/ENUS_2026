@@ -1,6 +1,6 @@
 # Ponderación y calibración {#sec-pesos-calibracion}
 
-Este capítulo documenta, con el detalle matemático completo, el procedimiento de ponderación de ENUS 2026: el peso de referencia con el que entra cada registro al proceso de estimación, la familia de distancias de calibración y la que efectivamente se adopta, la solución formal del problema de optimización y el algoritmo con el que esa solución se calcula, las variables auxiliares y sus totales poblacionales de referencia, y el procedimiento de replicación con el que se estima la incertidumbre de los pesos calibrados. En el diseño de ENUS 2026, con invitación a la totalidad del marco (\@ref(sec-marco-invitacion)), la calibración cumple la función de ajuste por no respuesta: es la forma en que se estima la propensión de responder de cada persona invitada.
+Este capítulo documenta, con el detalle matemático completo, el procedimiento de ponderación de ENUS 2026: el peso de referencia con el que entra cada registro al proceso de estimación, la familia de distancias de calibración y la que efectivamente se adopta, la solución formal del problema de optimización y el algoritmo con el que esa solución se calcula, las variables auxiliares y sus totales poblacionales de referencia, el ajuste por no respuesta, los estimadores de totales, promedios, proporciones, razones y dominios, y el procedimiento de replicación con el que se estima la incertidumbre de los pesos calibrados. En el diseño de ENUS 2026, con invitación a la totalidad del marco (\@ref(sec-marco-invitacion)), la calibración cumple la función de ajuste por no respuesta: es la forma en que se estima la propensión de responder de cada persona invitada.
 
 ## Peso de referencia
 
@@ -141,6 +141,8 @@ Que la calibración use las mismas variables que las metas de respuesta no las v
 
 ## Totales de referencia
 
+[**Pendiente de definición temporal.**]{.pendiente-rojo} El marco de invitación usa una ventana móvil de seis meses, mientras que este capítulo plantea un universo anual. Antes de ejecutar la calibración se debe documentar la construcción del marco anual: fecha de cierre, unión y deduplicación de marcos periódicos, tratamiento de atenciones del año anterior incluidas en la ventana, rezagos y cambios de afiliación. La elegibilidad periódica y el universo anual no deben asumirse equivalentes sin esta conciliación.
+
 **Decisión metodológica adoptada (septiembre de 2026).** Los totales $X_j$ de la calibración se calculan sobre el **marco del año de referencia**: las personas afiliadas en el **corte más reciente de la BDUA** que registran al menos una atención en salud durante el año (\@ref(sec-marco-invitacion)). De esta manera, el universo contra el cual se calibra coincide con la población objetivo —quienes utilizaron un servicio— y no con la totalidad de los afiliados. Cada persona se cuenta una sola vez, aunque registre varias atenciones.
 
 Esta decisión tiene dos consecuencias:
@@ -172,6 +174,8 @@ Los totales por departamento del mismo corte se presentan en el capítulo de dis
 
 ## Multiplicidad de modelos: peso transversal y pesos por módulo
 
+**Unidad de análisis.** El modelo transversal debe contener una sola observación de Parte 2 por persona y periodo de estimación. Los registros de ingresos posteriores no duplican esa respuesta. Los modelos de módulo deben vincularse al identificador de persona para preservar la dependencia en las réplicas. [**Pendiente de definición.**]{.pendiente-rojo} Precisar cuándo se renueva la Parte 2 y si el bloqueo se aplica a una entidad específica o a todo el tipo de actor; estas reglas condicionan la deduplicación y los universos de cada módulo.
+
 Las Partes 1 y 2 las responden todas las personas que ingresan, mientras que cada módulo de la Parte 3 lo responde solo una fracción de ellas: quienes resultan favorecidas en el sorteo, tienen una atención con el tipo de actor correspondiente y reciben ese módulo en la asignación aleatoria (\@ref(sec-mecanismo-captacion)). Un único modelo de calibración sobre todos los respondientes reproduce los totales para el conjunto, pero no garantiza que la submuestra de cada módulo, tomada por separado, también los reproduzca.
 
 Por esta razón, ENUS 2026 ejecuta **nueve modelos de calibración independientes**:
@@ -193,9 +197,145 @@ donde $X_j^{(a)}$ es el total de la variable $j$ en el subconjunto del marco con
 
 Cada respondiente de la Parte 3 queda representado por dos pesos no intercambiables: $w_i$, para sus respuestas de las Partes 1 y 2, y $w_i^{(m)}$, para las de su módulo. El peso que corresponde a cada indicador se documenta en la matriz de indicadores. Dado que $n_m$ es sustancialmente menor que $n$, la convergencia y la estabilidad de los modelos módulo-específicos se evalúan en el diagnóstico de calibración (\@ref(sec-diagnostico-calibracion)); con muestras pequeñas puede ser necesario colapsar categorías de las variables auxiliares, por ejemplo usar la región en lugar del departamento.
 
+## Ajuste por no respuesta {#sec-ajuste-no-respuesta}
+
+En ENUS 2026 la no respuesta de unidad corresponde a las personas del marco que, invitadas, no completan la Parte 2 (o, en la Parte 3, no completan el módulo asignado). Como las variables auxiliares se conocen para todas las personas del marco, respondan o no, el ajuste por no respuesta se hace **mediante calibración** directamente contra los totales del marco, sin una etapa previa de clases de ponderación o de modelación de la propensión [@SarndalLundstrom2005]. En este caso, la calibración ajusta a la vez por no respuesta y por las diferencias de composición entre quienes responden y el marco, y equivale a estimar la propensión de respuesta con un modelo de enlace exponencial (\@ref(sec-varianza)).
+
+### Secuencia del ajuste
+
+**Decisión metodológica adoptada (septiembre de 2026).** Cada uno de los nueve modelos de calibración (\@ref(sec-pesos-calibracion)) construye el peso final con la siguiente secuencia de ajustes, aplicada siempre en el mismo orden:
+
+1. **Peso de referencia.** $d_k=1$ para las Partes 1 y 2; $d_k=n_{\text{actor}}/0{,}8$ o $d_k=n_{\text{actor}}$ para la Parte 3, según el ingreso (\@ref(sec-mecanismo-captacion)).
+2. **Conjunto de respondientes.** Se conservan las personas que completan la parte o el módulo correspondiente y cuyos registros superan la validación del procesamiento.
+3. **Calibración por entropía** contra los totales del marco del año, o del subconjunto del marco con atención en el tipo de actor para los módulos de la Parte 3 (\@ref(sec-pesos-calibracion)).
+
+La secuencia se aplica completa, en el mismo orden, en cada réplica de la estimación de la incertidumbre (\@ref(sec-varianza)). Así, la varianza incorpora la variabilidad de todos los ajustes y no solo la del estimador final.
+
+**Recomendación metodológica.** Si el diagnóstico muestra factores de ajuste $g_k=w_k/d_k$ extremos (\@ref(sec-diagnostico-calibracion)), se recomienda añadir un cuarto paso de **recorte con recalibración**: los factores fuera de los límites $[L, U]$ se llevan al límite y se recalibra, repitiendo hasta que se cumplan a la vez los límites y los totales. Si se adopta, el paso se incluye también en cada réplica. Los límites no se fijan a priori.
+
+### Tasas de respuesta
+
+La tasa de respuesta es el indicador central de la calidad del ajuste, porque mide qué fracción del marco representa a las demás personas. Se calcula para el total y para cada categoría $c$ de las variables auxiliares:
+
+$$
+TR_c = \frac{n_c}{N_c} ,
+$$
+
+donde $n_c$ es el número de respondientes y $N_c$ el número de personas del marco en la categoría $c$. Como el peso de referencia de las Partes 1 y 2 es uno y la calibración reproduce $N_c$, el promedio de los pesos calibrados en la categoría es el inverso de su tasa de respuesta: las categorías con menor tasa de respuesta reciben pesos mayores.
+
+### Contraste con un modelo de propensión
+
+**Recomendación metodológica.** Dado que $\mathbf x_k$ y $R_k$ se conocen para todas las personas del marco, la propensión de respuesta también puede estimarse con un modelo de regresión logística ajustado sobre el marco completo:
+
+$$
+\operatorname{logit}\,\pi_k^{A} = \mathbf x_k'\boldsymbol\beta ,
+\qquad
+w_k^{\text{prop}} = \frac{d_k}{\hat\pi_k^{A}} .
+$$
+
+Se recomienda usar este modelo como contraste de la calibración, no como método de ponderación: diferencias importantes entre $w_k$ y $w_k^{\text{prop}}$, o entre las estimaciones que producen, indican que los resultados dependen de la forma del modelo de propensión y se revisan en el diagnóstico de calibración.
+
+### Análisis de sensibilidad a la no respuesta no ignorable
+
+Ni la calibración ni el modelo de propensión corrigen el sesgo que se produce cuando la decisión de responder depende de la experiencia de la persona aun después de condicionar por las variables auxiliares (incumplimiento del supuesto A1, \@ref(sec-varianza)).
+
+**Recomendación metodológica.** Para acotar ese sesgo se recomienda el **modelo de mezcla de patrones con variable sustituta** (*proxy pattern-mixture model*) de @AndridgeLittle2011. Para cada indicador $y$, se ajusta entre los respondientes la regresión de $y$ sobre $\mathbf x$ y se construye la variable sustituta $\hat x_k = \hat{\mathbf B}'\mathbf x_k$, que puede calcularse para todas las personas del marco. Con $\rho$ la correlación entre $y$ y $\hat x$ entre los respondientes, la media ajustada es:
+
+$$
+\hat\mu_y(\phi) = \bar y_s + m(\phi)\,\frac{s_{y}}{s_{\hat x}}\,\left(\bar{\hat x}_U - \bar{\hat x}_s\right),
+\qquad
+m(\phi) = \frac{\phi + (1-\phi)\,\rho}{\phi\,\rho + (1-\phi)} ,
+$$
+
+donde $\bar y_s$, $\bar{\hat x}_s$, $s_y$ y $s_{\hat x}$ son medias y desviaciones estándar entre los respondientes, y $\bar{\hat x}_U$ es la media de la variable sustituta en todo el marco. El parámetro $\phi\in[0,1]$ fija cuánto depende la respuesta del propio indicador: con $\phi=0$ la no respuesta es ignorable dada la variable sustituta, y con $\phi=1$ depende solo del indicador. Al evaluar $\phi$ en una rejilla, por ejemplo $\{0;\ 0{,}25;\ 0{,}5;\ 0{,}75;\ 1\}$, se obtiene un intervalo de sensibilidad que se publica junto al intervalo de confianza. @Little2020 sugieren $\phi=0{,}5$ como valor central y advierten que valores mayores suelen implicar mecanismos poco realistas.
+
+Cuanto menor es $\rho$, menos informativas son las variables auxiliares sobre el indicador y más amplio es el intervalo de sensibilidad. Para indicadores dicotómicos, como las proporciones, la forma lineal anterior es una aproximación.
+
+[**Pendiente de definición.**]{.pendiente-rojo} Los indicadores a los que se aplicará el análisis de sensibilidad y la forma de presentar el intervalo en las publicaciones.
+
 ## Diferencia entre metas de respuesta y calibración
 
 La calibración y las metas de respuesta comparten variables auxiliares, pero operan en momentos y con lógicas distintas: la meta orienta, durante la recolección, el seguimiento de la respuesta por celda y el refuerzo de la invitación donde es insuficiente; la calibración, una vez cerrada la recolección, ajusta los pesos para que quienes responden reproduzcan exactamente los totales del marco. La distinción entre meta de respuesta, estrato, dominio y variable de calibración se desarrolla en el capítulo de diseño muestral (\@ref(sec-diseno-muestral)).
+
+## Estimadores {#sec-estimadores}
+
+Todos los indicadores de ENUS 2026 se obtienen como funciones de los pesos calibrados. En esta sección, $w_k$ denota el peso que corresponde al indicador y $s$ el conjunto de respondientes sobre el que se calcula: para los indicadores construidos con las Partes 1 y 2, el peso transversal $w_k$ sobre el conjunto $s$ de personas que completan la Parte 2; para los indicadores de un módulo $m$ de la Parte 3, el peso $w_k^{(m)}$ sobre el subconjunto $s_m$ de sus respondientes (\@ref(sec-pesos-calibracion)). El universo al que se refieren las estimaciones es el marco del año de referencia $U$ o, para un módulo del actor $a$, el subconjunto del marco con atención en ese tipo de actor.
+
+Cuando una pregunta solo se formula a una parte de los respondientes, por las rutas del cuestionario, las sumas se restringen a quienes recibieron la pregunta. [**Pendiente de definición.**]{.pendiente-rojo} El tratamiento de la no respuesta a preguntas específicas (omisiones, "no sabe" o "no responde") dentro de ese conjunto no está definido en los insumos disponibles y se documentará en el capítulo de procesamiento.
+
+### Totales
+
+El total de una variable $y$ en el universo se estima como:
+
+$$
+\hat Y = \sum_{k\in s} w_k\, y_k .
+$$
+
+El tamaño del universo se estima con $\hat N = \sum_{k\in s} w_k$. Dado que las variables auxiliares son categóricas y sus categorías suman el total de personas del marco, la calibración garantiza que $\hat N = N$ y que, para cada variable auxiliar, $\sum_{k\in s} w_k\,\mathbf x_k = \mathbf X$ de forma exacta.
+
+### Promedios
+
+El promedio de $y$ se estima con el estimador de tipo Hájek:
+
+$$
+\hat{\bar Y} = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k} = \frac{\hat Y}{\hat N} .
+$$
+
+### Proporciones
+
+Una proporción es el promedio de una variable indicadora. Para la categoría $c$ de una pregunta, con $y_{ck}=1$ si la persona $k$ eligió esa categoría y $y_{ck}=0$ en otro caso:
+
+$$
+\hat P_c = \frac{\sum_{k\in s} w_k\, y_{ck}}{\sum_{k\in s} w_k} .
+$$
+
+Las proporciones de todas las categorías de una misma pregunta suman uno sobre el conjunto de quienes la respondieron.
+
+### Razones
+
+La razón entre los totales de dos variables $y$ y $z$ se estima como:
+
+$$
+\hat R = \frac{\hat Y}{\hat Z} = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k\, z_k} .
+$$
+
+El promedio y la proporción son casos particulares de la razón con $z_k=1$ para todo $k$.
+
+### Dominios
+
+Un dominio $d$ es un subconjunto del universo para el que se publican estimaciones, por ejemplo un departamento, un tipo de actor o una entidad (\@ref(sec-publicacion-entidad)). Sea $\delta_{dk}=1$ si la persona $k$ pertenece al dominio $d$ y $\delta_{dk}=0$ en otro caso. Los estimadores de dominio se obtienen sustituyendo $y_k$ por $\delta_{dk}\,y_k$:
+
+$$
+\hat Y_d = \sum_{k\in s} w_k\,\delta_{dk}\, y_k ,
+\qquad
+\hat N_d = \sum_{k\in s} w_k\,\delta_{dk} ,
+$$
+
+$$
+\hat{\bar Y}_d = \frac{\hat Y_d}{\hat N_d} ,
+\qquad
+\hat P_{dc} = \frac{\sum_{k\in s} w_k\,\delta_{dk}\, y_{ck}}{\hat N_d} ,
+\qquad
+\hat R_d = \frac{\sum_{k\in s} w_k\,\delta_{dk}\, y_k}{\sum_{k\in s} w_k\,\delta_{dk}\, z_k} .
+$$
+
+Los pesos no se recalculan por dominio: se usan los mismos pesos $w_k$, o $w_k^{(m)}$, obtenidos con la calibración sobre el conjunto completo de respondientes. Cuando el dominio está definido por categorías de las variables auxiliares, como el departamento, el tamaño estimado reproduce el del marco ($\hat N_d = N_d$). Cuando no lo está, como una entidad, $\hat N_d$ es una estimación y el número de respondientes del dominio es aleatorio. Las estimaciones de dominios con pocos respondientes siguen los umbrales de publicación definidos en el capítulo de diseño muestral (\@ref(sec-publicacion-entidad)).
+
+### Resumen
+
+| Parámetro | Estimador | Variable linealizada $u_k$ |
+|---|---|---|
+| Total | $\hat Y = \sum_{s} w_k y_k$ | $y_k$ |
+| Promedio | $\hat{\bar Y} = \hat Y/\hat N$ | $(y_k-\hat{\bar Y})/\hat N$ |
+| Proporción | $\hat P_c = \sum_{s} w_k y_{ck}/\hat N$ | $(y_{ck}-\hat P_c)/\hat N$ |
+| Razón | $\hat R = \hat Y/\hat Z$ | $(y_k-\hat R\,z_k)/\hat Z$ |
+| Total de dominio | $\hat Y_d = \sum_{s} w_k\delta_{dk} y_k$ | $\delta_{dk}\,y_k$ |
+| Promedio o proporción de dominio | $\hat{\bar Y}_d = \hat Y_d/\hat N_d$ | $\delta_{dk}(y_k-\hat{\bar Y}_d)/\hat N_d$ |
+| Razón de dominio | $\hat R_d = \hat Y_d/\hat Z_d$ | $\delta_{dk}(y_k-\hat R_d\,z_k)/\hat Z_d$ |
+
+Table: (\#tab:estimadores) Estimadores de los parámetros de ENUS 2026 y variables linealizadas para la aproximación analítica de la varianza.
+
+La variable linealizada $u_k$ se usa en la aproximación analítica de la varianza (\@ref(sec-varianza)); el procedimiento de réplicas no la requiere, porque recalcula cada estimador directamente con los pesos replicados.
 
 ## Estimación de la incertidumbre {#sec-varianza}
 
@@ -237,7 +377,7 @@ Por esta razón la calibración de ENUS 2026 no es un ajuste cosmético de compo
 
 ### Estimador
 
-Los indicadores de ENUS 2026 son proporciones o medias, y se estiman con el estimador de razón (de tipo Hájek):
+En lo que sigue, $\hat\theta$ denota cualquiera de los estimadores de la sección anterior (\@ref(sec-estimadores)), escrito como función de los pesos, $\hat\theta = f(\mathbf w)$. Para la exposición se usa el promedio de tipo Hájek, que cubre también las proporciones:
 
 $$
 \hat\theta = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k}.
@@ -250,7 +390,7 @@ $$
 Para cada réplica $b=1,\dots,B$:
 
 1. **Remuestreo.** Dentro de cada departamento $h$, se extraen con reemplazo $n_h$ respondientes de los $n_h$ observados. Sea $m_k^{(b)}$ el número de veces que el respondiente $k$ resulta seleccionado; el peso de referencia replicado es $d_k^{(b)} = m_k^{(b)}\, d_k$. El departamento se usa como partición de remuestreo porque es el nivel en que se fijan las metas de respuesta; las 1.848 celdas de meta no se usan porque muchas tendrán muy pocos respondientes. En los modelos de la Parte 3, donde el número de respondientes por departamento es pequeño, la partición se hace por región.
-2. **Recalibración.** Se resuelve el mismo problema de calibración con los **mismos totales del marco** $X_j$, que no se remuestrean porque son exactos:
+2. **Recalibración.** Se aplica de nuevo la secuencia completa del ajuste por no respuesta (\@ref(sec-ajuste-no-respuesta)) y se resuelve el mismo problema de calibración con los **mismos totales del marco** $X_j$, que no se remuestrean porque son exactos:
 
 $$
 w_k^{(b)} = d_k^{(b)} \exp\!\left(\mathbf x_k'\boldsymbol\lambda^{(b)}\right),
@@ -261,8 +401,12 @@ $$
 3. **Estimación replicada:**
 
 $$
+\hat\theta^{(b)} = f\!\left(\mathbf w^{(b)}\right),
+\qquad \text{por ejemplo} \qquad
 \hat\theta^{(b)} = \frac{\sum_{k\in s} w_k^{(b)}\, y_k}{\sum_{k\in s} w_k^{(b)}}.
 $$
+
+El mismo estimador se recalcula con los pesos replicados: $\hat Y^{(b)}=\sum_{k\in s} w_k^{(b)} y_k$ para un total y $\hat R^{(b)}=\sum_{k\in s} w_k^{(b)} y_k \big/ \sum_{k\in s} w_k^{(b)} z_k$ para una razón. Para un dominio, la réplica se construye y se recalibra con todos los respondientes, y solo después se calcula el estimador del dominio con $\delta_{dk}$; no se remuestrean ni se recalibran los respondientes del dominio por separado. Así, la varianza de un dominio incorpora la aleatoriedad de su número de respondientes.
 
 La varianza es la variabilidad entre réplicas:
 
@@ -296,6 +440,18 @@ $$
 \qquad
 \hat N=\sum_{k\in s} w_k .
 $$
+
+La expresión anterior corresponde al promedio. Para los demás estimadores se usa la misma forma con la variable linealizada $u_k$ de la tabla \@ref(tab:estimadores):
+
+$$
+v(\hat\theta) \;=\; \sum_{k\in s} w_k\,(w_k-1)\,\hat e_{uk}^{\,2},
+\qquad
+\hat e_{uk} = u_k - \hat{\mathbf B}_u'\mathbf x_k ,
+\qquad
+\hat{\mathbf B}_u = \Big(\sum_{k\in s} w_k\,\mathbf x_k\mathbf x_k'\Big)^{-1}\sum_{k\in s} w_k\,\mathbf x_k\,u_k .
+$$
+
+Con $u_k=(y_k-\hat\theta)/\hat N$ se recupera la expresión del promedio.
 
 Esta aproximación se usa para contrastar los resultados de las réplicas: una discrepancia importante entre ambas señala problemas de convergencia, de pesos extremos o de estabilidad en modelos con pocos respondientes, y se revisa en el diagnóstico de calibración (\@ref(sec-diagnostico-calibracion)). La forma general de la varianza asintótica para ecuaciones de estimación de este tipo es la del estimador sándwich [@Beresewicz2025, sección 4.2].
 

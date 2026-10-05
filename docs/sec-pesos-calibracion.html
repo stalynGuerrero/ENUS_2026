@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 5 Ponderación y calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</title>
+  <meta name="description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 5 Ponderación y calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 5 Ponderación y calibración | Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)" />
+  
+  <meta name="twitter:description" content="<p>Especificación técnica reproducible de la operación estadística ClicSalud
+— Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026), del
+Ministerio de Salud y Protección Social. Este libro bookdown deriva su
+contenido de la misma fuente redactada en documento_tecnico.qmd (Quarto);
+ver README.md sobre el flujo de sincronización entre ambos.</p>" />
+  
+
+<meta name="author" content="Ministerio de Salud y Protección Social" />
+
+
+<meta name="date" content="2026-10-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sec-diseno-muestral.html"/>
+<link rel="next" href="sec-instrumento-recoleccion.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="styles/msps.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ENUS 2026</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presentación</a></li>
+<li class="chapter" data-level="" data-path="glosario.html"><a href="glosario.html"><i class="fa fa-check"></i>Glosario</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i>Introducción</a></li>
+<li class="chapter" data-level="1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html"><i class="fa fa-check"></i><b>1</b> Antecedentes</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-marco-normativo"><i class="fa fa-check"></i><b>1.1</b> Marco normativo</a></li>
+<li class="chapter" data-level="1.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#evoluci%C3%B3n-del-objeto-de-medici%C3%B3n"><i class="fa fa-check"></i><b>1.2</b> Evolución del objeto de medición</a></li>
+<li class="chapter" data-level="1.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-mediciones-msps"><i class="fa fa-check"></i><b>1.3</b> Mediciones nacionales</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-poblacion-objetivo-serie"><i class="fa fa-check"></i><b>1.3.1</b> Población y cobertura de las primeras mediciones</a></li>
+<li class="chapter" data-level="1.3.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-diseno-serie"><i class="fa fa-check"></i><b>1.3.2</b> Selección y contenido del ciclo inicial</a></li>
+<li class="chapter" data-level="1.3.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-mediciones-msps-2018-2025"><i class="fa fa-check"></i><b>1.3.3</b> Transformaciones recientes</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-referentes-internacionales"><i class="fa fa-check"></i><b>1.4</b> Referentes internacionales</a></li>
+<li class="chapter" data-level="1.5" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#sec-sintesis-antecedentes"><i class="fa fa-check"></i><b>1.5</b> Comparabilidad y aprendizajes para ENUS</a></li>
+<li class="chapter" data-level="1.6" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#enus-2026-como-nueva-l%C3%ADnea-base-de-medici%C3%B3n"><i class="fa fa-check"></i><b>1.6</b> ENUS 2026 como nueva línea base de medición</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#fundamento-metodol%C3%B3gico-de-la-nueva-serie"><i class="fa fa-check"></i><b>1.6.1</b> Fundamento metodológico de la nueva serie</a></li>
+<li class="chapter" data-level="1.6.2" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#fundamento-normativo-e-institucional"><i class="fa fa-check"></i><b>1.6.2</b> Fundamento normativo e institucional</a></li>
+<li class="chapter" data-level="1.6.3" data-path="sec-antecedentes.html"><a href="sec-antecedentes.html#condiciones-para-establecer-y-conservar-la-l%C3%ADnea-base"><i class="fa fa-check"></i><b>1.6.3</b> Condiciones para establecer y conservar la línea base</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sec-objetivo.html"><a href="sec-objetivo.html"><i class="fa fa-check"></i><b>2</b> Objetivo de la ENUS 2026</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sec-objetivo.html"><a href="sec-objetivo.html#objetivo-general"><i class="fa fa-check"></i><b>2.1</b> Objetivo general</a></li>
+<li class="chapter" data-level="2.2" data-path="sec-objetivo.html"><a href="sec-objetivo.html#objetivos-espec%C3%ADficos"><i class="fa fa-check"></i><b>2.2</b> Objetivos específicos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sec-alcance.html"><a href="sec-alcance.html"><i class="fa fa-check"></i><b>3</b> Alcance de la operación estadística</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sec-alcance.html"><a href="sec-alcance.html#sec-marco-conceptual"><i class="fa fa-check"></i><b>3.1</b> Fenómenos objeto de medición</a></li>
+<li class="chapter" data-level="3.2" data-path="sec-alcance.html"><a href="sec-alcance.html#sec-poblacion-objetivo"><i class="fa fa-check"></i><b>3.2</b> Población objetivo</a></li>
+<li class="chapter" data-level="3.3" data-path="sec-alcance.html"><a href="sec-alcance.html#unidad-de-observaci%C3%B3n"><i class="fa fa-check"></i><b>3.3</b> Unidad de observación</a></li>
+<li class="chapter" data-level="3.4" data-path="sec-alcance.html"><a href="sec-alcance.html#cobertura-territorial"><i class="fa fa-check"></i><b>3.4</b> Cobertura territorial</a></li>
+<li class="chapter" data-level="3.5" data-path="sec-alcance.html"><a href="sec-alcance.html#cobertura-temporal-y-periodo-de-referencia"><i class="fa fa-check"></i><b>3.5</b> Cobertura temporal y periodo de referencia</a></li>
+<li class="chapter" data-level="3.6" data-path="sec-alcance.html"><a href="sec-alcance.html#servicios-de-salud-objeto-de-medici%C3%B3n"><i class="fa fa-check"></i><b>3.6</b> Servicios de salud objeto de medición</a></li>
+<li class="chapter" data-level="3.7" data-path="sec-alcance.html"><a href="sec-alcance.html#dominios-de-an%C3%A1lisis"><i class="fa fa-check"></i><b>3.7</b> Dominios de análisis</a></li>
+<li class="chapter" data-level="3.8" data-path="sec-alcance.html"><a href="sec-alcance.html#l%C3%ADmites-del-alcance"><i class="fa fa-check"></i><b>3.8</b> Límites del alcance</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html"><i class="fa fa-check"></i><b>4</b> Diseño muestral</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-marco-invitacion"><i class="fa fa-check"></i><b>4.1</b> Marco muestral, invitación y no respuesta</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#marco-muestral"><i class="fa fa-check"></i><b>4.1.1</b> Marco muestral</a></li>
+<li class="chapter" data-level="4.1.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#invitaci%C3%B3n"><i class="fa fa-check"></i><b>4.1.2</b> Invitación</a></li>
+<li class="chapter" data-level="4.1.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#no-respuesta"><i class="fa fa-check"></i><b>4.1.3</b> No respuesta</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-mecanismo-captacion"><i class="fa fa-check"></i><b>4.2</b> Mecanismo de asignación de la Parte 3</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#estructura-de-la-encuesta-en-tres-partes"><i class="fa fa-check"></i><b>4.2.1</b> Estructura de la encuesta en tres partes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#primer-ingreso-sorteo-actor-de-la-atenci%C3%B3n-y-asignaci%C3%B3n"><i class="fa fa-check"></i><b>4.2.2</b> Primer ingreso: sorteo, actor de la atención y asignación</a></li>
+<li class="chapter" data-level="4.2.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#ingresos-posteriores"><i class="fa fa-check"></i><b>4.2.3</b> Ingresos posteriores</a></li>
+<li class="chapter" data-level="4.2.4" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#probabilidades-y-pesos-de-dise%C3%B1o-de-la-parte-3"><i class="fa fa-check"></i><b>4.2.4</b> Probabilidades y pesos de diseño de la Parte 3</a></li>
+<li class="chapter" data-level="4.2.5" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#m%C3%B3dulos-de-parte-3"><i class="fa fa-check"></i><b>4.2.5</b> Módulos de Parte 3</a></li>
+<li class="chapter" data-level="4.2.6" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#diferenciaci%C3%B3n-frente-a-las-metas-de-respuesta"><i class="fa fa-check"></i><b>4.2.6</b> Diferenciación frente a las metas de respuesta</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-tamano-muestra"><i class="fa fa-check"></i><b>4.3</b> Determinación del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#c%C3%A1lculo-de-referencia"><i class="fa fa-check"></i><b>4.3.1</b> Cálculo de referencia</a></li>
+<li class="chapter" data-level="4.3.2" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#ajuste-por-efecto-de-dise%C3%B1o"><i class="fa fa-check"></i><b>4.3.2</b> Ajuste por efecto de diseño</a></li>
+<li class="chapter" data-level="4.3.3" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#correcci%C3%B3n-por-poblaci%C3%B3n-finita"><i class="fa fa-check"></i><b>4.3.3</b> Corrección por población finita</a></li>
+<li class="chapter" data-level="4.3.4" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#ajuste-operativo-y-meta-de-respuesta"><i class="fa fa-check"></i><b>4.3.4</b> Ajuste operativo y meta de respuesta</a></li>
+<li class="chapter" data-level="4.3.5" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#par%C3%A1metros-adoptados"><i class="fa fa-check"></i><b>4.3.5</b> Parámetros adoptados</a></li>
+<li class="chapter" data-level="4.3.6" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#tama%C3%B1o-adoptado-asignaci%C3%B3n-por-departamento"><i class="fa fa-check"></i><b>4.3.6</b> Tamaño adoptado: asignación por departamento</a></li>
+<li class="chapter" data-level="4.3.7" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-distribucion-metas-celdas"><i class="fa fa-check"></i><b>4.3.7</b> Distribución de la meta por celdas</a></li>
+<li class="chapter" data-level="4.3.8" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-alcance-departamental"><i class="fa fa-check"></i><b>4.3.8</b> Alcance de los resultados por departamento</a></li>
+<li class="chapter" data-level="4.3.9" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#conformaci%C3%B3n-peri%C3%B3dica-del-marco"><i class="fa fa-check"></i><b>4.3.9</b> Conformación periódica del marco</a></li>
+<li class="chapter" data-level="4.3.10" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-entidades-invitacion"><i class="fa fa-check"></i><b>4.3.10</b> Responsabilidades en la invitación y recolección</a></li>
+<li class="chapter" data-level="4.3.11" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-conceptos-metas-calibracion"><i class="fa fa-check"></i><b>4.3.11</b> Diferenciación conceptual para el análisis</a></li>
+<li class="chapter" data-level="4.3.12" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#alcance-de-los-an%C3%A1lisis-por-dominio-y-estructura-de-la-participaci%C3%B3n"><i class="fa fa-check"></i><b>4.3.12</b> Alcance de los análisis por dominio y estructura de la participación</a></li>
+<li class="chapter" data-level="4.3.13" data-path="sec-diseno-muestral.html"><a href="sec-diseno-muestral.html#sec-publicacion-entidad"><i class="fa fa-check"></i><b>4.3.13</b> Publicación de resultados por entidad</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html"><i class="fa fa-check"></i><b>5</b> Ponderación y calibración</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-peso-referencia"><i class="fa fa-check"></i><b>5.1</b> Peso de referencia</a></li>
+<li class="chapter" data-level="5.2" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#familia-de-distancias-de-calibraci%C3%B3n"><i class="fa fa-check"></i><b>5.2</b> Familia de distancias de calibración</a></li>
+<li class="chapter" data-level="5.3" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#soluci%C3%B3n-del-problema-de-calibraci%C3%B3n"><i class="fa fa-check"></i><b>5.3</b> Solución del problema de calibración</a></li>
+<li class="chapter" data-level="5.4" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#procedimiento-de-estimaci%C3%B3n-algoritmo-iterativo"><i class="fa fa-check"></i><b>5.4</b> Procedimiento de estimación: algoritmo iterativo</a></li>
+<li class="chapter" data-level="5.5" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#variables-auxiliares"><i class="fa fa-check"></i><b>5.5</b> Variables auxiliares</a></li>
+<li class="chapter" data-level="5.6" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-totales-calibracion"><i class="fa fa-check"></i><b>5.6</b> Totales de referencia</a></li>
+<li class="chapter" data-level="5.7" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-modelos-calibracion"><i class="fa fa-check"></i><b>5.7</b> Multiplicidad de modelos: peso transversal y pesos por módulo</a></li>
+<li class="chapter" data-level="5.8" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-ajuste-no-respuesta"><i class="fa fa-check"></i><b>5.8</b> Ajuste por no respuesta</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#secuencia-del-ajuste"><i class="fa fa-check"></i><b>5.8.1</b> Secuencia del ajuste</a></li>
+<li class="chapter" data-level="5.8.2" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#tasas-de-respuesta"><i class="fa fa-check"></i><b>5.8.2</b> Tasas de respuesta</a></li>
+<li class="chapter" data-level="5.8.3" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#contraste-con-un-modelo-de-propensi%C3%B3n"><i class="fa fa-check"></i><b>5.8.3</b> Contraste con un modelo de propensión</a></li>
+<li class="chapter" data-level="5.8.4" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#an%C3%A1lisis-de-sensibilidad-a-la-no-respuesta-no-ignorable"><i class="fa fa-check"></i><b>5.8.4</b> Análisis de sensibilidad a la no respuesta no ignorable</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#diferencia-entre-metas-de-respuesta-y-calibraci%C3%B3n"><i class="fa fa-check"></i><b>5.9</b> Diferencia entre metas de respuesta y calibración</a></li>
+<li class="chapter" data-level="5.10" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-estimadores"><i class="fa fa-check"></i><b>5.10</b> Estimadores</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#totales"><i class="fa fa-check"></i><b>5.10.1</b> Totales</a></li>
+<li class="chapter" data-level="5.10.2" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#promedios"><i class="fa fa-check"></i><b>5.10.2</b> Promedios</a></li>
+<li class="chapter" data-level="5.10.3" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#proporciones"><i class="fa fa-check"></i><b>5.10.3</b> Proporciones</a></li>
+<li class="chapter" data-level="5.10.4" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#razones"><i class="fa fa-check"></i><b>5.10.4</b> Razones</a></li>
+<li class="chapter" data-level="5.10.5" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#dominios"><i class="fa fa-check"></i><b>5.10.5</b> Dominios</a></li>
+<li class="chapter" data-level="5.10.6" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#resumen"><i class="fa fa-check"></i><b>5.10.6</b> Resumen</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-varianza"><i class="fa fa-check"></i><b>5.11</b> Estimación de la incertidumbre</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#marco-de-inferencia"><i class="fa fa-check"></i><b>5.11.1</b> Marco de inferencia</a></li>
+<li class="chapter" data-level="5.11.2" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#alcance-de-la-interpretaci%C3%B3n-por-propensi%C3%B3n"><i class="fa fa-check"></i><b>5.11.2</b> Alcance de la interpretación por propensión</a></li>
+<li class="chapter" data-level="5.11.3" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#estimador"><i class="fa fa-check"></i><b>5.11.3</b> Estimador</a></li>
+<li class="chapter" data-level="5.11.4" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#procedimiento-de-r%C3%A9plicas-con-recalibraci%C3%B3n"><i class="fa fa-check"></i><b>5.11.4</b> Procedimiento de réplicas con recalibración</a></li>
+<li class="chapter" data-level="5.11.5" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-matrices-pesos-replicas"><i class="fa fa-check"></i><b>5.11.5</b> Matrices desplegadas de pesos de las réplicas</a></li>
+<li class="chapter" data-level="5.11.6" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#aproximaci%C3%B3n-anal%C3%ADtica-de-contraste"><i class="fa fa-check"></i><b>5.11.6</b> Aproximación analítica de contraste</a></li>
+<li class="chapter" data-level="5.11.7" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#interpretaci%C3%B3n"><i class="fa fa-check"></i><b>5.11.7</b> Interpretación</a></li>
+<li class="chapter" data-level="5.11.8" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#extensiones-consideradas"><i class="fa fa-check"></i><b>5.11.8</b> Extensiones consideradas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="sec-pesos-calibracion.html"><a href="sec-pesos-calibracion.html#sec-diagnostico-pesos-enus"><i class="fa fa-check"></i><b>5.12</b> Diagnóstico de la calibración</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html"><i class="fa fa-check"></i><b>6</b> Instrumento de recolección: ClicSalud</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#sec-formularios-v07"><i class="fa fa-check"></i><b>6.1</b> Fuente vigente y estructura de los formularios</a></li>
+<li class="chapter" data-level="6.2" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#sec-app-clicsalud"><i class="fa fa-check"></i><b>6.2</b> Estructura general de la aplicación</a></li>
+<li class="chapter" data-level="6.3" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#gu%C3%ADa-de-uso-recorrido-completo-de-la-aplicaci%C3%B3n"><i class="fa fa-check"></i><b>6.3</b> Guía de uso: recorrido completo de la aplicación</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-1.-mensaje-institucional-de-bienvenida"><i class="fa fa-check"></i><b>6.3.1</b> Paso 1. Mensaje institucional de bienvenida</a></li>
+<li class="chapter" data-level="6.3.2" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-2.-identificaci%C3%B3n-por-documento"><i class="fa fa-check"></i><b>6.3.2</b> Paso 2. Identificación por documento</a></li>
+<li class="chapter" data-level="6.3.3" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-3.-verificaci%C3%B3n-por-c%C3%B3digo-sms"><i class="fa fa-check"></i><b>6.3.3</b> Paso 3. Verificación por código SMS</a></li>
+<li class="chapter" data-level="6.3.4" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-4.-verificaci%C3%B3n-bdua"><i class="fa fa-check"></i><b>6.3.4</b> Paso 4. Verificación BDUA</a></li>
+<li class="chapter" data-level="6.3.5" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-5.-pantalla-de-inicio-y-navegaci%C3%B3n-principal"><i class="fa fa-check"></i><b>6.3.5</b> Paso 5. Pantalla de Inicio y navegación principal</a></li>
+<li class="chapter" data-level="6.3.6" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-6.-pesta%C3%B1a-derechos"><i class="fa fa-check"></i><b>6.3.6</b> Paso 6. Pestaña Derechos</a></li>
+<li class="chapter" data-level="6.3.7" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-7.-pesta%C3%B1a-desempe%C3%B1o"><i class="fa fa-check"></i><b>6.3.7</b> Paso 7. Pestaña Desempeño</a></li>
+<li class="chapter" data-level="6.3.8" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-8.-pesta%C3%B1a-normas"><i class="fa fa-check"></i><b>6.3.8</b> Paso 8. Pestaña Normas</a></li>
+<li class="chapter" data-level="6.3.9" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-9.-acceso-al-m%C3%B3dulo-encuesta-enus"><i class="fa fa-check"></i><b>6.3.9</b> Paso 9. Acceso al módulo Encuesta ENUS</a></li>
+<li class="chapter" data-level="6.3.10" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-10.-parte-2-preguntas-comunes"><i class="fa fa-check"></i><b>6.3.10</b> Paso 10. Parte 2 — Preguntas comunes</a></li>
+<li class="chapter" data-level="6.3.11" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#paso-11.-sorteo-actor-de-la-atenci%C3%B3n-y-m%C3%B3dulo-asignado"><i class="fa fa-check"></i><b>6.3.11</b> Paso 11. Sorteo, actor de la atención y módulo asignado</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#sesi%C3%B3n-y-reingreso"><i class="fa fa-check"></i><b>6.4</b> Sesión y reingreso</a></li>
+<li class="chapter" data-level="6.5" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#almacenamiento-de-datos-durante-la-recolecci%C3%B3n"><i class="fa fa-check"></i><b>6.5</b> Almacenamiento de datos durante la recolección</a></li>
+<li class="chapter" data-level="6.6" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#alcance-de-esta-documentaci%C3%B3n-frente-a-otras-estructuras-del-instrumento"><i class="fa fa-check"></i><b>6.6</b> Alcance de esta documentación frente a otras estructuras del instrumento</a></li>
+<li class="chapter" data-level="6.7" data-path="sec-instrumento-recoleccion.html"><a href="sec-instrumento-recoleccion.html#controles-pendientes-de-los-formularios-vigentes"><i class="fa fa-check"></i><b>6.7</b> Controles pendientes de los formularios vigentes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://www.minsalud.gov.co" target="blank">Ministerio de Salud y Protección Social</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Documento Técnico de la Encuesta Nacional de Experiencia del Usuario en Salud (ENUS 2026)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sec-pesos-calibracion" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Capítulo 5</span> Ponderación y calibración<a href="sec-pesos-calibracion.html#sec-pesos-calibracion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo documenta, con su formulación matemática y condiciones de aplicación, el procedimiento de ponderación de ENUS 2026: el peso de referencia con el que entra cada registro al proceso de estimación, la familia de distancias de calibración y la que efectivamente se adopta, la solución formal del problema de optimización y el algoritmo con el que esa solución se calcula, las variables auxiliares y sus totales poblacionales de referencia, el ajuste por no respuesta, los estimadores de totales, promedios, proporciones, razones y dominios, y el procedimiento de replicación con el que se estima la incertidumbre de los pesos calibrados. En el diseño de ENUS 2026, con invitación a la totalidad del marco (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>), la calibración cumple la función de ajuste por no respuesta: ajusta la composición de los respondientes a los totales conocidos del marco. Su capacidad para reducir el sesgo depende de la cobertura, la elegibilidad y la información auxiliar; no garantiza representatividad en características que no se controlan.</p>
+<div id="sec-peso-referencia" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Peso de referencia<a href="sec-pesos-calibracion.html#sec-peso-referencia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Decisión metodológica adoptada (septiembre de 2026).</strong> Con el diseño por invitación a la totalidad del marco (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>), toda persona del marco tiene probabilidad de invitación igual a 1. El peso de referencia de las Partes 1 y 2 es, por tanto, el inverso de esa probabilidad:</p>
+<p><span class="math display">\[
+d_i = \frac{1}{\pi_i^{\text{inv}}} = 1 \qquad \forall i \in s
+\]</span></p>
+<p>Para la Parte 3, el peso de referencia es <span class="math inline">\(d_i^{(m)}=1/q_{im}\)</span>, donde <span class="math inline">\(q_{im}\)</span> es la probabilidad documentada de recibir el módulo <span class="math inline">\(m\)</span>, condicionada a la participación previa y a su elegibilidad (<a href="sec-diseno-muestral.html#sec-mecanismo-captacion">4.2</a>). Si el primer ingreso incluye un sorteo con probabilidad 0,8 y una asignación uniforme entre <span class="math inline">\(K_i\)</span> módulos elegibles, entonces <span class="math inline">\(q_{im}=0{,}8/K_i\)</span> y <span class="math inline">\(d_i^{(m)}=K_i/0{,}8\)</span>. En ingresos posteriores, si solo opera la asignación uniforme, <span class="math inline">\(d_i^{(m)}=K_i\)</span>.</p>
+<p><span class="pendiente-rojo"><strong>Condición previa de aplicación.</strong></span> Los formularios del Anexo A definen perfiles específicos. Debe conciliarse esa elegibilidad con la asignación descrita en el diseño. No se adoptarán automáticamente tres o cuatro módulos asignables por actor: se registrarán el conjunto elegible, la probabilidad efectiva y la regla de bloqueo en cada ingreso. Estas probabilidades corresponden a la asignación de contenido y no a la probabilidad total de obtener una respuesta válida.</p>
+<p>Este peso de referencia no corrige por sí mismo la no respuesta: quienes responden son un subconjunto del marco cuya composición depende de su propensión a participar, que no es conocida. Esa corrección es la función de la calibración, como se desarrolla en las secciones siguientes <span class="citation">(<a href="referencias.html#ref-ChenLiWu2020">Chen et al. 2020</a>; <a href="referencias.html#ref-Beresewicz2025">Beręsewicz et al. 2025</a>)</span>.</p>
+</div>
+<div id="familia-de-distancias-de-calibración" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Familia de distancias de calibración<a href="sec-pesos-calibracion.html#familia-de-distancias-de-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El problema general de calibración, formalizado por <span class="citation">Deville y Särndal (<a href="referencias.html#ref-DevilleSarndal1992">1992</a>)</span>, busca pesos finales <span class="math inline">\(w_i\)</span> que minimicen una medida de distancia agregada respecto al peso de referencia <span class="math inline">\(d_i\)</span>:</p>
+<p><span class="math display">\[
+\min_{\mathbf w} \sum_{i \in s} d_i \, G\!\left(\frac{w_i}{d_i}\right)
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s} w_i \, x_{ij} = X_j \quad (j = 1, \dots, J)
+\]</span></p>
+<p>donde <span class="math inline">\(G(\cdot)\)</span> es una función de distancia estrictamente convexa, con mínimo en <span class="math inline">\(G(1)=0\)</span>, y <span class="math inline">\(x_{ij}\)</span> es el valor de la variable auxiliar <span class="math inline">\(j\)</span> para el registro <span class="math inline">\(i\)</span>. La elección de <span class="math inline">\(G(\cdot)\)</span> define distintos métodos de calibración, todos miembros de la misma familia <span class="citation">(<a href="referencias.html#ref-DevilleSarndal1992">Deville y Särndal 1992</a>; <a href="referencias.html#ref-CressieRead1984">Cressie y Read 1984</a>; <a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>)</span>:</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Método</th>
+<th><span class="math inline">\(G(x)\)</span></th>
+<th>Solución <span class="math inline">\(w_i/d_i\)</span></th>
+<th>Signo de <span class="math inline">\(w_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lineal (mínimos cuadrados / <em>regresión generalizada</em>)</td>
+<td><span class="math inline">\(\tfrac{1}{2}(x-1)^2\)</span></td>
+<td><span class="math inline">\(1 + \boldsymbol\lambda&#39;\mathbf x_i\)</span></td>
+<td>puede ser negativo</td>
+</tr>
+<tr class="even">
+<td>Raking / entropía (Kullback–Leibler)</td>
+<td><span class="math inline">\(x\log x - x + 1\)</span></td>
+<td><span class="math inline">\(\exp(\boldsymbol\lambda&#39;\mathbf x_i)\)</span></td>
+<td>siempre positivo</td>
+</tr>
+<tr class="odd">
+<td>Logística acotada</td>
+<td>forma cerrada entre <span class="math inline">\(L\)</span> y <span class="math inline">\(U\)</span></td>
+<td>acotado entre <span class="math inline">\(L\)</span> y <span class="math inline">\(U\)</span></td>
+<td>siempre positivo, acotado</td>
+</tr>
+</tbody>
+</table>
+<p>ENUS 2026 adopta la distancia de <strong>raking / entropía</strong> (Kullback–Leibler):</p>
+<p><span class="math display">\[
+G\!\left(\frac{w_i}{d_i}\right) = \frac{w_i}{d_i}\log\!\left(\frac{w_i}{d_i}\right) - \frac{w_i}{d_i} + 1
+\]</span></p>
+<p>El problema, válido tanto para el peso transversal como para los pesos por módulo, es:</p>
+<p><span class="math display">\[
+\min_{\mathbf w} \sum_{i \in s} \left[w_i \log\left(\frac{w_i}{d_i}\right)-w_i+d_i\right]
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s} w_i \, x_{ij} = X_j \qquad j = 1, \dots, J
+\]</span></p>
+<p>La razón de esta elección, frente a la alternativa lineal, es que la distancia de raking garantiza <span class="math inline">\(w_i&gt;0\)</span> para cualquier valor de <span class="math inline">\(\boldsymbol\lambda\)</span>, mientras que la distancia lineal puede producir pesos negativos cuando la muestra está muy desbalanceada frente a los totales de referencia <span class="citation">(<a href="referencias.html#ref-DevilleSarndal1992">Deville y Särndal 1992</a>; <a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>)</span> —un riesgo real cuando la respuesta voluntaria produce una composición de respondientes muy distinta a la del marco. La positividad de los pesos no implica que sean inversos de probabilidades válidas ni que se haya eliminado el sesgo de participación. La validez del ajuste depende de que las variables auxiliares <span class="math inline">\(x_{ij}\)</span> capturen adecuadamente los factores asociados a la respuesta y de que se sostenga el supuesto de que la participación, condicionada a esas variables auxiliares, sea independiente de las respuestas de interés:</p>
+<p><span class="math display">\[
+Y_i \perp S_i \mid X_i
+\]</span></p>
+<p>Este supuesto de ignorabilidad condicional —no verificable directamente con los insumos disponibles— y sus implicaciones se explicitan en la sección de estimación de la incertidumbre (<a href="sec-pesos-calibracion.html#sec-varianza">5.11</a>).</p>
+</div>
+<div id="solución-del-problema-de-calibración" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Solución del problema de calibración<a href="sec-pesos-calibracion.html#soluci%C3%B3n-del-problema-de-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El problema se resuelve mediante el lagrangiano, introduciendo un multiplicador <span class="math inline">\(\lambda_j\)</span> por cada restricción <span class="math inline">\(j\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{L}(\mathbf w, \boldsymbol\lambda) = \sum_{i \in s} d_i \, G\!\left(\frac{w_i}{d_i}\right) - \sum_{j=1}^{J} \lambda_j \left( \sum_{i \in s} w_i x_{ij} - X_j \right)
+\]</span></p>
+<p>Derivando respecto a <span class="math inline">\(w_i\)</span> e igualando a cero:</p>
+<p><span class="math display">\[
+G&#39;\!\left(\frac{w_i}{d_i}\right) = \sum_{j=1}^{J} \lambda_j x_{ij} = \mathbf x_i&#39; \boldsymbol\lambda
+\]</span></p>
+<p>Para la distancia de raking, <span class="math inline">\(G&#39;(x) = \log(x)\)</span>, de modo que:</p>
+<p><span class="math display">\[
+\log\!\left(\frac{w_i}{d_i}\right) = \mathbf x_i&#39; \boldsymbol\lambda
+\quad\Longrightarrow\quad
+\boxed{w_i = d_i \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda\right)}
+\]</span></p>
+<p>El <strong>factor de calibración</strong> de cada registro es entonces:</p>
+<p><span class="math display">\[
+g_i = \frac{w_i}{d_i} = \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda\right)
+\]</span></p>
+<p>que, por construcción, es siempre estrictamente positivo —la propiedad que motivó, en la sección anterior, la elección de la distancia de raking sobre la distancia lineal. El vector <span class="math inline">\(\boldsymbol\lambda\)</span> que hace cumplir simultáneamente las <span class="math inline">\(J\)</span> restricciones se obtiene resolviendo el sistema de ecuaciones no lineales:</p>
+<p><span class="math display">\[
+\sum_{i \in s} d_i \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda\right) x_{ij} = X_j \qquad j = 1, \dots, J
+\]</span></p>
+<p>Dado que <span class="math inline">\(G(\cdot)\)</span> es estrictamente convexa, el problema de calibración tiene solución única siempre que exista un <span class="math inline">\(\boldsymbol\lambda\)</span> que satisfaga el sistema anterior (es decir, siempre que los totales de referencia <span class="math inline">\(X_j\)</span> sean alcanzables dentro del rango de variación de <span class="math inline">\(\mathbf x_i\)</span> observado en la muestra) <span class="citation">(<a href="referencias.html#ref-DevilleSarndal1992">Deville y Särndal 1992</a>; <a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>)</span>.</p>
+</div>
+<div id="procedimiento-de-estimación-algoritmo-iterativo" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Procedimiento de estimación: algoritmo iterativo<a href="sec-pesos-calibracion.html#procedimiento-de-estimaci%C3%B3n-algoritmo-iterativo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Antes del ajuste se verifica la factibilidad de los totales y el rango de la matriz auxiliar. Las indicadoras completas de las cinco dimensiones contienen restricciones redundantes: se usará una parametrización de rango completo, por ejemplo un intercepto y una categoría de referencia omitida por dimensión. Los pesos pueden ser únicos aunque los multiplicadores no lo sean con una parametrización redundante. Una categoría con total positivo y sin respondientes impide reproducir ese total; requiere revisar cobertura o reagrupar categorías con justificación, sin fabricar observaciones.</p>
+<p>El sistema de ecuaciones que define <span class="math inline">\(\boldsymbol\lambda\)</span> no tiene, en general, solución cerrada, porque <span class="math inline">\(\exp(\cdot)\)</span> es no lineal en <span class="math inline">\(\boldsymbol\lambda\)</span>. Se resuelve numéricamente mediante el algoritmo de Newton–Raphson, que es también la base del procedimiento de <em>raking</em> generalizado (<em>generalized raking procedures</em>, GENRAKE) descrito por <span class="citation">Deville et al. (<a href="referencias.html#ref-deville1993generalized">1993</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Inicialización:</strong> <span class="math inline">\(\boldsymbol\lambda^{(0)} = \mathbf 0\)</span>, de modo que <span class="math inline">\(w_i^{(0)} = d_i\)</span>.</li>
+<li><strong>Actualización:</strong> en la iteración <span class="math inline">\(t\)</span>, se calcula el vector de discrepancias respecto a los totales de referencia y la matriz de segundas derivadas (hessiano):</li>
+</ol>
+<p><span class="math display">\[
+\mathbf u^{(t)} = \sum_{i \in s} w_i^{(t)} \mathbf x_i - \mathbf X
+\qquad\qquad
+\mathbf H^{(t)} = \sum_{i \in s} w_i^{(t)} \, \mathbf x_i \mathbf x_i&#39;
+\]</span></p>
+<p>y se actualiza el multiplicador:</p>
+<p><span class="math display">\[
+\boldsymbol\lambda^{(t+1)} = \boldsymbol\lambda^{(t)} - \left(\mathbf H^{(t)}\right)^{-1} \mathbf u^{(t)}
+\]</span></p>
+<p><span class="math display">\[
+w_i^{(t+1)} = d_i \exp\!\left(\mathbf x_i&#39; \boldsymbol\lambda^{(t+1)}\right)
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Convergencia:</strong> el algoritmo se detiene cuando la discrepancia máxima entre la suma ponderada y el total de referencia, para todas las variables auxiliares, cae por debajo de una tolerancia predefinida:</li>
+</ol>
+<p><span class="math display">\[
+\max_{j} \left| \sum_{i \in s} w_i^{(t)} x_{ij} - X_j \right| &lt; \varepsilon
+\]</span></p>
+<p>Cuando las variables auxiliares <span class="math inline">\(x_{ij}\)</span> son indicadoras de categorías (como sexo, grupo de edad, departamento, régimen y zona en ENUS 2026), Newton–Raphson y el ajuste iterativo proporcional son algoritmos distintos que, cuando convergen sobre las mismas restricciones factibles, obtienen los mismos pesos de entropía. No se exige reproducir la tabla cruzada completa para ajustar márgenes. El ajuste iterativo proporcional (<em>iterative proportional fitting</em>, IPF) permite ajustar los márgenes categóricos; la formulación general admite también restricciones sobre variables continuas <span class="citation">(<a href="referencias.html#ref-deville1993generalized">Deville et al. 1993</a>; <a href="referencias.html#ref-Fuller2009">Fuller 2009</a>)</span>.</p>
+</div>
+<div id="variables-auxiliares" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Variables auxiliares<a href="sec-pesos-calibracion.html#variables-auxiliares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las variables auxiliares de la calibración son las mismas cinco dimensiones de clasificación que se usan para construir las metas de respuesta (<a href="sec-diseno-muestral.html#sec-distribucion-metas-celdas">4.3.7</a>). El departamento reemplaza a la región, en coherencia con el nivel en que se fijan las metas y se publican los resultados; la región se obtiene por agregación:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable auxiliar</th>
+<th>Categorías</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sexo</td>
+<td>Femenino, Masculino</td>
+</tr>
+<tr class="even">
+<td>Grupo de edad</td>
+<td>00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más</td>
+</tr>
+<tr class="odd">
+<td>Departamento</td>
+<td>32 departamentos y Bogotá D.C.</td>
+</tr>
+<tr class="even">
+<td>Régimen de afiliación</td>
+<td>Contributivo, Subsidiado</td>
+</tr>
+<tr class="odd">
+<td>Zona</td>
+<td>Urbano, Rural</td>
+</tr>
+</tbody>
+</table>
+<p>Que la calibración use las mismas variables que las metas de respuesta no las vuelve equivalentes: la meta orienta el seguimiento de la respuesta durante la operación, mientras que la calibración impone una igualdad exacta entre la suma ponderada de quienes responden y el total del marco una vez cerrada la recolección. La distinción conceptual completa entre meta de respuesta, estrato, dominio y variable de calibración se desarrolla en el apartado de diferenciación conceptual (<a href="sec-diseno-muestral.html#sec-conceptos-metas-calibracion">4.3.11</a>).</p>
+</div>
+<div id="sec-totales-calibracion" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Totales de referencia<a href="sec-pesos-calibracion.html#sec-totales-calibracion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="pendiente-rojo"><strong>Pendiente de definición temporal.</strong></span> El marco de invitación usa una ventana móvil de seis meses, mientras que este capítulo plantea un universo anual. Antes de ejecutar la calibración se debe documentar la construcción del marco anual: fecha de cierre, unión y deduplicación de marcos periódicos, tratamiento de atenciones del año anterior incluidas en la ventana, rezagos y cambios de afiliación. La elegibilidad periódica y el universo anual no deben asumirse equivalentes sin esta conciliación.</p>
+<p><strong>Decisión metodológica adoptada (septiembre de 2026).</strong> Los totales <span class="math inline">\(X_j\)</span> de la calibración se calculan sobre el <strong>marco del año de referencia</strong>: las personas afiliadas en el <strong>corte más reciente de la BDUA</strong> que registran al menos una atención en salud durante el año (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>). De esta manera, el universo contra el cual se calibra coincide con la población objetivo —quienes utilizaron un servicio— y no con la totalidad de los afiliados. Cada persona se cuenta una sola vez, aunque registre varias atenciones.</p>
+<p>Esta decisión tiene dos consecuencias:</p>
+<ul>
+<li>Los totales de calibración <strong>no coinciden</strong> con los totales de afiliados de la BDUA con corte a marzo de 2026 que se usaron para calcular el tamaño de muestra y distribuir las metas de respuesta (<a href="sec-diseno-muestral.html#sec-tamano-muestra">4.3</a>): aquellos describen a todos los afiliados; estos, a los afiliados que usaron un servicio. La diferencia de composición entre ambos universos es precisamente la que la calibración debe reproducir.</li>
+<li>Para la Parte 3, los totales se construirán sobre el universo elegible de cada módulo, conciliando el actor, el perfil, el servicio y el periodo de referencia (<a href="sec-pesos-calibracion.html#sec-modelos-calibracion">5.7</a>).</li>
+</ul>
+<p><strong>Pendiente de definición:</strong> los valores de <span class="math inline">\(X_j\)</span>, que solo pueden calcularse una vez conformado el marco del año con el registro de atenciones (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>).</p>
+<p>Los conteos de afiliación usados para planear las metas se presentan en la sección de tamaño de muestra (<a href="sec-diseno-muestral.html#sec-tamano-muestra">4.3</a>) y en el Anexo B. No sustituyen los totales del universo elegible de cada estimación. Los totales administrativos se consideran fijos en la calibración, pero siguen sujetos a errores de cobertura, registro y clasificación.</p>
+</div>
+<div id="sec-modelos-calibracion" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Multiplicidad de modelos: peso transversal y pesos por módulo<a href="sec-pesos-calibracion.html#sec-modelos-calibracion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Unidad de análisis.</strong> El modelo transversal debe contener una sola observación de Parte 2 por persona y periodo de estimación. Los registros de ingresos posteriores no duplican esa respuesta. Los modelos de módulo deben vincularse al identificador de persona para preservar la dependencia en las réplicas. <span class="pendiente-rojo"><strong>Pendiente de definición.</strong></span> Precisar cuándo se renueva la Parte 2 y si el bloqueo se aplica a una entidad específica o a todo el tipo de actor; estas reglas condicionan la deduplicación y los universos de cada módulo.</p>
+<p>Las Partes 1 y 2 las responden todas las personas que ingresan, mientras que cada módulo de la Parte 3 lo responde solo una fracción de ellas: quienes cumplen el perfil elegible, superan el sorteo cuando corresponde y reciben el módulo según la regla de asignación vigente (<a href="sec-diseno-muestral.html#sec-mecanismo-captacion">4.2</a>). Un único modelo de calibración sobre todos los respondientes reproduce los totales para el conjunto, pero no garantiza que la submuestra de cada módulo, tomada por separado, también los reproduzca.</p>
+<p>Por esta razón, se plantea <strong>un modelo transversal y hasta ocho ajustes específicos por módulo</strong>, estimados separadamente. Esto no implica independencia estadística entre sus resultados, pues pueden compartir personas. Cada ajuste requiere un universo elegible identificable, sus totales y suficiente soporte entre los respondientes:</p>
+<ul>
+<li><strong>Un modelo transversal</strong>, calibrado sobre el conjunto <span class="math inline">\(s\)</span> de personas que completan la Parte 2, sujeto a los totales del marco del año. Produce el peso <span class="math inline">\(w_i\)</span> de los indicadores construidos con las Partes 1 y 2.</li>
+<li><strong>Ocho modelos módulo-específicos</strong>, uno por módulo <span class="math inline">\(m=1,\dots,8\)</span>, calibrado cada uno sobre el subconjunto <span class="math inline">\(s_m\)</span> de respondientes de ese módulo, con el peso de referencia de la Parte 3 y sujeto a los totales de las personas elegibles para ese módulo, según perfil, servicio y periodo de referencia. La atención en un tipo de actor no basta para establecer la elegibilidad de todos sus módulos. El formulario para no usuarios requiere un universo específico y no puede expandirse al marco de usuarios de servicios. Cada uno produce un peso <span class="math inline">\(w_i^{(m)}\)</span>, que se usa únicamente para los indicadores de ese módulo.</li>
+</ul>
+<p>Formalmente, para el módulo <span class="math inline">\(m\)</span> del actor <span class="math inline">\(a\)</span>:</p>
+<p><span class="math display">\[
+\min_{\mathbf w^{(m)}} \sum_{i \in s_m} d_i \, G\!\left(\frac{w_i^{(m)}}{d_i}\right)
+\qquad
+\text{sujeto a}
+\qquad
+\sum_{i \in s_m} w_i^{(m)} \, x_{ij} = X_j^{(m)} \qquad j=1,\dots,J
+\]</span></p>
+<p>donde <span class="math inline">\(X_j^{(m)}\)</span> es el total de la variable <span class="math inline">\(j\)</span> en el universo elegible del módulo <span class="math inline">\(m\)</span>. La solución es <span class="math inline">\(w_i^{(m)} = d_i \exp(\mathbf x_i&#39; \boldsymbol\lambda^{(m)})\)</span>, obtenida con el mismo algoritmo de Newton–Raphson.</p>
+<p>Cada respondiente de la Parte 3 queda representado por dos pesos no intercambiables: <span class="math inline">\(w_i\)</span>, para sus respuestas de las Partes 1 y 2, y <span class="math inline">\(w_i^{(m)}\)</span>, para las de su módulo. El peso que corresponde a cada indicador se documenta en la matriz de indicadores. Dado que <span class="math inline">\(n_m\)</span> es sustancialmente menor que <span class="math inline">\(n\)</span>, la convergencia y la estabilidad de los modelos módulo-específicos se evalúan en el diagnóstico de calibración (<a href="sec-pesos-calibracion.html#sec-diagnostico-pesos-enus">5.12</a>); con muestras pequeñas puede ser necesario colapsar categorías de las variables auxiliares, por ejemplo usar la región en lugar del departamento.</p>
+</div>
+<div id="sec-ajuste-no-respuesta" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Ajuste por no respuesta<a href="sec-pesos-calibracion.html#sec-ajuste-no-respuesta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En ENUS 2026 la no respuesta de unidad corresponde a las personas del marco que, invitadas, no completan la Parte 2 (o, en la Parte 3, no completan el módulo asignado). Como las variables auxiliares se conocen para todas las personas del marco, respondan o no, el ajuste por no respuesta se hace <strong>mediante calibración</strong> directamente contra los totales del marco, sin una etapa previa de clases de ponderación o de modelación de la propensión <span class="citation">(<a href="referencias.html#ref-SarndalLundstrom2005">Särndal y Lundström 2005</a>)</span>. En este caso, la calibración ajusta a la vez por no respuesta y por las diferencias de composición entre quienes responden y el marco, sin equivaler automáticamente a un modelo probabilístico válido de respuesta (<a href="sec-pesos-calibracion.html#sec-varianza">5.11</a>).</p>
+<div id="secuencia-del-ajuste" class="section level3 hasAnchor" number="5.8.1">
+<h3><span class="header-section-number">5.8.1</span> Secuencia del ajuste<a href="sec-pesos-calibracion.html#secuencia-del-ajuste" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Decisión metodológica adoptada (septiembre de 2026).</strong> Cada ajuste de calibración aplicable (<a href="sec-pesos-calibracion.html#sec-modelos-calibracion">5.7</a>) construye el peso final con la siguiente secuencia de ajustes, aplicada siempre en el mismo orden:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Peso de referencia.</strong> <span class="math inline">\(d_k=1\)</span> para las Partes 1 y 2; <span class="math inline">\(d_k^{(m)}=1/q_{km}\)</span> para la Parte 3, según la elegibilidad y la asignación documentadas (<a href="sec-diseno-muestral.html#sec-mecanismo-captacion">4.2</a>).</li>
+<li><strong>Conjunto de respondientes.</strong> Se conservan las personas que completan la parte o el módulo correspondiente y cuyos registros superan la validación del procesamiento.</li>
+<li><strong>Calibración por entropía</strong> contra los totales del marco del año, o del universo elegible de cada módulo de la Parte 3 (<a href="sec-pesos-calibracion.html#sec-totales-calibracion">5.6</a>).</li>
+</ol>
+<p>La secuencia se aplica completa, en el mismo orden, en cada réplica de la estimación de la incertidumbre (<a href="sec-pesos-calibracion.html#sec-varianza">5.11</a>). Así se incorpora la variabilidad del ajuste de pesos sobre los registros disponibles. Las réplicas de respondientes no reproducen por sí solas errores de cobertura, validación o decisiones de elegibilidad.</p>
+<p><strong>Recomendación metodológica.</strong> Si el diagnóstico muestra factores de ajuste <span class="math inline">\(g_k=w_k/d_k\)</span> extremos (<a href="sec-pesos-calibracion.html#sec-diagnostico-pesos-enus">5.12</a>), se recomienda añadir un cuarto paso de <strong>recorte con recalibración</strong>: los factores fuera de los límites <span class="math inline">\([L, U]\)</span> se llevan al límite y se recalibra, repitiendo hasta que se cumplan a la vez los límites y los totales. Si se adopta, el paso se incluye también en cada réplica. Los límites deberán aprobarse y documentarse antes de calcular los resultados definitivos, evaluando su factibilidad y el cambio en las estimaciones. El recorte seguido de recalibración sin restricciones puede volver a producir pesos fuera de los límites; si se requieren cotas simultáneas, se utilizará una calibración acotada factible.</p>
+</div>
+<div id="tasas-de-respuesta" class="section level3 hasAnchor" number="5.8.2">
+<h3><span class="header-section-number">5.8.2</span> Tasas de respuesta<a href="sec-pesos-calibracion.html#tasas-de-respuesta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La tasa de respuesta es el indicador central de la calidad del ajuste, porque mide qué fracción del marco representa a las demás personas. Se calcula para el total y para cada categoría <span class="math inline">\(c\)</span> de las variables auxiliares:</p>
+<p><span class="math display">\[
+TR_c = \frac{n_c}{N_c} ,
+\]</span></p>
+<p>donde <span class="math inline">\(n_c\)</span> es el número de respondientes y <span class="math inline">\(N_c\)</span> el número de personas del marco en la categoría <span class="math inline">\(c\)</span>. Como el peso de referencia de las Partes 1 y 2 es uno y la calibración reproduce <span class="math inline">\(N_c\)</span>, el promedio de los pesos calibrados en la categoría es el inverso de su tasa de respuesta: las categorías con menor tasa de respuesta reciben pesos mayores.</p>
+<p>Para cada módulo se calculará, además, la tasa de finalización como el número de módulos válidos dividido por el número de personas elegibles a quienes se asignó ese módulo, por total y categoría. El cociente entre respondientes del módulo y usuarios del actor mezcla asignación, elegibilidad y no respuesta; no constituye esa tasa.</p>
+</div>
+<div id="contraste-con-un-modelo-de-propensión" class="section level3 hasAnchor" number="5.8.3">
+<h3><span class="header-section-number">5.8.3</span> Contraste con un modelo de propensión<a href="sec-pesos-calibracion.html#contraste-con-un-modelo-de-propensi%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Recomendación metodológica.</strong> Dado que <span class="math inline">\(\mathbf x_k\)</span> y <span class="math inline">\(R_k\)</span> se conocen para todas las personas del marco, la propensión de respuesta también puede estimarse con un modelo de regresión logística ajustado sobre el marco completo para la Parte 2. En los módulos, la respuesta debe modelarse condicionada a la elegibilidad y la asignación, separando la respuesta previa de la finalización del módulo:</p>
+<p><span class="math display">\[
+\operatorname{logit}\,\pi_k^{A} = \mathbf x_k&#39;\boldsymbol\beta ,
+\qquad
+w_k^{\text{prop}} = \frac{d_k}{\hat\pi_k^{A}} .
+\]</span></p>
+<p>Se recomienda usar este modelo como contraste de la calibración, no como método de ponderación: diferencias importantes entre <span class="math inline">\(w_k\)</span> y <span class="math inline">\(w_k^{\text{prop}}\)</span>, o entre las estimaciones que producen, indican que los resultados dependen de la forma del modelo de propensión y se revisan en el diagnóstico de calibración.</p>
+</div>
+<div id="análisis-de-sensibilidad-a-la-no-respuesta-no-ignorable" class="section level3 hasAnchor" number="5.8.4">
+<h3><span class="header-section-number">5.8.4</span> Análisis de sensibilidad a la no respuesta no ignorable<a href="sec-pesos-calibracion.html#an%C3%A1lisis-de-sensibilidad-a-la-no-respuesta-no-ignorable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ni la calibración ni el modelo de propensión corrigen el sesgo que se produce cuando la decisión de responder depende de la experiencia de la persona aun después de condicionar por las variables auxiliares (incumplimiento del supuesto A1, <a href="sec-pesos-calibracion.html#sec-varianza">5.11</a>).</p>
+<p><strong>Recomendación metodológica.</strong> Para acotar ese sesgo se recomienda el <strong>modelo de mezcla de patrones con variable sustituta</strong> (<em>proxy pattern-mixture model</em>) de <span class="citation">Andridge y Little (<a href="referencias.html#ref-AndridgeLittle2011">2011</a>)</span>. Para cada indicador <span class="math inline">\(y\)</span>, se ajusta entre los respondientes la regresión de <span class="math inline">\(y\)</span> sobre <span class="math inline">\(\mathbf x\)</span> y se construye la variable sustituta <span class="math inline">\(\hat x_k = \hat{\mathbf B}&#39;\mathbf x_k\)</span>, que puede calcularse para todas las personas del marco. Con <span class="math inline">\(\rho\)</span> la correlación entre <span class="math inline">\(y\)</span> y <span class="math inline">\(\hat x\)</span> entre los respondientes, la media ajustada es:</p>
+<p><span class="math display">\[
+\hat\mu_y(\phi) = \bar y_s + m(\phi)\,\frac{s_{y}}{s_{\hat x}}\,\left(\bar{\hat x}_U - \bar{\hat x}_s\right),
+\qquad
+m(\phi) = \frac{\phi + (1-\phi)\,\rho}{\phi\,\rho + (1-\phi)} ,
+\]</span></p>
+<p>donde <span class="math inline">\(\bar y_s\)</span>, <span class="math inline">\(\bar{\hat x}_s\)</span>, <span class="math inline">\(s_y\)</span> y <span class="math inline">\(s_{\hat x}\)</span> son medias y desviaciones estándar entre los respondientes, y <span class="math inline">\(\bar{\hat x}_U\)</span> es la media de la variable sustituta en todo el marco. El parámetro <span class="math inline">\(\phi\in[0,1]\)</span> fija cuánto depende la respuesta del propio indicador: con <span class="math inline">\(\phi=0\)</span> la no respuesta es ignorable dada la variable sustituta, y con <span class="math inline">\(\phi=1\)</span> depende solo del indicador. Al evaluar <span class="math inline">\(\phi\)</span> en una rejilla, por ejemplo <span class="math inline">\(\{0;\ 0{,}25;\ 0{,}5;\ 0{,}75;\ 1\}\)</span>, se obtiene un intervalo de sensibilidad que se publica junto al intervalo de confianza. <span class="citation">Little et al. (<a href="referencias.html#ref-Little2020">2020</a>)</span> sugieren <span class="math inline">\(\phi=0{,}5\)</span> como valor central y advierten que valores mayores suelen implicar mecanismos poco realistas.</p>
+<p>Cuanto menor es <span class="math inline">\(\rho\)</span>, menos informativas son las variables auxiliares sobre el indicador y más amplio es el intervalo de sensibilidad. Para indicadores dicotómicos, como las proporciones, la forma lineal anterior es una aproximación.</p>
+<p><span class="pendiente-rojo"><strong>Pendiente de definición.</strong></span> Los indicadores a los que se aplicará el análisis de sensibilidad y la forma de presentar el intervalo en las publicaciones.</p>
+</div>
+</div>
+<div id="diferencia-entre-metas-de-respuesta-y-calibración" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Diferencia entre metas de respuesta y calibración<a href="sec-pesos-calibracion.html#diferencia-entre-metas-de-respuesta-y-calibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La calibración y las metas de respuesta comparten variables auxiliares, pero operan en momentos y con lógicas distintas: la meta orienta, durante la recolección, el seguimiento de la respuesta por celda y el refuerzo de la invitación donde es insuficiente; la calibración, una vez cerrada la recolección, ajusta los pesos para que quienes responden reproduzcan exactamente los totales del marco. La distinción entre meta de respuesta, estrato, dominio y variable de calibración se desarrolla en el apartado de diferenciación conceptual (<a href="sec-diseno-muestral.html#sec-conceptos-metas-calibracion">4.3.11</a>).</p>
+</div>
+<div id="sec-estimadores" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> Estimadores<a href="sec-pesos-calibracion.html#sec-estimadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Correspondencia entre indicador y peso.</strong> Para cada indicador se documentarán el universo, la pregunta y el módulo de origen, el denominador, las exclusiones y el peso aplicable, con referencia a las fichas técnicas y al Anexo A. Preguntas con una misma numeración pueden medir contenidos diferentes entre módulos. Las preguntas comunes incluidas únicamente en formularios específicos utilizan el peso de su conjunto elegible, aunque su contenido sea transversal. El indicador de tiempo de desplazamiento permanece suspendido mientras no exista una pregunta válida. La batería abreviada de atención centrada en la persona debe identificarse como tal.</p>
+<p>Todos los indicadores de ENUS 2026 se obtienen como funciones de los pesos calibrados. En esta sección, <span class="math inline">\(w_k\)</span> denota el peso que corresponde al indicador y <span class="math inline">\(s\)</span> el conjunto de respondientes sobre el que se calcula: para los indicadores construidos con las Partes 1 y 2, el peso transversal <span class="math inline">\(w_k\)</span> sobre el conjunto <span class="math inline">\(s\)</span> de personas que completan la Parte 2; para los indicadores de un módulo <span class="math inline">\(m\)</span> de la Parte 3, el peso <span class="math inline">\(w_k^{(m)}\)</span> sobre el subconjunto <span class="math inline">\(s_m\)</span> de sus respondientes (<a href="sec-pesos-calibracion.html#sec-modelos-calibracion">5.7</a>). El universo al que se refieren las estimaciones es el marco del año de referencia <span class="math inline">\(U\)</span> o, para un módulo <span class="math inline">\(m\)</span>, su universo elegible <span class="math inline">\(U_m\)</span>.</p>
+<p>Cuando una pregunta solo se formula a una parte de los respondientes, por las rutas del cuestionario, las sumas se restringen a quienes recibieron la pregunta. <span class="pendiente-rojo"><strong>Pendiente de definición.</strong></span> El tratamiento de la no respuesta a preguntas específicas (omisiones, “no sabe” o “no responde”) dentro de ese conjunto no está definido en los insumos disponibles y se documentará en el capítulo de procesamiento.</p>
+<div id="totales" class="section level3 hasAnchor" number="5.10.1">
+<h3><span class="header-section-number">5.10.1</span> Totales<a href="sec-pesos-calibracion.html#totales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El total de una variable <span class="math inline">\(y\)</span> en el universo se estima como:</p>
+<p><span class="math display">\[
+\hat Y = \sum_{k\in s} w_k\, y_k .
+\]</span></p>
+<p>El tamaño del universo se estima con <span class="math inline">\(\hat N = \sum_{k\in s} w_k\)</span>. Dado que las variables auxiliares son categóricas y sus categorías suman el total de personas del marco, la calibración garantiza que <span class="math inline">\(\hat N = N\)</span> y que, para cada variable auxiliar, <span class="math inline">\(\sum_{k\in s} w_k\,\mathbf x_k = \mathbf X\)</span> de forma exacta.</p>
+</div>
+<div id="promedios" class="section level3 hasAnchor" number="5.10.2">
+<h3><span class="header-section-number">5.10.2</span> Promedios<a href="sec-pesos-calibracion.html#promedios" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El promedio de <span class="math inline">\(y\)</span> se estima con el estimador de tipo Hájek:</p>
+<p><span class="math display">\[
+\hat{\bar Y} = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k} = \frac{\hat Y}{\hat N} .
+\]</span></p>
+</div>
+<div id="proporciones" class="section level3 hasAnchor" number="5.10.3">
+<h3><span class="header-section-number">5.10.3</span> Proporciones<a href="sec-pesos-calibracion.html#proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una proporción es el promedio de una variable indicadora. Para la categoría <span class="math inline">\(c\)</span> de una pregunta, con <span class="math inline">\(y_{ck}=1\)</span> si la persona <span class="math inline">\(k\)</span> eligió esa categoría y <span class="math inline">\(y_{ck}=0\)</span> en otro caso:</p>
+<p><span class="math display">\[
+\hat P_c = \frac{\sum_{k\in s} w_k\, y_{ck}}{\sum_{k\in s} w_k} .
+\]</span></p>
+<p>En preguntas de respuesta única, las proporciones de categorías mutuamente excluyentes y exhaustivas suman uno sobre quienes respondieron. En preguntas de respuesta múltiple, esa suma puede superar uno.</p>
+</div>
+<div id="razones" class="section level3 hasAnchor" number="5.10.4">
+<h3><span class="header-section-number">5.10.4</span> Razones<a href="sec-pesos-calibracion.html#razones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La razón entre los totales de dos variables <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> se estima como:</p>
+<p><span class="math display">\[
+\hat R = \frac{\hat Y}{\hat Z} = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k\, z_k} .
+\]</span></p>
+<p>El promedio y la proporción son casos particulares de la razón con <span class="math inline">\(z_k=1\)</span> para todo <span class="math inline">\(k\)</span>.</p>
+</div>
+<div id="dominios" class="section level3 hasAnchor" number="5.10.5">
+<h3><span class="header-section-number">5.10.5</span> Dominios<a href="sec-pesos-calibracion.html#dominios" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un dominio <span class="math inline">\(d\)</span> es un subconjunto del universo para el que se publican estimaciones, por ejemplo un departamento, un tipo de actor o una entidad (<a href="sec-diseno-muestral.html#sec-publicacion-entidad">4.3.13</a>). Sea <span class="math inline">\(\delta_{dk}=1\)</span> si la persona <span class="math inline">\(k\)</span> pertenece al dominio <span class="math inline">\(d\)</span> y <span class="math inline">\(\delta_{dk}=0\)</span> en otro caso. Los estimadores de dominio se obtienen sustituyendo <span class="math inline">\(y_k\)</span> por <span class="math inline">\(\delta_{dk}\,y_k\)</span>:</p>
+<p><span class="math display">\[
+\hat Y_d = \sum_{k\in s} w_k\,\delta_{dk}\, y_k ,
+\qquad
+\hat N_d = \sum_{k\in s} w_k\,\delta_{dk} ,
+\]</span></p>
+<p><span class="math display">\[
+\hat{\bar Y}_d = \frac{\hat Y_d}{\hat N_d} ,
+\qquad
+\hat P_{dc} = \frac{\sum_{k\in s} w_k\,\delta_{dk}\, y_{ck}}{\hat N_d} ,
+\qquad
+\hat R_d = \frac{\sum_{k\in s} w_k\,\delta_{dk}\, y_k}{\sum_{k\in s} w_k\,\delta_{dk}\, z_k} .
+\]</span></p>
+<p>Los pesos no se recalculan por dominio: se usan los mismos pesos <span class="math inline">\(w_k\)</span>, o <span class="math inline">\(w_k^{(m)}\)</span>, obtenidos con la calibración sobre el conjunto completo de respondientes. Cuando el dominio coincide con una categoría cuyo total se impuso como restricción, como el departamento cuando se conserva ese margen, el tamaño estimado reproduce el del marco (<span class="math inline">\(\hat N_d = N_d\)</span>). Cuando no lo está, como una entidad, <span class="math inline">\(\hat N_d\)</span> es una estimación y el número de respondientes del dominio es aleatorio. Las estimaciones de dominios con pocos respondientes siguen los umbrales de publicación definidos en el capítulo de diseño muestral (<a href="sec-diseno-muestral.html#sec-publicacion-entidad">4.3.13</a>).</p>
+</div>
+<div id="resumen" class="section level3 hasAnchor" number="5.10.6">
+<h3><span class="header-section-number">5.10.6</span> Resumen<a href="sec-pesos-calibracion.html#resumen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<caption><span id="tab:estimadores">Table 5.1: </span> Estimadores de los parámetros de ENUS 2026 y variables linealizadas para la aproximación analítica de la varianza.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Estimador</th>
+<th>Variable linealizada <span class="math inline">\(u_k\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total</td>
+<td><span class="math inline">\(\hat Y = \sum_{s} w_k y_k\)</span></td>
+<td><span class="math inline">\(y_k\)</span></td>
+</tr>
+<tr class="even">
+<td>Promedio</td>
+<td><span class="math inline">\(\hat{\bar Y} = \hat Y/\hat N\)</span></td>
+<td><span class="math inline">\((y_k-\hat{\bar Y})/\hat N\)</span></td>
+</tr>
+<tr class="odd">
+<td>Proporción</td>
+<td><span class="math inline">\(\hat P_c = \sum_{s} w_k y_{ck}/\hat N\)</span></td>
+<td><span class="math inline">\((y_{ck}-\hat P_c)/\hat N\)</span></td>
+</tr>
+<tr class="even">
+<td>Razón</td>
+<td><span class="math inline">\(\hat R = \hat Y/\hat Z\)</span></td>
+<td><span class="math inline">\((y_k-\hat R\,z_k)/\hat Z\)</span></td>
+</tr>
+<tr class="odd">
+<td>Total de dominio</td>
+<td><span class="math inline">\(\hat Y_d = \sum_{s} w_k\delta_{dk} y_k\)</span></td>
+<td><span class="math inline">\(\delta_{dk}\,y_k\)</span></td>
+</tr>
+<tr class="even">
+<td>Promedio o proporción de dominio</td>
+<td><span class="math inline">\(\hat{\bar Y}_d = \hat Y_d/\hat N_d\)</span></td>
+<td><span class="math inline">\(\delta_{dk}(y_k-\hat{\bar Y}_d)/\hat N_d\)</span></td>
+</tr>
+<tr class="odd">
+<td>Razón de dominio</td>
+<td><span class="math inline">\(\hat R_d = \hat Y_d/\hat Z_d\)</span></td>
+<td><span class="math inline">\(\delta_{dk}(y_k-\hat R_d\,z_k)/\hat Z_d\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>La variable linealizada <span class="math inline">\(u_k\)</span> sirve para desarrollar la aproximación analítica de la varianza (<a href="sec-pesos-calibracion.html#sec-varianza">5.11</a>); el procedimiento de réplicas no la requiere, porque recalcula cada estimador directamente con los pesos replicados.</p>
+</div>
+</div>
+<div id="sec-varianza" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Estimación de la incertidumbre<a href="sec-pesos-calibracion.html#sec-varianza" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Esta sección documenta cómo se estima la variabilidad de los indicadores de ENUS 2026. El procedimiento se fundamenta en el marco de inferencia para muestras con participación voluntaria desarrollado por <span class="citation">Chen et al. (<a href="referencias.html#ref-ChenLiWu2020">2020</a>)</span> y extendido por <span class="citation">Beręsewicz et al. (<a href="referencias.html#ref-Beresewicz2025">2025</a>)</span>, adaptado a una condición favorable de la operación: las variables auxiliares se conocen para <strong>todas</strong> las personas del marco.</p>
+<div id="marco-de-inferencia" class="section level3 hasAnchor" number="5.11.1">
+<h3><span class="header-section-number">5.11.1</span> Marco de inferencia<a href="sec-pesos-calibracion.html#marco-de-inferencia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sea <span class="math inline">\(U=\{1,\dots,N\}\)</span> el marco del año de referencia —las personas afiliadas en el corte más reciente de la BDUA con al menos una atención registrada en el año (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>)—, <span class="math inline">\(\mathbf x_k\)</span> el vector de variables auxiliares de la persona <span class="math inline">\(k\)</span> (departamento, régimen, sexo, grupo de edad y zona) e <span class="math inline">\(y_k\)</span> la variable de interés. Sea <span class="math inline">\(R_k=1\)</span> si la persona <span class="math inline">\(k\)</span>, invitada, completa la Parte 2, y <span class="math inline">\(R_k=0\)</span> en caso contrario; el conjunto de respondientes es <span class="math inline">\(s=\{k\in U: R_k=1\}\)</span>, de tamaño <span class="math inline">\(n\)</span>. La <strong>propensión de respuesta</strong> es:</p>
+<p><span class="math display">\[
+\pi_k^{A} = P\left(R_k = 1 \mid \mathbf x_k\right).
+\]</span></p>
+<p>La validez de los estimadores descansa en tres supuestos <span class="citation">(<a href="referencias.html#ref-ChenLiWu2020">Chen et al. 2020</a>; <a href="referencias.html#ref-Beresewicz2025">Beręsewicz et al. 2025</a>)</span>:</p>
+<ul>
+<li><strong>A1 (ignorabilidad):</strong> condicionado a <span class="math inline">\(\mathbf x_k\)</span>, responder o no es independiente de <span class="math inline">\(y_k\)</span>.</li>
+<li><strong>A2 (positividad):</strong> toda persona del marco tiene una propensión de respuesta positiva, <span class="math inline">\(\pi_k^{A}&gt;0\)</span>.</li>
+<li><strong>A3 (independencia):</strong> las decisiones de responder <span class="math inline">\(R_1,\dots,R_N\)</span> son independientes entre sí, dado <span class="math inline">\(\mathbf x\)</span>.</li>
+</ul>
+<p>El supuesto A1 no es verificable con los datos de la operación; A2 se incumple cuando una persona no tiene ninguna vía efectiva de participación. La falta de datos de contacto debe evaluarse junto con las demás vías de acceso previstas (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>). Ambas condiciones se documentan como limitaciones y no son corregidas por la estimación de varianza.</p>
+</div>
+<div id="alcance-de-la-interpretación-por-propensión" class="section level3 hasAnchor" number="5.11.2">
+<h3><span class="header-section-number">5.11.2</span> Alcance de la interpretación por propensión<a href="sec-pesos-calibracion.html#alcance-de-la-interpretaci%C3%B3n-por-propensi%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Las ecuaciones de calibración pueden coincidir con ecuaciones de estimación de un modelo de respuesta bajo condiciones específicas. Sin embargo, la calibración por entropía solo garantiza <span class="math inline">\(w_k&gt;0\)</span>: no garantiza <span class="math inline">\(w_k\geq1\)</span>. Por tanto, <span class="math inline">\(1/w_k\)</span> puede superar uno y no debe interpretarse automáticamente como una probabilidad. Para módulos, tampoco basta interpretar <span class="math inline">\(d_k/w_k\)</span> como propensión sin verificar su rango y el mecanismo de respuesta correspondiente.</p>
+<p>La inferencia se sustentará en un modelo de respuesta o de resultados explícito y validado, con probabilidades admisibles cuando se utilice ponderación por propensión <span class="citation">(<a href="referencias.html#ref-ChenLiWu2020">Chen et al. 2020</a>)</span>. El balance de las variables auxiliares es un diagnóstico necesario, pero no demuestra ignorabilidad ni elimina el sesgo residual.</p>
+</div>
+<div id="estimador" class="section level3 hasAnchor" number="5.11.3">
+<h3><span class="header-section-number">5.11.3</span> Estimador<a href="sec-pesos-calibracion.html#estimador" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En lo que sigue, <span class="math inline">\(\hat\theta\)</span> denota cualquiera de los estimadores de la sección anterior (<a href="sec-pesos-calibracion.html#sec-estimadores">5.10</a>), escrito como función de los pesos, <span class="math inline">\(\hat\theta = f(\mathbf w)\)</span>. Para la exposición se usa el promedio de tipo Hájek, que cubre también las proporciones:</p>
+<p><span class="math display">\[
+\hat\theta = \frac{\sum_{k\in s} w_k\, y_k}{\sum_{k\in s} w_k}.
+\]</span></p>
+</div>
+<div id="procedimiento-de-réplicas-con-recalibración" class="section level3 hasAnchor" number="5.11.4">
+<h3><span class="header-section-number">5.11.4</span> Procedimiento de réplicas con recalibración<a href="sec-pesos-calibracion.html#procedimiento-de-r%C3%A9plicas-con-recalibraci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="pendiente-rojo"><strong>Validación previa a la publicación.</strong></span> Se conserva el bootstrap con recalibración como procedimiento propuesto. Su cobertura debe verificarse mediante simulaciones compatibles con la respuesta voluntaria, la asignación de módulos y los ingresos repetidos. Las metas departamentales no convierten los grupos de remuestreo en estratos de selección probabilística.</p>
+<p><strong>Decisión metodológica adoptada (septiembre de 2026).</strong> Se mantiene la decisión de recalcular la calibración en cada réplica. Reutilizar los pesos finales como si fueran fijos omitiría la variabilidad de su estimación. La correspondencia del remuestreo con el modelo de respuesta y asignación deberá validarse <span class="citation">(<a href="referencias.html#ref-ChenLiWu2020">Chen et al. 2020</a>)</span>.</p>
+<p>Para cada réplica <span class="math inline">\(b=1,\dots,B\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Remuestreo.</strong> La unidad de remuestreo es la persona. Se propone extraer con reemplazo personas dentro de grupos territoriales con soporte suficiente. Sea <span class="math inline">\(m_k^{(b)}\)</span> su multiplicidad; el peso de referencia replicado es <span class="math inline">\(d_k^{(b)}=m_k^{(b)}d_k\)</span>. En comparaciones entre módulos o con el resultado transversal se usarán multiplicidades coordinadas para todos los registros de la misma persona. La partición territorial y la forma de reproducir la asignación y la respuesta deberán validarse antes de fijar el procedimiento; no se remuestrearán módulos independientemente cuando el contraste requiera conservar su dependencia.</li>
+<li><strong>Recalibración.</strong> Se aplica de nuevo la secuencia completa del ajuste por no respuesta (<a href="sec-pesos-calibracion.html#sec-ajuste-no-respuesta">5.8</a>) y se resuelve el mismo problema de calibración con los <strong>mismos totales del marco</strong> <span class="math inline">\(X_j\)</span>, que se mantienen fijos por tratarse de referencias administrativas; ello no supone ausencia de errores del marco:</li>
+</ol>
+<p><span class="math display">\[
+w_k^{(b)} = d_k^{(b)} \exp\!\left(\mathbf x_k&#39;\boldsymbol\lambda^{(b)}\right),
+\qquad
+\sum_{k\in s} w_k^{(b)}\mathbf x_k = \mathbf X .
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Estimación replicada:</strong></li>
+</ol>
+<p><span class="math display">\[
+\hat\theta^{(b)} = f\!\left(\mathbf w^{(b)}\right),
+\qquad \text{por ejemplo} \qquad
+\hat\theta^{(b)} = \frac{\sum_{k\in s} w_k^{(b)}\, y_k}{\sum_{k\in s} w_k^{(b)}}.
+\]</span></p>
+<p>El mismo estimador se recalcula con los pesos replicados: <span class="math inline">\(\hat Y^{(b)}=\sum_{k\in s} w_k^{(b)} y_k\)</span> para un total y <span class="math inline">\(\hat R^{(b)}=\sum_{k\in s} w_k^{(b)} y_k \big/ \sum_{k\in s} w_k^{(b)} z_k\)</span> para una razón. Para un dominio, la réplica se construye y se recalibra con todos los respondientes, y solo después se calcula el estimador del dominio con <span class="math inline">\(\delta_{dk}\)</span>; no se remuestrean ni se recalibran los respondientes del dominio por separado. Así, la varianza de un dominio incorpora la aleatoriedad de su número de respondientes.</p>
+</div>
+<div id="sec-matrices-pesos-replicas" class="section level3 hasAnchor" number="5.11.5">
+<h3><span class="header-section-number">5.11.5</span> Matrices desplegadas de pesos de las réplicas<a href="sec-pesos-calibracion.html#sec-matrices-pesos-replicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para mostrar la organización de los pesos, se mantienen las mismas <span class="math inline">\(n\)</span> personas en las filas y las <span class="math inline">\(B\)</span> réplicas en las columnas. La matriz de multiplicidades de remuestreo es:</p>
+<p><span class="math display">\[
+\mathbf M=
+\begin{pmatrix}
+m_1^{(1)} &amp; m_1^{(2)} &amp; \cdots &amp; m_1^{(B)}\\
+m_2^{(1)} &amp; m_2^{(2)} &amp; \cdots &amp; m_2^{(B)}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+m_n^{(1)} &amp; m_n^{(2)} &amp; \cdots &amp; m_n^{(B)}
+\end{pmatrix}_{n\times B}.
+\]</span></p>
+<p>Cada elemento <span class="math inline">\(m_k^{(b)}\)</span> indica cuántas veces aparece la persona <span class="math inline">\(k\)</span> en la réplica <span class="math inline">\(b\)</span>. Puede valer cero, uno o más. Con <span class="math inline">\(\mathbf d=(d_1,\dots,d_n)^{\mathsf T}\)</span>, la matriz de pesos de referencia replicados es:</p>
+<p><span class="math display">\[
+\mathbf D_{\mathrm{rep}}=\operatorname{diag}(\mathbf d)\mathbf M=
+\begin{pmatrix}
+d_1m_1^{(1)} &amp; d_1m_1^{(2)} &amp; \cdots &amp; d_1m_1^{(B)}\\
+d_2m_2^{(1)} &amp; d_2m_2^{(2)} &amp; \cdots &amp; d_2m_2^{(B)}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+d_nm_n^{(1)} &amp; d_nm_n^{(2)} &amp; \cdots &amp; d_nm_n^{(B)}
+\end{pmatrix}_{n\times B}.
+\]</span></p>
+<p>Para las Partes 1 y 2, <span class="math inline">\(d_k=1\)</span> y, por tanto, <span class="math inline">\(\mathbf D_{\mathrm{rep}}=\mathbf M\)</span>. En los módulos se utiliza el peso de referencia correspondiente a su probabilidad de asignación y elegibilidad.</p>
+<p>Después de recalibrar cada columna se obtiene la matriz de pesos finales replicados:</p>
+<p><span class="math display">\[
+\mathbf W_{\mathrm{rep}}=
+\begin{pmatrix}
+w_1^{(1)} &amp; w_1^{(2)} &amp; \cdots &amp; w_1^{(B)}\\
+w_2^{(1)} &amp; w_2^{(2)} &amp; \cdots &amp; w_2^{(B)}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+w_n^{(1)} &amp; w_n^{(2)} &amp; \cdots &amp; w_n^{(B)}
+\end{pmatrix}_{n\times B},
+\qquad
+w_k^{(b)}=m_k^{(b)}d_k\exp\!\left(\mathbf x_k^{\mathsf T}\boldsymbol\lambda^{(b)}\right).
+\]</span></p>
+<p>Si una persona no aparece en una réplica, su peso en esa columna es cero. La calibración se realiza sobre las personas con multiplicidad positiva; las filas de peso cero se conservan en la representación matricial para mantener la correspondencia entre personas. El peso de la fila agrega todas sus apariciones en la réplica, por lo que la multiplicidad no se aplica de nuevo al calcular el indicador.</p>
+<p>Sea <span class="math inline">\(\mathbf X_s\)</span> la matriz de auxiliares, de dimensión <span class="math inline">\(n\times J\)</span>, y <span class="math inline">\(\mathbf t_x\)</span> el vector de sus <span class="math inline">\(J\)</span> totales de referencia. Cada columna de pesos debe satisfacer las mismas restricciones. En conjunto:</p>
+<p><span class="math display">\[
+\mathbf X_s^{\mathsf T}\mathbf W_{\mathrm{rep}}
+=\mathbf t_x\mathbf 1_B^{\mathsf T}
+=
+\begin{pmatrix}
+X_1 &amp; X_1 &amp; \cdots &amp; X_1\\
+X_2 &amp; X_2 &amp; \cdots &amp; X_2\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+X_J &amp; X_J &amp; \cdots &amp; X_J
+\end{pmatrix}_{J\times B},
+\]</span></p>
+<p>dentro de las tolerancias numéricas documentadas. Una réplica sin soporte para reproducir los totales se registra como fallida y se trata conforme al protocolo de diagnóstico (<a href="sec-pesos-calibracion.html#sec-diagnostico-pesos-enus">5.12</a>).</p>
+<p>Con el vector de respuestas <span class="math inline">\(\mathbf y=(y_1,\dots,y_n)^{\mathsf T}\)</span>, los totales replicados se obtienen simultáneamente como <span class="math inline">\(\mathbf W_{\mathrm{rep}}^{\mathsf T}\mathbf y\)</span>. Para promedios o proporciones, el vector de estimaciones es:</p>
+<p><span class="math display">\[
+\widehat{\boldsymbol\theta}_{\mathrm{rep}}
+=
+\begin{pmatrix}
+\dfrac{\sum_k w_k^{(1)}y_k}{\sum_k w_k^{(1)}}\\[6pt]
+\dfrac{\sum_k w_k^{(2)}y_k}{\sum_k w_k^{(2)}}\\
+\vdots\\
+\dfrac{\sum_k w_k^{(B)}y_k}{\sum_k w_k^{(B)}}
+\end{pmatrix}_{B\times1}.
+\]</span></p>
+<p>Las sumas se restringen al conjunto válido del indicador, según sus filtros y el tratamiento de la no respuesta a preguntas. Para cada módulo <span class="math inline">\(m\)</span> se construye una matriz <span class="math inline">\(\mathbf W_{\mathrm{rep}}^{(m)}\)</span> con sus <span class="math inline">\(n_m\)</span> respondientes y sus totales elegibles. En comparaciones conjuntas, la columna <span class="math inline">\(b\)</span> debe corresponder a la misma réplica coordinada por persona en todas las matrices; esto no exige que los pesos finales sean iguales entre módulos.</p>
+<p>La varianza es la variabilidad entre réplicas:</p>
+<p><span class="math display">\[
+\bar\theta = \frac{1}{B}\sum_{b=1}^{B}\hat\theta^{(b)},
+\qquad
+\widehat V(\hat\theta) = \frac{1}{B-1}\sum_{b=1}^{B}\left(\hat\theta^{(b)}-\bar\theta\right)^2 ,
+\]</span></p>
+<p>de la que se derivan el error estándar <span class="math inline">\(ee(\hat\theta)=\sqrt{\widehat V(\hat\theta)}\)</span> y el coeficiente de variación <span class="math inline">\(cv(\hat\theta)=ee(\hat\theta)/|\hat\theta|\)</span>, cuando <span class="math inline">\(\hat\theta\neq0\)</span>. El intervalo de confianza al 95 % se construye con los percentiles empíricos 2,5 y 97,5 de las réplicas, cuya cobertura deberá comprobarse. Para proporciones extremas o pocos casos, un intervalo de percentiles puede ser degenerado y no garantiza por sí mismo una precisión adecuada.</p>
+<p><strong>Número de réplicas.</strong> Se adopta <span class="math inline">\(B = 1\,000\)</span>. <span class="citation">Beręsewicz et al. (<a href="referencias.html#ref-Beresewicz2025">2025</a>)</span> utilizan <span class="math inline">\(B=500\)</span> en su aplicación; se adopta un número mayor para reducir el error de Monte Carlo de los percentiles extremos que definen el intervalo.</p>
+<p><strong>Comparaciones.</strong> Las diferencias entre estimaciones —por ejemplo, entre una entidad y el valor nacional de su tipo de actor (<a href="sec-diseno-muestral.html#sec-publicacion-entidad">4.3.13</a>)— se estiman con las mismas réplicas, calculando la diferencia en cada réplica, de modo que la varianza de la diferencia incorpore la dependencia entre ambas estimaciones.</p>
+</div>
+<div id="aproximación-analítica-de-contraste" class="section level3 hasAnchor" number="5.11.6">
+<h3><span class="header-section-number">5.11.6</span> Aproximación analítica de contraste<a href="sec-pesos-calibracion.html#aproximaci%C3%B3n-anal%C3%ADtica-de-contraste" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La aproximación analítica debe corresponder al modelo inferencial efectivamente validado. No se aplicará de manera general la expresión <span class="math inline">\(\sum_k w_k(w_k-1)\hat e_k^2\)</span>: requiere, entre otras condiciones, pesos interpretables como inversos de probabilidades válidas y un mecanismo de respuesta compatible. Pesos de entropía inferiores a uno pueden producir términos negativos, lo que invalida esa aplicación automática.</p>
+<p>Para la Parte 3 se deben incorporar la asignación, la respuesta previa y la finalización del módulo, así como la dependencia por persona. La forma analítica o sándwich utilizada y su contraste con las réplicas se documentarán antes de publicar errores estándar <span class="citation">(<a href="referencias.html#ref-ChenLiWu2020">Chen et al. 2020</a>)</span>. Las variables linealizadas de la tabla <a href="sec-pesos-calibracion.html#tab:estimadores">5.1</a> sirven para construir esa derivación; no sustituyen la especificación del mecanismo de observación.</p>
+</div>
+<div id="interpretación" class="section level3 hasAnchor" number="5.11.7">
+<h3><span class="header-section-number">5.11.7</span> Interpretación<a href="sec-pesos-calibracion.html#interpretaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una vez validado el procedimiento, la varianza estimada describe la variabilidad de los indicadores bajo el mecanismo de respuesta y asignación especificado y sus supuestos. No incorpora:</p>
+<ul>
+<li>el sesgo que persiste si la respuesta depende de la satisfacción o experiencia de la persona aun después de condicionar por las variables auxiliares (incumplimiento de A1);</li>
+<li>la exclusión de las personas que no pueden recibir el aviso de invitación o cuya atención no ingresa al marco (incumplimiento de A2 y error de cobertura).</li>
+</ul>
+<p>Los intervalos de confianza deben leerse, por tanto, como medidas de precisión condicionadas a esos supuestos, y publicarse junto con la tasa de respuesta (<a href="sec-diseno-muestral.html#sec-marco-invitacion">4.1</a>).</p>
+</div>
+<div id="extensiones-consideradas" class="section level3 hasAnchor" number="5.11.8">
+<h3><span class="header-section-number">5.11.8</span> Extensiones consideradas<a href="sec-pesos-calibracion.html#extensiones-consideradas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Recomendación metodológica.</strong> Las siguientes extensiones se documentan para evaluación, pero no hacen parte del método adoptado:</p>
+<ul>
+<li><strong>Estimador doblemente robusto</strong> <span class="citation">(<a href="referencias.html#ref-ChenLiWu2020">Chen et al. 2020</a>)</span>: combina la propensión con un modelo de regresión de <span class="math inline">\(y\)</span> sobre <span class="math inline">\(\mathbf x\)</span> y es consistente si al menos uno de los dos modelos es correcto. Con <span class="math inline">\(\mathbf x\)</span> conocido para todo el marco, coincide con el estimador de diferencia generalizada. Su adopción requiere especificar un modelo por indicador.</li>
+<li><strong>Balanceo de cuantiles (QBIPW)</strong> <span class="citation">(<a href="referencias.html#ref-Beresewicz2025">Beręsewicz et al. 2025</a>)</span>: añade a la calibración restricciones sobre cuantiles de variables auxiliares continuas, lo que mejora la robustez frente a errores de especificación del modelo de propensión. Solo aporta cuando el marco contiene variables continuas —por ejemplo, la edad en años o el número de atenciones del año—, y los propios autores advierten que agregar restricciones puede aumentar la varianza.</li>
+</ul>
+</div>
+</div>
+<div id="sec-diagnostico-pesos-enus" class="section level2 hasAnchor" number="5.12">
+<h2><span class="header-section-number">5.12</span> Diagnóstico de la calibración<a href="sec-pesos-calibracion.html#sec-diagnostico-pesos-enus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Antes de publicar, cada ajuste transversal o por módulo deberá contar con un registro de control que incluya:</p>
+<ul>
+<li>Universo y periodo de referencia; elegibilidad, deduplicación y probabilidades de asignación.</li>
+<li>Categorías sin respondientes, rango de la matriz auxiliar y factibilidad de los totales.</li>
+<li>Convergencia y discrepancias absolutas y relativas por margen, con tolerancias y número máximo de iteraciones documentados.</li>
+<li>Distribución de <span class="math inline">\(d_k\)</span>, <span class="math inline">\(g_k\)</span> y <span class="math inline">\(w_k\)</span>: mínimos, máximos, percentiles, coeficiente de variación y concentración del peso.</li>
+<li>Tamaño efectivo descriptivo <span class="math inline">\(n_{\mathrm{ef}}=(\sum_k w_k)^2/\sum_k w_k^2\)</span>, para el conjunto y los dominios. Esta medida refleja desigualdad de pesos; no equivale a una garantía de precisión ni mide todos los efectos del diseño.</li>
+<li>Tasas de respuesta y finalización, estabilidad de indicadores y sensibilidad a restricciones, agrupaciones y límites de pesos.</li>
+<li>Número de réplicas válidas y fallidas, causas de fallo y tratamiento aplicado. No se eliminarán silenciosamente réplicas sin convergencia.</li>
+</ul>
+<p>La reproducción de márgenes no garantiza el balance de sus cruces ni representatividad por entidad. El diagnóstico deberá contrastar esos cruces y evaluar las variables administrativas relevantes para la respuesta y los indicadores. Cualquier agrupación de categorías o incorporación de auxiliares se justificará por soporte y capacidad explicativa, dejando constancia de las restricciones que dejan de reproducirse. No se calibrará contra las metas operativas del Anexo B.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sec-diseno-muestral.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sec-instrumento-recoleccion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["ENUS_2026_metodoloia.pdf", "ENUS_2026_metodoloia.docx"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

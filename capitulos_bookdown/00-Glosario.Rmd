@@ -4,7 +4,7 @@ Este glosario reúne, en orden alfabético, los términos técnicos y metodológ
 
 **Actor evaluado.** EPS, IPS o gestor farmacéutico que prestó el servicio registrado en la atención que originó la invitación. Determina la Parte 3 que responde la persona, que no lo elige; el módulo específico se asigna después al azar dentro de ese actor (\@ref(sec-mecanismo-captacion)).
 
-**Anexo E — Matriz de metas de respuesta.** Anexo externo al documento que contiene la matriz de las 1.848 celdas de meta de respuesta (departamento × régimen de afiliación × sexo × grupo de edad × zona), con su meta y su mínimo garantizado. [**Pendiente de actualización.**]{.pendiente-rojo} El archivo vigente del anexo está organizado por región y debe regenerarse con la estructura departamental (\@ref(sec-diseno-muestral)).
+**Anexo B — Matriz de metas de respuesta.** Anexo externo al documento que contiene la matriz de las 1.848 celdas de meta de respuesta (departamento × régimen de afiliación × sexo × grupo de edad × zona), con su meta y su mínimo garantizado. La matriz actualizada contiene 1.848 celdas departamentales y suma 43.173 respuestas; se presenta en el anexo correspondiente (\@ref(sec-diseno-muestral)).
 
 **Árbol de decisión.** Estructura que define la secuencia de preguntas, las condiciones de entrada y los saltos que sigue cada participante durante el cuestionario. Se organiza en bloques secuenciales (identificación y caracterización, Parte 2, sorteo Bernoulli, asignación del actor de la atención y de un módulo al azar, y módulos finales) y define nueve desenlaces posibles: uno sin Parte 3 (sorteo negativo) y ocho que corresponden a un módulo asignado al azar (\@ref(sec-mecanismo-captacion)).
 
@@ -12,7 +12,7 @@ Este glosario reúne, en orden alfabético, los términos técnicos y metodológ
 
 **BDUA (Base de Datos Única de Afiliados).** Registro administrativo de la afiliación al Sistema General de Seguridad Social en Salud (SGSSS). En ENUS 2026, su corte de marzo de 2026 es la referencia para el tamaño de muestra y las metas de respuesta, y su corte más reciente, cruzado con el registro de atenciones, conforma el marco muestral y los totales de calibración (\@ref(sec-marco-invitacion)).
 
-**Bloqueo por actor.** Restricción de un año calendario, contado desde que una persona responde la Parte 3 de un actor (EPS, IPS o gestor farmacéutico), durante la cual no se le vuelve a invitar a evaluar ese mismo actor. Por esta regla, una persona genera como máximo tres registros por año, uno por tipo de actor (\@ref(sec-mecanismo-captacion)).
+**Bloqueo por actor.** [**Pendiente de precisión operativa.**]{.pendiente-rojo} Debe definirse si aplica a la entidad específica o al tipo de actor, y si corresponde a doce meses desde la evaluación o al año calendario. La regla actualmente descrita es: Restricción de un año calendario, contado desde que una persona responde la Parte 3 de un actor (EPS, IPS o gestor farmacéutico), durante la cual no se le vuelve a invitar a evaluar ese mismo actor. Por esta regla, una persona genera como máximo tres registros por año, uno por tipo de actor (\@ref(sec-mecanismo-captacion)).
 
 **Calibración por entropía.** Procedimiento que ajusta los pesos de diseño de quienes responden para que reproduzcan los totales del marco en un conjunto de variables auxiliares, minimizando una función de distancia de entropía sujeta a esas restricciones. En ENUS 2026 es el ajuste por no respuesta: equivale a estimar la propensión de responder de cada persona invitada, y el peso calibrado es el inverso de esa propensión [@ChenLiWu2020; @Beresewicz2025] (\@ref(sec-pesos-calibracion)).
 
@@ -26,7 +26,7 @@ Este glosario reúne, en orden alfabético, los términos técnicos y metodológ
 
 **ENUS 2026.** Encuesta Nacional de Experiencia del Usuario en Salud, operación estadística del Ministerio de Salud y Protección Social adoptada como instrumento oficial y permanente mediante la Resolución 1642 de 2026 [@Resolucion1642_2026] (\@ref(sec-antecedentes)).
 
-**EPS, IPS y gestor farmacéutico.** Actores institucionales del sistema de salud. En ENUS 2026 son objeto de medición de los indicadores de desempeño; la EPS de cada persona proviene de la BDUA. Por mandato del artículo 12 de la Resolución 1642 de 2026 promueven el uso del aplicativo, y las EPS refuerzan el aviso de invitación. No son unidades de selección ni tienen metas de respuesta propias (\@ref(sec-papel-eps-ips)).
+**EPS, IPS y gestor farmacéutico.** Actores institucionales del sistema de salud. En ENUS 2026 son objeto de medición de los indicadores de desempeño; la EPS de cada persona proviene de la BDUA. Por mandato del artículo 12 de la Resolución 1642 de 2026 promueven el uso del aplicativo, y las EPS refuerzan el aviso de invitación. No son unidades de selección ni tienen metas de respuesta propias (\@ref(sec-entidades-invitacion)).
 
 **Estrato.** En el sentido probabilístico clásico, partición de la población dentro de la cual se realiza una selección aleatoria independiente. ENUS 2026 no tiene estratos: se invita a todo el marco, y las celdas de meta de respuesta solo sirven para monitorear la respuesta (\@ref(sec-diseno-muestral)).
 

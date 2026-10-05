@@ -15,3 +15,5 @@ El presente *Documento Metodológico* describe de manera integrada los elementos
 La organización del documento sigue la secuencia metodológica de la operación. Los primeros capítulos presentan la identidad y caracterización de la ENUS 2026, establecen su marco general y describen la población objetivo, el diseño muestral por invitación, el instrumento de recolección y la estructura lógica del cuestionario. Los capítulos centrales desarrollan los procedimientos de procesamiento, ponderación, calibración y estimación, así como la metodología para evaluar la incertidumbre y la calidad estadística de los resultados. El documento cierra con las principales limitaciones de la operación y los anexos técnicos que detallan el cuestionario, el árbol de decisión, las metas de respuesta, los indicadores y las matrices de trazabilidad.
 
 En conjunto, el documento constituye el referente metodológico para comprender cómo se estructura la ENUS 2026, cómo se recolecta y procesa la información, y cómo esta se transforma en los resultados estadísticos de la operación.
+
+

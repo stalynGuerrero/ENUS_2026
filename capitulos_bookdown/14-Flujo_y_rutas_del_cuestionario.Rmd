@@ -1,6 +1,6 @@
 # Flujo y rutas del cuestionario {#sec-flujo-rutas}
 
-Este capítulo reconstruye la lógica completa de navegación del cuestionario a partir del árbol de decisión: los nodos que lo componen, las transiciones entre ellos y las rutas alcanzables desde la raíz hasta cada módulo final. El árbol se organiza en 48 nodos distribuidos en cuatro bloques secuenciales —identificación y caracterización, pregunta trazadora, gestión institucional y módulos finales—, y define las nueve rutas que convergen en ocho módulos, referenciadas desde los capítulos de papel de las EPS (\@ref(sec-papel-eps-ips)) y de relación entre cuestionario y cuotas (\@ref(sec-relacion-cuestionario-cuotas)).
+Este capítulo reconstruye la lógica completa de navegación del cuestionario a partir del árbol de decisión: los nodos que lo componen, las transiciones entre ellos y las rutas alcanzables desde la raíz hasta cada módulo final. El árbol se organiza en 48 nodos distribuidos en cuatro bloques secuenciales —identificación y caracterización, pregunta trazadora, gestión institucional y módulos finales—, y define las nueve rutas que convergen en ocho módulos, referenciadas desde los capítulos de papel de las EPS (\@ref(sec-entidades-invitacion)) y de relación entre cuestionario y cuotas (\@ref(sec-relacion-cuestionario-cuotas)).
 
 ![Esquema general del árbol de decisión: de la caracterización del usuario a la pregunta trazadora, la gestión institucional y las nueve rutas que convergen en ocho módulos finales.](figuras/fig-arbol-general.png){width=95%}
 

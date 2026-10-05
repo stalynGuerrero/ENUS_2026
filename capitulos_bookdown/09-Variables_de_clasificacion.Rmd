@@ -15,7 +15,7 @@ Las variables se obtienen en tres momentos sucesivos y con dos mecanismos distin
 | Variable | Categorías | Fuente | Momento de obtención | Uso |
 |---|---|---|---|---|
 | Documento de identificación | Cédula de ciudadanía, cédula de extranjería y demás tipos habilitados en *ClicSalud* | Autorreporte, validado contra BDUA | Identificación, antes del cuestionario | Elegibilidad (\@ref(sec-poblacion-objetivo)); no es variable de clasificación |
-| EPS | Listado de EPS del SGSSS | Autorreporte (selección de una lista) | Identificación, antes del cuestionario | Identificación del usuario; no es variable de cuota ni de calibración (\@ref(sec-papel-eps-ips)) |
+| EPS | Listado de EPS del SGSSS | Autorreporte (selección de una lista) | Identificación, antes del cuestionario | Identificación del usuario; no es variable de cuota ni de calibración (\@ref(sec-entidades-invitacion)) |
 | Sexo | Femenino, Masculino | Autorreporte (pregunta del árbol) | Bloque de identificación y caracterización | Cuota; variable auxiliar de calibración |
 | Grupo de edad | 00-09, 10-19, 20-29, 30-39, 40-49, 50-59, 60 o más | Autorreporte, capturado directamente en rangos de 10 años (no como edad exacta) | Bloque de identificación y caracterización | Cuota; variable auxiliar de calibración |
 | Ubicación geográfica (región) | Bogotá, Caribe, Central, Oriental, Orinoquía-Amazonía, Pacífica | Autorreporte (pregunta del árbol, etiquetada "Departamento", con las seis regiones como únicas opciones de respuesta) | Bloque de identificación y caracterización | Cuota; dominio geográfico de análisis; variable auxiliar de calibración |

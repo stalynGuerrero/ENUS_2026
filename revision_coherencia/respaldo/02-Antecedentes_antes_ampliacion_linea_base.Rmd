@@ -1,0 +1,83 @@
+# Antecedentes {#sec-antecedentes}
+
+La ENUS 2026 se apoya en las mediciones colombianas de percepción de calidad y satisfacción de los usuarios y en referentes internacionales de experiencia del paciente. Este capítulo sintetiza su evolución, los cambios que afectan la comparación temporal y los aprendizajes para la nueva operación. Las decisiones de población, diseño, instrumento y estimación se desarrollan en los capítulos correspondientes.
+
+## Marco normativo {#sec-marco-normativo}
+
+La operación se enmarca en el Sistema Obligatorio de Garantía de Calidad de la Atención de Salud (SOGCS), establecido por el Decreto 1011 de 2006 y compilado en el Decreto 780 de 2016 [@Decreto1011_2006; @Decreto780_2016]. Sus atributos de accesibilidad, oportunidad, seguridad, pertinencia y continuidad orientan la evaluación de la calidad; las definiciones utilizadas por ENUS se desarrollan en el marco conceptual (\@ref(sec-marco-conceptual)).
+
+Dentro del SOGCS, el Sistema de Información para la Calidad (SIC), desarrollado por la Resolución 256 de 2016, constituye el vínculo institucional con las mediciones desde la perspectiva del usuario [@Resolucion256_2016]. Los informes de las encuestas de 2017 y 2020 sitúan sus operaciones en este componente [@MSPS2017; @MSPS2020].
+
+La Resolución 1642 de 2026 adopta la ENUS como instrumento oficial de captura digital, permanente y continua de la experiencia del afiliado y establece su aplicación a EPS, IPS y gestores farmacéuticos [@Resolucion1642_2026]. Su mandato de comparabilidad y reducción de la autoselección exige documentar los procedimientos de la operación. Los niveles de desagregación previstos normativamente deben interpretarse junto con los criterios de suficiencia y calidad estadística del diseño, sin asumir que cada nivel dispone de precisión garantizada.
+
+## Evolución del objeto de medición
+
+Los antecedentes corresponden a objetos relacionados, pero distintos: **percepción de calidad**, como valoración del servicio en PECASUSS; **satisfacción**, como evaluación global en las encuestas históricas; y **experiencia**, como reporte de hechos de la interacción con los servicios. ENUS mide satisfacción y experiencia de forma complementaria. El uso de la palabra «experiencia» en preguntas anteriores no convierte por sí solo toda la operación en una medición multidimensional de ese fenómeno [@PECASUSS2008; @MSPS2017; @MSPS2023].
+
+## Mediciones nacionales {#sec-mediciones-msps}
+
+Los informes del Ministerio mencionan una evaluación de las EPS atribuida a la Defensoría del Pueblo en 2005; su fuente primaria no pudo validarse en la revisión original, por lo que no se le asigna una ficha técnica [@MSPS2017; @MSPS2020]. PECASUSS se aplicó en 2006 y 2008 a instituciones intervenidas por el Programa de Reestructuración de Redes de Servicios de Salud y constituye un antecedente de percepción de calidad, con alcance diferente de las posteriores encuestas de satisfacción [@PECASUSS2008].
+
+Desde 2012, el MSPS consolidó un ciclo de mediciones de satisfacción. Su continuidad institucional no supone estabilidad de población, selección o instrumento. La tabla reúne las características respaldadas por las fuentes revisadas; «no disponible» significa que no se cuenta con información suficiente en esos antecedentes, no que la operación careciera de un diseño.
+
+### Población y cobertura de las primeras mediciones {#sec-poblacion-objetivo-serie}
+
+| Edición | Población y cobertura documentadas | Muestra efectiva |
+|---|---|---:|
+| 2012–2013 | Fichas técnicas no disponibles en las fuentes revisadas; años identificados como parte de la serie institucional [@MSPS2017; @MSPS2020] | No disponible |
+| 2014 | Usuarios mayores de 18 años con uso en los últimos seis meses; 85 municipios [@MSPS2016] | 20.361 |
+| 2015 | Se incorporan menores de edad; uso en los últimos seis meses; 73 municipios [@MSPS2014_2015; @MSPS2016] | 29.761 |
+| 2016 | Afiliados con uso en los últimos seis meses, sin restricción de edad; 95 municipios [@MSPS2016] | 26.502 |
+| 2017 | Usuarios de todas las edades; ámbito urbano y centros poblados rurales; 95 municipios [@MSPS2017] | 24.586 |
+
+La incorporación de menores en 2015 amplió el universo estimado de 11.425.380 a 16.555.627 usuarios y limita la comparación directa con 2014 [@MSPS2014_2015]. Las exclusiones tampoco fueron constantes: comprendieron regímenes especiales y exentos y, según la edición, medicina prepagada, planes complementarios o seguro privado [@MSPS2016; @MSPS2017]. Las comparaciones deben reconstruir la población común antes de atribuir diferencias a cambios en satisfacción.
+
+### Selección y contenido del ciclo inicial {#sec-diseno-serie}
+
+En 2014–2015 se documentó un diseño probabilístico de conglomerados, con marcos de áreas y un marco de lista complementario para EPS de baja participación [@MSPS2014_2015]. En 2016–2017 el diseño fue probabilístico, estratificado, multietápico y de conglomerados, con selección de municipios, manzanas y personas [@MSPS2016; @MSPS2017].
+
+#### Medición de 2017 {#sec-medicion-2017}
+
+En 2017 se seleccionó una persona elegible del hogar; para menores respondió el adulto acompañante. La entrevista presencial utilizó 60 preguntas en 18 capítulos y abordó satisfacción, oportunidad, acceso, trato digno, respuesta, caracterización y corresponsabilidad. El informe declaró error relativo inferior al 5 % para proporciones superiores al 20 % [@MSPS2017]. Estos contenidos aportan antecedentes temáticos, pero su continuidad con ENUS debe comprobarse pregunta por pregunta.
+
+### Transformaciones recientes {#sec-mediciones-msps-2018-2025}
+
+#### Comparación de las mediciones 2018–2025 {#sec-comparacion-mediciones-2018-2025}
+
+| Edición | Diseño o modalidad y muestra | Cambio relevante para la comparación |
+|---|---|---|
+| 2018 | Análisis de la encuesta de 2017; sin nuevo levantamiento | Ranking de 51 indicadores de oportunidad, satisfacción y trámites; sustitución de acceso por trámites y remuestreo para comparar EPS [@MSPS2018] |
+| 2020 | Entrevista telefónica y marco de lista; 18.630 usuarios de 36 EPS | Pandemia: cambio del marco de áreas al de lista, ampliación de 157 a 541 municipios y módulo COVID-19 [@MSPS2020] |
+| 2022 | Entrevista presencial; selección de barrios y manzanas y barrido de hogares; 18.360 encuestas | Retorno presencial; resultados expandidos a 42.897.182 personas; contenido de satisfacción, acceso, recomendación y trámites [@MSPS2022] |
+| 2023 | Probabilístico, estratificado, de conglomerados y trietápico; entrevista presencial; 14.845 encuestas válidas | Énfasis en atención primaria, aproximadamente 75 preguntas y resultados en seis macrorregiones [@MSPS2023] |
+| 2024 | Diseño y muestra no disponibles en los antecedentes revisados | Continuidad de satisfacción; el título del informe no conserva el énfasis explícito en atención primaria de 2023 [@MSPS2024] |
+| 2025 | 18.639 usuarios en seis regiones; diseño no documentado en los antecedentes revisados | Levantamiento entre septiembre y diciembre; antecedente inmediatamente anterior a ENUS [@MSPS2025] |
+
+No se dispone en esta revisión de fichas suficientes para caracterizar separadamente las ediciones de 2018–2019 como nuevos levantamientos. En particular, el ranking publicado en 2018 utiliza información de 2017 y debe distinguirse de una encuesta adicional.
+
+## Referentes internacionales {#sec-referentes-internacionales}
+
+Los siguientes referentes orientan la definición de dimensiones y las prácticas de estandarización. ENUS no adopta íntegramente sus instrumentos ni sus diseños.
+
+| Referente | Enfoque | Aprendizaje para ENUS |
+|---|---|---|
+| **CAHPS — AHRQ** | Preguntas estandarizadas sobre hechos de la atención, valoraciones globales y medidas compuestas | Diferenciar experiencia y satisfacción y conservar un núcleo de preguntas para comparar proveedores y periodos [@AHRQ_CAHPS; @AHRQ_CAHPS_Measures] |
+| **Responsiveness — OMS** | Respeto por las personas y orientación al usuario en aspectos no clínicos | Incorporar dignidad, autonomía, confidencialidad, oportunidad y condiciones de atención [@WHO2000Responsiveness] |
+| **PaRIS — OCDE** | Experiencias (PREM) y resultados (PROM) reportados por pacientes; primer ciclo centrado en atención primaria de personas de 45 años o más | Separar experiencia de atención y resultados de salud, y estandarizar indicadores considerando diferencias de población y contexto [@OECD2025PaRIS] |
+
+## Comparabilidad y aprendizajes para ENUS {#sec-sintesis-antecedentes}
+
+Los antecedentes conservan valor histórico, pero no conforman automáticamente una serie homogénea. Las principales condiciones para comparar son:
+
+- **Población común:** armonizar edades, regímenes, exclusiones, cobertura y periodo de uso de servicios.
+- **Indicador equivalente:** comprobar redacción, opciones, ruta, denominador y fórmula. La coincidencia del nombre no demuestra equivalencia.
+- **Procedimiento documentado:** considerar cambios de marco, selección, ponderación y modalidad. El paso a teléfono en 2020 constituye una modificación relevante de cobertura y contacto.
+- **Contenido estable:** distinguir reorganizaciones de resultados, como el ranking de 2018, de cambios de cuestionario y de nuevos levantamientos.
+
+Estas condiciones permiten evaluar comparaciones específicas; no corresponde unir todos los porcentajes publicados como una única tendencia ni descartar toda comparación antes de revisar los indicadores.
+
+## ENUS 2026 como línea base
+
+La primera aplicación de ENUS establece la línea base de su propia serie de satisfacción y experiencia, sustentada en el instrumento y los procedimientos adoptados. Las mediciones previas aportan dimensiones y evidencia histórica; su comparación con ENUS requiere una evaluación explícita de equivalencia [@Resolucion1642_2026].
+
+Para preservar la comparabilidad futura deben documentarse y mantenerse estables la población, los periodos de referencia, las preguntas centrales, los universos de los indicadores, las reglas de procesamiento y los métodos de ponderación y estimación. Los cambios necesarios deben registrarse por versión y evaluarse por su posible efecto sobre la serie. La continuidad normativa e institucional aporta el marco de la operación; la continuidad estadística depende de esas condiciones metodológicas.

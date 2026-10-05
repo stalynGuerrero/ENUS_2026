@@ -10,7 +10,7 @@ La Resolución 1642 de 2026 dispone que el diseño metodológico de la ENUS «ga
 
 Las metas por departamento y por celda de régimen, sexo, grupo de edad y zona que se calculan en este capítulo se conservan como **metas de respuesta**: fijan el número de respuestas que se espera obtener en cada grupo y sirven para monitorear la operación y reforzar la invitación donde la respuesta sea insuficiente. No restringen la participación ni constituyen probabilidades de selección.
 
-El diseño se estructura en dos niveles. Primero, se determina una meta de respuesta para cada **departamento**, de manera que la operación disponga de un número suficiente de observaciones para producir resultados a ese nivel —condicionado, como se precisa más adelante (\@ref(sec-alcance-departamental)), a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección—. Segundo, la meta de cada departamento se distribuye entre las celdas definidas por régimen de afiliación, sexo, grupo de edad y zona, utilizando la estructura poblacional de referencia y estableciendo mínimos para las celdas de menor tamaño. La región (agrupación estándar DANE/ENDS de los 32 departamentos y Bogotá D.C.) se conserva como nivel de agregación para el reporte de resultados.
+El diseño se estructura en dos niveles. Primero, se determina una meta de respuesta para cada **departamento**, de manera que la operación disponga de un número suficiente de observaciones para producir resultados a ese nivel —condicionado, como se precisa más adelante (\@ref(sec-alcance-departamental)), a que la meta departamental se cumpla efectivamente al cierre del periodo de recolección—. Segundo, la meta de cada departamento se distribuye entre las celdas definidas por régimen de afiliación, sexo, grupo de edad y zona, utilizando la estructura poblacional de referencia y estableciendo mínimos para las celdas de menor tamaño. La región (agrupación de los 32 departamentos y Bogotá D.C. adoptada para el reporte de ENUS 2026) se conserva como nivel de agregación para el reporte de resultados.
 
 A partir de esta estructura, el presente capítulo desarrolla el marco y la invitación, el mecanismo de asignación de la Parte 3, la determinación de las metas de respuesta, la diferenciación entre los conceptos de meta de respuesta, estrato, dominio y variable de calibración y, finalmente, las implicaciones del diseño para el alcance inferencial de los resultados.
 
@@ -22,11 +22,11 @@ El marco muestral está conformado por las personas registradas en la BDUA con a
 
 La cobertura del marco depende de la oportunidad y completitud del registro de atenciones: una atención no reportada, o reportada con rezago, deja a la persona por fuera de la invitación del periodo correspondiente. Esta condición constituye un error de cobertura y se documenta en el capítulo de limitaciones.
 
-**Decisión metodológica adoptada (septiembre de 2026).** Para conformar el marco, las atenciones se identifican en la factura electrónica de venta con RIPS (FEV-RIPS) para las atenciones de las IPS, en los registros de dispensación para los gestores farmacéuticos y en los registros propios de las EPS (autorizaciones y trámites). Las EPS actualizan esta información de manera permanente a partir de la facturación de los servicios. En consecuencia, el rezago con que una atención ingresa al marco corresponde al ciclo de facturación, y su magnitud debe monitorearse durante la operación como parte de la evaluación de cobertura.
+Para conformar el marco, las atenciones se identifican en la factura electrónica de venta con RIPS (FEV-RIPS) para las atenciones de las IPS, en los registros de dispensación para los gestores farmacéuticos y en los registros propios de las EPS (autorizaciones y trámites). Las EPS actualizan esta información de manera permanente a partir de la facturación de los servicios. En consecuencia, el rezago con que una atención ingresa al marco corresponde al ciclo de facturación, y su magnitud debe monitorearse durante la operación como parte de la evaluación de cobertura.
 
 ### Invitación
 
-**Decisión metodológica adoptada.** Toda persona del marco queda **invitada automáticamente** a participar, y la invitación se le comunica mediante un **aviso individual** (mensaje de texto, correo electrónico o notificación del aplicativo), enviado con los datos de contacto disponibles en la BDUA y en las bases de información del Ministerio. El aviso es indispensable: una persona que queda habilitada en el marco pero no se entera de que puede participar no ha sido invitada en sentido efectivo, y su participación dependería de la autoselección que el artículo 9 de la Resolución 1642 de 2026 exige reducir.
+Toda persona del marco queda **invitada automáticamente** a participar, y la invitación se le comunica mediante un **aviso individual** (mensaje de texto, correo electrónico o notificación del aplicativo), enviado con los datos de contacto disponibles en la BDUA y en las bases de información del Ministerio. El aviso es indispensable: una persona que queda habilitada en el marco pero no se entera de que puede participar no ha sido invitada en sentido efectivo, y su participación dependería de la autoselección que el artículo 9 de la Resolución 1642 de 2026 exige reducir.
 
 El aviso individual se complementa con la promoción prevista en la Resolución; en particular, las EPS, IPS y gestores farmacéuticos están obligados a promover activamente el uso del aplicativo en sus puntos de atención mediante carteles, mensajes de texto y notificaciones push (art. 12, num. 1) [@Resolucion1642_2026]. Dado que la probabilidad de invitación es igual a 1, el peso de diseño asociado a la invitación es:
 
@@ -36,14 +36,14 @@ $$
 
 El conjunto de personas del marco constituye el **registro de personas invitadas** del periodo. Las respuestas se vinculan a ese registro mediante el documento de identidad con el que la persona se identifica en el aplicativo, lo que permite calcular las tasas de respuesta. Cuando se disponga de la fecha y el canal de cada aviso, estos datos permiten distinguir además la falta de contacto del rechazo a participar.
 
-**Decisiones metodológicas adoptadas (septiembre de 2026)** sobre la operación de la invitación:
+sobre la operación de la invitación:
 
 - **Responsable del envío (esquema mixto).** El Ministerio envía el aviso de invitación y las EPS lo refuerzan por sus propios canales, reportando al Ministerio a quién lo enviaron, en la estructura de datos que este defina (art. 10, par. 2) [@Resolucion1642_2026].
 - **Personas sin datos de contacto.** Cuando una persona del marco no tenga datos de contacto en la BDUA ni en las bases del Ministerio, este solicitará a la EPS el contacto actualizado. Las personas que, aun así, no puedan recibir el aviso constituyen un error de cobertura de la invitación; su proporción se reporta por departamento y régimen.
 - **Frecuencia.** Las invitaciones se generan al menos mensualmente y, cuando la fuente lo permita, de forma automática al ingresar un nuevo registro de atención, condicionado al rezago del ciclo de facturación.
 - **Personas con varias atenciones.** Cada persona recibe una invitación por actor en cada periodo de seis meses, basada en su atención más reciente con ese actor, siempre que no lo haya evaluado en el último año (bloqueo por actor, \@ref(sec-mecanismo-captacion)). Esta regla evita que las personas con mayor uso de servicios reciban más invitaciones y queden sobrerrepresentadas por ese motivo.
 
-**Decisión metodológica adoptada (septiembre de 2026): participación restringida al marco.** Solo pueden responder la encuesta las personas del marco. Quien no registra una atención en salud en los últimos seis meses no pertenece a la población objetivo y no queda habilitado en el aplicativo, cualquiera sea el canal por el que llegue. Dado que la invitación es automática, las personas del marco que ingresan al aplicativo por cualquier canal —aviso individual, promoción de las EPS o iniciativa propia— se consideran invitadas y sus respuestas se incluyen en la estimación. En consecuencia, no existen respuestas de personas ajenas al marco que deban tratarse por separado.
+Solo pueden responder la encuesta las personas del marco. Quien no registra una atención en salud en los últimos seis meses no pertenece a la población objetivo y no queda habilitado en el aplicativo, cualquiera sea el canal por el que llegue. Dado que la invitación es automática, las personas del marco que ingresan al aplicativo por cualquier canal —aviso individual, promoción de las EPS o iniciativa propia— se consideran invitadas y sus respuestas se incluyen en la estimación. En consecuencia, no existen respuestas de personas ajenas al marco que deban tratarse por separado.
 
 Una implicación operativa de esta regla es que una persona atendida recientemente no puede responder hasta que su atención ingrese al marco, lo que depende del ciclo de facturación descrito en la sección de marco muestral.
 
@@ -69,7 +69,7 @@ El formulario de *ClicSalud* se estructura en tres partes secuenciales:
 - **Parte 2 (preguntas comunes).** Preguntas de respuesta directa del usuario sobre experiencia general de atención y servicio. Todas las personas que avanzan más allá de Parte 1 la responden; en ingresos posteriores al primero, ya completada, no se repite.
 - **Parte 3 (módulo específico).** Diez o más preguntas adicionales sobre las características particulares de un prestador. Solo se responde si el mecanismo descrito a continuación lo determina.
 
-### Primer ingreso: sorteo, elección y asignación
+### Primer ingreso: sorteo, actor de la atención y asignación
 
 Al finalizar Parte 2 en su primer ingreso, la persona queda sujeta a un sorteo Bernoulli $u\sim\text{Uniforme}(0,1)$ con corte $\pi=0,8$:
 
@@ -83,7 +83,7 @@ $$
 
 Si el sorteo es negativo ($u>0,8$), la encuesta finaliza sin Parte 3. Si es positivo ($u\leq0,8$), la persona responde la Parte 3 del **actor que le prestó el servicio** —EPS, IPS o gestor farmacéutico— registrado en la atención que originó la invitación (\@ref(sec-marco-invitacion)).
 
-**Decisión metodológica adoptada (septiembre de 2026).** La persona **no elige** el actor sobre el cual opina: la Parte 3 se asocia al actor de la atención registrada. Esta decisión reemplaza la elección de prestador por parte del usuario prevista en versiones anteriores del diseño y elimina esa fuente de autoselección dentro de la Parte 3.
+La persona **no elige** el actor sobre el cual opina: la Parte 3 se asocia al actor de la atención registrada. Esta decisión reemplaza la elección de prestador por parte del usuario prevista en versiones anteriores del diseño y elimina esa fuente de autoselección dentro de la Parte 3.
 
 Dentro de ese actor, el sistema asigna **al azar** uno de los módulos disponibles, con probabilidad $P(\text{módulo}\mid\text{actor}) = 1/n_{\text{actor}}$:
 
@@ -101,22 +101,22 @@ El actor evaluado queda **bloqueado por un año calendario** para esa persona. U
 
 ### Probabilidades y pesos de diseño de la Parte 3
 
-Las probabilidades de la Parte 3 son conocidas y se registran para cada persona. Condicionado al actor de la atención que originó la invitación, la probabilidad de responder el módulo $j$ y el peso de diseño correspondiente son:
+Las probabilidades de la Parte 3 son conocidas y se registran para cada persona. Condicionado al actor de la atención que originó la invitación, la probabilidad de asignación al módulo $j$ y el peso de diseño correspondiente son:
 
-| Ingreso | Probabilidad de responder el módulo $j$ | Peso de diseño $d_i$ |
+| Ingreso | Probabilidad de asignación al módulo $j$ | Peso de diseño $d_i$ |
 |---|---|---|
 | Primer ingreso | $\pi_{ij} = 0,8 \times \dfrac{1}{n_{\text{actor}}}$ | $\dfrac{n_{\text{actor}}}{0,8}$ |
 | Ingresos posteriores | $\pi_{ij} = \dfrac{1}{n_{\text{actor}}}$ | $n_{\text{actor}}$ |
 
 Table: (\#tab:pesos-parte3) Probabilidades y pesos de diseño de la Parte 3, condicionados al actor de la atención, ENUS 2026.
 
-Para las Partes 1 y 2 el peso de diseño es $d_i^{\text{inv}}=1$ (\@ref(sec-marco-invitacion)). Todos los pesos de diseño se calibran posteriormente con la BDUA para ajustar por no respuesta.
+Para las Partes 1 y 2 el peso de diseño es $d_i^{\text{inv}}=1$ (\@ref(sec-marco-invitacion)). Estas probabilidades describen la asignación, condicionada al ingreso y al actor, no la probabilidad de completar el módulo. La participación y la finalización requieren un ajuste por no respuesta. Los pesos se calibran contra los totales del marco correspondiente, construido con BDUA y registros de atenciones.
 
 Dado que el actor evaluado lo determina la atención registrada y no la persona, los indicadores de un módulo representan a los usuarios de ese tipo de actor que respondieron la Parte 2, sujetos al ajuste por no respuesta mediante calibración. Cuando una persona tiene atenciones con varios actores, la secuencia de ingresos depende de las invitaciones recibidas y de su respuesta a cada una.
 
 ### Módulos de Parte 3
 
-ENUS 2026 define ocho módulos de Parte 3, cuyo contenido proviene de la especificación del instrumento por módulo (`00_Cuestionario/ENUS_Formato_por_Modulos.xlsx`):
+ENUS 2026 define ocho módulos de Parte 3, cuyo contenido proviene de la especificación del instrumento por módulo
 
 | Prestador | Módulo | Enfoque |
 |---|---|---|
@@ -131,11 +131,13 @@ ENUS 2026 define ocho módulos de Parte 3, cuyo contenido proviene de la especif
 
 Table: (\#tab:modulos-parte3) Módulos de Parte 3 asignables por prestador, ENUS 2026.
 
-[**Pendiente de definición.**]{.pendiente-rojo} El contenido original del módulo EPS 1 está dirigido a población que *no* ha utilizado servicios de salud (barreras de acceso), lo cual es inconsistente con el criterio de elegibilidad de la operación, que exige un registro BDUA de uso efectivo de un servicio (\@ref(sec-poblacion-objetivo)). Mientras esta inconsistencia no se resuelva, el módulo se conserva como una de las tres opciones asignables al azar dentro de EPS.
+El contenido original del módulo EPS 1 está dirigido a población que *no* ha utilizado servicios de salud (barreras de acceso), lo cual es inconsistente con el criterio de elegibilidad de la operación, que exige un registro BDUA de uso efectivo de un servicio (\@ref(sec-poblacion-objetivo)). Mientras esta inconsistencia no se resuelva, el módulo se conserva como una de las tres opciones asignables al azar dentro de EPS.
+
+**Coherencia entre los formularios y el diseño.** Los ocho formularios son independientes y contemplan perfiles de aplicación según el servicio utilizado durante el último año; uno de ellos está dirigido a personas que no utilizaron servicios. Esta estructura requiere armonización con el diseño aquí descrito, que contempla personas con una atención registrada en los últimos seis meses y asignación aleatoria de un módulo dentro del actor correspondiente. Debe precisarse qué módulos puede responder cada persona y cómo se incorpora el grupo de no usuarios. Si la asignación se restringe a los módulos aplicables a cada perfil, las probabilidades y los pesos deberán calcularse a partir del conjunto efectivamente disponible, sin asumir que todos los módulos de un actor son asignables a cualquier participante.
 
 ### Diferenciación frente a las metas de respuesta
 
-El mecanismo de sorteo y asignación descrito en esta sección es distinto de las metas de respuesta (\@ref(sec-diseno-muestral)): las metas fijan cuántas respuestas se espera obtener en cada grupo; el sorteo determina si una persona que respondió la Parte 2 responde la Parte 3; el actor de la atención que originó la invitación y la asignación aleatoria de módulo determinan qué contenido específico responde. Ninguno de estos elementos constituye un estrato, y ninguno modifica las metas de respuesta por celda.
+El mecanismo de sorteo y asignación descrito en esta sección es distinto de las metas de respuesta definidas en la sección \@ref(sec-distribucion-metas-celdas): las metas fijan cuántas respuestas se espera obtener en cada grupo; el sorteo determina si una persona que respondió la Parte 2 responde la Parte 3; el actor de la atención que originó la invitación y la asignación aleatoria de módulo determinan qué contenido específico responde. Ninguno de estos elementos constituye un estrato, y ninguno modifica las metas de respuesta por celda.
 
 ## Determinación del tamaño de muestra {#sec-tamano-muestra}
 
@@ -159,41 +161,25 @@ donde $P$ es la proporción de referencia, $Z_{1-\alpha/2}$ corresponde al cuant
 
 En la ENUS 2026 se adopta $P=0,50$, valor que maximiza la varianza de una proporción y, por tanto, produce un tamaño de referencia conservador cuando no se dispone de una proporción previa.
 
-El margen de error absoluto se obtiene a partir de la longitud total del intervalo de confianza definida para el diseño:
+El margen de error absoluto es la semilongitud del intervalo de confianza. Si $L$ denota su longitud total, entonces:
 
 $$
-ME =
-Z_{1-\alpha/2}
-\left(\frac{L}{2}\right),
+ME=L/2.
 $$
 
-donde $L$ representa la longitud total del intervalo.
-
-Dado que el diseño utiliza un margen de error relativo, este se obtiene mediante:
+El margen de error relativo se define como $MER=ME/P$. Se adoptan la confianza del 95 %, $P=0,50$ y el margen de error absoluto de referencia $ME=0,0392$. Por tanto:
 
 $$
-MER = \frac{ME}{P}.
+L=2ME=0,0784,\qquad MER=\frac{0,0392}{0,50}=0,0784=7,84\%.
 $$
 
-Con un nivel de confianza del 95 %, $P=0,50$ y una longitud total del intervalo de 0,04, se obtiene:
+El tamaño bajo muestreo aleatorio simple utilizado como referencia es:
 
 $$
-ME = 1,96\times0,02 = 0,0392
+n_{MAS}=\frac{1,96^2\times0,50\times0,50}{0,0392^2}=625.
 $$
 
-y, por tanto,
-
-$$
-MER = \frac{0,0392}{0,50}=0,0784,
-$$
-
-equivalente a un margen de error relativo del **7,84 %**.
-
-El tamaño de referencia resultante es aproximadamente:
-
-$$
-n_{MAS}\approx625.
-$$
+Los tamaños se calculan con estos parámetros, sin redondear los resultados intermedios. La meta de cada departamento se redondea hacia arriba únicamente después de aplicar la corrección por población finita y el factor operativo. La precisión indicada es nominal de planeación; la precisión efectiva se estima con las respuestas y los pesos obtenidos.
 
 ### Ajuste por efecto de diseño
 
@@ -208,7 +194,7 @@ El efecto de diseño expresa la relación entre la varianza de un estimador bajo
 Para la ENUS 2026:
 
 $$
-n_{DEFF}=625\times1,5\approx938.
+n_{DEFF}=625\times1,5=937,5.
 $$
 
 Este ajuste debe interpretarse como parte del procedimiento utilizado para establecer el tamaño objetivo y no como una estimación empírica de la varianza del diseño de la ENUS.
@@ -225,11 +211,11 @@ $$
 
 La corrección por población finita reduce el tamaño requerido cuando la fracción de muestreo deja de ser despreciable. Para poblaciones grandes respecto del tamaño de muestra, su efecto es prácticamente nulo [@Cochran1977].
 
-En la ENUS 2026, la corrección se aplica al nivel en el que efectivamente se fija la meta —la región (\@ref(sec-tamano-muestra))—, no a una combinación región × régimen: el régimen se distribuye después, dentro del presupuesto ya fijado para la región. Para la región de menor tamaño poblacional, Orinoquía-Amazonía, con $N\approx1\,428\,022$, el tamaño se reduce de manera prácticamente nula, de aproximadamente 938 a 937.
+En la ENUS 2026, la corrección se aplica al nivel en el que efectivamente se fija la meta —el departamento—, con su población de referencia $N_d$, no al total nacional ni a una combinación departamento × régimen. El régimen se distribuye después dentro de la meta departamental. Esta corrección pertenece al cálculo nominal de planeación y no determina la varianza de los estimadores ajustados por no respuesta.
 
 ### Ajuste operativo y meta de respuesta
 
-**Decisión metodológica adoptada (septiembre de 2026).** El tamaño ajustado se incrementa mediante un factor operativo $f$ que compensa dos pérdidas previsibles del diseño por invitación:
+El tamaño ajustado se incrementa mediante un factor operativo $f$ que compensa dos pérdidas previsibles del diseño por invitación:
 
 $$
 n_{meta}=n_{ajustado}\times f,
@@ -244,13 +230,13 @@ donde:
 
 La no respuesta a la invitación no se incluye en el factor. Como se invita a la totalidad del marco, la meta se expresa en respuestas obtenidas y no en personas invitadas, y la no respuesta se trata mediante la calibración (\@ref(sec-marco-invitacion)).
 
-**Valor inicial.** Mientras no se disponga de datos de la operación, se adopta $f=1{,}4$, que corresponde, por ejemplo, a un coeficiente de variación de los pesos de 0,5 y a un 10 % de registros no válidos ($f=1{,}25/0{,}90\approx1{,}39$). Este valor conserva las metas de respuesta del capítulo: entre 1.278 y 1.313 respuestas por departamento y 43.176 en total (\@ref(tab:departamentos-meta)).
+Mientras no se disponga de datos de la operación, se adopta $f=1{,}4$, que corresponde, por ejemplo, a un coeficiente de variación de los pesos de 0,5 y a un 10 % de registros no válidos ($f=1{,}25/0{,}90\approx1{,}39$). Este valor conserva las metas de respuesta del capítulo: entre 1.278 y 1.313 respuestas por departamento y 43.173 en total (\@ref(tab:departamentos-meta)).
 
-**Recálculo.** Al cierre del primer periodo de recolección, el factor se recalculará con el coeficiente de variación observado de los pesos calibrados y la proporción observada de registros no válidos, y las metas de respuesta se ajustarán para el periodo siguiente.
+Al cierre del primer periodo de recolección, el factor se recalculará con el coeficiente de variación observado de los pesos calibrados y la proporción observada de registros no válidos, y las metas de respuesta se ajustarán para el periodo siguiente.
 
-**Relación con el efecto de diseño.** El $DEFF=1{,}5$ se adoptó como aproximación de la pérdida de eficiencia asociada a la estructura del diseño, mientras que el factor $f$ cubre de forma explícita la dispersión de los pesos por el ajuste de no respuesta. [**Pendiente de verificación.**]{.pendiente-rojo} Con los datos de la operación, debe comprobarse que ambos ajustes no se superpongan, comparando el efecto de diseño estimado con las réplicas (capítulo de ponderación y calibración) con el producto $DEFF\times(1+CV_w^{2})$ supuesto en la planeación.
+El $DEFF=1{,}5$ se adoptó como aproximación de la pérdida de eficiencia asociada a la estructura del diseño, mientras que el factor $f$ cubre de forma explícita la dispersión de los pesos por el ajuste de no respuesta. Con los datos de la operación, debe comprobarse que ambos ajustes no se superpongan, comparando el efecto de diseño estimado con las réplicas (capítulo de ponderación y calibración) con el producto $DEFF\times(1+CV_w^{2})$ supuesto en la planeación.
 
-Este resultado debe leerse como el *número de respuestas válidas* que se busca obtener para alcanzar la precisión nominal. La precisión efectivamente alcanzada se estima a partir de los pesos calibrados y de las réplicas, y depende del número de respuestas obtenidas y de la variabilidad de los pesos después del ajuste por no respuesta.
+Al incluir una compensación por registros no válidos, $n_{meta}$ es una meta de respuestas recibidas antes de depuración; el número válido esperado es $(1-p)n_{meta}$. Debe diferenciarse de la meta analítica de respuestas válidas. Este resultado es una referencia operativa que se busca obtener para alcanzar la precisión nominal. La precisión efectivamente alcanzada se estima a partir de los pesos calibrados y de las réplicas, y depende del número de respuestas obtenidas y de la variabilidad de los pesos después del ajuste por no respuesta.
 
 ### Parámetros adoptados
 
@@ -261,7 +247,7 @@ El procedimiento descrito proporciona una **referencia cuantitativa para estable
 | ---------------------------- | -----------: | -----: |
 | Proporción de referencia     |        $P$ |   0,50 |
 | Nivel de confianza           | $1-\alpha$ |   95 % |
-| Longitud total del intervalo |        $L$ |   0,04 |
+| Longitud total del intervalo de referencia | $L$ | 0,0784 |
 | Margen de error absoluto     |       $ME$ | 0,0392 |
 | Margen de error relativo     |      $MER$ | 7,84 % |
 | Efecto de diseño             |     $DEFF$ |    1,5 |
@@ -274,9 +260,9 @@ La evaluación de la composición alcanzada, así como los procedimientos de pon
 
 ### Tamaño adoptado: asignación por departamento
 
-**Decisión metodológica adoptada.** El tamaño objetivo se establece en función del departamento, y no de la región, como nivel de desagregación territorial previsto para la producción de resultados. La razón de este cambio es que Parte 1 (datos administrativos) y Parte 2 (preguntas comunes) son obligatorias para la totalidad de las personas que responden, con independencia del resultado del sorteo Bernoulli y de la asignación de módulo de Parte 3 (\@ref(sec-mecanismo-captacion)); ampliar la meta de respuesta al nivel departamental aprovecha esa obligatoriedad para que los indicadores construidos con Parte 1-2 puedan, sujeto a lo indicado en \@ref(sec-alcance-departamental), desagregarse por departamento y no solo por región.
+El tamaño objetivo se establece en función del departamento, y no de la región, como nivel de desagregación territorial previsto para la producción de resultados. La razón de este cambio es que Parte 1 (datos administrativos) y Parte 2 (preguntas comunes) son obligatorias para la totalidad de las personas que responden, con independencia del resultado del sorteo Bernoulli y de la asignación de módulo de Parte 3 (\@ref(sec-mecanismo-captacion)); ampliar la meta de respuesta al nivel departamental aprovecha esa obligatoriedad para que los indicadores construidos con Parte 1-2 puedan, sujeto a lo indicado en \@ref(sec-alcance-departamental), desagregarse por departamento y no solo por región.
 
-Los 32 departamentos del país y Bogotá D.C. (33 dominios en total) se agrupan, para efectos de reporte, en el esquema estándar de regionalización DANE/ENDS de seis regiones:
+Los 32 departamentos del país y Bogotá D.C. (33 dominios en total) se agrupan, para efectos de reporte, en las seis regiones de reporte adoptadas para ENUS 2026:
 
 | Región                 | Departamentos que la conforman |
 | ---------------------- | ------------------------------ |
@@ -299,32 +285,32 @@ n_{\text{nacional}}
 \sum_{d=1}^{33} n_d.
 $$
 
-Con los tamaños adoptados para los 33 departamentos, se obtiene una meta nacional de **43.176 participaciones** (43.159 tras el redondeo del reparto por celda que se describe en la siguiente sección, con diferencias de -0,2 a -0,8 por departamento atribuibles al mismo procedimiento de redondeo ya documentado para el reparto por celda). El detalle completo de las metas departamentales se presenta a continuación:
+Con los parámetros adoptados y redondeo hacia arriba al final de cada cálculo departamental, se obtiene una meta nacional de **43.173 respuestas**. El total corresponde a la suma de las 33 metas enteras; no se redondea por separado un cálculo nacional. El detalle se presenta a continuación:
 
 | Región | Departamento | N (BDUA) | Meta ($n_{\text{efectivo}}$) |
 | --- | --- | ---: | ---: |
 | Bogotá | Bogotá D.C. | 7.780.253 | 1.313 |
 | Caribe | Atlántico | 2.806.306 | 1.313 |
-| Caribe | Bolívar | 2.345.340 | 1.313 |
+| Caribe | Bolívar | 2.345.340 | 1.312 |
 | Caribe | Cesar | 1.284.077 | 1.312 |
 | Caribe | Córdoba | 1.670.770 | 1.312 |
 | Caribe | La Guajira | 1.151.490 | 1.312 |
 | Caribe | Magdalena | 1.402.034 | 1.312 |
-| Caribe | San Andrés | 61.282 | 1.294 |
+| Caribe | San Andrés | 61.282 | 1.293 |
 | Caribe | Sucre | 944.956 | 1.312 |
 | Central | Antioquia | 6.959.952 | 1.313 |
 | Central | Caldas | 911.331 | 1.312 |
 | Central | Caquetá | 411.841 | 1.310 |
 | Central | Huila | 1.184.153 | 1.312 |
-| Central | Quindío | 569.685 | 1.310 |
+| Central | Quindío | 569.685 | 1.311 |
 | Central | Risaralda | 1.076.349 | 1.312 |
 | Central | Tolima | 1.300.917 | 1.312 |
 | Oriental | Boyacá | 1.171.268 | 1.312 |
 | Oriental | Cundinamarca | 2.765.132 | 1.313 |
 | Oriental | Meta | 1.080.475 | 1.312 |
 | Oriental | Norte de Santander | 1.746.638 | 1.312 |
-| Oriental | Santander | 2.270.133 | 1.313 |
-| Orinoquía-Amazonía | Amazonas | 76.629 | 1.298 |
+| Oriental | Santander | 2.270.133 | 1.312 |
+| Orinoquía-Amazonía | Amazonas | 76.629 | 1.297 |
 | Orinoquía-Amazonía | Arauca | 319.492 | 1.309 |
 | Orinoquía-Amazonía | Casanare | 434.332 | 1.310 |
 | Orinoquía-Amazonía | Guainía | 54.596 | 1.291 |
@@ -336,9 +322,9 @@ Con los tamaños adoptados para los 33 departamentos, se obtiene una meta nacion
 | Pacífica | Chocó | 441.422 | 1.310 |
 | Pacífica | Nariño | 1.447.016 | 1.312 |
 | Pacífica | Valle | 4.628.732 | 1.313 |
-| **Total nacional** | **33 departamentos** | **50.168.746** | **43.176** |
+| **Total nacional** | **33 departamentos** | **50.168.746** | **43.173** |
 
-Table: (\#tab:departamentos-meta) Meta de respuesta por departamento (BDUA marzo de 2026, DEFF=1,5, factor operativo=1,4), ENUS 2026. Fuente: `03_Encuesta/01_Tamaño_Muestra/Output/02_tamanos_muestra_deff_1.5.xlsx`, hoja `3_Departamento`.
+Table: (\#tab:departamentos-meta) Meta de respuesta por departamento (BDUA marzo de 2026, DEFF=1,5, factor operativo=1,4), ENUS 2026. Fuente: recálculo con las poblaciones BDUA consignadas en esta tabla, $n_{MAS}=625$, $DEFF=1,5$ y $f=1,4$, sin redondeos intermedios.
 
 El régimen de afiliación no se utiliza como un nivel adicional e independiente para determinar el tamaño total. En consecuencia, no se asigna una meta independiente a cada combinación departamento × régimen. Hacerlo implicaría establecer 66 metas independientes y elevaría sustancialmente el tamaño total de la operación.
 
@@ -346,7 +332,7 @@ En su lugar, el tamaño correspondiente a cada departamento constituye una meta 
 
 Esta decisión permite mantener el objetivo de participación establecido para cada departamento y, simultáneamente, reproducir dentro de cada uno de ellos la estructura poblacional de los regímenes de afiliación. Las metas obtenidas para las combinaciones departamento × régimen constituyen, por tanto, componentes del tamaño departamental y no dominios independientes de tamaño.
 
-### Distribución de la meta por celdas
+### Distribución de la meta por celdas {#sec-distribucion-metas-celdas}
 
 Una vez definidos los tamaños objetivo departamentales, cada departamento se desagrega en las celdas que conforman la estructura de metas de respuesta. Las celdas resultan del cruce de cuatro variables:
 
@@ -368,111 +354,105 @@ $$
 
 donde \(n_c\) corresponde al tamaño inicial de la celda \(c\), \(n_d\) al tamaño objetivo del departamento al que pertenece, \(N_c\) al número de personas de la celda en la BDUA y \(N_d\) al total de personas del departamento.
 
-Sobre esta asignación proporcional se establece un **mínimo de 10 participaciones por celda**, con el propósito de evitar que las categorías de menor tamaño poblacional queden sin meta de respuesta:
+Sobre la estructura de celdas se conserva un **mínimo de 10 respuestas por celda con población positiva**. Las celdas vacías tienen meta cero. Primero se reserva el mínimo y después se distribuye el remanente proporcionalmente a la población. Este es el procedimiento implementado en el archivo fuente; difiere de aplicar un máximo a la asignación proporcional inicial.
+
+Para cada departamento, con $C_d^+$ celdas de población positiva, se define:
 
 $$
-n_c^{*}
-=
-\max
-\left\{
-n_d\frac{N_c}{N_d},\;10
-\right\}.
+R_d=n_d-10C_d^+,\qquad q_c=R_d\frac{N_c}{\sum_{k:N_k>0}N_k}.
 $$
 
-La aplicación del mínimo puede generar una suma superior o inferior al tamaño departamental inicialmente distribuido. Por esta razón, la asignación definitiva incorpora un procedimiento de ajuste que conserva el tamaño total establecido para cada departamento y mantiene, en la medida permitida por las restricciones de mínimo, la relación proporcional derivada de la estructura poblacional.
+La asignación inicial es $10+\lfloor q_c\rfloor$. Las unidades restantes se asignan a las celdas con mayor parte fraccionaria de $q_c$; los empates se resuelven por el orden de las filas del archivo. El procedimiento requiere $n_d\geq10C_d^+$; si no se cumple, se debe revisar la factibilidad antes de asignar. No se relaja silenciosamente el mínimo.
 
-Una vez obtenidas las asignaciones enteras, el ajuste final se realiza mediante el **método del resto mayor**. Para ello, se asigna inicialmente la parte entera de cada meta y las unidades restantes se distribuyen entre las celdas con las mayores partes fraccionarias, hasta completar exactamente el tamaño departamental establecido.
+La matriz actualizada contiene **1.848 celdas**, todas con población positiva, y suma **43.173 respuestas**. Las 33 sumas departamentales coinciden exactamente con sus metas. Hay **39 celdas con meta 10** y la meta máxima es **72**. Los conteos poblacionales utilizados suman **50.168.746 afiliados** y coinciden por departamento con la tabla de planeación.
 
-El procedimiento produce una estructura nacional de 1.848 metas de respuesta por celda. De ellas, 40 corresponden al mínimo de 10 participaciones —concentradas en los departamentos de menor población, como Vaupés, Guainía y San Andrés—, mientras que la meta de mayor tamaño alcanza 72 respuestas. El establecimiento de un mínimo implica una sobrerrepresentación deliberada de las celdas demográficamente menos numerosas respecto de su peso poblacional. Esta decisión responde a la necesidad operativa de conservar participación en los grupos de menor tamaño y será considerada posteriormente en la construcción y calibración de los pesos analíticos.
+El **Anexo B — Matriz de metas de respuesta** presenta la distribución departamental por régimen, sexo, grupo de edad y zona, junto con los parámetros de cálculo, las metas departamentales, los controles de cuadre y los resúmenes agregados. Su elaboración utiliza los conteos poblacionales de la BDUA con corte a marzo de 2026. La asignación conserva estos conteos y aplica el procedimiento de mínimo por celda y reparto del remanente descrito en esta sección, de manera que la suma de las metas por celda coincida exactamente con la meta de cada departamento.
 
-La matriz completa de las 1.848 celdas se generó ejecutando, a nivel departamento, el mismo procedimiento ya adoptado a nivel región (proporcional a población + mínimo garantizado + resto mayor), y se encuentra en `03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx`. El **Anexo E — Matriz de cuotas** (\@ref(sec-diseno-muestral)), organizado hasta ahora por región, queda pendiente de regenerar a partir de este nuevo archivo para reflejar la estructura departamental.
+La agregación de las metas departamentales permite describir la distribución de las **43.173 respuestas previstas** por región, régimen de afiliación, sexo, grupo de edad y zona. Las tablas siguientes presentan distintas desagregaciones de una misma meta nacional; sus totales no deben sumarse entre sí. Esta composición corresponde a metas de seguimiento y no a respuestas efectivamente obtenidas ni a resultados de la encuesta.
 
-### Resultado agregado por región y régimen
+La tabla \@ref(tab:cuota-region-regimen) muestra la distribución territorial y por régimen. Caribe y Orinoquía-Amazonía reúnen las mayores metas regionales, en concordancia con el número de departamentos que agrupan y sus metas individuales. En el total nacional, el régimen subsidiado concentra 25.668 respuestas previstas y el contributivo 17.505. La composición resulta de la asignación por celdas con mínimos garantizados, por lo que no reproduce estrictamente la distribución proporcional de la población.
 
-Aunque la meta se fija por departamento, la agregación de los departamentos que conforman cada región permite obtener, con fines de reporte, la distribución de la meta regional entre los dos regímenes de afiliación:
+| Región | Contributivo | Subsidiado | Total región |
+|---|---:|---:|---:|
+| Bogotá | 855 | 458 | 1.313 |
+| Caribe | 4.071 | 6.407 | 10.478 |
+| Central | 4.214 | 4.968 | 9.182 |
+| Oriental | 3.038 | 3.523 | 6.561 |
+| Orinoquía-Amazonía | 3.405 | 6.987 | 10.392 |
+| Pacífica | 1.922 | 3.325 | 5.247 |
+| **Total nacional** | **17.505** | **25.668** | **43.173** |
 
-| Región             | Contributivo | Subsidiado | Total región |
-| ------------------ | -----------: | ---------: | -----------: |
-| Bogotá             |          855 |        458 |        1.313 |
-| Caribe             |        4.068 |      6.406 |       10.474 |
-| Central            |        4.212 |      4.965 |        9.177 |
-| Oriental           |        3.038 |      3.521 |        6.559 |
-| Orinoquía-Amazonía |        3.405 |      6.986 |       10.391 |
-| Pacífica           |        1.921 |      3.324 |        5.245 |
-| **Total nacional** |   **17.499** | **25.660** |   **43.159** |
+Table: (\#tab:cuota-region-regimen) Metas de respuesta por región y régimen, obtenidas por agregación de la matriz departamental actualizada.
 
-Table: (\#tab:cuota-region-regimen) Distribución de la meta de respuesta por región (agregación de departamentos) y régimen de afiliación, ENUS 2026.
+Las tablas \@ref(tab:cuota-sexo), \@ref(tab:cuota-edad) y \@ref(tab:cuota-zona) presentan la composición demográfica de las metas. La distribución por sexo es cercana al equilibrio, con 50,4 % femenino y 49,6 % masculino. Por edad, las participaciones oscilan entre 12,2 % para el grupo de 50–59 años y 15,5 % para el de 10–19 años. Por zona, se prevén 59,7 % de respuestas urbanas y 40,3 % rurales. Estas participaciones describen la asignación operativa adoptada y no deben interpretarse como porcentajes poblacionales. Los porcentajes se redondean de manera independiente, por lo que su suma puede diferir ligeramente del 100 %.
 
-La distribución muestra que la composición por régimen varía entre regiones de acuerdo con la estructura poblacional de referencia. No obstante, las metas de ambos regímenes se encuentran contenidas dentro del tamaño total definido para cada región. El detalle por cada uno de los 33 departamentos se presenta en \@ref(tab:departamentos-meta) y en el archivo fuente de la matriz de celdas (\@ref(sec-tamano-muestra)).
+| Sexo | Meta | % |
+|---|---:|---:|
+| FEMENINO | 21.768 | 50,4 % |
+| MASCULINO | 21.405 | 49,6 % |
+| **Total** | **43.173** | **100 %** |
 
-### Composición agregada de las metas
+Table: (\#tab:cuota-sexo) Composición de las metas por sexo, matriz departamental actualizada. Los porcentajes se redondean de forma independiente.
 
-La agregación de las metas a nivel nacional produce la siguiente composición según sexo:
+| Grupo de edad | Meta | % |
+|---|---:|---:|
+| 00-09 | 5.955 | 13,8 % |
+| 10-19 | 6.686 | 15,5 % |
+| 20-29 | 6.534 | 15,1 % |
+| 30-39 | 6.419 | 14,9 % |
+| 40-49 | 5.815 | 13,5 % |
+| 50-59 | 5.248 | 12,2 % |
+| 60 o más | 6.516 | 15,1 % |
+| **Total** | **43.173** | **100 %** |
 
-| Sexo      |    \(n\) |      % |
-| --------- | -------: | -----: |
-| Femenino  |   21.760 | 50,4 % |
-| Masculino |   21.399 | 49,6 % |
+Table: (\#tab:cuota-edad) Composición de las metas por grupo de edad, matriz departamental actualizada. Los porcentajes se redondean de forma independiente.
 
-Table: (\#tab:cuota-sexo) Composición agregada de la meta nacional por sexo, ENUS 2026.
+| Zona | Meta | % |
+|---|---:|---:|
+| URBANO | 25.759 | 59,7 % |
+| RURAL | 17.414 | 40,3 % |
+| **Total** | **43.173** | **100 %** |
 
-Por grupo de edad:
-
-| Grupo de edad |  \(n\) |      % |
-| ------------- | -----: | -----: |
-| 00–09         |  5.952 | 13,8 % |
-| 10–19         |  6.686 | 15,5 % |
-| 20–29         |  6.532 | 15,1 % |
-| 30–39         |  6.416 | 14,9 % |
-| 40–49         |  5.814 | 13,5 % |
-| 50–59         |  5.246 | 12,2 % |
-| 60 o más      |  6.513 | 15,1 % |
-
-Table: (\#tab:cuota-edad) Composición agregada de la meta nacional por grupo de edad, ENUS 2026.
-
-Y por zona:
-
-| Zona   |    \(n\) |      % |
-| ------ | -------: | -----: |
-| Urbana |   25.751 | 59,7 % |
-| Rural  |   17.408 | 40,3 % |
-
-Table: (\#tab:cuota-zona) Composición agregada de la meta nacional por zona, ENUS 2026.
-
-::: {.por-ajustar}
-**Por ajustar:** regenerar el Anexo E con la matriz de 1.848 metas de respuesta por departamento.
-
-La matriz completa de metas, correspondiente a las 1.848 combinaciones de departamento, régimen, sexo, grupo de edad y zona, se generó en `03_Encuesta/01_Tamaño_Muestra/Output/04_asignacion_sexo_edad10_departamento_regimen.xlsx`. El **Anexo E — Matriz de cuotas**, organizado hasta ahora en una hoja por región (336 combinaciones), queda **pendiente de regenerar** a partir de este archivo, con una hoja por departamento.
-:::
+Table: (\#tab:cuota-zona) Composición de las metas por zona, matriz departamental actualizada. Los porcentajes se redondean de forma independiente.
 
 ### Alcance de los resultados por departamento {#sec-alcance-departamental}
 
-**Decisión metodológica adoptada, con alcance condicionado.** La ampliación del tamaño objetivo a 43.176 participaciones (\@ref(tab:departamentos-meta)) abre la posibilidad de producir resultados representativos por departamento, pero esa posibilidad está **condicionada a que la meta de cada departamento se cumpla efectivamente al cierre del periodo de recolección**. La respuesta a la invitación es voluntaria (\@ref(sec-marco-invitacion)), por lo que alcanzar la meta departamental es un resultado de la operación, no una propiedad garantizada por el diseño.
+Alcanzar una meta de respuesta es un control operativo y no demuestra representatividad. La publicación de cada indicador requiere evaluar respuestas válidas, precisión estimada, cobertura, tasa de respuesta y estabilidad de los pesos, además de explicitar los supuestos del ajuste. No alcanzar la meta tampoco sustituye esa evaluación por indicador. Las reglas históricas descritas a continuación deben leerse sujetas a este criterio y están pendientes de armonización con un protocolo único de publicación.
 
-En consecuencia:
+Las 43.173 respuestas constituyen la meta operativa calculada. Las metas departamentales permiten identificar grupos con respuesta insuficiente y reforzar la invitación; no son umbrales que demuestren representatividad. La clasificación de los resultados como publicables, descriptivos o insuficientes requiere un protocolo por indicador con respuestas válidas, precisión, cobertura, respuesta y estabilidad de pesos. Ese protocolo debe armonizarse con los criterios de publicación por entidad.
 
-- Un departamento que alcance su meta de 1.278 a 1.313 participaciones (según su tamaño poblacional; \@ref(tab:departamentos-meta)) puede, en principio, habilitarse para la producción de resultados representativos a ese nivel para los indicadores construidos con Parte 1 y Parte 2, que responde la totalidad de las personas captadas.
-- Un departamento que no alcance su meta al cierre del periodo de recolección **no debe tratarse como representativo a nivel departamental**; sus resultados deberán limitarse a análisis descriptivos, agregarse al nivel de región, o presentarse con las advertencias metodológicas correspondientes, conforme al criterio general ya establecido para cualquier dominio con baja participación (\@ref(sec-diseno-muestral)).
-
-**Esta ampliación no extiende la representatividad departamental a los indicadores de Parte 3 (módulo específico).** Aun si un departamento alcanza su meta de 1.278 a 1.313 participaciones en Parte 1-2, el número de personas que además accede a un módulo determinado dentro de ese departamento es sustancialmente menor, por la doble dilución del sorteo Bernoulli ($\pi=0,8$) y de la asignación aleatoria entre los módulos de un mismo prestador ($P=1/3$ en EPS, $1/4$ en IPS, 1 en el gestor; \@ref(sec-mecanismo-captacion)). Por ejemplo, para un departamento con meta de 1.313 participaciones, el número esperado de personas cuya atención corresponde a una IPS y que reciben un módulo IPS específico es del orden de $1.313\times0,8\times P(\text{atención con IPS})/4$, una fracción pequeña del total departamental. Este documento no define un tamaño objetivo por combinación departamento × módulo, y no debe interpretarse que la ampliación aquí adoptada garantiza esa desagregación.
+**La meta departamental de las Partes 1 y 2 no garantiza suficiencia ni precisión departamental para los indicadores de Parte 3 (módulo específico).** Aun si un departamento alcanza su meta de 1.278 a 1.313 participaciones en Parte 1-2, el número de personas que además accede a un módulo determinado dentro de ese departamento es sustancialmente menor, por la doble dilución del sorteo Bernoulli ($\pi=0,8$) y de la asignación aleatoria entre los módulos de un mismo prestador ($P=1/3$ en EPS, $1/4$ en IPS, 1 en el gestor; \@ref(sec-mecanismo-captacion)). Por ejemplo, para un departamento con meta de 1.313 participaciones, el número esperado de personas cuya atención corresponde a una IPS y que reciben un módulo IPS específico es del orden de $1.313\times0,8\times P(\text{atención con IPS})/4$, una fracción pequeña del total departamental. Este documento no define un tamaño objetivo por combinación departamento × módulo, y no debe interpretarse que la ampliación aquí adoptada garantiza esa desagregación.
 
 ### Conformación periódica del marco
 
 El marco de invitación se conforma periódicamente durante el año con las personas que registran una atención en salud en el periodo correspondiente (\@ref(sec-marco-invitacion)). Esta conformación periódica reemplaza la actualización cada cuatro meses de la base de usuarios habilitados prevista en el esquema anterior.
 
-La conformación del marco debe distinguirse de la BDUA con corte a marzo de 2026 utilizada como referencia poblacional para distribuir las metas de respuesta (\@ref(sec-tamano-muestra)) y, más adelante, para los totales de calibración: aquella es un corte fijo, adoptado como parámetro del diseño para todo el año de referencia, mientras que el marco de invitación se renueva en cada periodo.
+La conformación del marco debe distinguirse de la BDUA con corte a marzo de 2026 utilizada como referencia poblacional para distribuir las metas de respuesta (\@ref(sec-tamano-muestra)) y no constituye el universo de calibración: aquella es un corte fijo para la planeación, mientras que el marco de invitación se renueva en cada periodo. Los totales de calibración se construyen con el corte BDUA más reciente y las atenciones del universo de estimación definido en el capítulo de ponderación.
 
 La frecuencia de conformación del marco determina el tiempo transcurrido entre la atención y la invitación. Una frecuencia baja aumenta el potencial sesgo de recuerdo y se aleja de lo dispuesto en el artículo 9 de la Resolución 1642 de 2026, según el cual la ENUS «captura la experiencia del afiliado tras cada atención en salud» [@Resolucion1642_2026]. Por esta razón se adoptó una frecuencia de invitación al menos mensual (\@ref(sec-marco-invitacion)).
 
-### Papel de las EPS, IPS y gestores en la invitación
+### Responsabilidades en la invitación y recolección {#sec-entidades-invitacion}
 
-La Resolución 1642 de 2026 obliga a las EPS, IPS y gestores farmacéuticos a promover activamente el uso del aplicativo móvil oficial entre sus afiliados y usuarios en los puntos de atención, mediante estrategias que incluyan carteles informativos, mensajes de texto y notificaciones push (art. 12, num. 1), y a las EPS a informar y orientar a sus afiliados sobre la descarga, el acceso y el uso del aplicativo (art. 10, par. 1) [@Resolucion1642_2026]. Estas acciones complementan la invitación que realiza el Ministerio a todas las personas del marco.
+El Ministerio, las EPS, las IPS y los gestores farmacéuticos cumplen funciones complementarias en la invitación, la promoción y el acceso a ENUS. Las entidades son objetos de medición y canales de apoyo a la operación; **no constituyen unidades de selección ni tienen metas propias de respuesta**. El número de respuestas disponible por entidad depende de la participación efectiva de sus usuarios. La EPS de afiliación, obtenida de la BDUA, es un dato administrativo y debe distinguirse de la entidad asociada a la atención evaluada.
 
-La necesidad de este apoyo responde a una condición operativa relevante: **no todas las personas de la población objetivo disponen de teléfono inteligente, conexión a Internet u otros medios digitales**. Las entidades deben facilitar el acceso asistido, de manera que el usuario conserve la autonomía para decidir si participa y que las respuestas sean registradas directamente por él o con su consentimiento y acompañamiento.
+La Resolución 1642 de 2026 dispone que las EPS, IPS y gestores promuevan el aplicativo en sus puntos de atención mediante carteles, mensajes de texto y notificaciones (art. 12, num. 1), y que las EPS orienten a sus afiliados sobre su acceso y uso (art. 10, par. 1) [@Resolucion1642_2026]. Estas acciones complementan el aviso individual enviado por el Ministerio y reforzado por las EPS, conforme al procedimiento de invitación descrito en la sección \@ref(sec-marco-invitacion). La promoción no habilita a personas ajenas al marco ni modifica las reglas de asignación del cuestionario.
 
-Las entidades no constituyen unidades de selección ni tienen metas de respuesta propias. El número de respuestas de los usuarios de cada EPS, IPS o gestor depende de la respuesta efectiva a la invitación y no es una dimensión controlada por el diseño.
+| Participante | Responsabilidad en la operación | Información para el seguimiento |
+|---|---|---|
+| Ministerio | Conformar y actualizar el marco, enviar avisos y monitorear cobertura y respuesta | Versiones del marco y registro de avisos |
+| EPS | Reforzar las invitaciones y suministrar contactos actualizados cuando se soliciten | Personas contactadas y actualizaciones de contacto |
+| EPS, IPS y gestores | Promover el aplicativo y facilitar el acceso asistido | Acciones de promoción y canales utilizados |
+| Equipo responsable de la recolección | Verificar elegibilidad, aplicar las rutas y vincular las respuestas | Identificación de persona, atención, invitación y encuesta |
 
-### Diferenciación conceptual para el análisis
+Table: (\#tab:responsabilidades-invitacion) Distribución de responsabilidades para la invitación y recolección de ENUS 2026.
+
+El acceso asistido busca facilitar la participación de quienes tienen dificultades digitales o carecen de dispositivos y conectividad. El acompañamiento debe preservar la decisión voluntaria del usuario y no orientar su valoración. La asistencia técnica para diligenciar y la respuesta por un representante son situaciones distintas; los criterios de representación y su registro requieren definición explícita en el procedimiento de recolección.
+
+El seguimiento debe distinguir entre persona habilitada, aviso enviado, aviso entregado, ingreso al cuestionario, Parte 2 completada y módulo completado. Esta separación permite evaluar cobertura de contacto y no respuesta sin confundir varios avisos con varias personas. La ausencia de datos de contacto se registra y reporta por departamento y régimen; el registro del canal de acceso permite examinar diferencias de participación entre canales.
+
+Los formatos de intercambio, responsables, plazos de reporte y mecanismos de vinculación de avisos deben precisarse en el protocolo operativo. Las responsabilidades aquí descritas corresponden al esquema adoptado; su ejecución se verifica mediante los registros de envíos, reportes y participación. La descripción de pantallas y navegación se desarrolla en el capítulo de instrumento de recolección (\@ref(sec-instrumento-recoleccion)).
+
+### Diferenciación conceptual para el análisis {#sec-conceptos-metas-calibracion}
 
 Para la interpretación de los resultados es necesario distinguir entre los conceptos utilizados para organizar la operación y aquellos utilizados para producir y analizar los resultados. Aunque una misma variable puede intervenir en más de una de estas funciones, su propósito estadístico es diferente.
 
@@ -511,29 +491,29 @@ En consecuencia, el carácter probabilístico de la invitación no constituye po
 
 ### Publicación de resultados por entidad {#sec-publicacion-entidad}
 
-La Resolución 1642 de 2026 dispone que la ENUS mida el desempeño de las EPS, las IPS y los gestores farmacéuticos (art. 11) y que las entidades implementen planes de mejora cuando sus indicadores se encuentren por debajo del promedio nacional (art. 12, num. 3) [@Resolucion1642_2026]. Dado que las entidades no tienen metas de respuesta propias (\@ref(sec-diseno-muestral)), el número de respuestas disponible para cada una depende de la respuesta efectiva de sus usuarios. Esta sección establece los criterios con que se publican y comparan los resultados por entidad.
+La Resolución 1642 de 2026 dispone que la ENUS mida el desempeño de las EPS, las IPS y los gestores farmacéuticos (art. 11) y que las entidades implementen planes de mejora cuando sus indicadores se encuentren por debajo del promedio nacional (art. 12, num. 3) [@Resolucion1642_2026]. Dado que las entidades no tienen metas de respuesta propias, como se explica en la sección \@ref(sec-entidades-invitacion), el número de respuestas disponible para cada una depende de la respuesta efectiva de sus usuarios. Esta sección establece los criterios con que se publican y comparan los resultados por entidad.
 
-**Umbrales de suficiencia.** Un indicador se publica para una entidad solo si cumple un número mínimo de respuestas y un nivel mínimo de precisión.
+Un indicador se publica para una entidad solo si cumple un número mínimo de respuestas y un nivel mínimo de precisión.
 
-**Decisión metodológica adoptada (septiembre de 2026): número mínimo de respuestas por entidad.** El número mínimo de respuestas que debe alcanzar una entidad $a$ para que un indicador se publique como estimación representativa se obtiene con la misma ecuación de tamaño de muestra de la operación (\@ref(sec-tamano-muestra)), aplicada con corrección por población finita al número $N_a$ de personas que utilizaron los servicios de la entidad en el año:
+El número mínimo de respuestas que debe alcanzar una entidad $a$ para que un indicador se publique como estimación representativa se obtiene con la misma ecuación de tamaño de muestra de la operación (\@ref(sec-tamano-muestra)), aplicada con corrección por población finita al número $N_a$ de personas que utilizaron los servicios de la entidad en el año:
 
 $$
-n_{\min,a} = \frac{n_{DEFF}}{1 + \dfrac{n_{DEFF}}{N_a}}, \qquad n_{DEFF} = n_{MAS}\times DEFF \approx 938,
+n_{\min,a} = \frac{n_{DEFF}}{1 + \dfrac{n_{DEFF}}{N_a}}, \qquad n_{DEFF} = n_{MAS}\times DEFF = 937,5,
 $$
 
-con los mismos parámetros de la tabla de parámetros adoptados ($P=0{,}50$, confianza del 95 %, longitud del intervalo de 0,04 y $DEFF=1{,}5$). El factor operativo $f$ no se aplica: $n_{\min,a}$ se cuenta sobre respuestas válidas, y la pérdida de precisión por la dispersión de los pesos se refleja directamente en la precisión estimada con las réplicas. $N_a$ se obtiene del marco del año (\@ref(sec-marco-invitacion)).
+con los mismos parámetros de la tabla de parámetros adoptados ($P=0{,}50$, confianza del 95 %, longitud total del intervalo de 0,0784 y $DEFF=1{,}5$). El factor operativo $f$ no se aplica: $n_{\min,a}$ se cuenta sobre respuestas válidas, y la pérdida de precisión por la dispersión de los pesos se refleja directamente en la precisión estimada con las réplicas. $N_a$ se obtiene del marco del año (\@ref(sec-marco-invitacion)).
 
 A modo de ilustración, el mínimo resultante es de aproximadamente 165 respuestas para una entidad con 200 usuarios en el año, 484 para una con 1.000 y 858 para una con 10.000. Para las entidades pequeñas, el mínimo se acerca al número total de sus usuarios, por lo que la mayoría de ellas tendrá resultados descriptivos o agregados en la red de su EPS o en su departamento.
 
-**Decisión metodológica adoptada (septiembre de 2026): comparación con el valor nacional.** Para efectos del numeral 3 del artículo 12, el «promedio nacional» se entiende como el **valor nacional del mismo indicador para el tipo de actor** (EPS, IPS o gestor farmacéutico), estimado por la ENUS con los pesos calibrados y publicado en los resultados anuales. Una entidad se considera por debajo del valor nacional cuando uno o más de sus indicadores se ubican por debajo de dicho valor y la **diferencia es estadísticamente significativa** según los intervalos de confianza. Dado que cada entidad forma parte del valor nacional con el que se compara, la diferencia entre ambos debe estimarse con las réplicas de los pesos calibrados, de manera que su varianza incorpore esa dependencia, en lugar de juzgarse solo por la superposición de los intervalos de cada estimación.
+Para efectos del numeral 3 del artículo 12, el «promedio nacional» se entiende como el **valor nacional del mismo indicador para el tipo de actor** (EPS, IPS o gestor farmacéutico), estimado por la ENUS con los pesos calibrados y publicado en los resultados anuales. Una entidad se considera por debajo del valor nacional cuando uno o más de sus indicadores se ubican por debajo de dicho valor y la **diferencia es estadísticamente significativa** según los intervalos de confianza. Dado que cada entidad forma parte del valor nacional con el que se compara, la diferencia entre ambos debe estimarse con las réplicas de los pesos calibrados, de manera que su varianza incorpore esa dependencia, en lugar de juzgarse solo por la superposición de los intervalos de cada estimación.
 
-**Decisión metodológica adoptada (septiembre de 2026): entidades sin información suficiente.** Cuando una entidad no cumpla los umbrales de suficiencia para un indicador:
+Cuando una entidad no cumpla los umbrales de suficiencia para un indicador:
 
 - el indicador se presenta para la entidad como **resultado descriptivo**: la distribución de las respuestas obtenidas, sin intervalo de confianza, identificada expresamente como no representativa del conjunto de usuarios de la entidad y no comparable con el valor nacional ni con otras entidades;
 - el resultado descriptivo se acompaña del número de respuestas y de la tasa de respuesta de la entidad, y no da lugar a plan de mejora;
 - si la situación se presenta en dos publicaciones anuales consecutivas, la entidad debe reforzar las estrategias de promoción del aplicativo previstas en el numeral 1 del artículo 12 e informar las acciones adoptadas en el seguimiento anual de la Oficina de Calidad;
 - los resultados de las IPS sin información suficiente pueden presentarse de forma agregada en la red de prestadores de su EPS o en su departamento.
 
-**Decisión metodológica adoptada (septiembre de 2026): piso de confidencialidad.** Cuando una entidad tenga menos de **50 respuestas** para un indicador, el resultado descriptivo no se muestra, para proteger la confidencialidad de quienes respondieron, y el tablero informa que la información es insuficiente. Con muy pocas respuestas, la distribución publicada podría permitir identificar a una persona, en contravía de la protección de datos personales de la Ley 1581 de 2012.
+Cuando una entidad tenga menos de **50 respuestas** para un indicador, el resultado descriptivo no se muestra, para proteger la confidencialidad de quienes respondieron, y el tablero informa que la información es insuficiente. Con muy pocas respuestas, la distribución publicada podría permitir identificar a una persona, en contravía de la protección de datos personales de la Ley 1581 de 2012.
 
 Estas reglas buscan evitar dos riesgos opuestos: presentar cifras inestables como si fueran estimaciones representativas, lo que resultaría injusto con la entidad o engañoso para el ciudadano, y que la falta de información se convierta en un incentivo para no promover la participación de los usuarios. Por esta razón, la insuficiencia de información no exime a la entidad de obligaciones: la traslada de mejorar un indicador a generar la información necesaria para medirlo.

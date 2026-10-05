@@ -2,11 +2,30 @@
 
 El instrumento de ENUS 2026 se administra en su totalidad a través de *ClicSalud*, la aplicación en la que se implementan la identificación del usuario, la validación de su elegibilidad, la navegación del árbol de decisión y el registro de las respuestas. Este capítulo documenta la estructura funcional de la aplicación como guía de uso paso a paso —qué ve y qué hace un usuario en cada pantalla— con evidencia visual de cada paso, siguiendo el recorrido completo desde el ingreso a la aplicación hasta el cuestionario de ENUS 2026.
 
-::: {.por-ajustar}
-**Por ajustar:** la elección de prestador ya no hace parte del diseño: el actor lo determina la atención que originó la invitación.
+**Estado de la documentación.** Este capítulo distingue el flujo metodológico adoptado de las pantallas del prototipo. Las capturas conservadas ilustran acceso y navegación; no certifican la implementación de la elegibilidad por atención ni de la asignación del actor. Las pantallas de encuesta deben actualizarse cuando estos cambios se implementen.
 
-> **Nota sobre la evidencia visual (septiembre de 2026).** El mecanismo de captación de *ClicSalud* se actualizó (sorteo Bernoulli, elección de prestador y asignación aleatoria de módulo; \@ref(sec-mecanismo-captacion)) con posterioridad a la toma de las capturas de pantalla que ilustran los pasos 9 a 11. El texto de esos pasos se actualizó con base en el código fuente vigente de la aplicación, pero las capturas de pantalla correspondientes (figuras `fig-clicsalud-06` y `fig-clicsalud-12`) **no se han vuelto a tomar** y muestran pantallas de la versión anterior. Se conservan únicamente donde su contenido no cambió (identificación, verificación, pantallas informativas) y se marcan explícitamente como pendientes de actualización donde sí cambió.
-:::
+## Fuente vigente y estructura de los formularios {#sec-formularios-v07}
+
+La fuente vigente del cuestionario es `00_Cuestionario/V1/ENUS_Formato_por_Modulos_CartaDerechos_V07 17092026.xlsx`; las definiciones de indicadores se consultan en `00_Cuestionario/V1/Matriz_de_indicadores_-_Fichas_tecnicas_ENUS_V07_30092026.xlsx`. Se identifica la versión por archivo y fecha: algunos encabezados internos del formulario aún dicen «Versión 04», y el Índice, el Plan de Análisis y el Control de Cambios no reflejan completamente sus hojas de módulo. Para describir las preguntas se toma como referencia el contenido efectivo de cada formulario; para cálculo y restricciones, las fichas técnicas de la matriz del 30 de septiembre.
+
+Los ocho formularios son independientes y contienen Sección A (identificación administrativa), Sección B (trazadoras y preguntas transversales) y Sección C (preguntas específicas). No existe salto de un formulario a otro. La siguiente tabla cuenta códigos de pregunta presentes, no opciones de respuesta ni el número que responderá cada persona; las rutas condicionan la carga efectiva.
+
+| Formulario | Códigos T distintos | Registros T | Preguntas específicas C |
+|---|---:|---:|---:|
+| EPS - Módulo 1 | 19 | 19 | 12 |
+| EPS - Módulo 2 | 19 | 21 | 24 |
+| EPS - Módulo 3 | 19 | 19 | 18 |
+| IPS - Módulo 1 | 19 | 19 | 17 |
+| IPS - Módulo 2 | 19 | 19 | 14 |
+| IPS - Módulo 3 | 19 | 19 | 11 |
+| IPS - Módulo 4 | 18 | 18 | 12 |
+| Gestor - Módulo 1 | 18 | 18 | 15 |
+
+EPS 2 tiene dos apariciones de T13 y T14. Los demás conteos incluyen T12a y las preguntas de cierre que efectivamente aparecen: T18 no está en IPS 4 ni en Gestor. Los códigos de Sección C suman 123 entradas entre módulos; no son 123 preguntas semánticamente diferentes, pues existen contenidos compartidos.
+
+**Periodo de referencia.** Los formularios reemplazan seis meses por «el último año» en preguntas de uso, cambio de EPS, necesidad de atención y otros eventos; varias preguntas de experiencia se refieren a la última atención. Esto no modifica automáticamente la ventana de seis meses del marco de invitación. Se debe armonizar el periodo del cuestionario, la elegibilidad y los universos de los indicadores antes de publicar resultados.
+
+**Perfil y asignación.** El Índice describe preselección de los formularios por perfil de servicio y destina EPS 1 a no usuarios. T06 y T09 se presentan como clasificación y control, sin salto entre formularios. Esta especificación no coincide completamente con la asignación aleatoria entre todos los módulos de un actor descrita en el diseño. Las fuentes V07 no resuelven esa decisión: se requiere definir módulos elegibles por persona, probabilidades y totales de calibración, y el tratamiento de discordancias de perfil.
 
 ## Estructura general de la aplicación {#sec-app-clicsalud}
 
@@ -14,7 +33,7 @@ La aplicación se organiza en doce pantallas identificables, agrupadas en tres b
 
 | Bloque | Pantalla | Función |
 |---|---|---|
-| Acceso e identificación | Identificación | Captura de documento y EPS del usuario |
+| Acceso e identificación | Identificación | Captura del tipo y número de documento |
 | Acceso e identificación | Verificación BDUA | Validación de afiliación activa contra BDUA |
 | Acceso e identificación | Código SMS | Verificación del usuario mediante código enviado por mensaje de texto |
 | Acceso e identificación | Reingreso | Reconocimiento automático de un usuario con sesión ya verificada en el mismo dispositivo |
@@ -53,7 +72,7 @@ Tras enviar el documento, la aplicación indica que está enviando un código de
 
 ### Paso 4. Verificación BDUA
 
-Superada la verificación por SMS, la aplicación presenta los datos de afiliación del usuario —nombre, EPS, régimen, municipio y departamento— obtenidos de la Base de Datos Única de Afiliados (BDUA), junto con la fecha de corte de la consulta y la confirmación de que la afiliación está activa. El usuario debe confirmar que estos datos son correctos para continuar; este es el tercer y último paso de la elegibilidad. La pantalla advierte además que, al confirmar, la sesión queda guardada en el dispositivo (\@ref(sec-mecanismo-seleccion)).
+Superada la verificación por SMS, la aplicación presenta los datos de afiliación del usuario —nombre, EPS, régimen, municipio y departamento— obtenidos de la Base de Datos Única de Afiliados (BDUA), junto con la fecha de corte de la consulta y la confirmación de que la afiliación está activa. El usuario debe confirmar que estos datos son correctos para continuar; esta verificación confirma la afiliación, pero no completa la elegibilidad para ENUS: antes de acceder a la encuesta se debe comprobar la pertenencia al marco y la atención que origina la invitación. La pantalla advierte además que, al confirmar, la sesión queda guardada en el dispositivo (\@ref(sec-mecanismo-seleccion)).
 
 ![Verificación BDUA: confirmación de la afiliación activa y de los datos institucionales del usuario.](figuras/fig-clicsalud-04-verificacion-bdua.png){width=45%}
 
@@ -83,57 +102,27 @@ La pestaña "Normas" enumera el marco normativo que respalda la aplicación y lo
 
 ### Paso 9. Acceso al módulo Encuesta ENUS
 
-::: {.por-ajustar}
-**Por ajustar:** la pantalla debe mostrar el actor de la atención que originó la invitación, no una lista de prestadores para elegir; el aplicativo debe verificar además que la persona pertenezca al marco.
-
-Desde la pestaña "Encuesta" o desde la opción "Contar mi experiencia" en Inicio, el usuario llega a la pantalla de entrada del cuestionario de ENUS 2026, que muestra su sesión activa y verificada, y una vista previa de los prestadores disponibles para evaluar —los que tiene habilitados en BDUA y que no estén bloqueados por haber sido evaluados en el último año (\@ref(sec-mecanismo-captacion))—. El usuario inicia la encuesta desde esta pantalla.
-:::
+**Flujo adoptado.** Desde la pestaña Encuesta, el sistema debe verificar la pertenencia al marco y presentar el actor asociado a la atención que originó la invitación, sujeto al bloqueo. La persona no elige un prestador de una lista. La sesión identificada y la afiliación activa no sustituyen esta verificación. **Implementación pendiente:** adecuar el prototipo y actualizar la evidencia visual.
 
 [**Pendiente de actualización visual.**]{.pendiente-rojo} La figura `fig-clicsalud-06-modulo-encuesta.png` corresponde a la versión anterior de esta pantalla, que mostraba en su lugar las atenciones de salud detectadas para el usuario (FEVRIPS); no se incluye aquí por no representar ya la pantalla vigente.
 
 ### Paso 10. Parte 2 — Preguntas comunes
 
-Al iniciar la encuesta, el usuario responde Parte 2: once preguntas comunes de respuesta directa, tomadas de la sección de trazadoras y transversales del instrumento (\@ref(sec-mecanismo-captacion)). Las dos primeras coinciden con los ejemplos capturados en las figuras siguientes:
+El prototipo documentado en las capturas presenta once preguntas, pero esa cantidad y sus textos no describen los formularios vigentes V07. La Sección B incorpora códigos T01–T18 y T12a, con diferencias y duplicados según módulo, detallados en \@ref(sec-formularios-v07). T01 y T02 identifican el documento; no deben contarse automáticamente como preguntas sustantivas adicionales después de la autenticación.
 
-1. ¿Quién se encuentra diligenciando esta encuesta? (Usted mismo / Un pariente o tutor legal / Otra persona)
-2. ¿Cuenta usted con algún plan voluntario de salud? (Plan Complementario / Medicina Prepagada / Póliza de salud / Ninguno)
-3. ¿Cuál es su percepción general de su salud? (Excelente / Muy buena / Buena / Regular / Mala / Muy mala)
-4. En los últimos 6 meses, ¿ha utilizado un servicio de salud? (Sí / No)
-5. En los últimos 6 meses, ¿ha cambiado de EPS o se afilió por primera vez a una EPS? (Sí / No)
-6. ¿Quién le ayudó a gestionar el servicio de salud que requería? (EPS / Secretaría de Salud / IPS pública / IPS privada de su EPS / IPS privada particular / Ninguna de las anteriores)
-7. ¿Cuál de los siguientes servicios utilizó la última vez? (Urgencias / Hospitalización / Cirugía / Consulta Externa / Atención Domiciliaria / Entrega de medicamentos o dispositivos médicos / Laboratorio clínico / Imágenes diagnósticas / Otro / Ninguna de las anteriores)
-8. ¿Se encuentra usted en estado de embarazo? (Sí / No)
-9. ¿Ha sido diagnosticado con alguna de estas condiciones? (Hipertensión Arterial / Diabetes Mellitus Tipo 2 / Hemofilia / Enfermedad Huérfana o Rara / VIH / Hepatitis C / Artritis reumatoide u otras enfermedades autoinmunes / Cáncer / Ninguna de las anteriores)
-10. En los últimos seis meses, ¿hubo algún momento en el que tuvo un problema de salud y requería atención médica, pero decidió no acudir al servicio médico? (Sí / No)
-11. ¿Conoce o ha tenido acceso al informe anual de tutelas? (Sí / No)
+La adaptación del aplicativo debe usar los textos, opciones y condiciones del formulario vigente. En particular, T06, T07 y T12 se refieren al último año; T12a indaga la razón de no acudir y es condicional a T12; T14 recoge tutela o PQRS. Las preguntas T15–T18 deben mapearse por módulo y constructo: no puede asumirse que un mismo código T representa una variable idéntica en todos los formularios.
 
-Cada pregunta se presenta en pantalla completa, con un indicador de avance ("Pregunta N de 11") y un botón "Siguiente" para continuar. Las dos figuras siguientes siguen siendo válidas como ejemplo del diseño de pantalla (tarjeta de pregunta, opciones, barra de progreso): el texto de sus preguntas no cambió, aunque el indicador "de 6" que muestran quedó desactualizado por el aumento a once preguntas.
+Las capturas previas ilustran el diseño de pantalla y no certifican los textos, escalas o la cantidad de preguntas de V07. Deben actualizarse después de armonizar el formulario y las rutas con el aplicativo.
 
-![Primera pregunta de Parte 2: identificación de quién diligencia la encuesta.](figuras/fig-clicsalud-07-pregunta-ejemplo.png){width=45%}
+### Paso 11. Sorteo, actor de la atención y módulo asignado
 
-![Cuarta pregunta de Parte 2: uso de servicios de salud en los últimos seis meses.](figuras/fig-clicsalud-11-trazadora-ejemplo.png){width=45%}
+Al completar Parte 2 por primera vez se ejecuta el sorteo Bernoulli con probabilidad de acceso de 0,8. Un resultado negativo finaliza la encuesta conservando las respuestas comunes. Un resultado positivo permite acceder al actor de la atención y asigna al azar uno de sus módulos. En ingresos posteriores habilitados, Parte 2 no se repite y no se ejecuta nuevamente el sorteo, conforme a \@ref(sec-mecanismo-captacion). La probabilidad de asignación no garantiza la finalización del módulo.
 
-### Paso 11. Sorteo, elección de prestador y módulo asignado
-
-::: {.por-ajustar}
-**Por ajustar:** describe la versión del aplicativo con elección de prestador; actualizar cuando se ajuste el aplicativo.
-
-Al terminar Parte 2 de su primer ingreso, la aplicación ejecuta el sorteo Bernoulli ($u\sim\text{Uniforme}(0,1)$, $\pi=0,8$) sin mostrar una pantalla intermedia: si el resultado es negativo, el usuario pasa directamente a la pantalla de agradecimiento; si es positivo, se le presenta una pantalla para **elegir cuál prestador desea evaluar** (EPS, IPS o gestor farmacéutico) entre los que tiene habilitados y no bloqueados. Elegido el prestador, la aplicación asigna al azar uno de sus módulos disponibles y presenta sus preguntas bajo el encabezado "Parte 3" y el código del módulo asignado (por ejemplo, "Parte 3 · Cod. eps_m3"), sin la etiqueta de forma ("Forma A/B") de la versión anterior de la aplicación, que fue retirada junto con el mecanismo de selección determinística por servicio efectivamente recibido.
-:::
-
-[**Pendiente de actualización visual.**]{.pendiente-rojo} La figura `fig-clicsalud-12-modulo-forma-a.png` corresponde a la versión anterior de esta pantalla (con las etiquetas "Forma A", "Cod. 01" y "Bloque 1 de 3", ya retiradas) y a la pantalla de elección de prestador no existe todavía una captura; no se incluyen aquí por no representar la aplicación vigente.
-
-[**Pendiente de ajuste en la aplicación.**]{.pendiente-rojo} Con posterioridad a la versión documentada en este paso, se adoptó que la persona **no elige** el actor que evalúa: la Parte 3 corresponde al actor que prestó el servicio registrado en la atención que originó la invitación (\@ref(sec-mecanismo-captacion)). La pantalla de elección de prestador debe retirarse de *ClicSalud* y reemplazarse por la asignación del actor a partir de la atención.
-
-La correspondencia formal entre la terminología de "módulos" utilizada en este documento a partir del árbol de decisión (\@ref(sec-diseno-muestral)) y cualquier esquema de identificación interno de la aplicación se desarrolla, cuando corresponda, en el capítulo de reconciliación de estructuras.
+**Implementación pendiente.** El prototipo conserva una pantalla de elección de prestador. Debe reemplazarse por la asignación a partir de la atención antes de tomar nuevas capturas. El diseño de pantallas no resuelve la pertinencia de los módulos: EPS 1 y los módulos que no coinciden con la experiencia registrada requieren una decisión metodológica documentada.
 
 ## Sesión y reingreso
 
-::: {.por-ajustar}
-**Por ajustar:** la persona ya no se clasifica «dentro de su celda de cuota» para participar: la celda solo sirve para las metas de respuesta.
-
-El comportamiento de sesión —persistencia en el dispositivo mediante la clave `clicsalud_sesion_v1`— se documenta de forma completa en el capítulo de instrumento de recolección (paso 9 y siguientes) y no se repite aquí. La pantalla de Reingreso es la implementación visual de ese reconocimiento automático de sesión. Nótese que, a diferencia de la sesión de identificación, sí existe un mecanismo aleatorio en la captación: el sorteo Bernoulli y la asignación de módulo descritos en \@ref(sec-mecanismo-captacion), que operan después de que la persona ya fue clasificada dentro de su celda de cuota, no dentro de ella.
-:::
+El prototipo conserva la sesión mediante `clicsalud_sesion_v1`. Reconocer la identidad no equivale a autorizar una nueva encuesta: cada reingreso debe verificar la atención habilitada y el bloqueo. La clasificación demográfica sirve para seguimiento y calibración, sin restringir el acceso por cumplimiento de metas. **Pendiente de definición:** periodicidad de renovación de Parte 2, unidad del bloqueo y tratamiento de un reingreso después de un sorteo negativo.
 
 ## Almacenamiento de datos durante la recolección
 
@@ -141,8 +130,10 @@ Los insumos técnicos disponibles no documentan si las respuestas del cuestionar
 
 ## Alcance de esta documentación frente a otras estructuras del instrumento
 
-::: {.por-ajustar}
-**Por ajustar:** cambiar «elección de prestador» por «actor de la atención que originó la invitación».
+El flujo adoptado comprende un desenlace sin Parte 3 y ocho módulos posibles, determinados por el sorteo inicial, el actor de la atención y la asignación aleatoria dentro de ese actor. Las capturas del prototipo deben interpretarse según su versión y no como evidencia de implementación de todas las reglas metodológicas.
 
-Este capítulo documenta la estructura funcional de *ClicSalud* como aplicación de recolección, con evidencia visual de su recorrido completo, salvo en los pasos donde esa evidencia quedó pendiente de actualización (pasos 9 y 11). La estructura del cuestionario mismo —los nueve desenlaces y ocho módulos finales que resultan del sorteo Bernoulli, la elección de prestador y la asignación aleatoria de módulo— es la que se ha utilizado de forma consistente en todo este documento y se documenta de forma completa en el capítulo de diseño muestral (\@ref(sec-mecanismo-captacion)).
-:::
+## Controles pendientes de los formularios vigentes
+
+La hoja «Hallazgos del instrumento» de la matriz V07 documenta las incidencias y su efecto en los indicadores. Entre las de mayor prioridad están la duplicación de la pregunta de espera en lugar del desplazamiento (EPS 3 e IPS 1), preguntas de experiencia no aplicables a no usuarios, códigos T15–T18 con constructos distintos y saltos desactualizados del gestor farmacéutico. La matriz señala IND-ACC-11 como suspendido; no debe presentarse como calculable mientras falte la pregunta pertinente.
+
+También requieren control los duplicados T13/T14 en EPS 2, opciones repetidas en T09, formatos heterogéneos de tiempo, ausencia de captura de triage y la batería abreviada de atención centrada en la persona. Estas incidencias no se corrigen por asumir que el Plan de Análisis o el Control de Cambios están actualizados: deben resolverse en los formularios, las reglas del aplicativo y las fichas afectadas de forma trazable. Los archivos fuente V1 se conservan sin modificación en esta revisión.
